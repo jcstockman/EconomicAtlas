@@ -78,6 +78,12 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 06019-01-01905,06019-01,06019,Fresno City (Southeast),0601905,puma,1.0,116597,119695,38392,0
 06019-01-01906,06019-01,06019,Clovis City,0601906,puma,1.0,129784,133233,41765,0
 06019-01-01907,06019-01,06019,"Sanger, Reedley & Parlier Cities",0601907,puma,1.0,133435,136981,39425,0
+06029-01-02903,06029-01,06029,Bakersfield City (Northeast),0602903,puma,1.0,168325,171626,65225,0
+06029-01-02904,06029-01,06029,Bakersfield City (Southeast),0602904,puma,1.0,113912,116146,22313,0
+06029-01-02905,06029-01,06029,"Ridgecrest, Arvin, Tehachapi & California City Cities",0602905,puma,1.0,192671,196450,57590,0
+06029-01-02906,06029-01,06029,"Delano, Wasco & Shafter Cities",0602906,puma,1.0,157085,160166,62319,0
+06029-01-02907,06029-01,06029,Bakersfield City (Northwest) & Rosedale,0602907,puma,1.0,107020,109119,41428,0
+06029-01-02908,06029-01,06029,Bakersfield City (Southwest),0602908,puma,1.0,170222,173561,62072,0
 06037-01-03758,06037-01,06037,"Gardena, Lawndale Cities & West Athens (part)",0603758,puma_part,1.0,167669,162327,46628,3
 06037-01-03759,06037-01,06037,Hawthorne City,0603759,puma,1.0,115060,111394,37834,0
 06037-01-03760,06037-01,06037,"Redondo Beach, Manhattan Beach & Hermosa Beach Cities",0603760,puma,1.0,144082,139491,131625,0
@@ -161,27 +167,28 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 06037-12-03740,06037-12,06037,Pico Rivera & Montebello Cities,0603740,puma,1.0,127928,123852,44616,0
 06037-12-03743,06037-12,06037,East Los Angeles (part),0603743,puma_part,0.9813,130412,126257,75995,4
 06037-12-03754,06037-12,06037,La Mirada & Santa Fe Springs Cities,0603754,puma,1.0,135779,131453,89767,0
-06059-01-05921,06059-01,06059,"Lake Forest, Irvine (North) Cities & Silverado",0605921,puma,1.0,141087,139428,42684,0
-06059-01-05923,06059-01,06059,Irvine City (Central),0605923,puma,1.0,142279,140606,51332,0
-06059-01-05924,06059-01,06059,Irvine City (South) (part),0605924,puma_part,1.0,129208,127688,306718,2
-06059-01-05925,06059-01,06059,"Newport Beach, Aliso Viejo & Laguna Woods Cities (part)",0605925,puma_part,1.0,194843,192552,117657,3
+06059-01-05918,06059-01,06059,Costa Mesa & Fountain Valley Cities (part),0605918,puma_part,0.6925,125027,123557,88621,0
+06059-01-05921,06059-01,06059,"Lake Forest, Irvine (North) Cities & Silverado (part)",0605921,puma_part,0.501,76798,75895,42264,1
+06059-01-05925,06059-01,06059,"Newport Beach, Aliso Viejo & Laguna Woods Cities (part)",0605925,puma_part,1.0,191528,189275,191239,1
 06059-01-05926,06059-01,06059,Mission Viejo and Laguna Hills Cities,0605926,puma,1.0,117535,116153,41140,0
 06059-01-05927,06059-01,06059,Rancho Santa Margarita City & Ladera Ranch,0605927,puma,1.0,109926,108633,29891,0
 06059-01-05928,06059-01,06059,"San Clemente, Laguna Niguel & San Juan Capistrano Cities",0605928,puma,1.0,187346,185143,59068,0
-06059-02-05906,06059-02,06059,"Yorba Linda, La Habra & Brea Cities",0605906,puma,1.0,191861,189605,84395,0
+06059-02-05906,06059-02,06059,"Yorba Linda, La Habra & Brea Cities",0605906,puma,1.0,191861,189604,84395,0
 06059-02-05907,06059-02,06059,Fullerton & Placentia Cities,0605907,puma,1.0,197785,195459,91897,0
-06059-02-05908,06059-02,06059,"Buena Park, Cypress & Seal Beach Cities (part)",0605908,puma_part,0.7464,138260,136634,66785,0
-06059-02-05909,06059-02,06059,Anaheim City (West) (part),0605909,puma_part,1.0,154285,152470,75340,1
-06059-02-05919,06059-02,06059,Anaheim City (East) (part),0605919,puma_part,0.9583,187460,185255,128766,0
-06059-03-05908,06059-03,06059,"Buena Park, Cypress & Seal Beach Cities (part)",0605908,puma_part,0.2536,46973,46421,28770,0
+06059-02-05909,06059-02,06059,Anaheim City (West) (part),0605909,puma_part,0.9619,148665,146916,74927,1
+06059-02-05919,06059-02,06059,Anaheim City (East) (part),0605919,puma_part,1.0,212972,210467,157533,4
+06059-02-05920,06059-02,06059,Orange & Villa Park Cities (part),0605920,puma_part,0.9089,132796,131234,101768,0
+06059-03-05908,06059-03,06059,"Buena Park, Cypress & Seal Beach Cities (part)",0605908,puma_part,1.0,190853,188608,95968,1
 06059-03-05912,06059-03,06059,"Westminster, Stanton & Garden Grove (West) Cities",0605912,puma,1.0,170318,168315,56989,0
 06059-03-05913,06059-03,06059,Garden Grove City (East) (part),0605913,puma_part,0.923,153348,151544,42151,1
 06059-03-05914,06059-03,06059,Huntington Beach City,0605914,puma,1.0,196817,194502,70423,0
-06059-03-05918,06059-03,06059,Costa Mesa & Fountain Valley Cities (part),0605918,puma_part,0.9159,165368,163423,105830,0
-06059-04-05916,06059-04,06059,Santa Ana City (West) (part),0605916,puma_part,0.9639,153985,152174,64451,2
+06059-03-05918,06059-03,06059,Costa Mesa & Fountain Valley Cities (part),0605918,puma_part,0.3075,55523,54870,31207,0
+06059-04-05916,06059-04,06059,Santa Ana City (West) (part),0605916,puma_part,0.9639,145835,144120,41274,1
 06059-04-05917,06059-04,06059,Santa Ana City (East),0605917,puma,1.0,156226,154389,107726,0
-06059-04-05920,06059-04,06059,Orange & Villa Park Cities,0605920,puma,1.0,146112,144394,103450,0
-06059-04-05922,06059-04,06059,Irvine (Northwest) & Tustin Cities (part),0605922,puma_part,0.8352,105967,104721,62006,0
+06059-04-05921,06059-04,06059,"Lake Forest, Irvine (North) Cities & Silverado (part)",0605921,puma_part,0.3759,53038,52414,5533,0
+06059-04-05922,06059-04,06059,Irvine (Northwest) & Tustin Cities (part),0605922,puma_part,0.9065,128328,126819,145051,2
+06059-04-05923,06059-04,06059,Irvine City (Central),0605923,puma,1.0,142279,140606,51332,0
+06059-04-05924,06059-04,06059,Irvine City (South) (part),0605924,puma_part,0.9436,102185,100983,127072,0
 06065-01-06511,06065-01,06065,Riverside City (West),0606511,puma,1.0,170401,179331,90393,0
 06065-01-06514,06065-01,06065,Jurupa Valley & Eastvale Cities,0606514,puma,1.0,174806,183967,58440,0
 06065-01-06516,06065-01,06065,Lake Elsinore & Canyon Lake Cities (part),0606516,puma_part,0.8709,95793,100813,19778,1
@@ -231,27 +238,26 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 06073-01-07301,06073-01,06073,Oceanside City & Camp Pendleton,0607301,puma,1.0,196491,195515,47866,0
 06073-01-07302,06073-01,06073,"Fallbrook, Alpine & Valley Center (part)",0607302,puma_part,1.0,145928,145203,34858,4
 06073-01-07306,06073-01,06073,Escondido City (East),0607306,puma,1.0,144300,143583,35177,0
-06073-01-07307,06073-01,06073,"Lakeside, Winter Gardens & Ramona",0607307,puma,1.0,112315,111757,25439,0
 06073-01-07323,06073-01,06073,Vista City,0607323,puma,1.0,116522,115943,39405,0
 06073-01-07324,06073-01,06073,Carlsbad City (part),0607324,puma_part,0.9479,124447,123829,83397,0
 06073-01-07325,06073-01,06073,San Marcos & Escondido (West) Cities,0607325,puma,1.0,126224,125597,67027,0
-06073-02-07310,06073-02,06073,San Diego City (Southwest/Central Coastal) (part),0607310,puma_part,0.3858,63800,63483,46024,0
 06073-02-07316,06073-02,06073,San Diego City (Central/Centre City & Balboa Park) (part),0607316,puma_part,1.0,201054,200055,165271,8
 06073-02-07322,06073-02,06073,San Diego City (South/Otay Mesa & South Bay),0607322,puma,1.0,141103,140402,39483,0
 06073-02-07327,06073-02,06073,San Diego City (Southeast/Encanto & Skyline),0607327,puma,1.0,149834,149090,18016,0
 06073-02-07329,06073-02,06073,Sweetwater Region--Chula Vista City (East) (part),0607329,puma_part,0.9659,163119,162309,32448,0
 06073-02-07330,06073-02,06073,Chula Vista (West) & National City Cities,0607330,puma,1.0,180114,179219,66651,0
-06073-03-07313,06073-03,06073,El Cajon & Santee Cities,0607313,puma,1.0,189588,188646,67618,0
-06073-03-07314,06073-03,06073,San Diego (East Central/Navajo) & La Mesa Cities (part),0607314,puma_part,1.0,167255,166424,50536,1
-06073-03-07315,06073-03,06073,San Diego City (Central/Clairemont & Kearny Mesa),0607315,puma,1.0,166232,165406,219579,0
-06073-03-07317,06073-03,06073,San Diego City (Central/Mid-City),0607317,puma,1.0,164963,164144,35589,0
-06073-03-07328,06073-03,06073,"Lemon Grove City, La Presa & Spring Valley (part)",0607328,puma_part,0.8917,118041,117455,21743,0
-06073-04-07308,06073-04,06073,San Diego (Northeast/Rancho Bernardo) & Poway Cities,0607308,puma,1.0,128327,127690,74279,0
-06073-04-07310,06073-04,06073,San Diego City (Southwest/Central Coastal) (part),0607310,puma_part,0.4546,75179,74806,42315,0
-06073-04-07311,06073-04,06073,San Diego City (Northwest/Del Mar Mesa) (part),0607311,puma_part,1.0,127878,127243,126512,2
-06073-04-07312a,06073-04,06073,San Diego City (Central/Mira Mesa & University Heights) (part),0607312,puma_part,0.5547,68632,68291,100677,0
-06073-04-07312b,06073-04,06073,San Diego City (Central/Mira Mesa & University Heights) (part),0607312,puma_part,0.3804,47071,46837,12207,0
-06073-04-07326,06073-04,06073,San Diego (Northwest/San Dieguito) & Encinitas Cities (part),0607326,puma_part,1.0,180217,179322,77985,1
+06073-03-07308,06073-03,06073,San Diego (Northeast/Rancho Bernardo) & Poway Cities,0607308,puma,1.0,128327,127689,74279,0
+06073-03-07310,06073-03,06073,San Diego City (Southwest/Central Coastal) (part),0607310,puma_part,0.8404,138979,138289,88339,0
+06073-03-07311,06073-03,06073,San Diego City (Northwest/Del Mar Mesa) (part),0607311,puma_part,1.0,127878,127243,126512,2
+06073-03-07312,06073-03,06073,San Diego City (Central/Mira Mesa & University Heights),0607312,puma,1.0,123738,123123,113841,0
+06073-03-07314,06073-03,06073,San Diego (East Central/Navajo) & La Mesa Cities (part),0607314,puma_part,0.6026,95949,95472,21588,0
+06073-03-07326,06073-03,06073,San Diego (Northwest/San Dieguito) & Encinitas Cities (part),0607326,puma_part,1.0,180217,179322,77985,1
+06073-05-07307,06073-05,06073,"Lakeside, Winter Gardens & Ramona",0607307,puma,1.0,112315,111757,25439,0
+06073-05-07313,06073-05,06073,El Cajon & Santee Cities,0607313,puma,1.0,189588,188646,67618,0
+06073-05-07314,06073-05,06073,San Diego (East Central/Navajo) & La Mesa Cities (part),0607314,puma_part,0.3974,63271,62957,27991,0
+06073-05-07315,06073-05,06073,San Diego City (Central/Clairemont & Kearny Mesa),0607315,puma,1.0,166232,165406,219579,0
+06073-05-07317,06073-05,06073,San Diego City (Central/Mid-City),0607317,puma,1.0,164963,164143,35589,0
+06073-05-07328,06073-05,06073,"Lemon Grove City, La Presa & Spring Valley (part)",0607328,puma_part,0.8917,118041,117455,21743,0
 06085-01-08506,06085-01,06085,"Gilroy, Morgan Hill & San Jose (South) Cities",0608506,puma,1.0,128486,127035,45724,0
 06085-01-08507,06085-01,06085,"Cupertino, Saratoga Cities & Los Gatos Town",0608507,puma,1.0,143265,141647,94381,0
 06085-01-08508,06085-01,06085,San Jose (West Central) & Campbell Cities,0608508,puma,1.0,140927,139335,51708,0
@@ -270,6 +276,14 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 06085-02-08520,06085-02,06085,San Jose City (Southeast/Evergreen) (part),0608520,puma_part,0.5488,64340,63613,8362,0
 06085-02-08521,06085-02,06085,San Jose City (North Valley/East San Jose),0608521,puma,1.0,133325,131819,53007,0
 06085-02-08522,06085-02,06085,Mountain View & Los Altos Cities,0608522,puma,1.0,115763,114456,112687,0
+09110-01-20201,09110-01,09110,Hartford Town,0920201,puma,1.0,121054,123269,115631,0
+09110-01-20205,09110-01,09110,"Glastonbury, Wethersfield, Rocky Hill & Newington Towns",0920205,puma,1.0,113838,115921,63498,0
+09110-01-20206,09110-01,09110,"New Britain, Southington, Berlin & Plainville Towns",0920206,puma,1.0,155336,158179,67699,0
+09110-01-20207,09110-01,09110,Capitol West (part),0920207,puma_part,0.6837,109727,111735,67315,0
+09110-02-20202,09110-02,09110,Connecticut River North,0920202,puma,1.0,159641,162563,103193,0
+09110-02-20203,09110-02,09110,Capitol East (part),0920203,puma_part,1.0,124921,127207,33028,3
+09110-02-20204,09110-02,09110,"East Hartford, Manchester & Vernon Towns",0920204,puma,1.0,140973,143553,67647,0
+09110-02-20207,09110-02,09110,Capitol West (part),0920207,puma_part,0.3163,50758,51687,18384,0
 12011-01-01109,12011-01,12011,Hollywood (North) & Dania Beach Cities,1201109,puma,1.0,115621,119721,82672,0
 12011-01-01110,12011-01,12011,Davie Town & Cooper City,1201110,puma,1.0,116150,120268,46699,0
 12011-01-01111,12011-01,12011,Pembroke Pines (West) City,1201111,puma,1.0,117083,121234,41712,0
@@ -306,14 +320,11 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 12057-02-05708,12057-02,12057,Hillsborough County (Southwest),1205708,puma,1.0,110712,119385,22507,1
 12057-02-05709,12057-02,12057,Hillsborough County (Southeast),1205709,puma,1.0,102754,110803,16024,0
 12057-02-05711,12057-02,12057,"Progress Village, Gibsonton, Riverview",1205711,puma,1.0,117840,127071,24055,1
-12086-01-08616,12086-01,12086,"Coral Gables City, Pinecrest Village & Kendall (South) (part)",1208616,puma_part,0.4764,51078,52973,13881,0
-12086-01-08617,12086-01,12086,"South Miami City, Westchester & Coral Terrace (part)",1208617,puma_part,0.681,71078,73716,28966,0
-12086-01-08618,12086-01,12086,"Tamiami Trail Region (South), Tamiami",1208618,puma,1.0,108223,112239,25186,0
-12086-01-08619,12086-01,12086,Kendale Lakes (Southwest) & Kendall West (South),1208619,puma,1.0,104162,108027,11666,0
-12086-01-08620,12086-01,12086,"Kendall (North), Sunset & Westwood Lakes",1208620,puma,1.0,102738,106551,55422,0
+12086-01-08618,12086-01,12086,"Tamiami Trail Region (South), Tamiami (part)",1208618,puma_part,0.9081,98280,101927,15493,0
+12086-01-08619,12086-01,12086,Kendale Lakes (Southwest) & Kendall West (South) (part),1208619,puma_part,1.0,112582,116760,14311,2
 12086-01-08621,12086-01,12086,"The Hammocks (West), Richmond West (West) & Country Walk",1208621,puma,1.0,141616,146871,38899,0
 12086-01-08622,12086-01,12086,South Miami Heights,1208622,puma,1.0,130426,135266,28216,0
-12086-01-08623,12086-01,12086,Cutler Bay Town & Palmetto Bay Village,1208623,puma,1.0,109970,114051,18168,0
+12086-01-08623,12086-01,12086,Cutler Bay Town & Palmetto Bay Village (part),1208623,puma_part,0.4708,51769,53690,5736,0
 12086-01-08624,12086-01,12086,Homestead City (North) & Florida City (North),1208624,puma,1.0,104002,107862,19337,0
 12086-01-08625,12086-01,12086,Miami-Dade (South/Outside Urban Development Boundary) & Monroe Counties,1208625,puma,1.0,35993,37329,9282,1
 12086-02-08602,12086-02,12086,Miami Gardens City,1208602,puma,1.0,116815,121150,26223,0
@@ -332,8 +343,10 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 12086-04-08613,12086-04,12086,Miami City (Downtown),1208613,puma,1.0,120640,125117,147860,0
 12086-04-08614,12086-04,12086,Miami City (South) & Key Biscayne Village,1208614,puma,1.0,118866,123277,86317,0
 12086-04-08615,12086-04,12086,Miami City (West) (part),1208615,puma_part,1.0,107650,111645,26368,1
-12086-04-08616,12086-04,12086,"Coral Gables City, Pinecrest Village & Kendall (South) (part)",1208616,puma_part,0.5236,56138,58221,72093,0
-12086-04-08617,12086-04,12086,"South Miami City, Westchester & Coral Terrace (part)",1208617,puma_part,0.319,33301,34537,17165,0
+12086-04-08616,12086-04,12086,"Coral Gables City, Pinecrest Village & Kendall (South)",1208616,puma,1.0,107216,111195,85974,0
+12086-04-08617,12086-04,12086,"South Miami City, Westchester & Coral Terrace (part)",1208617,puma_part,1.0,114322,118564,55824,3
+12086-04-08620,12086-04,12086,"Kendall (North), Sunset & Westwood Lakes (part)",1208620,puma_part,0.918,94318,97818,52777,0
+12086-04-08623,12086-04,12086,Cutler Bay Town & Palmetto Bay Village (part),1208623,puma_part,0.5292,58201,60361,12432,0
 12095-01-09501,12095-01,12095,Orange County (Northwest) (part),1209501,puma_part,0.2785,42023,44906,4920,0
 12095-01-09504,12095-01,12095,"Orlando City (South Central), Conway & Pine Castle",1209504,puma,1.0,173812,185736,104405,0
 12095-01-09505,12095-01,12095,Orlando City (East Downtown) & Azalea Park,1209505,puma,1.0,127169,135893,174765,0
@@ -346,17 +359,26 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 12095-02-09502,12095-02,12095,"Winter Garden, Ocoee Cities & Oakland Town",1209502,puma,1.0,144272,154169,50451,0
 12095-02-09503,12095-02,12095,Disney-International Drive Region,1209503,puma,1.0,172523,184358,281548,0
 12095-02-09509,12095-02,12095,Orange County (Southeast) (part),1209509,puma_part,0.2664,40486,43263,21075,0
-12099-01-09904,12099-01,12099,Greenacres City (North) & Palm Springs Village (North),1209904,puma,1.0,141123,149023,56749,0
-12099-01-09905,12099-01,12099,"Lake Worth City, Lantana Town & Atlantis City",1209905,puma,1.0,140214,148063,34416,0
+12099-01-09905,12099-01,12099,"Lake Worth City, Lantana Town & Atlantis City (part)",1209905,puma_part,0.3268,45828,48393,9164,0
 12099-01-09906,12099-01,12099,Greater Boynton Beach City (North),1209906,puma,1.0,167950,177352,47647,0
-12099-01-09907,12099-01,12099,Greater Delray Beach City,1209907,puma,1.0,128355,135541,49493,0
+12099-01-09907,12099-01,12099,Greater Delray Beach City,1209907,puma,1.0,128355,135540,49493,0
 12099-01-09908,12099-01,12099,Boca Raton City & Highland Beach Town,1209908,puma,1.0,122789,129663,120531,0
 12099-01-09909,12099-01,12099,Palm Beach County (West of Boca Raton City),1209909,puma,1.0,113611,119971,27533,0
 12099-01-09910,12099-01,12099,Wellington Village & Agricultural Reserve,1209910,puma,1.0,123832,130764,38202,0
 12099-02-09901,12099-02,12099,Palm Beach County (Northeast),1209901,puma,1.0,114836,121265,59751,0
 12099-02-09902,12099-02,12099,Palm Beach Gardens & Riviera Beach Cities,1209902,puma,1.0,128440,135630,78923,0
 12099-02-09903,12099-02,12099,West Palm Beach City (Southeast) & Palm Beach Town,1209903,puma,1.0,164912,174144,125864,0
-12099-02-09911,12099-02,12099,Glades & Western Communities,1209911,puma,1.0,146129,154309,51315,0
+12099-02-09904,12099-02,12099,Greenacres City (North) & Palm Springs Village (North),1209904,puma,1.0,141123,149023,56749,0
+12099-02-09905,12099-02,12099,"Lake Worth City, Lantana Town & Atlantis City (part)",1209905,puma_part,0.6732,94386,99670,25252,0
+12099-02-09911,12099-02,12099,Glades & Western Communities,1209911,puma,1.0,146129,154310,51315,0
+12103-01-10305,12103-01,12103,Greater Seminole City (part),1210305,puma_part,0.8309,91753,90744,26828,0
+12103-01-10306,12103-01,12103,Greater Pinellas Park City (part),1210306,puma_part,1.0,120321,118998,112678,1
+12103-01-10307,12103-01,12103,St. Petersburg City (East),1210307,puma,1.0,161306,159533,81641,0
+12103-01-10308,12103-01,12103,St. Petersburg City (West),1210308,puma,1.0,112834,111594,35231,0
+12103-02-10301,12103-02,12103,Pinellas County (North),1210301,puma,1.0,124236,122870,35661,0
+12103-02-10302,12103-02,12103,Pinellas County (North Central),1210302,puma,1.0,111090,109869,52030,0
+12103-02-10303,12103-02,12103,Clearwater City (South & Central),1210303,puma,1.0,112563,111325,64923,0
+12103-02-10304,12103-02,12103,Greater Largo City (part),1210304,puma_part,0.9671,125004,123630,79448,6
 13121-01-01404,13121-01,13121,Atlanta Regional Commission--Fulton County (Central)--Atlanta City (North) (part),1301404,puma_part,0.5283,84953,87508,135091,0
 13121-01-01405,13121-01,13121,Atlanta Regional Commission (Central)--Fulton County (East)--Atlanta City (South),1301405,puma,1.0,144940,149299,198825,0
 13121-01-01406,13121-01,13121,Atlanta Regional Commission--Fulton County (Central)--Atlanta City (Southwest),1301406,puma,1.0,152642,157233,55102,0
@@ -373,49 +395,70 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 13135-01-01605,13135-01,13135,Atlanta Regional Commission (Northeast)--Gwinnett County (Central),1301605,puma,1.0,135524,144167,50104,0
 13135-01-01606,13135-01,13135,Atlanta Regional Commission (Northeast)--Gwinnett County (West Central)--Lilburn City,1301606,puma,1.0,132124,140550,38607,0
 13135-01-01607,13135-01,13135,Atlanta Regional Commission (Northeast)--Gwinnett County (South)--Snellville City,1301607,puma,1.0,136512,145218,33885,0
-17031-01-03113,17031-01,17031,Lyons & Stickney Townships (part),1703113,puma_part,0.3806,59602,58688,35219,0
-17031-01-03114,17031-01,17031,Worth & Calumet Townships (part),1703114,puma_part,0.9747,167209,164644,69001,0
+15003-01-00302,15003-01,15003,Koolaupoko,1500302,puma,1.0,121275,117958,23545,0
+15003-01-00303,15003-01,15003,East Honolulu to Kapahulu,1500303,puma,1.0,110577,107552,22565,0
+15003-01-00304,15003-01,15003,Tantalus to Waikiki,1500304,puma,1.0,127223,123743,107216,0
+15003-01-00305,15003-01,15003,Nuuanu to Kalihi,1500305,puma,1.0,118490,115249,153142,0
+15003-01-00306,15003-01,15003,Moanalua to Pearl City (part),1500306,puma_part,0.3325,49005,47664,39148,1
+15003-02-00301,15003-02,15003,Rural Oahu,1500301,puma,1.0,104755,101890,15006,0
+15003-02-00306,15003-02,15003,Moanalua to Pearl City (part),1500306,puma_part,0.6675,98366,95675,28535,0
+15003-02-00307,15003-02,15003,Central Oahu,1500307,puma,1.0,153278,149085,26376,0
+15003-02-00308,15003-02,15003,Ewa,1500308,puma,1.0,133539,129886,33418,0
+17031-01-03113,17031-01,17031,Lyons & Stickney Townships (part),1703113,puma_part,0.693,108537,106872,73566,0
+17031-01-03114,17031-01,17031,Worth & Calumet Townships (part),1703114,puma_part,0.8584,165892,163348,64736,4
 17031-01-03115,17031-01,17031,"Palos, Lemont & Orland (North & West) Townships",1703115,puma,1.0,135705,133624,50770,0
 17031-01-03116,17031-01,17031,Bremen & Orland (East) Townships,1703116,puma,1.0,149150,146862,40981,0
-17031-01-03117,17031-01,17031,Thornton Township,1703117,puma,1.0,157865,155444,52349,0
+17031-01-03117,17031-01,17031,Thornton Township (part),1703117,puma_part,1.0,165127,162594,53427,2
 17031-01-03118,17031-01,17031,Bloom & Rich Townships,1703118,puma,1.0,162177,159690,45730,0
-17031-01-03166,17031-01,17031,"Chicago City (Southwest)--Auburn Gresham, Washington Heights, Morgan Park & Beverly",1703166,puma,1.0,129775,127785,16236,0
-17031-01-03167,17031-01,17031,"Chicago City (South)--Roseland, Chatham, West Pullman, Calumet Heights & Avalon Park (part)",1703167,puma_part,0.5818,79002,77790,7842,0
-17031-01-03168,17031-01,17031,"Chicago City (South)--South Shore, South Chicago, East Side & South Deering (part)",1703168,puma_part,0.3672,45856,45153,13085,0
 17031-02-03101,17031-02,17031,Palatine & Barrington Townships,1703101,puma,1.0,128980,127002,56849,0
 17031-02-03102,17031-02,17031,Hanover & Schaumburg (Northwest) Townships,1703102,puma,1.0,122349,120472,30231,0
 17031-02-03103,17031-02,17031,Schaumburg Township (South & East),1703103,puma,1.0,112552,110826,90842,0
 17031-02-03104,17031-02,17031,Elk Grove & Wheeling (Southwest) Townships,1703104,puma,1.0,125661,123734,105255,0
 17031-02-03105,17031-02,17031,Wheeling Township (North & East),1703105,puma,1.0,129271,127288,58013,0
-17031-02-03106,17031-02,17031,Northfield & New Trier Townships,1703106,puma,1.0,148936,146652,95991,0
-17031-02-03108,17031-02,17031,Maine & Niles (West) Townships,1703108,puma,1.0,172153,169512,101442,0
-17031-02-03151,17031-02,17031,"Chicago City (Northwest)--Albany Park, Norwood Park, Forest Glen, North Park & O'Hare (part)",1703151,puma_part,0.3341,57024,56149,15843,2
-17031-03-03109,17031-03,17031,Leyden & Norwood Park Townships (part),1703109,puma_part,0.7358,102501,100929,126311,4
-17031-03-03110,17031-03,17031,Proviso Township (North & West),1703110,puma,1.0,113130,111395,70588,0
-17031-03-03111,17031-03,17031,"Oak Park, Riverside, River Forest & Proviso (Southeast) Townships",1703111,puma,1.0,121043,119186,45148,0
+17031-02-03108,17031-02,17031,Maine & Niles (West) Townships (part),1703108,puma_part,0.962,165610,163070,99216,0
+17031-02-03109,17031-02,17031,Leyden & Norwood Park Townships (part),1703109,puma_part,0.7687,109180,107505,129157,10
+17031-03-03110,17031-03,17031,Proviso Township (North & West) (part),1703110,puma_part,0.9762,114002,112254,77410,1
+17031-03-03111,17031-03,17031,"Oak Park, Riverside, River Forest & Proviso (Southeast) Townships",1703111,puma,1.0,121043,119187,45148,0
 17031-03-03112,17031-03,17031,Cicero & Berwyn Townships,1703112,puma,1.0,142518,140332,29692,0
-17031-03-03113,17031-03,17031,Lyons & Stickney Townships (part),1703113,puma_part,0.6194,97017,95529,57638,0
-17031-03-03156,17031-03,17031,"Chicago City (Northwest)--Portage Park, Dunning & Jefferson Park (part)",1703156,puma_part,1.0,156957,154550,30939,5
-17031-03-03157,17031-03,17031,"Chicago City (West)--Belmont Cragin, Humboldt Park, Hermosa & Montclare (part)",1703157,puma_part,0.5418,92517,91098,12229,0
+17031-03-03113,17031-03,17031,Lyons & Stickney Townships (part),1703113,puma_part,0.307,48082,47345,19291,0
+17031-03-03157,17031-03,17031,"Chicago City (West)--Belmont Cragin, Humboldt Park, Hermosa & Montclare (part)",1703157,puma_part,0.3173,54173,53342,8774,0
 17031-03-03158,17031-03,17031,"Chicago City (West)--Austin, North Lawndale & East/West Garfield Park",1703158,puma,1.0,168776,166187,27063,0
+17031-03-03163,17031-03,17031,"Chicago City (Southwest)--South Lawndale, Brighton Park & Gage Park",1703163,puma,1.0,155992,153599,25305,0
+17031-03-03164,17031-03,17031,"Chicago City (Southwest)--Ashburn, Garfield Ridge, West Lawn, Clearing & West Elsdon (part)",1703164,puma_part,0.553,92502,91083,30151,0
 17031-04-03161,17031-04,17031,"Chicago City (South)--Hyde Park, Grand Boulevard, Woodlawn, Douglas & Kenwood",1703161,puma,1.0,142116,139936,48513,0
 17031-04-03162,17031-04,17031,"Chicago City (Southwest)--New City, Lower West Side, Bridgeport & McKinley Park",1703162,puma,1.0,140979,138817,55503,0
-17031-04-03163,17031-04,17031,"Chicago City (Southwest)--South Lawndale, Brighton Park & Gage Park",1703163,puma,1.0,155992,153599,25305,0
-17031-04-03164,17031-04,17031,"Chicago City (Southwest)--Ashburn, Garfield Ridge, West Lawn, Clearing & West Elsdon (part)",1703164,puma_part,1.0,171605,168973,43583,1
+17031-04-03164,17031-04,17031,"Chicago City (Southwest)--Ashburn, Garfield Ridge, West Lawn, Clearing & West Elsdon (part)",1703164,puma_part,0.447,99048,97529,21307,5
 17031-04-03165,17031-04,17031,"Chicago City (South)--Chicago Lawn, Greater Grand Crossing & West Englewood/Englewood",1703165,puma,1.0,141418,139249,12604,0
-17031-04-03167,17031-04,17031,"Chicago City (South)--Roseland, Chatham, West Pullman, Calumet Heights & Avalon Park (part)",1703167,puma_part,0.4182,56783,55912,10884,0
-17031-04-03168,17031-04,17031,"Chicago City (South)--South Shore, South Chicago, East Side & South Deering (part)",1703168,puma_part,0.6328,79020,77808,6253,0
-17031-05-03152,17031-05,17031,"Chicago City (North)--West Ridge, Lincoln Square & North Center (part)",1703152,puma_part,0.2299,35114,34575,10673,0
-17031-05-03153,17031-05,17031,"Chicago City (North)--Uptown, Edgewater & Rogers Park (part)",1703153,puma_part,0.3381,57182,56305,12741,0
+17031-04-03166,17031-04,17031,"Chicago City (Southwest)--Auburn Gresham, Washington Heights, Morgan Park & Beverly (part)",1703166,puma_part,0.8565,111147,109442,12626,0
+17031-04-03167,17031-04,17031,"Chicago City (South)--Roseland, Chatham, West Pullman, Calumet Heights & Avalon Park (part)",1703167,puma_part,0.9465,128523,126552,17648,0
+17031-04-03168,17031-04,17031,"Chicago City (South)--South Shore, South Chicago, East Side & South Deering",1703168,puma,1.0,124876,122961,19338,0
+17031-05-03152,17031-05,17031,"Chicago City (North)--West Ridge, Lincoln Square & North Center (part)",1703152,puma_part,0.495,75608,74448,21620,0
+17031-05-03153,17031-05,17031,"Chicago City (North)--Uptown, Edgewater & Rogers Park (part)",1703153,puma_part,0.671,113478,111737,21603,0
 17031-05-03154,17031-05,17031,Chicago City (North)--Lake View & Lincoln Park,1703154,puma,1.0,173542,170880,55345,0
 17031-05-03155,17031-05,17031,"Chicago City (Northwest)--Logan Square, Irving Park & Avondale",1703155,puma,1.0,160976,158507,43624,0
-17031-05-03157,17031-05,17031,"Chicago City (West)--Belmont Cragin, Humboldt Park, Hermosa & Montclare (part)",1703157,puma_part,0.4582,78235,77035,12850,0
 17031-05-03159,17031-05,17031,Chicago City (West)--West Town & Near West Side,1703159,puma,1.0,154540,152170,211258,0
 17031-05-03160,17031-05,17031,"Chicago City (Central)--Near North Side, Loop & Near South Side",1703160,puma,1.0,176574,173866,689757,0
+17031-06-03106,17031-06,17031,Northfield & New Trier Townships (part),1703106,puma_part,1.0,155479,153094,98217,2
 17031-06-03107,17031-06,17031,Evanston & Niles (East) Townships,1703107,puma,1.0,158648,156215,106524,0
-17031-06-03151,17031-06,17031,"Chicago City (Northwest)--Albany Park, Norwood Park, Forest Glen, North Park & O'Hare (part)",1703151,puma_part,0.5771,85551,84239,19547,0
-17031-06-03152,17031-06,17031,"Chicago City (North)--West Ridge, Lincoln Square & North Center (part)",1703152,puma_part,0.7701,117616,115812,23329,0
-17031-06-03153,17031-06,17031,"Chicago City (North)--Uptown, Edgewater & Rogers Park (part)",1703153,puma_part,0.6619,111924,110207,21535,0
+17031-06-03151,17031-06,17031,"Chicago City (Northwest)--Albany Park, Norwood Park, Forest Glen, North Park & O'Hare (part)",1703151,puma_part,0.9112,135077,133005,32921,0
+17031-06-03152,17031-06,17031,"Chicago City (North)--West Ridge, Lincoln Square & North Center (part)",1703152,puma_part,0.505,77122,75939,12382,0
+17031-06-03153,17031-06,17031,"Chicago City (North)--Uptown, Edgewater & Rogers Park (part)",1703153,puma_part,0.329,55628,54775,12673,0
+17031-06-03156,17031-06,17031,"Chicago City (Northwest)--Portage Park, Dunning & Jefferson Park (part)",1703156,puma_part,1.0,156904,154497,23740,5
+17031-06-03157,17031-06,17031,"Chicago City (West)--Belmont Cragin, Humboldt Park, Hermosa & Montclare (part)",1703157,puma_part,0.6827,116579,114791,16305,0
+17043-01-04301,17043-01,17043,"Wayne, Bloomingdale (South) & Winfield (North) Townships",1704301,puma,1.0,174577,174843,82282,0
+17043-01-04302,17043-01,17043,Addison & Bloomingdale (North) Townships,1704302,puma,1.0,116589,116767,113978,0
+17043-01-04303,17043-01,17043,York Township,1704303,puma,1.0,128425,128621,159224,0
+17043-01-04304,17043-01,17043,Milton Township,1704304,puma,1.0,120181,120364,54141,0
+17043-01-04305,17043-01,17043,Naperville & Winfield (South) Townships,1704305,puma,1.0,124144,124333,97392,0
+17043-01-04306,17043-01,17043,Lisle Township,1704306,puma,1.0,119040,119221,62690,0
+17043-01-04307,17043-01,17043,Downers Grove Township,1704307,puma,1.0,149921,150149,75602,0
+18097-01-02401,18097-01,18097,Pike & Washington (Northwest) Townships & Indianapolis City (Northwest),1802401,puma,1.0,109582,111263,96825,0
+18097-01-02402,18097-01,18097,Washington Township (South & East) & Indianapolis City (North),1802402,puma,1.0,112126,113846,81328,0
+18097-01-02403,18097-01,18097,"Lawrence Township, Indianapolis (Northeast) & Lawrence Cities",1802403,puma,1.0,122321,124198,65648,0
+18097-01-02406,18097-01,18097,Warren & Franklin Townships & Indianapolis City (East & Southeast),1802406,puma,1.0,172462,175108,77850,0
+18097-02-02404,18097-02,18097,Wayne & Decatur (Northwest) Townships & Indianapolis City (West),1802404,puma,1.0,153342,155695,83915,0
+18097-02-02405,18097-02,18097,Center Township & Indianapolis City (Central),1802405,puma,1.0,153549,155905,223927,0
+18097-02-02407,18097-02,18097,Perry & Decatur (South & East) Townships & Indianapolis City (South),1802407,puma,1.0,153821,156181,45501,0
 24031-01-01001,24031-01,24031,"Olney, Damascus & Darnestown (part)",2401001,puma_part,1.0,115482,116844,26002,1
 24031-01-01002,24031-01,24031,"Germantown, Clarksburg & Montgomery Village",2401002,puma,1.0,169702,171703,39209,0
 24031-01-01003,24031-01,24031,Gaithersburg & Rockville,2401003,puma,1.0,167322,169295,158370,0
@@ -424,6 +467,15 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 24031-02-01006,24031-02,24031,"Fairland, Colesville & White Oak",2401006,puma,1.0,120896,122321,30940,0
 24031-02-01007,24031-02,24031,Takoma Park City & Silver Spring,2401007,puma,1.0,118754,120154,43781,0
 24031-02-01008,24031-02,24031,South Bethesda & Chevy Chase (part),2401008,puma_part,1.0,107273,108538,92166,1
+24033-01-01104,24033-01,24033,"Seat Pleasant City, Capitol Heights Town & Landover (part)",2401104,puma_part,0.653,78807,79065,25666,0
+24033-01-01105,24033-01,24033,"Bowie City, Kettering & Largo (part)",2401105,puma_part,0.7962,154900,155408,61744,0
+24033-01-01106,24033-01,24033,"Clinton, Fort Washington & Rosaryville",2401106,puma,1.0,131061,131491,25468,0
+24033-01-01107,24033-01,24033,"Oxon Hill, Hillcrest Heights & Temple Hills",2401107,puma,1.0,122413,122815,30860,0
+24033-02-01101,24033-02,24033,College Park City & Langley Park,2401101,puma,1.0,129416,129841,42376,0
+24033-02-01102,24033-02,24033,"Laurel, Greenbelt & Beltsville",2401102,puma,1.0,149620,150111,73393,0
+24033-02-01103,24033-02,24033,New Carrollton & Hyattsville (part),2401103,puma_part,1.0,125845,126258,50883,2
+24033-02-01104,24033-02,24033,"Seat Pleasant City, Capitol Heights Town & Landover (part)",2401104,puma_part,0.294,35489,35605,4045,0
+24033-02-01105,24033-02,24033,"Bowie City, Kettering & Largo (part)",2401105,puma_part,0.2038,39650,39780,12326,0
 25017-01-00608,25017-01,25017,"Woburn, Melrose & Reading (part)",2500608,puma_part,1.0,185069,189376,101193,5
 25017-01-00609,25017-01,25017,Malden & Medford,2500609,puma,1.0,125922,128852,38694,0
 25017-01-00610,25017-01,25017,Somerville & Everett,2500610,puma,1.0,130120,133148,48217,0
@@ -469,6 +521,14 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 27053-02-01609,27053-02,27053,Minneapolis City (East),2701609,puma,1.0,111865,112146,226903,0
 27053-02-01610,27053-02,27053,Minneapolis City (Southwest),2701610,puma,1.0,106733,107001,21054,0
 27053-02-01611,27053-02,27053,Minneapolis City (Central),2701611,puma,1.0,104172,104434,50422,0
+29189-01-01901,29189-01,29189,St. Louis County (Northeast),2901901,puma,1.0,123853,122223,25520,0
+29189-01-01902,29189-01,29189,St. Louis County (Northwest) (part),2901902,puma_part,1.0,133709,131949,156797,3
+29189-01-01903,29189-01,29189,St. Louis County (Inner Ring North),2901903,puma,1.0,164138,161978,104153,0
+29189-01-01905,29189-01,29189,St. Louis County (Inner Ring Central) (part),2901905,puma_part,0.8939,92360,91145,113586,0
+29189-02-01904,29189-02,29189,St. Louis County (West) (part),2901904,puma_part,0.8458,91314,90112,98777,0
+29189-02-01906,29189-02,29189,St. Louis County (Southwest),2901906,puma,1.0,119912,118334,34020,0
+29189-02-01907,29189-02,29189,St. Louis County (Inner Ring South) (part),2901907,puma_part,1.0,172338,170070,67982,2
+29189-02-01908,29189-02,29189,St. Louis County (Southeast),2901908,puma,1.0,106501,105100,61841,0
 32003-01-00401,32003-01,32003,Las Vegas (Northeast) & North Las Vegas (Outer) Cities,3200401,puma,0.9904,140044,148808,26886,0
 32003-01-00402,32003-01,32003,"Mesquite City, Sunrise Manor (North), Moapa Valley & Nellis AFB (part)",3200402,puma_part,0.4013,65022,69091,34404,0
 32003-01-00403,32003-01,32003,Greater North Las Vegas City,3200403,puma,1.0,215691,229188,83856,0
@@ -487,6 +547,14 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 32003-03-00411,32003-03,32003,Spring Valley (West),3200411,puma,1.0,135714,144207,36345,0
 32003-03-00412,32003-03,32003,Paradise (South) & Enterprise (part),3200412,puma_part,0.966,160305,170336,93620,1
 32003-03-00415,32003-03,32003,Henderson (East) & Boulder Cities (part),3200415,puma_part,0.204,39439,41907,4403,0
+34003-01-00301,34003-01,34003,Hackensack & Teaneck,3400301,puma,1.0,109278,111713,67220,0
+34003-01-00302,34003-01,34003,"Rutherford, North Arlington & Hasbrouck Heights",3400302,puma,1.0,125216,128006,83500,0
+34003-01-00303,34003-01,34003,"Fort Lee, Cliffside Park & Palisades Park",3400303,puma,1.0,136342,139380,36151,0
+34003-01-00304,34003-01,34003,"Fair Lawn, Garfield & Lodi",3400304,puma,1.0,129504,132389,47021,0
+34003-02-00305,34003-02,34003,"Tenafly, Park Ridge, Englewood City & Cresskill",3400305,puma,1.0,126560,129380,68542,0
+34003-02-00306,34003-02,34003,"Ramsey, Oakland & Franklin Lakes",3400306,puma,1.0,104617,106948,53632,0
+34003-02-00307,34003-02,34003,"Bergenfield, Paramus, Dumont & New Milford",3400307,puma,1.0,117748,120371,71036,0
+34003-02-00308,34003-02,34003,"Ridgewood Village, Glen Rock & Westwood",3400308,puma,1.0,106467,108839,38675,0
 36005-01-04209,36005-01,36005,Soundview & Parkchester (CD 9),3604209,puma,1.0,186667,178260,30021,0
 36005-01-04210,36005-01,36005,Co-op City & Throgs Neck (CD 10),3604210,puma,1.0,132351,126390,31446,2
 36005-01-04211,36005-01,36005,Pelham Parkway & Morris Park (CD 11),3604211,puma,1.0,121824,116338,42064,0
@@ -497,6 +565,13 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 36005-02-04205,36005-02,36005,Morris Heights & Mount Hope (CD 5),3604205,puma,1.0,135880,129761,18870,0
 36005-02-04207,36005-02,36005,"Fordham, Bedford Park, & Norwood (CD 7)",3604207,puma,1.0,141945,135553,35951,0
 36005-02-04208,36005-02,36005,"Riverdale, Kingsbridge, & Marble Hill (CD 8)",3604208,puma,1.0,101619,97043,26291,0
+36029-01-01201,36029-01,36029,Erie County (Northwest),3601201,puma,1.0,109154,108297,44245,0
+36029-01-01202,36029-01,36029,Erie County (North Central),3601202,puma,1.0,129595,128577,99939,0
+36029-01-01203,36029-01,36029,Erie County (Northeast),3601203,puma,1.0,113381,112490,58607,0
+36029-01-01204,36029-01,36029,Erie County (Central) (part),3601204,puma_part,0.8716,135377,134314,67128,0
+36029-02-01205,36029-02,36029,Buffalo City (East),3601205,puma,1.0,157444,156207,100898,0
+36029-02-01206,36029-02,36029,Buffalo City (West),3601206,puma,1.0,120905,119955,48073,0
+36029-02-01207,36029-02,36029,Erie County (South) (part),3601207,puma_part,1.0,188380,186900,67866,6
 36047-01-04301,36047-01,36047,Williamsburg & Greenpoint (CD 1),3604301,puma,1.0,204125,197999,119382,0
 36047-01-04302,36047-01,36047,Downtown Brooklyn & Fort Greene (CD 2),3604302,puma,1.0,127650,123819,185521,0
 36047-01-04303,36047-01,36047,Bedford-Stuyvesant (CD 3),3604303,puma,1.0,173842,168625,34412,0
@@ -691,73 +766,89 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 48121-02-02001,48121-02,48121,Carrollton (North) & Dallas (North) Cities,4802001,puma,1.0,132680,156528,36827,0
 48121-02-02004,48121-02,48121,"Frisco (West), The Colony & Little Elm Cities (part)",4802004,puma_part,1.0,199972,235916,37379,3
 48121-02-02006,48121-02,48121,Denton City (Outer) (part),4802006,puma_part,0.3932,74784,88226,12637,0
-48201-01-04602,48201-01,48201,Houston City (East Central)--East of I-45 & Inside Loop I-610 (part),4804602,puma_part,0.6624,85482,91153,49551,3
-48201-01-04605,48201-01,48201,Pasadena City (North & Central)-Inside Beltway TX-8,4804605,puma,1.0,116402,124125,51696,0
-48201-01-04606,48201-01,48201,"Houston (East), Galena Park, Jacinto Cities & Cloverleaf",4804606,puma,1.0,112087,119523,32445,0
-48201-01-04607,48201-01,48201,Houston City (Northeast)--Between Loop I-610 & Beltway TX-8 (part),4804607,puma_part,0.3128,40546,43236,8902,0
-48201-01-04618,48201-01,48201,Houston City (Southeast)--West of Pasadena City & Outside Loop I-610 (part),4804618,puma_part,0.5458,65579,69930,28812,0
-48201-01-04619,48201-01,48201,Houston (Southeast) & South Houston Cities--Inside Beltway TX-8 (part),4804619,puma_part,0.843,89436,95370,29393,0
+48157-01-04901,48157-01,48157,Missouri City,4804901,puma,1.0,119965,142187,20566,0
+48157-01-04902,48157-01,48157,Sugar Land & Stafford Cities,4804902,puma,1.0,130960,155219,117416,0
+48157-01-04903,48157-01,48157,"Rosenberg City, Pecan Grove & New Territory",4804903,puma,1.0,122983,145764,35997,0
+48157-01-04904,48157-01,48157,"Mission Bend (Southwest), Cinco Ranch & Four Corners",4804904,puma,1.0,175880,208460,23836,0
+48157-01-04906,48157-01,48157,Fort Bend County (Northwest),4804906,puma,1.0,155550,184364,42172,0
+48157-01-04907,48157-01,48157,Fort Bend County (South),4804907,puma,1.0,117441,139196,18070,0
+48201-01-04602,48201-01,48201,Houston City (East Central)--East of I-45 & Inside Loop I-610 (part),4804602,puma_part,0.4432,50163,53491,25127,0
+48201-01-04605,48201-01,48201,Pasadena City (North & Central)-Inside Beltway TX-8,4804605,puma,1.0,116402,124124,51696,0
+48201-01-04606,48201-01,48201,"Houston (East), Galena Park, Jacinto Cities & Cloverleaf (part)",4804606,puma_part,0.3212,36007,38396,16396,0
+48201-01-04618,48201-01,48201,Houston City (Southeast)--West of Pasadena City & Outside Loop I-610 (part),4804618,puma_part,0.6271,75346,80345,29892,0
+48201-01-04619,48201-01,48201,Houston (Southeast) & South Houston Cities--Inside Beltway TX-8,4804619,puma,1.0,106098,113137,37541,0
 48201-01-04620,48201-01,48201,Houston (Southeast) & Webster Cities,4804620,puma,1.0,115337,122989,42319,0
 48201-01-04621,48201-01,48201,"Houston (Southeast), Pasadena (Southeast), La Porte (South) & Seabrook (East) Cities",4804621,puma,1.0,113742,121288,71078,0
-48201-01-04622,48201-01,48201,"Deer Park, La Porte (North) Cities & Channelview (part)",4804622,puma_part,1.0,136215,145252,97842,3
-48201-01-04623,48201-01,48201,Baytown City,4804623,puma,1.0,125250,133560,42252,0
-48201-02-04611,48201-02,48201,Houston City (Northwest)--Between Loop I-610 & Beltway TX-8 (part),4804611,puma_part,0.8058,87950,93785,98058,0
+48201-01-04622,48201-01,48201,"Deer Park, La Porte (North) Cities & Channelview (part)",4804622,puma_part,0.5502,65868,70238,75230,0
+48201-01-04623,48201-01,48201,Baytown City,4804623,puma,1.0,125250,133559,42252,0
+48201-02-04611,48201-02,48201,Houston City (Northwest)--Between Loop I-610 & Beltway TX-8 (part),4804611,puma_part,1.0,120356,128341,134758,3
+48201-02-04612,48201-02,48201,Houston (West) & Spring Valley Village Cities--Between Loop I-610 & Beltway TX-8,4804612,puma,1.0,107527,114661,97662,0
+48201-02-04613,48201-02,48201,Houston (West) & Hunters Creek Village Cities--Between Loop I-610 & Beltway TX-8 (part),4804613,puma_part,0.2682,32338,34483,33281,0
 48201-02-04628,48201-02,48201,Jersey Village City-Between Beltway TX-8 & FM-1960 (part),4804628,puma_part,0.5999,68272,72801,53158,0
-48201-02-04631,48201-02,48201,North of US-290 & North of FM-1960 (part),4804631,puma_part,0.6621,87118,92898,25556,0
+48201-02-04631,48201-02,48201,North of US-290 & North of FM-1960 (part),4804631,puma_part,0.7442,97929,104426,27919,0
 48201-02-04633,48201-02,48201,South of US-290 & West of TX-6,4804633,puma,1.0,111541,118941,17055,0
-48201-02-04634,48201-02,48201,Houston City (West)-North of US-90 & West of TX-6,4804634,puma,1.0,123401,131588,27877,0
-48201-02-04635,48201-02,48201,Houston City (West)--South of I-10 & West of TX-6 (part),4804635,puma_part,0.7317,88031,93871,40982,0
-48201-02-04636,48201-02,48201,Houston City (West)--East of TX-6 & West of Beltway TX-8 (part),4804636,puma_part,0.883,106621,113695,106762,0
-48201-02-04639,48201-02,48201,Harris County (Far Northwest),4804639,puma,1.0,107261,114377,23305,0
-48201-02-04640,48201-02,48201,Katy City (Northeast),4804640,puma,1.0,111496,118893,32952,0
-48201-03-04601,48201-03,48201,Houston City (North Central)--North of I-10 & Inside Loop I-610 (part),4804601,puma_part,0.3789,45752,48787,11763,0
-48201-03-04607,48201-03,48201,Houston City (Northeast)--Between Loop I-610 & Beltway TX-8 (part),4804607,puma_part,0.6872,89093,95004,12210,0
+48201-02-04634,48201-02,48201,Houston City (West)-North of US-90 & West of TX-6 (part),4804634,puma_part,0.3337,41180,43912,3114,0
+48201-02-04636,48201-02,48201,Houston City (West)--East of TX-6 & West of Beltway TX-8 (part),4804636,puma_part,0.3533,42667,45498,30830,0
+48201-02-04639,48201-02,48201,Harris County (Far Northwest) (part),4804639,puma_part,1.0,122721,130863,27561,2
+48201-03-04602,48201-03,48201,Houston City (East Central)--East of I-45 & Inside Loop I-610 (part),4804602,puma_part,0.1422,30335,32348,25238,4
+48201-03-04606,48201-03,48201,"Houston (East), Galena Park, Jacinto Cities & Cloverleaf (part)",4804606,puma_part,0.6788,76080,81127,16049,0
+48201-03-04607,48201-03,48201,Houston City (Northeast)--Between Loop I-610 & Beltway TX-8,4804607,puma,1.0,129639,138240,21112,0
 48201-03-04608,48201-03,48201,Houston City (North) & Aldine--Between Loop I-610 & Beltway TX-8,4804608,puma,1.0,103320,110175,61165,0
-48201-03-04609,48201-03,48201,Houston City (North)--South of Aldine & Inside Beltway TX-8,4804609,puma,1.0,129596,138194,40470,0
-48201-03-04610,48201-03,48201,Houston City (North)--West of Aldine & Inside Beltway TX-8 (part),4804610,puma_part,0.8816,100639,107316,21250,0
-48201-03-04624,48201-03,48201,Houston City (Far Northeast) (part),4804624,puma_part,0.876,116581,124315,17056,0
+48201-03-04609,48201-03,48201,Houston City (North)--South of Aldine & Inside Beltway TX-8 (part),4804609,puma_part,0.7372,113585,121121,29700,4
+48201-03-04622,48201-03,48201,"Deer Park, La Porte (North) Cities & Channelview (part)",4804622,puma_part,0.4498,53847,57419,18453,0
+48201-03-04624,48201-03,48201,Houston City (Far Northeast),4804624,puma,1.0,133081,141910,21215,0
 48201-03-04625,48201-03,48201,"Houston (North), Humble Cities & Atascocita",4804625,puma,1.0,145350,154993,98503,0
-48201-04-04601,48201-04,48201,Houston City (North Central)--North of I-10 & Inside Loop I-610 (part),4804601,puma_part,0.5341,64498,68777,56414,0
-48201-04-04602,48201-04,48201,Houston City (East Central)--East of I-45 & Inside Loop I-610 (part),4804602,puma_part,0.3376,38208,40743,175788,0
+48201-04-04601,48201-04,48201,Houston City (North Central)--North of I-10 & Inside Loop I-610 (part),4804601,puma_part,0.8575,129365,137948,64795,7
+48201-04-04602,48201-04,48201,Houston City (East Central)--East of I-45 & Inside Loop I-610 (part),4804602,puma_part,0.4146,46924,50037,178465,0
 48201-04-04603,48201-04,48201,"Houston City (South Central)--South of US-59, West of I-45 & Inside Loop I-610",4804603,puma,1.0,133134,141967,197279,0
-48201-04-04604,48201-04,48201,Houston City (West Central)--South of I-10 & Inside Loop I-610 (part),4804604,puma_part,0.9862,153950,164164,189310,1
-48201-04-04616,48201-04,48201,Houston City (Southwest)--Between Loop I-610 & Beltway TX-8 (part),4804616,puma_part,1.0,133649,142516,28202,6
-48201-04-04617,48201-04,48201,Houston City (South)--Between Loop I-610 & Beltway TX-8 (part),4804617,puma_part,1.0,127269,135712,42695,5
-48201-04-04618,48201-04,48201,Houston City (Southeast)--West of Pasadena City & Outside Loop I-610 (part),4804618,puma_part,0.4542,54578,58199,8027,0
-48201-05-04612,48201-05,48201,Houston (West) & Spring Valley Village Cities--Between Loop I-610 & Beltway TX-8 (part),4804612,puma_part,1.0,128722,137262,122643,6
-48201-05-04613,48201-05,48201,Houston (West) & Hunters Creek Village Cities--Between Loop I-610 & Beltway TX-8 (part),4804613,puma_part,1.0,122695,130835,141925,1
-48201-05-04614,48201-05,48201,"Houston City (West)--Westpark Tollway, Between Loop I-610 & Beltway TX-8 (part)",4804614,puma_part,0.9768,108317,115503,94174,0
-48201-05-04615,48201-05,48201,Houston (Southwest) & Bellaire (Southeast) Cities--Between Loop I-610 & Beltway TX-8 (part),4804615,puma_part,0.789,82998,88504,31893,0
-48201-05-04635,48201-05,48201,Houston City (West)--South of I-10 & West of TX-6 (part),4804635,puma_part,0.2683,32286,34428,4348,0
-48201-05-04637,48201-05,48201,"Houston City (West)--Westpark Tollway, West of Beltway TX-8 (part)",4804637,puma_part,1.0,141366,150745,69285,4
+48201-04-04604,48201-04,48201,Houston City (West Central)--South of I-10 & Inside Loop I-610 (part),4804604,puma_part,1.0,173102,184586,233963,7
+48201-04-04613,48201-04,48201,Houston (West) & Hunters Creek Village Cities--Between Loop I-610 & Beltway TX-8 (part),4804613,puma_part,0.3732,44997,47982,73000,0
+48201-04-04615,48201-04,48201,Houston (Southwest) & Bellaire (Southeast) Cities--Between Loop I-610 & Beltway TX-8 (part),4804615,puma_part,0.3862,40623,43318,10521,0
+48201-04-04616,48201-04,48201,Houston City (Southwest)--Between Loop I-610 & Beltway TX-8,4804616,puma,1.0,111447,118841,19629,0
+48201-04-04617,48201-04,48201,Houston City (South)--Between Loop I-610 & Beltway TX-8,4804617,puma,1.0,110607,117945,34547,0
+48201-04-04618,48201-04,48201,Houston City (Southeast)--West of Pasadena City & Outside Loop I-610 (part),4804618,puma_part,0.3729,44811,47784,6947,0
+48201-05-04613,48201-05,48201,Houston (West) & Hunters Creek Village Cities--Between Loop I-610 & Beltway TX-8 (part),4804613,puma_part,0.3586,43241,46110,23716,0
+48201-05-04614,48201-05,48201,"Houston City (West)--Westpark Tollway, Between Loop I-610 & Beltway TX-8 (part)",4804614,puma_part,0.8232,91284,97340,61449,0
+48201-05-04615,48201-05,48201,Houston (Southwest) & Bellaire (Southeast) Cities--Between Loop I-610 & Beltway TX-8 (part),4804615,puma_part,0.6138,64577,68861,29945,0
+48201-05-04634,48201-05,48201,Houston City (West)-North of US-90 & West of TX-6 (part),4804634,puma_part,0.6663,82221,87676,24763,0
+48201-05-04635,48201-05,48201,Houston City (West)--South of I-10 & West of TX-6,4804635,puma,1.0,120317,128299,45330,0
+48201-05-04636,48201-05,48201,Houston City (West)--East of TX-6 & West of Beltway TX-8 (part),4804636,puma_part,0.6467,78086,83266,78164,0
+48201-05-04637,48201-05,48201,"Houston City (West)--Westpark Tollway, West of Beltway TX-8",4804637,puma,1.0,127234,135675,67053,0
 48201-05-04638,48201-05,48201,Houston City (Southwest)--East of TX-6 & West of Beltway TX-8,4804638,puma,1.0,107815,114968,22852,0
+48201-05-04640,48201-05,48201,Katy City (Northeast) (part),4804640,puma_part,0.8613,96036,102407,28696,0
+48201-06-04610,48201-06,48201,Houston City (North)--West of Aldine & Inside Beltway TX-8 (part),4804610,puma_part,0.8419,96114,102491,25703,0
 48201-06-04626,48201-06,48201,"Houston City (North)-I-45, Between Beltway TX-8 & FM-1960",4804626,puma,1.0,138807,148016,62759,0
 48201-06-04627,48201-06,48201,Spring,4804627,puma,1.0,139765,149038,36526,0
-48201-06-04628,48201-06,48201,Jersey Village City-Between Beltway TX-8 & FM-1960 (part),4804628,puma_part,0.4001,59052,62970,36662,3
+48201-06-04628,48201-06,48201,Jersey Village City-Between Beltway TX-8 & FM-1960 (part),4804628,puma_part,0.4001,45530,48551,31151,0
 48201-06-04629,48201-06,48201,"North of FM-1960, West of I-45 & East of TX-249",4804629,puma,1.0,127122,135556,44599,0
 48201-06-04630,48201-06,48201,Tomball City & The Woodlands (Southwest),4804630,puma,1.0,170352,181654,59328,0
-48201-06-04631,48201-06,48201,North of US-290 & North of FM-1960 (part),4804631,puma_part,0.3379,44464,47414,18994,0
+48201-06-04631,48201-06,48201,North of US-290 & North of FM-1960 (part),4804631,puma_part,0.2558,33653,35886,16631,0
+48215-01-06801,48215-01,48215,Weslaco & Mercedes Cities,4806801,puma,1.0,110324,116756,33251,0
+48215-01-06802,48215-01,48215,Alamo & Donna Cities,4806802,puma,1.0,119470,126435,18391,0
+48215-01-06803,48215-01,48215,"Pharr, San Juan & Hidalgo Cities",4806803,puma,1.0,133846,141649,46727,0
+48215-01-06804,48215-01,48215,Edinburg City,4806804,puma,1.0,136243,144186,54469,0
+48215-01-06805,48215-01,48215,McAllen City,4806805,puma,1.0,139627,147767,98626,0
+48215-01-06806,48215-01,48215,Mission City,4806806,puma,1.0,114104,120756,34388,0
+48215-01-06807,48215-01,48215,Hidalgo County (North & West),4806807,puma,1.0,117167,123998,13394,0
 48439-01-02506,48439-01,48439,Fort Worth City (Southeast)-South of I-20 (part),4802506,puma_part,0.7947,107170,114168,41199,0
-48439-01-02507,48439-01,48439,Arlington City (West)-South of I-30 & East of Loop I-820 (part),4802507,puma_part,0.2627,31797,33873,5640,0
 48439-01-02508,48439-01,48439,"Fort Worth City (East Central)-South of I-30, East of I-35W & Inside Loop I-820",4802508,puma,1.0,119054,126828,23980,0
-48439-01-02509,48439-01,48439,"Fort Worth (Northeast)--Hurst (South) Cities, North of I-30 (part)",4802509,puma_part,0.3099,60168,64097,70877,3
-48439-01-02512,48439-01,48439,Fort Worth City (North Central) & Haltom City (North)--Inside Loop I-820 (part),4802512,puma_part,0.6223,71509,76179,54311,0
-48439-01-02513,48439-01,48439,Fort Worth City (South Central) & Edgecliff Village Town,4802513,puma,1.0,131615,140209,71872,0
-48439-01-02514,48439-01,48439,Fort Worth (Southwest) & Benbrook Cities,4802514,puma,1.0,147878,157534,64598,0
+48439-01-02512,48439-01,48439,Fort Worth City (North Central) & Haltom City (North)--Inside Loop I-820 (part),4802512,puma_part,0.5682,72622,77364,51968,2
+48439-01-02513,48439-01,48439,Fort Worth City (South Central) & Edgecliff Village Town,4802513,puma,1.0,131615,140210,71872,0
+48439-01-02514,48439-01,48439,Fort Worth (Southwest) & Benbrook Cities,4802514,puma,1.0,147878,157535,64598,0
 48439-01-02515,48439-01,48439,Fort Worth City (West),4802515,puma,1.0,121165,129077,133200,0
-48439-01-02516,48439-01,48439,Fort Worth (Northwest) & Saginaw Cities (part),4802516,puma_part,0.818,148156,157831,34764,0
+48439-01-02516,48439-01,48439,Fort Worth (Northwest) & Saginaw Cities (part),4802516,puma_part,0.5205,94270,100426,18294,0
 48439-02-02501,48439-02,48439,"Grapevine, Southlake & Colleyville Cities",4802501,puma,1.0,121237,129154,147689,0
-48439-02-02502,48439-02,48439,Euless (South & West) & Arlington (North) Cities (part),4802502,puma_part,0.4907,66933,71304,23601,0
-48439-02-02509,48439-02,48439,"Fort Worth (Northeast)--Hurst (South) Cities, North of I-30 (part)",4802509,puma_part,0.6588,96459,102758,44719,0
+48439-02-02502,48439-02,48439,Euless (South & West) & Arlington (North) Cities (part),4802502,puma_part,0.5587,76208,81184,30809,0
+48439-02-02509,48439-02,48439,"Fort Worth (Northeast)--Hurst (South) Cities, North of I-30 (part)",4802509,puma_part,0.9187,134506,143289,65667,0
 48439-02-02510,48439-02,48439,North Richland Hills (North) & Keller Cities,4802510,puma,1.0,125530,133727,52619,0
 48439-02-02511,48439-02,48439,Fort Worth City (North)--East of I-35W & West of US-377,4802511,puma,1.0,130477,138997,33964,0
-48439-02-02512,48439-02,48439,Fort Worth City (North Central) & Haltom City (North)--Inside Loop I-820 (part),4802512,puma_part,0.3777,43410,46245,16838,0
-48439-02-02516,48439-02,48439,Fort Worth (Northwest) & Saginaw Cities (part),4802516,puma_part,0.182,32960,35112,15661,0
-48439-03-02502,48439-03,48439,Euless (South & West) & Arlington (North) Cities (part),4802502,puma_part,0.4009,59264,63134,45858,1
+48439-02-02512,48439-02,48439,Fort Worth City (North Central) & Haltom City (North)--Inside Loop I-820 (part),4802512,puma_part,0.4318,49619,52859,26606,0
+48439-02-02516,48439-02,48439,Fort Worth (Northwest) & Saginaw Cities (part),4802516,puma_part,0.4795,86846,92517,32131,0
+48439-03-02502,48439-03,48439,Euless (South & West) & Arlington (North) Cities (part),4802502,puma_part,0.4413,64788,69019,81154,1
 48439-03-02503,48439-03,48439,Arlington (East) & Grand Prairie (West Central) Cities,4802503,puma,1.0,136796,145729,111345,0
 48439-03-02504,48439-03,48439,Arlington (Southeast) & Grand Prairie (Southwest) Cities,4802504,puma,1.0,116980,124619,30411,0
 48439-03-02505,48439-03,48439,Mansfield (North) & Arlington (Southwest) Cities (part),4802505,puma_part,1.0,152841,162822,47934,6
-48439-03-02507,48439-03,48439,Arlington City (West)-South of I-30 & East of Loop I-820 (part),4802507,puma_part,0.7373,89241,95069,34080,0
+48439-03-02507,48439-03,48439,Arlington City (West)-South of I-30 & East of Loop I-820,4802507,puma,1.0,121038,128942,39720,0
 48453-01-05301,48453-01,48453,"Pflugerville, Manor Cities & Wells Branch",4805301,puma,1.0,177964,191686,60212,0
 48453-01-05302,48453-01,48453,Austin City (North),4805302,puma,1.0,114491,123319,134317,0
 48453-01-05303,48453-01,48453,Austin City (Northeast) (part),4805303,puma_part,0.6789,105646,113792,56339,0
@@ -792,10 +883,8 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 53033-01-23301,53033-01,53033,"Shoreline, Kenmore & Bothell (South) Cities (part)",5323301,puma_part,0.5744,74066,76522,25768,0
 53033-01-23302,53033-01,53033,"Snoqualmie City, Cottage Lake, Union Hill & Novelty Hill",5323302,puma,1.0,121656,125690,36135,0
 53033-01-23303,53033-01,53033,"Redmond, Kirkland Cities, Ingelwood & Finn Hill",5323303,puma,1.0,157802,163035,174075,0
-53033-01-23304,53033-01,53033,Greater Bellevue City,5323304,puma,1.0,154624,159751,160503,0
-53033-01-23305,53033-01,53033,"Sammamish, Issaquah, Mercer Island & Newcastle Cities",5323305,puma,1.0,158004,163243,52651,0
-53033-01-23306,53033-01,53033,"Maple Valley, Covington & Enumclaw Cities (part)",5323306,puma_part,1.0,138917,143524,26978,2
-53033-01-23310,53033-01,53033,"Renton City, Fairwood, Bryn Mawr & Skyway",5323310,puma,1.0,143320,148073,49249,0
+53033-01-23304,53033-01,53033,Greater Bellevue City (part),5323304,puma_part,1.0,184171,190278,168895,7
+53033-01-23305,53033-01,53033,"Sammamish, Issaquah, Mercer Island & Newcastle Cities (part)",5323305,puma_part,0.7131,112672,116408,41074,0
 53033-02-23301,53033-02,53033,"Shoreline, Kenmore & Bothell (South) Cities (part)",5323301,puma_part,0.4256,54882,56702,17130,0
 53033-02-23312,53033-02,53033,Seattle City (West Seattle-Industrial),5323312,puma,1.0,104706,108178,98804,0
 53033-02-23313,53033-02,53033,Seattle City (Southeast),5323313,puma,1.0,100338,103665,26538,0
@@ -804,7 +893,27 @@ subarea_id,piece_id,county_fips,name,puma_geoid,kind,puma_share,pop2020,pop2025_
 53033-02-23316,53033-02,53033,Seattle City (Northwest),5323316,puma,1.0,104424,107887,37881,0
 53033-02-23317,53033-02,53033,Seattle City (Northeast),5323317,puma,1.0,114016,117797,70047,0
 53033-02-23318,53033-02,53033,Seattle City (North),5323318,puma,1.0,109691,113328,29011,0
-53033-03-23307,53033-03,53033,Auburn City & Lakeland (part),5323307,puma_part,0.9475,121146,125163,54352,0
+53033-03-23306,53033-03,53033,"Maple Valley, Covington & Enumclaw Cities",5323306,puma,1.0,128296,132550,24097,0
+53033-03-23307,53033-03,53033,Auburn City & Lakeland,5323307,puma,1.0,127864,132104,56761,0
 53033-03-23308,53033-03,53033,"Federal Way, Des Moines Cities & Vashon Island (part)",5323308,puma_part,0.9183,124207,128326,35104,0
-53033-03-23309,53033-03,53033,Kent City (part),5323309,puma_part,0.9715,133123,137538,74554,0
+53033-03-23309,53033-03,53033,Kent City,5323309,puma,1.0,137026,141570,75026,0
+53033-03-23310,53033-03,53033,"Renton City, Fairwood, Bryn Mawr & Skyway (part)",5323310,puma_part,1.0,159105,164381,52434,3
 53033-03-23311,53033-03,53033,"Burien, SeaTac, Tukwila Cities & White Center (part)",5323311,puma_part,1.0,150901,155905,144879,2
+53053-01-25301,53053-01,53053,Tacoma City (North),5325301,puma,1.0,116310,119487,87074,0
+53053-01-25302,53053-01,53053,Tacoma City (South),5325302,puma,1.0,100645,103394,38533,0
+53053-01-25303,53053-01,53053,"Bonney Lake, Edgewood, Fife & Sumner Cities",5325303,puma,1.0,103643,106474,63552,0
+53053-01-25304,53053-01,53053,"Graham, Elk Plain & Prairie Ridge",5325304,puma,1.0,128920,132441,13367,0
+53053-01-25305,53053-01,53053,Puyallup City & South Hill,5325305,puma,1.0,139409,143217,43667,0
+53053-01-25306,53053-01,53053,Parkland & Spanaway,5325306,puma,1.0,108181,111136,26038,0
+53053-01-25307,53053-01,53053,Lakewood & University Place Cities,5325307,puma,1.0,111218,114256,36785,0
+53053-01-25308a,53053-01,53053,Peninsula Region & JBLM (part),5325308,puma_part,0.6374,71901,73865,18218,1
+53053-01-25308b,53053-01,53053,Peninsula Region & JBLM (part),5325308,puma_part,0.3626,40903,42020,9195,0
+55079-01-02801,55079-01,55079,City of Milwaukee Northwest,5502801,puma,1.0,104248,102553,40085,0
+55079-01-02802,55079-01,55079,City of Milwaukee East Side & Northern Suburbs,5502802,puma,1.0,117113,115209,100040,0
+55079-01-02803,55079-01,55079,City of Milwaukee Central (part),5502803,puma_part,0.8602,94041,92512,56624,3
+55079-01-02804,55079-01,55079,City of Milwaukee North Central,5502804,puma,1.0,103279,101600,18438,0
+55079-01-02807,55079-01,55079,Western Suburbs (part),5502807,puma_part,0.2798,51439,50603,69415,1
+55079-02-02805,55079-02,55079,City of Milwaukee South Central (part),5502805,puma_part,0.9045,108347,106586,58962,6
+55079-02-02806,55079-02,55079,City of Milwaukee South,5502806,puma,1.0,114988,113119,41388,0
+55079-02-02807,55079-02,55079,Western Suburbs (part),5502807,puma_part,0.7202,124561,122536,65835,0
+55079-02-02808,55079-02,55079,Southern Suburbs,5502808,puma,1.0,121473,119498,52878,0

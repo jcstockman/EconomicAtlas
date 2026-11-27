@@ -10,6 +10,7 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 06001-02,06001,"Alameda, California",Oakland & Berkeley,Oakland / Berkeley / Alameda,official,687693,669003
 06013-01,06013,"Contra Costa, California",Contra Costa County,unincorporated / Concord / Richmond,whole,1165927,1170070
 06019-01,06019,"Fresno, California",Fresno County,Fresno / unincorporated / Clovis,whole,1008654,1035456
+06029-01,06029,"Kern, California",Kern County,Bakersfield / unincorporated / Delano,whole,909235,927068
 06037-01,06037,"Los Angeles, California",South Bay & Harbor,Torrance / Inglewood / Harbor,official,1080610,1046179
 06037-02,06037,"Los Angeles, California",Westside,West,official,666076,644853
 06037-03,06037,"Los Angeles, California",West San Fernando Valley,West Valley / Los Angeles,official,1018039,985601
@@ -22,10 +23,10 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 06037-10,06037,"Los Angeles, California",Crenshaw & South Central,Southwest / Southeast,official,545572,528189
 06037-11,06037,"Los Angeles, California","South LA, Compton & Southeast Cities",San Antonio / Compton / South,official,877768,849800
 06037-12,06037,"Los Angeles, California",East LA & Whittier,Whittier / East LA,official,515557,499130
-06059-01,06059,"Orange, California","South County, Irvine & Newport",Irvine / Mission Viejo / Newport Beach,inferred,1022224,1010202
-06059-02,06059,"Orange, California",North County: Anaheim & Fullerton,Anaheim / Fullerton / Buena Park,inferred,869651,859423
-06059-03,06059,"Orange, California",Huntington Beach & Costa Mesa,Huntington Beach / Garden Grove / Costa Mesa,inferred,732824,724205
-06059-04,06059,"Orange, California",Central County: Santa Ana & Orange,Santa Ana / Orange / Tustin,inferred,562290,555677
+06059-01,06059,"Orange, California",South County & Newport-Mesa,Costa Mesa / Mission Viejo / Newport Beach,inferred,808160,798655
+06059-02,06059,"Orange, California","North County: Anaheim, Fullerton & Orange",Anaheim / Fullerton / Orange,inferred,884079,873681
+06059-03,06059,"Orange, California",West County: Huntington Beach & Garden Grove,Huntington Beach / Garden Grove / Westminster,inferred,766859,757840
+06059-04,06059,"Orange, California","Central County: Santa Ana, Irvine & Tustin",Santa Ana / Irvine / Lake Forest,inferred,727891,719330
 06065-01,06065,"Riverside, California","Riverside, Corona & Moreno Valley",Riverside / Corona / Moreno Valley,official,1013680,1066804
 06065-02,06065,"Riverside, California","Temecula, Hemet & the Pass",unincorporated / Temecula / Menifee,official,926099,974634
 06065-03,06065,"Riverside, California",Coachella Valley & Desert,Indio / unincorporated / Palm Springs,official,478406,503478
@@ -34,12 +35,14 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 06071-01,06071,"San Bernardino, California",San Bernardino Valley,San Bernardino / Fontana / Rialto,official,914071,931851
 06071-02,06071,"San Bernardino, California","West End: Ontario, Rancho & Chino",Ontario / Rancho Cucamonga / Chino,official,660377,673222
 06071-03,06071,"San Bernardino, California",High Desert & Mountains,Victorville / Hesperia / unincorporated,official,607206,619017
-06073-01,06073,"San Diego, California",North County & Backcountry,Escondido / Oceanside / Carlsbad,official,966227,961427
-06073-02,06073,"San Diego, California",Central San Diego & South Bay,Central San Diego / Sweetwater / Southeastern San Diego,official,899024,894558
-06073-03,06073,"San Diego, California",Mid-City & East County,Kearny Mesa / Mid-City / El Cajon,official,806079,802075
-06073-04,06073,"San Diego, California","La Jolla, Poway & Encinitas",Del Mar-Mira Mesa / North San Diego / San Dieguito,official,627304,624188
+06073-01,06073,"San Diego, California",North County & Backcountry,Escondido / Oceanside / Carlsbad,official,853912,849670
+06073-02,06073,"San Diego, California",Central San Diego & South Bay,Central San Diego / Sweetwater / Southeastern San Diego,official,835224,831075
+06073-03,06073,"San Diego, California","La Jolla, Mira Mesa, Poway & Encinitas",Del Mar-Mira Mesa / North San Diego / San Dieguito,official,795088,791138
+06073-05,06073,"San Diego, California","Mid-City, Kearny Mesa & East County",Kearny Mesa / Mid-City / El Cajon,official,814410,810364
 06085-01,06085,"Santa Clara, California","San Jose, West Valley & South County",San Jose / unincorporated / Cupertino,official,1024309,1012741
 06085-02,06085,"Santa Clara, California",North County & East San Jose,San Jose / Sunnyvale / Santa Clara,official,911950,901650
+09110-01,09110,"Capitol Planning Region, Connecticut","Hartford, West Hartford & New Britain",Hartford town / New Britain town / West Hartford town,official,499955,509105
+09110-02,09110,"Capitol Planning Region, Connecticut",North & East of Hartford,Manchester town / East Hartford town / Enfield town,official,476293,485010
 12011-01,12011,"Broward, Florida",South Broward,Pembroke Pines / Hollywood / Miramar,official,780775,808459
 12011-02,12011,"Broward, Florida",Central Broward: Fort Lauderdale & Sunrise,Fort Lauderdale / Plantation / Sunrise,official,605551,627022
 12011-03,12011,"Broward, Florida",North Broward: Coral Springs & Pompano Beach,Coral Springs / Pompano Beach / Deerfield Beach,official,558049,577836
@@ -47,25 +50,34 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 12031-02,12031,"Duval, Florida","Downtown, Northside & Westside",Jacksonville,official,443044,473036
 12057-01,12057,"Hillsborough, Florida",Tampa & Northwest Hillsborough,Tampa / Town 'n' Country / University,official,854557,921500
 12057-02,12057,"Hillsborough, Florida",Brandon & South County,Brandon / Riverview / unincorporated,official,605205,652615
-12086-01,12086,"Miami-Dade, Florida",South Dade: Kendall & Homestead,unincorporated / Kendall / Homestead,official,959286,994885
+12086-01,12086,"Miami-Dade, Florida",West Kendall & South Dade,unincorporated / Homestead / The Hammocks,official,674668,699705
 12086-02,12086,"Miami-Dade, Florida",Northeast Dade & the Beaches,Miami Gardens / Miami Beach / North Miami,official,711821,738237
 12086-03,12086,"Miami-Dade, Florida",Hialeah & Doral,Hialeah / Doral / Fountainebleau,official,542759,562901
-12086-04,12086,"Miami-Dade, Florida",City of Miami & Coral Gables,Miami / Coral Gables / Coral Terrace,official,487901,506007
+12086-04,12086,"Miami-Dade, Florida","City of Miami, Coral Gables & Kendall",Miami / Kendall / Westchester,official,772519,801187
 12095-01,12095,"Orange, Florida",Orlando & East Orange,Orlando / unincorporated / Alafaya,official,963737,1029851
 12095-02,12095,"Orange, Florida",West Orange & Tourist Corridor,unincorporated / Apopka / Horizon West,official,466171,498151
-12099-01,12099,"Palm Beach, Florida",South County: Boca Raton & Boynton Beach,unincorporated / Boca Raton / Boynton Beach,official,937874,990378
-12099-02,12099,"Palm Beach, Florida","West Palm Beach, North County & Glades",West Palm Beach / unincorporated / Palm Beach Gardens,official,554317,585348
+12099-01,12099,"Palm Beach, Florida",South County: Boca Raton & Boynton Beach,unincorporated / Boca Raton / Boynton Beach,official,702365,741684
+12099-02,12099,"Palm Beach, Florida","West Palm Beach, North County & Glades",unincorporated / West Palm Beach / Palm Beach Gardens,official,789826,834042
+12103-01,12103,"Pinellas, Florida",St. Petersburg & South Pinellas,St. Petersburg / unincorporated / Pinellas Park,official,486214,480869
+12103-02,12103,"Pinellas, Florida",Clearwater & North Pinellas,Clearwater / Largo / unincorporated,official,472893,467694
 13121-01,13121,"Fulton, Georgia",Atlanta & South Fulton,Atlanta / South Fulton / East Point,inferred,599581,617613
 13121-02,13121,"Fulton, Georgia",Buckhead & North Fulton,Sandy Springs / Roswell / Johns Creek,inferred,467129,481178
 13135-01,13135,"Gwinnett, Georgia",Gwinnett County,unincorporated / Peachtree Corners / Lawrenceville,whole,957062,1018099
-17031-01,17031,"Cook, Illinois",Far South Side & South Suburbs,Oak Lawn / Chicago: Auburn Gresham / Orland Park,official,1086341,1069679
-17031-02,17031,"Cook, Illinois",North & Northwest Suburbs,Arlington Heights / Schaumburg / Des Plaines,official,996926,981635
-17031-03,17031,"Cook, Illinois",West Side & Near West Suburbs,Chicago: Austin / Cicero / Chicago: Belmont Cragin,official,994459,979206
-17031-04,17031,"Cook, Illinois",South & Southwest Side,Chicago: South Lawndale / Chicago: Chicago Lawn / Chicago: South Shore,official,887913,874294
-17031-05,17031,"Cook, Illinois",Downtown & North Side,Chicago: Near North Side / Chicago: Lake View / Chicago: West Town,official,836163,823338
-17031-06,17031,"Cook, Illinois","Far North Side, Evanston & Skokie",Evanston / Chicago: West Ridge / Skokie,official,473739,466473
+15003-01,15003,"Honolulu, Hawaii",Urban Honolulu & Windward Oahu,Urban Honolulu / East Honolulu / Kailua,official,526570,512166
+15003-02,15003,"Honolulu, Hawaii","Leeward, Central & North Shore Oahu",unincorporated / Waipahu / Pearl City,official,489938,476537
+17031-01,17031,"Cook, Illinois",South & Southwest Suburbs,Oak Lawn / Orland Park / Calumet City,official,886588,872990
+17031-02,17031,"Cook, Illinois",Northwest Suburbs & O'Hare,Arlington Heights / Schaumburg / Des Plaines,official,893603,879897
+17031-03,17031,"Cook, Illinois",West & Southwest Sides & Near West Suburbs,Chicago: Austin / Cicero / Chicago: South Lawndale,official,897088,883329
+17031-04,17031,"Cook, Illinois",South Side & Far South Side,Chicago: Chicago Lawn / Chicago: South Shore / Chicago: Auburn Gresham,official,888107,874485
+17031-05,17031,"Cook, Illinois",Downtown & North Side,Chicago: Near North Side / Chicago: Lake View / Chicago: West Town,official,854718,841608
+17031-06,17031,"Cook, Illinois",Northwest Side & North Shore,Chicago: Belmont Cragin / Evanston / Chicago: West Ridge,official,855437,842316
+17043-01,17043,"DuPage, Illinois",DuPage County,unincorporated / Naperville / Downers Grove village,whole,932877,934298
+18097-01,18097,"Marion, Indiana",North & East Indianapolis,Indianapolis (balance) / Lawrence / Beech Grove,official,516491,524415
+18097-02,18097,"Marion, Indiana","Downtown, West & South Indianapolis",Indianapolis (balance) / Speedway / Beech Grove,official,460712,467781
 24031-01,24031,"Montgomery, Maryland",I-270 Corridor & Upcounty,unincorporated / Germantown / Rockville,official,573109,579866
 24031-02,24031,"Montgomery, Maryland",Downcounty: Silver Spring & Bethesda,Silver Spring / Bethesda / Wheaton,official,488952,494716
+24033-01,24033,"Prince George's, Maryland",Central & Southern Prince George's,Clinton / Suitland / Fort Washington,official,487181,488779
+24033-02,24033,"Prince George's, Maryland",Northern Prince George's,unincorporated / Chillum / Laurel,official,480020,481595
 25017-01,25017,"Middlesex, Massachusetts","Inner Core: Cambridge, Newton & Somerville",Cambridge / Newton / Somerville,official,822587,841729
 25017-02,25017,"Middlesex, Massachusetts",Outer Middlesex: Lowell & Framingham,Lowell / Framingham / Billerica,official,809415,828250
 26125-01,26125,"Oakland, Michigan",South & West Oakland: Southfield & Novi,unincorporated / Farmington Hills / Southfield,official,801002,809765
@@ -74,11 +86,17 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 26163-02,26163,"Wayne, Michigan",Detroit & Grosse Pointes,Detroit / Hamtramck / Grosse Pointe Woods,official,738491,728394
 27053-01,27053,"Hennepin, Minnesota",North & West Suburbs,Brooklyn Park / Plymouth / Maple Grove,official,718578,720383
 27053-02,27053,"Hennepin, Minnesota",Minneapolis & Bloomington,Minneapolis / Bloomington / Richfield,official,562987,564401
+29189-01,29189,"St. Louis, Missouri",North & Central St. Louis County,unincorporated / Florissant / Maryland Heights,official,514060,507295
+29189-02,29189,"St. Louis, Missouri",West & South St. Louis County,unincorporated / Wildwood / Oakville,official,490065,483616
 32003-01,32003,"Clark, Nevada",Las Vegas & North Las Vegas,Las Vegas / North Las Vegas / Sunrise Manor,inferred,994916,1057175
 32003-02,32003,"Clark, Nevada",Henderson & East Valley,Henderson / Sunrise Manor / unincorporated,inferred,658085,699266
 32003-03,32003,"Clark, Nevada",Strip & Southwest Valley,Spring Valley / Paradise / Enterprise,inferred,612460,650786
+34003-01,34003,"Bergen, New Jersey",Southern Bergen: Hackensack & Fort Lee,Hackensack city / Teaneck township / Fort Lee borough,official,500340,511488
+34003-02,34003,"Bergen, New Jersey",North & West Bergen,Englewood city / Bergenfield borough / Paramus borough,official,455392,465538
 36005-01,36005,"Bronx, New York",South & East Bronx,BX09 Soundview-Parkchester / BX12 Wakefield-Williamsbridge-Eastchester / BX10 Co-op City-Throgs Neck,official,941687,899277
 36005-02,36005,"Bronx, New York",West & Northwest Bronx,BX04 Highbridge-Concourse / BX07 Fordham-Bedford Park-Norwood / BX05 Morris Heights-Mount Hope,official,530967,507055
+36029-01,36029,"Erie, New York","Amherst, Cheektowaga & Tonawanda",unincorporated / Cheektowaga / Tonawanda Town,official,487507,483678
+36029-02,36029,"Erie, New York",Buffalo & Southtowns,Buffalo / unincorporated / Lackawanna,official,466729,463063
 36047-01,36047,"Kings, New York",North Brooklyn & Downtown,BK01 Williamsburg-Greenpoint / BK03 Bedford-Stuyvesant / BK02 Downtown Brooklyn-Fort Greene,official,951858,923292
 36047-02,36047,"Kings, New York",East Brooklyn & Coney Island,BK18 Canarsie-Flatlands / BK05 East New York-Cypress Hills / BK17 East Flatbush,official,944822,916467
 36047-03,36047,"Kings, New York",Southwest Brooklyn & Midwood,BK12 Borough Park-Kensington / BK11 Bensonhurst-Bath Beach / BK14 Flatbush-Midwood,official,839394,814203
@@ -115,21 +133,26 @@ piece_id,county_fips,county,piece_name,piece_components,method,pop2020,pop2025_e
 48113-03,48113,"Dallas, Texas",North Dallas & Downtown,Dallas / Richardson / Carrollton,inferred,781519,795830
 48121-01,48121,"Denton, Texas",Denton & Lewisville,Denton / Lewisville / unincorporated,official,498986,588676
 48121-02,48121,"Denton, Texas","Frisco, The Colony & Carrollton",Frisco / Carrollton / unincorporated,official,407436,480670
-48201-01,48201,"Harris, Texas",East Harris & Bay Area,Houston / unincorporated / Pasadena,inferred,1000076,1066425
-48201-02,48201,"Harris, Texas",West Harris: Katy & Cypress,unincorporated / Houston / Katy,inferred,891691,950849
-48201-03,48201,"Harris, Texas","Northeast Harris: Humble, Kingwood & Aldine",Houston / unincorporated / Atascocita,inferred,730331,778784
-48201-04,48201,"Harris, Texas",Inner Houston,Houston / Pearland / Bellaire,inferred,705286,752077
-48201-05,48201,"Harris, Texas","Southwest Houston, Galleria & Memorial",Houston / unincorporated / Mission Bend,inferred,724199,772245
-48201-06,48201,"Harris, Texas",North Harris: Spring & Tomball,unincorporated / Spring / Houston,inferred,679562,724647
-48439-01,48439,"Tarrant, Texas",Fort Worth,Fort Worth / unincorporated / Saginaw,official,938512,999797
-48439-02,48439,"Tarrant, Texas",Northeast Tarrant: Mid-Cities & Alliance,Fort Worth / North Richland Hills / Euless,official,617006,657297
-48439-03,48439,"Tarrant, Texas",Arlington & Mansfield,Arlington / Grand Prairie / Mansfield,official,555122,591372
+48157-01,48157,"Fort Bend, Texas",Fort Bend County,unincorporated / Sugar Land / Missouri City,whole,822779,975191
+48201-01,48201,"Harris, Texas",East Harris & Bay Area,Houston / Pasadena / unincorporated,inferred,804213,857567
+48201-02,48201,"Harris, Texas",Northwest Harris: Cy-Fair & Memorial,unincorporated / Houston / Jersey Village,inferred,744531,793926
+48201-03,48201,"Harris, Texas","Northeast Harris: Humble, Kingwood & Aldine",Houston / unincorporated / Atascocita,inferred,785237,837332
+48201-04,48201,"Harris, Texas",Inner Houston,Houston / Bellaire / West University Place,inferred,835010,890408
+48201-05,48201,"Harris, Texas",West & Southwest Houston: Alief & Katy,Houston / unincorporated / Mission Bend,inferred,810811,864603
+48201-06,48201,"Harris, Texas",North Harris: Spring & Tomball,unincorporated / Houston / Spring,inferred,751343,801190
+48215-01,48215,"Hidalgo, Texas",Hidalgo County,unincorporated / McAllen / Mission,whole,870781,921549
+48439-01,48439,"Tarrant, Texas",Fort Worth,Fort Worth / unincorporated / Benbrook,official,793774,845608
+48439-02,48439,"Tarrant, Texas",Northeast Tarrant: Mid-Cities & Alliance,Fort Worth / North Richland Hills / Euless,official,724423,771728
+48439-03,48439,"Tarrant, Texas",Arlington & Mansfield,Arlington / Grand Prairie / Mansfield,official,592443,631130
 48453-01,48453,"Travis, Texas",North Austin & Pflugerville,Austin / unincorporated / Pflugerville,inferred,675200,727262
 48453-02,48453,"Travis, Texas",Central & South Austin,Austin / unincorporated / Hornsby Bend,inferred,614988,662408
 49035-01,49035,"Salt Lake, Utah",Salt Lake City & West Valley,Salt Lake City / West Valley City / Taylorsville,inferred,641903,661226
 49035-02,49035,"Salt Lake, Utah",South Valley: West Jordan & Sandy,West Jordan / Sandy / South Jordan,inferred,543335,559690
 51059-01,51059,"Fairfax, Virginia",Eastern Fairfax: Annandale & Springfield,Annandale / Burke / Bailey's Crossroads,official,624401,633935
 51059-02,51059,"Fairfax, Virginia",North & West County: Reston & Tysons,Reston / Centreville / McLean,official,525908,533938
-53033-01,53033,"King, Washington",Eastside & Southeast King,"Sammamish / Renton - North / East Highlands, Hobart, and Greater Maple Valley",official,948389,979838
+53033-01,53033,"King, Washington",Eastside,"Sammamish / Kirkland - South / Duvall, Carnation, Skykomish, and Northeast King County",official,650367,671934
 53033-02,53033,"King, Washington",Seattle & Shoreline,Seattle - West Seattle / Shoreline / Seattle - Rainier Valley and Rainier Beach,official,791909,818169
-53033-03,53033,"King, Washington","South King: Burien, Kent & Auburn",Burien / Auburn - North / Kent - East,official,529377,546932
+53033-03,53033,"King, Washington",South & Southeast King,"Renton - North / East Highlands, Hobart, and Greater Maple Valley / Burien",official,827399,854836
+53053-01,53053,"Pierce, Washington",Pierce County,Tacoma / Lakewood / unincorporated,whole,921130,946288
+55079-01,55079,"Milwaukee, Wisconsin","North Side, Wauwatosa & North Shore",Milwaukee / Wauwatosa / Whitefish Bay,inferred,470120,462477
+55079-02,55079,"Milwaukee, Wisconsin",South Side & South Suburbs,Milwaukee / West Allis / Greenfield,inferred,469369,461739

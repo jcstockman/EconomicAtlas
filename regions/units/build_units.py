@@ -80,12 +80,13 @@ def main():
         raise SystemExit(f"county mismatch: tracts in counties not in Vintage 2025 {sorted(unknown)[:10]}; counties without tracts {sorted(empty)[:10]}")
 
     # pieces (frozen release)
-    piece_of = {r["tract_geoid"]: r["piece_id"] for r in csv.DictReader(open(os.path.join(rel, "crosswalk_tract_piece.csv")))}
+    pxw = list(csv.DictReader(open(os.path.join(rel, "crosswalk_tract_piece.csv"))))
+    piece_of = {r["tract_geoid"]: r["piece_id"] for r in pxw}
     pname = {r["piece_id"]: r["piece_name"] for r in csv.DictReader(open(os.path.join(rel, "piece_registry.csv"))) if r["status"] == "active"}
     missing = set(piece_of) - set(tracts)
     if missing:
         raise SystemExit(f"{len(missing)} piece tracts not among 2020 tracts")
-    piece_counties = {g[:5] for g in piece_of}
+    piece_counties = {r["county_fips"] for r in pxw}  # current counties (a Connecticut planning region, not the 2020 county)
 
     unit_of = {g: (piece_of[g] if county_of[g] in piece_counties else county_of[g]) for g in tracts}
     for g in tracts:

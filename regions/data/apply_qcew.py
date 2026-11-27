@@ -1,6 +1,6 @@
 """QCEW 2024 annual averages for every atlas unit (docs/specs/allocation-keys.md).
 
-County units take BLS's published figures. In the 46 split counties each county figure is shared among its pieces by
+County units take BLS's published figures. In the split counties each county figure is shared among its pieces by
 its allocation key (regions/keys/keys.csv, measure_keys.csv):
   ownership totals   federal: jobs_federal; state, local: jobs_state_local; private: sum of its sectors
   private sectors    employment jobs_private_<s>, wages wages_private_<s>, establishments est_<s> (fallback: the total key)

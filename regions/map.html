@@ -1,0 +1,513 @@
+<title>Atlas Geography Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: view switch and control bar over a two-column workspace, map left and table right; stacks below 900px. */
+:root {
+  --bg: #f6f7f8; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #75746f;
+  --rule: #e1e0d9; --ring: rgba(11,11,11,0.10); --accent: #2a78d6; --hover: #0b0b0b;
+  --seq-0: #b7d3f6; --seq-1: #86b6ef; --seq-2: #5598e7; --seq-3: #2a78d6; --seq-4: #1c5cab; --seq-5: #104281;
+  --on-light: #0b0b0b; --on-dark: #ffffff; --empty: #e1e0d9;
+  --g1: #2a78d6; --g2: #eb6834; --g3: #1baf7a; --g4: #eda100; --g5: #e87ba4;
+  /* categorical slots for subregions and districts, in fixed order */
+  --c1: #257de0; --c2: #f47230; --c3: #00b894; --c4: #f2a600; --c5: #ee7fac; --c6: #008a17; --c7: #6a4ce2; --c8: #ec4647;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121211; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #9a9990;
+  --rule: #2c2c2a; --ring: rgba(255,255,255,0.10); --accent: #3987e5; --hover: #f0efec; --empty: #2c2c2a;
+  --g1: #3987e5; --g2: #d95926; --g3: #199e70; --g4: #c98500; --g5: #d55181;
+  --c1: #338ced; --c2: #e76624; --c3: #00a888; --c4: #d28e05; --c5: #e24d8b; --c6: #0aac23; --c7: #9887ef; --c8: #eb6263; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121211; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #9a9990;
+  --rule: #2c2c2a; --ring: rgba(255,255,255,0.10); --accent: #3987e5; --hover: #f0efec; --empty: #2c2c2a;
+  --g1: #3987e5; --g2: #d95926; --g3: #199e70; --g4: #c98500; --g5: #d55181;
+  --c1: #338ced; --c2: #e76624; --c3: #00a888; --c4: #d28e05; --c5: #e24d8b; --c6: #0aac23; --c7: #9887ef; --c8: #eb6263; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--f-body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 24px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+header { display: grid; gap: 10px; }
+h1 { font-size: 1.6rem; line-height: 1.2; margin: 0; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+.lede { margin: 0; color: var(--ink-2); max-width: 72ch; }
+.bar { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; }
+.field { display: grid; gap: 4px; min-width: 0; max-width: 100%; }
+.field label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+select { font: 500 0.95rem var(--f-body); color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 7px 10px; width: 100%; max-width: 100%; text-overflow: ellipsis; }
+select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { justify-self: start; display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--surface); flex-wrap: wrap; }
+.seg button { font: 500 0.88rem var(--f-body); color: var(--ink-2); background: transparent; border: 0; padding: 7px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.views { justify-self: start; }
+.views button { font-weight: 600; padding: 8px 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.88rem; color: var(--ink-2); }
+.meta b { color: var(--ink); font-weight: 600; }
+.chip { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid var(--ring); color: var(--ink-2); }
+.chip.inferred { border-color: var(--accent); color: var(--accent); }
+.work { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .work { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; min-width: 0; }
+.mapbox { position: relative; padding: 12px; }
+svg.map { display: block; width: 100%; height: auto; touch-action: none; cursor: grab; }
+svg.map path { vector-effect: non-scaling-stroke; }
+.zoomer { position: absolute; top: 18px; right: 18px; display: flex; gap: 4px; }
+.zoomer button { font: 600 0.9rem var(--f-body); min-width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--rule);
+  background: var(--surface); color: var(--ink); cursor: pointer; }
+.zoomer button:hover { border-color: var(--ink-3); }
+.piece { stroke: var(--surface); stroke-width: 1.5; stroke-linejoin: round; cursor: pointer; }
+.piece.on { stroke: var(--hover); stroke-width: 2.5; }
+.sub, .sub-halo { fill: none; pointer-events: none; stroke-linejoin: round; }
+.sub-halo { stroke: var(--surface); stroke-opacity: 0.75; stroke-width: 2.4; }
+.sub { stroke: var(--ink); stroke-opacity: 0.8; stroke-width: 0.9; stroke-dasharray: 3 2; }
+.sr-edge { fill: none; pointer-events: none; stroke: var(--ink); stroke-width: 2.2; stroke-linejoin: round; }
+.sr-halo { fill: none; pointer-events: none; stroke: var(--surface); stroke-width: 4.5; stroke-linejoin: round; }
+.comp { margin: -4px 0 6px; font-size: 0.78rem; color: var(--ink-3); }
+.subtip { margin: 8px 0 0; padding-top: 6px; border-top: 1px solid var(--rule); font-size: 0.8rem; color: var(--ink-2); }
+.num { font: 600 13px var(--f-data); pointer-events: none; text-anchor: middle; dominant-baseline: central; }
+.legend { display: flex; align-items: center; gap: 10px; padding: 0 12px 12px; font-size: 0.8rem; color: var(--ink-2); flex-wrap: wrap; }
+.legend i { display: inline-block; width: 18px; height: 0; vertical-align: middle; margin-right: 6px; }
+.ramp { width: 160px; max-width: 40vw; height: 10px; border-radius: 3px; }
+.legend .v { font-family: var(--f-data); font-variant-numeric: tabular-nums; color: var(--ink); }
+.note { padding: 0 12px 12px; margin: 0; font-size: 0.8rem; color: var(--ink-3); }
+.tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--rule);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12); border-radius: 8px; padding: 8px 10px; font-size: 0.82rem; min-width: 180px; max-width: 280px; }
+.tip h3 { margin: 0 0 4px; font-size: 0.88rem; }
+.tip dl { margin: 0; display: grid; grid-template-columns: auto auto; gap: 2px 12px; }
+.tip dt { color: var(--ink-2); } .tip dd { margin: 0; text-align: right; font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+.tablebox { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+th { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); }
+th:nth-child(2), td:nth-child(2) { text-align: left; white-space: normal; }
+td { font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+td:nth-child(2) { font-family: var(--f-body); }
+td .id { display: block; font-family: var(--f-data); font-size: 0.75rem; color: var(--ink-3); }
+tbody tr { cursor: pointer; }
+tbody tr.on td { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+tr.sr td { border-top: 2px solid var(--ink-3); background: color-mix(in srgb, var(--ink) 4%, transparent); }
+tr.sr td:nth-child(2) { font-weight: 600; }
+tr.sr .id { font-weight: 400; }
+tr.dd td:nth-child(2) { padding-left: 22px; }
+tr.muted td { color: var(--ink-3); }
+tfoot td { font-weight: 600; border-bottom: 0; }
+.badge { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; border-radius: 4px; font: 600 0.8rem var(--f-data); padding: 0 3px; }
+.mix { display: flex; gap: 2px; width: 96px; height: 10px; }
+.mix span { display: block; height: 100%; border-radius: 1px; }
+.mix span:first-child { border-radius: 3px 1px 1px 3px; } .mix span:last-child { border-radius: 1px 3px 3px 1px; }
+.mixkey { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 10px; font-size: 0.78rem; color: var(--ink-2); }
+.mixkey i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.status { padding: 40px 12px; text-align: center; color: var(--ink-2); }
+footer { font-size: 0.8rem; color: var(--ink-3); max-width: 90ch; display: grid; gap: 6px; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .piece { transition: fill 200ms ease; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Atlas geography</h1>
+    <div class="seg views" role="group" aria-label="View" id="views">
+      <button type="button" data-v="m" aria-pressed="true">Metro areas</button>
+      <button type="button" data-v="c" aria-pressed="false">County pieces</button>
+    </div>
+    <p class="lede" id="lede"></p>
+  </header>
+
+  <div class="bar">
+    <div class="field"><label for="place" id="place-label">Metro area</label><select id="place"></select></div>
+    <div class="field"><label id="shade-label">Shade by</label>
+      <div class="seg" role="group" aria-labelledby="shade-label" id="shade"></div>
+    </div>
+    <div class="field"><label id="sub-label">Subareas</label>
+      <div class="seg" role="group" aria-labelledby="sub-label" id="subtoggle">
+        <button type="button" data-s="off" aria-pressed="true">Hide</button>
+        <button type="button" data-s="on" aria-pressed="false">Show</button>
+      </div>
+    </div>
+  </div>
+  <div class="meta" id="meta"></div>
+
+  <div class="work">
+    <section class="panel mapbox" aria-label="Map">
+      <svg class="map" id="map" role="img" aria-label="Map of the selected area"></svg>
+      <div class="zoomer"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button><button type="button" id="zreset">Reset</button></div>
+      <div class="legend" id="legend"></div>
+      <p class="note" id="note"></p>
+      <div class="tip" id="tip" hidden></div>
+    </section>
+    <section class="panel tablebox" aria-label="Table">
+      <table>
+        <thead id="head"></thead>
+        <tbody id="rows"><tr class="status-row"><td colspan="6" class="status">Loading…</td></tr></tbody>
+        <tfoot id="foot"></tfoot>
+      </table>
+      <div class="mixkey" id="mixkey"></div>
+    </section>
+  </div>
+
+  <footer>
+    <p id="foot-m">Metro areas: the 56 CBSAs of 1.0M+ residents (OMB July 2023 delineation, Vintage 2025 estimates). Districts (0.35–1.5M) are atlas units, that is county pieces and counties, of 0.35M+, with smaller counties joined by where their residents work. Subregions (0.6–3.5M, aiming at 1–2.5M) exist only in the 26 CBSAs of 2.5M+: OMB metropolitan divisions, with larger divisions and undivided CBSAs split by commuting. The district view is shown in subregions over 1.5M and in mid-size CBSAs with two or more districts; elsewhere it falls through to the subregion or CBSA. Work inside: employed residents whose job is in the same area (LEHD LODES 2024, Michigan 2021, cross-state commuting included). Spec: docs/specs/subregions-districts.md.</p>
+    <p id="foot-c">County pieces: Census 2020 tracts (cartographic boundaries) and Vintage 2025 county estimates; 2020 redistricting data (PL 94-171) for the population mix; LEHD LODES 2024 workplace and origin–destination files (Michigan 2021; in-state jobs only, so "work inside" excludes cross-state commuting). Official pieces follow each county's planning or statistical division; inferred pieces come from Louvain on commuting. Spec: docs/specs/county-pieces.md.</p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+(() => {
+  const css = () => getComputedStyle(document.documentElement);
+  const tok = n => css().getPropertyValue(n).trim();
+  const fmt = d3.format(","), fmtM = v => (v / 1e6).toFixed(2) + "M", pct = d3.format(".1%");
+  const wi = v => v == null ? "—" : pct(v);
+  const SHADES = {
+    c: [["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["jobs_lodes", "Jobs"]],
+    m: [["group", "Subregion"], ["work_inside", "Work inside"], ["pop2025", "Residents 2025"]],
+  };
+  const METRIC = {
+    work_inside: { label: "Work inside", f: wi },
+    pop2025: { label: "Residents, 2025 est.", f: v => fmtM(v) },
+    jobs_lodes: { label: "Jobs located in piece", f: v => fmt(v) },
+  };
+  const SOURCE = {
+    lacdph_spa_hd_2022: "LA County DPH Service Planning Areas and Health Districts (2022)",
+    lacdph_hd_2022: "LA County DPH Health Districts (2022)",
+    chicago_ca_ccdph_municipalities: "Chicago community areas and suburban Cook municipalities and townships",
+    sandag_sra_2020: "SANDAG 2020 Subregional Areas",
+    phskc_hra_2020: "Public Health – Seattle & King County Health Reporting Areas (2020)",
+    harris_commissioner_precincts_2021: "Harris County commissioner precincts (2021 plan)",
+    chicago_ca_ccdph_districts: "Chicago community areas and Cook County public health districts",
+    sandag_sra_2020_msa: "SANDAG 2020 Subregional Areas grouped into Major Statistical Areas",
+    miamidade_minor_statistical_areas: "Miami-Dade Minor Statistical Areas",
+    nyc_dcp_cdta_2020: "NYC DCP 2020 Community District Tabulation Areas",
+    census_ccd_2020: "Census 2020 county subdivisions (CCDs)",
+    phskc_health_regions_2020: "Public Health – Seattle & King County health regions (2020)",
+    mtc_superdistricts_taz1454: "MTC travel-model superdistricts",
+    sacog_rad_2007: "SACOG Regional Analysis Districts (2007)",
+    census_cousub_2020: "Census 2020 county subdivisions (towns and cities)",
+    census_cousub_2020_mapc_icc: "Census 2020 towns, grouped by MAPC Inner Core",
+    phila_planning_districts: "Philadelphia City Planning Commission planning districts",
+    lodes_2024_louvain: "Louvain on LODES 2024 commuting (no official division or Census county division fits)",
+    whole_county: "Whole county: no natural two-way split (spec rule 1)",
+  };
+  const GROUPS = [["hispanic_share", "Hispanic", "--g1"], ["nh_white_share", "White", "--g2"], ["nh_black_share", "Black", "--g3"],
+    ["nh_asian_share", "Asian", "--g4"], ["nh_other_share", "Other or multiple", "--g5"]];
+  const mixBar = p => `<span class="mix" role="img" aria-label="${GROUPS.map(g => g[1] + " " + pct(p[g[0]] || 0)).join(", ")}">` +
+    GROUPS.map(g => `<span style="flex:${p[g[0]] || 0};background:var(${g[2]})"></span>`).join("") + "</span>";
+  const $ = id => document.getElementById(id);
+  const els = { sel: d3.select("#place"), map: d3.select("#map"), rows: d3.select("#rows"), foot: d3.select("#foot"), head: d3.select("#head"),
+    meta: d3.select("#meta"), legend: d3.select("#legend"), tip: $("tip") };
+  const state = { view: "m", shade: { c: "work_inside", m: "group" }, lines: { c: false, m: false }, current: { c: null, m: null } };
+  const byCounty = new Map(), subByCounty = new Map();
+  const metro = { cbsa: new Map(), subs: new Map(), units: new Map(), order: [] };
+  let countyOrder = [], shown = null;
+  const W = 640, H = 560;
+  els.map.attr("viewBox", `0 0 ${W} ${H}`);
+  const zoom = d3.zoom().scaleExtent([1, 24]).translateExtent([[0, 0], [W, H]]);
+  let zoomT = null;
+  els.map.call(zoom).on("dblclick.zoom", null);
+  d3.select("#zin").on("click", () => els.map.transition().duration(250).call(zoom.scaleBy, 2));
+  d3.select("#zout").on("click", () => els.map.transition().duration(250).call(zoom.scaleBy, 0.5));
+  d3.select("#zreset").on("click", () => els.map.transition().duration(250).call(zoom.transform, d3.zoomIdentity));
+
+  // GeoJSON rings are planar (RFC 7946); d3-geo wants spherical winding: exterior clockwise, holes counter-clockwise.
+  function area(r) { let a = 0; for (let i = 0, n = r.length - 1; i < n; i++) a += r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1]; return a / 2; }
+  function fixRing(r, outer) { const ccw = area(r) > 0; return (outer ? ccw : !ccw) ? r.slice().reverse() : r; }
+  function rewind(g) {
+    const poly = p => p.map((r, i) => fixRing(r, i === 0));
+    if (g.type === "Polygon") g.coordinates = poly(g.coordinates);
+    else if (g.type === "MultiPolygon") g.coordinates = g.coordinates.map(poly);
+    return g;
+  }
+  // Frame the map on polygon parts that touch another feature; far islands (Catalina, San Clemente) would shrink everything else.
+  function mainland(ps) {
+    const parts = [];
+    ps.forEach((f, i) => { const g = f.geometry; const polys = g.type === "Polygon" ? [g.coordinates] : g.coordinates;
+      polys.forEach(c => { const xs = c[0].map(p => p[0]), ys = c[0].map(p => p[1]);
+        parts.push({ i, c, b: [d3.min(xs), d3.min(ys), d3.max(xs), d3.max(ys)] }); }); });
+    if (ps.length < 2) return { collection: { type: "FeatureCollection", features: ps }, dropped: false };
+    const m = 0.01, hit = (a, b) => a[0] - m <= b[2] && b[0] - m <= a[2] && a[1] - m <= b[3] && b[1] - m <= a[3];
+    const keep = parts.filter(p => parts.some(q => q.i !== p.i && hit(p.b, q.b)));
+    const use = keep.length ? keep : parts;
+    return { collection: { type: "MultiPolygon", coordinates: use.map(p => p.c) }, dropped: use.length < parts.length };
+  }
+  function seq() { return d3.interpolateRgbBasis(["--seq-0","--seq-1","--seq-2","--seq-3","--seq-4","--seq-5"].map(tok)); }
+  function ink(fill) { return d3.hsl(fill).l > 0.62 ? tok("--on-light") : tok("--on-dark"); }
+  const num = id => +id.slice(-2);
+  const shortTitle = t => t.split(",")[0];
+
+  // ---------- controls ----------
+  function setPressed(sel, attr, val) { d3.selectAll(sel + " button").attr("aria-pressed", function () { return String(this.dataset[attr] === val); }); }
+  function controls() {
+    const v = state.view, isM = v === "m";
+    setPressed("#views", "v", v);
+    $("lede").textContent = isM
+      ? "The 56 metro areas (CBSAs) of 1.0M+ residents, split into districts of 0.35–1.5M and, in the 26 of 2.5M+, subregions of 0.6–3.5M. Every district is a union of atlas units (county pieces and whole counties), so all atlas figures add up to it. Pick a metro area to see how it divides."
+      : "The 64 US counties with 0.92M+ residents, split into pieces of about 0.8M residents (0.45–1.1M) built from 2020 census tracts. Pick a county to see its pieces, their size and how much of their commuting stays inside.";
+    $("place-label").textContent = isM ? "Metro area" : "County";
+    $("sub-label").textContent = isM ? "County and piece lines" : "Subareas";
+    $("foot-m").hidden = !isM; $("foot-c").hidden = isM;
+    const sh = d3.select("#shade").selectAll("button").data(SHADES[v], d => d[0]).join("button").attr("type", "button")
+      .attr("aria-pressed", d => String(d[0] === state.shade[v])).on("click", (ev, d) => { state.shade[v] = d[0]; controls(); redraw(); });
+    sh.text(d => d[0] === "group" && isM && state.current.m && !metro.cbsa.get(state.current.m).big ? "District" : d[1]);
+    setPressed("#subtoggle", "s", state.lines[v] ? "on" : "off");
+    const order = isM ? metro.order : countyOrder;
+    els.sel.selectAll("option").data(order, d => d.id).join("option").attr("value", d => d.id).text(d => d.label);
+    if (state.current[v]) els.sel.property("value", state.current[v]);
+  }
+  d3.selectAll("#views button").on("click", function () { setView(this.dataset.v); });
+  d3.selectAll("#subtoggle button").on("click", function () { state.lines[state.view] = this.dataset.s === "on"; controls(); redraw(); });
+  els.sel.on("change", function () { state.current[state.view] = this.value; controls(); redraw(); });
+  function setView(v, id) {
+    state.view = v; if (id) state.current[v] = id;
+    if (!state.current[v]) state.current[v] = (v === "m" ? metro.order : countyOrder)[0]?.id || null;
+    controls(); redraw();
+  }
+  function redraw() {
+    const id = state.current[state.view]; if (!id) return;
+    try { history.replaceState(null, "", "#" + state.view + id); } catch (e) {}
+    state.view === "m" ? drawMetro(id) : drawCounty(id);
+  }
+  function frame(feats) {
+    els.map.selectAll("g").remove(); els.map.selectAll("defs").remove();
+    els.map.append("defs").append("clipPath").attr("id", "frame").append("rect").attr("width", W).attr("height", H);
+    els.tip.hidden = true;
+    const fitTo = mainland(feats);
+    const proj = d3.geoMercator().fitExtent([[8, 8], [W - 8, H - 8]], fitTo.collection);
+    const root = els.map.append("g").attr("clip-path", "url(#frame)");
+    const geo = root.append("g"), labels = root.append("g");
+    const key = state.view + state.current[state.view];
+    const apply = t => {
+      geo.attr("transform", t);
+      labels.selectAll("text").attr("transform", function () { const c = t.apply(this._c); return `translate(${c[0]},${c[1]})`; });
+      zoomT = { key, t };
+    };
+    zoom.on("zoom", ev => apply(ev.transform));
+    const t0 = zoomT && zoomT.key === key ? zoomT.t : d3.zoomIdentity;
+    els.map.call(zoom.transform, t0);
+    return { path: d3.geoPath(proj), root: geo, labels, dropped: fitTo.dropped, place: sel => { sel.each(function (d) { this._c = d3.geoPath(proj).centroid(d); }); apply(zoomT && zoomT.key === key ? zoomT.t : t0); } };
+  }
+  function ramp(vals, ip, f, label, dropped) {
+    els.legend.html("");
+    if (dropped) els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)")
+      .text("Inhabited offshore islands lie outside this frame; their figures are included in the table.");
+    els.legend.append("span").text(label);
+    els.legend.append("span").attr("class", "v").text(f(d3.min(vals)));
+    els.legend.append("span").attr("class", "ramp").style("background", `linear-gradient(90deg, ${d3.range(0.08, 1.001, 0.092).map(ip).join(",")})`);
+    els.legend.append("span").attr("class", "v").text(f(d3.max(vals)));
+  }
+  function scaleFor(vals) {
+    const lo = d3.min(vals), hi = d3.max(vals), ip = seq();
+    return { ip, c: v => v == null ? tok("--empty") : ip(hi > lo ? 0.08 + 0.92 * (v - lo) / (hi - lo) : 0.6) };
+  }
+  function place(ev, html) {
+    const box = els.map.node().parentNode.getBoundingClientRect();
+    els.tip.innerHTML = html; els.tip.hidden = false;
+    const x = ev.clientX - box.left + 14, y = ev.clientY - box.top + 14, w = els.tip.offsetWidth, h = els.tip.offsetHeight;
+    els.tip.style.left = Math.max(4, Math.min(x, box.width - w - 8)) + "px";
+    els.tip.style.top = Math.max(4, Math.min(y, box.height - h - 8)) + "px";
+  }
+  function hover(id, key) {
+    els.map.selectAll("path.piece").classed("on", d => id != null && d.properties[key] === id).filter(d => id != null && d.properties[key] === id).raise();
+    els.rows.selectAll("tr").classed("on", function () { return id != null && this.dataset.id === id; });
+  }
+
+  // ---------- metro view ----------
+  // Subregions take categorical slots in ID order; past eight, a slot is reused by the subregion farthest from its holders.
+  function groupColors(groups) {
+    const slots = d3.range(1, 9).map(i => tok("--c" + i)), out = new Map(), cent = new Map(), used = [];
+    groups.forEach(g => cent.set(g.id, d3.geoCentroid({ type: "FeatureCollection", features: g.feats })));
+    groups.forEach((g, i) => {
+      if (i < 8) { out.set(g.id, slots[i]); used[i] = [g.id]; return; }
+      let best = 0, bd = -1;
+      used.forEach((ids, s) => { const d = d3.min(ids, x => d3.geoDistance(cent.get(x), cent.get(g.id))); if (d > bd) { bd = d; best = s; } });
+      out.set(g.id, slots[best]); used[best].push(g.id);
+    });
+    return out;
+  }
+  function drawMetro(cbsa) {
+    const m = metro.cbsa.get(cbsa); if (!m) return;
+    const ds = m.districts, big = m.big, shade = state.shade.m;
+    const groups = big ? m.subregions.map(s => ({ id: s.properties.subregion_id, p: s.properties, feats: ds.filter(d => d.properties.subregion_id === s.properties.subregion_id) }))
+                       : ds.map(d => ({ id: d.properties.district_id, p: d.properties, feats: [d] }));
+    const gc = groupColors(groups);
+    const gkey = big ? "subregion_id" : "district_id";
+    const sc = shade === "group" ? null : scaleFor(ds.map(d => d.properties[shade]));
+    const fill = d => sc ? sc.c(d.properties[shade]) : gc.get(d.properties[gkey]);
+
+    els.meta.html("");
+    els.meta.append("span").html(`<b>${m.title}</b>`);
+    const nView = ds.filter(d => d.properties.district_view).length;
+    els.meta.append("span").html(`<span class="chip">${big ? "Subregions and districts" : ds.length > 1 ? "Districts" : "Whole CBSA"}</span>`);
+    els.meta.append("span").text(`${fmtM(m.pop)} residents`);
+    if (big) els.meta.append("span").text(`${m.subregions.length} subregions`);
+    els.meta.append("span").text(`${ds.length} district${ds.length > 1 ? "s" : ""}${big ? `, ${nView} in the district view` : ""}`);
+
+    const fr = frame(ds), { path, root, dropped } = fr;
+    const g = root.append("g"), gu = root.append("g"), ge = root.append("g"), gl = fr.labels;
+    g.selectAll("path").data(ds).join("path").attr("class", "piece").attr("d", path).attr("fill", fill)
+      .on("pointerenter pointermove", (ev, d) => { hover(d.properties.district_id, "district_id"); place(ev, metroTip(d, m)); })
+      .on("pointerleave", () => { hover(null); els.tip.hidden = true; });
+    if (state.lines.m) {
+      const us = m.units.filter(u => true);
+      gu.selectAll("path.sub-halo").data(us).join("path").attr("class", "sub-halo").attr("d", path);
+      gu.selectAll("path.sub").data(us).join("path").attr("class", "sub").attr("d", path);
+    }
+    if (big) {
+      ge.selectAll("path.sr-halo").data(m.subregions).join("path").attr("class", "sr-halo").attr("d", path);
+      ge.selectAll("path.sr-edge").data(m.subregions).join("path").attr("class", "sr-edge").attr("d", path);
+    }
+    fr.place(gl.selectAll("text").data(ds).join("text").attr("class", "num")
+      .attr("fill", d => ink(fill(d))).text(d => num(d.properties.district_id)));
+
+    if (sc) ramp(ds.map(d => d.properties[shade]), sc.ip, METRIC[shade].f, METRIC[shade].label + (shade === "work_inside" ? " district" : ""), dropped);
+    else {
+      els.legend.html("");
+      if (dropped) els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)").text("Inhabited offshore islands lie outside this frame; their figures are included in the table.");
+      if (big) {
+        els.legend.append("span").html(`<i style="border-top:2.5px solid var(--ink)"></i>Subregion boundary`);
+        els.legend.append("span").html(`<i style="border-top:2px solid var(--ink-3)"></i>District boundary (white gap)`);
+        els.legend.append("span").text("Colour: subregion, matching the table");
+      } else els.legend.append("span").text("Colour: district, matching the table");
+    }
+    if (state.lines.m) els.legend.append("span").html(`<i style="border-top:1.5px dashed var(--ink)"></i>Counties and county pieces`);
+    $("note").textContent = "Numbers are district numbers (the last two digits of the district ID) and match the table. Shading compares this metro area's districts only. Shapes are dissolved atlas units; no basemap. Scroll, pinch or use + and − to zoom; drag to pan.";
+
+    els.head.html(`<tr><th>#</th><th>${big ? "Subregion / district" : "District"}</th><th>2025 est.</th><th>Work inside</th><th>Units</th></tr>`);
+    const rows = [];
+    if (big) for (const gr of groups) {
+      rows.push({ kind: "sr", p: gr.p, color: gc.get(gr.id), id: gr.id });
+      gr.feats.forEach(d => rows.push({ kind: "dd", p: d.properties, color: fill(d), id: d.properties.district_id, muted: !d.properties.district_view }));
+    } else ds.forEach(d => rows.push({ kind: "d", p: d.properties, color: fill(d), id: d.properties.district_id, muted: !d.properties.district_view }));
+    els.rows.selectAll("tr").remove();
+    els.rows.selectAll("tr").data(rows).join("tr").attr("class", r => r.kind + (r.muted ? " muted" : "")).attr("data-id", r => r.id)
+      .on("pointerenter", (ev, r) => r.kind === "sr" ? hover(r.id, "subregion_id") : hover(r.id, "district_id"))
+      .on("pointerleave", () => hover(null))
+      .html(r => {
+        const p = r.p;
+        if (r.kind === "sr") {
+          const view = p.district_view ? `${p.districts} districts, shown in the district view` : `${p.districts} district${p.districts > 1 ? "s" : ""}; district view falls through to the subregion (under 1.5M)`;
+          return `<td><span class="badge" style="background:${r.color};color:${ink(r.color)}">S${num(p.subregion_id)}</span></td>
+            <td>${p.name}<span class="id">${p.subregion_id} · ${view}</span></td><td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td><td>${p.units}</td>`;
+        }
+        return `<td><span class="badge" style="background:${r.color};color:${ink(r.color)}">${num(p.district_id)}</span></td>
+          <td>${p.name}<span class="id">${p.district_id}${p.units > 1 ? " · " + p.members.split("; ").join(", ") : ""}</span></td>
+          <td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td><td>${p.units}</td>`;
+      });
+    d3.select("#mixkey").html(big ? "Greyed districts are not shown in the district view: their subregion is under 1.5M, so the atlas reports the subregion instead." :
+      ds.length > 1 ? "Mid-size metro area (1.0–2.5M): no subregions; the district view shows these districts." :
+      "Mid-size metro area that yields a single district: both levels fall through to the CBSA.");
+    els.foot.html(`<tr><td></td><td>CBSA total</td><td>${fmtM(m.pop)}</td><td></td><td>${d3.sum(ds, d => d.properties.units)}</td></tr>`);
+  }
+  function metroTip(d, m) {
+    const p = d.properties, s = p.subregion_id && metro.subs.get(p.subregion_id);
+    return `<h3>${num(p.district_id)}. ${p.name}</h3><p class="comp">${p.district_id}${s ? ` · in subregion S${num(s.subregion_id)}, ${s.name}` : ""}</p><dl>
+      <dt>Residents 2025</dt><dd>${fmtM(p.pop2025)}</dd><dt>Work inside</dt><dd>${wi(p.work_inside)}</dd><dt>Atlas units</dt><dd>${p.units}</dd></dl>
+      ${p.units > 1 ? `<p class="subtip">${p.members.split("; ").join(", ")}</p>` : ""}
+      <p class="subtip">${p.district_view ? "Shown in the district view." : s ? "Not in the district view: subregion under 1.5M." : "Single district: falls through to the CBSA."}</p>`;
+  }
+
+  // ---------- county pieces view ----------
+  function drawCounty(fips) {
+    const ps = byCounty.get(fips); if (!ps) return;
+    const metric = state.shade.c, showSub = state.lines.c;
+    const first = ps[0].properties;
+    const official = first.method === "official", whole = first.method === "whole";
+    els.meta.html("");
+    els.meta.append("span").html(`<b>${first.county}</b>`);
+    els.meta.append("span").html(`<span class="chip ${official || whole ? "" : "inferred"}">${whole ? "Whole county" : official ? "Official division" : "Inferred, Louvain"}</span>`);
+    els.meta.append("span").text(`Source: ${SOURCE[first.source_id] || first.source_id.replaceAll("_", " ")}`);
+    els.meta.append("span").text(`${ps.length} piece${ps.length > 1 ? "s" : ""} · LODES ${first.lodes_year}`);
+    const sc0 = subByCounty.get(fips);
+    if (sc0) els.meta.append("span").text(`${sc0.length} subareas, ${sc0.filter(d => d.properties.kind === "puma").length} exact PUMAs`);
+
+    const fr = frame(ps), { path, root, dropped } = fr;
+    const sc = scaleFor(ps.map(p => p.properties[metric]).filter(v => v != null));
+    const fill = p => sc.c(p.properties[metric]);
+    const g = root.append("g"), gs = root.append("g"), gl = fr.labels;
+    g.selectAll("path").data(ps, d => d.properties.piece_id).join("path")
+      .attr("class", "piece").attr("d", path).attr("fill", fill)
+      .on("pointerenter pointermove", (ev, d) => { hover(d.properties.piece_id, "piece_id"); place(ev, pieceTip(ev, d)); })
+      .on("pointerleave", () => { hover(null); els.tip.hidden = true; });
+    const subs = subByCounty.get(fips) || [];
+    shown = { path, geo: root, subs: showSub ? subs : [] };
+    if (showSub) {
+      gs.selectAll("path.sub-halo").data(subs).join("path").attr("class", "sub-halo").attr("d", path);
+      gs.selectAll("path.sub").data(subs).join("path").attr("class", "sub").attr("d", path);
+    }
+    fr.place(gl.selectAll("text").data(ps).join("text").attr("class", "num")
+      .attr("fill", d => ink(fill(d))).text(d => num(d.properties.piece_id)));
+    ramp(ps.map(p => p.properties[metric]).filter(v => v != null), sc.ip, METRIC[metric].f, metric === "work_inside" ? "Work inside piece" : METRIC[metric].label, dropped);
+    $("note").textContent = "Numbers match the table. Dashed lines (Show subareas) are the subareas nested in each piece, cut along 2020 PUMA lines. Shading compares this county's pieces only. No basemap: boundaries are dissolved 2020 tracts, clipped to the shoreline; uninhabited islands are left off.";
+
+    els.head.html(`<tr><th>#</th><th>Piece</th><th>2025 est.</th><th>Jobs</th><th>Work inside</th><th>Population mix</th></tr>`);
+    els.rows.selectAll("tr").remove();
+    els.rows.selectAll("tr").data(ps).join("tr").attr("data-id", d => d.properties.piece_id)
+      .on("pointerenter", (ev, d) => hover(d.properties.piece_id, "piece_id")).on("pointerleave", () => hover(null))
+      .html(d => { const p = d.properties, f = fill(d);
+        return `<td><span class="badge" style="background:${f};color:${ink(f)}">${num(p.piece_id)}</span></td>
+          <td>${p.name}<span class="id">${p.piece_id}${p.components ? " · " + p.components : ""}</span></td><td>${fmtM(p.pop2025)}</td>
+          <td>${fmt(p.jobs_lodes)}</td><td>${wi(p.work_inside)}</td><td>${mixBar(p)}</td>`; });
+    d3.select("#mixkey").html("Population mix, 2020 census (non-Hispanic groups by race): " + GROUPS.map(g => `<span><i style="background:var(${g[2]})"></i>${g[1]}</span>`).join(""));
+    const sum = k => d3.sum(ps, d => d.properties[k]);
+    els.foot.html(`<tr><td></td><td>County total</td><td>${fmtM(sum("pop2025"))}</td><td>${fmt(sum("jobs_lodes"))}</td><td></td><td></td></tr>`);
+  }
+  function pieceTip(ev, d) {
+    const p = d.properties;
+    return `<h3>${num(p.piece_id)}. ${p.name}</h3>${p.components ? `<p class="comp">${p.components}</p>` : ""}<dl>
+      <dt>Residents 2025</dt><dd>${fmtM(p.pop2025)}</dd><dt>Residents 2020</dt><dd>${fmt(p.pop2020)}</dd>
+      <dt>Jobs</dt><dd>${fmt(p.jobs_lodes)}</dd><dt>Work inside</dt><dd>${wi(p.work_inside)}</dd>
+      ${GROUPS.map(g => `<dt>${g[1]}</dt><dd>${pct(p[g[0]] || 0)}</dd>`).join("")}</dl>${subTip(ev)}`;
+  }
+  function subTip(ev) {  // the subarea under the pointer, when subareas are shown
+    if (!shown || !shown.subs.length) return "";
+    const [x, y] = d3.pointer(ev, shown.geo.node()), ll = shown.path.projection().invert([x, y]);
+    const s = ll && shown.subs.find(f => d3.geoContains(f, ll));
+    if (!s) return "";
+    const q = s.properties;
+    return `<p class="subtip"><b>${q.name}</b><br>Subarea ${q.subarea_id} · ${fmt(q.pop2020)} residents (2020) · ${q.kind === "puma" ? "exact PUMA " + q.puma_geoid : "part of PUMA " + q.puma_geoid}</p>`;
+  }
+
+  // ---------- loading ----------
+  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (/^[mc]\d+$/.test(h)) setView(h[0], h.slice(1)); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => setTimeout(redraw, 0));
+  new MutationObserver(() => redraw()).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+
+  Promise.all([get("metros/districts.geojson"), get("metros/subregions.geojson"), get("pieces/pieces.geojson")]).then(([dj, sj, pj]) => {
+    for (const f of dj.features) {
+      rewind(f.geometry); const p = f.properties, c = p.cbsa;
+      if (!metro.cbsa.has(c)) metro.cbsa.set(c, { title: p.cbsa_title, districts: [], subregions: [], units: [], pop: 0 });
+      const m = metro.cbsa.get(c); m.districts.push(f); m.pop += p.pop2025;
+    }
+    for (const f of sj.features) { rewind(f.geometry); metro.cbsa.get(f.properties.cbsa).subregions.push(f); metro.subs.set(f.properties.subregion_id, f.properties); }
+    for (const m of metro.cbsa.values()) {
+      m.big = m.subregions.length > 0;
+      m.districts.sort((a, b) => a.properties.district_id.localeCompare(b.properties.district_id));
+      m.subregions.sort((a, b) => a.properties.subregion_id.localeCompare(b.properties.subregion_id));
+    }
+    metro.order = [...metro.cbsa.entries()].sort((a, b) => b[1].pop - a[1].pop).map(([id, m]) => ({ id,
+      label: `${shortTitle(m.title)} · ${fmtM(m.pop)} · ${m.big ? m.subregions.length + " subregions, " : ""}${m.districts.length} district${m.districts.length > 1 ? "s" : ""}` }));
+    for (const f of pj.features) { rewind(f.geometry); const c = f.properties.county_fips; if (!byCounty.has(c)) byCounty.set(c, []); byCounty.get(c).push(f); }
+    for (const ps of byCounty.values()) ps.sort((a, b) => a.properties.piece_id.localeCompare(b.properties.piece_id));
+    countyOrder = [...byCounty.entries()].sort((a, b) => d3.sum(b[1], d => d.properties.pop2025) - d3.sum(a[1], d => d.properties.pop2025))
+      .map(([id, ps]) => ({ id, label: `${ps[0].properties.county} · ${(d3.sum(ps, x => x.properties.pop2025) / 1e6).toFixed(2)}M · ${ps.length} piece${ps.length > 1 ? "s" : ""}` }));
+    const h = location.hash.slice(1);
+    if (/^[mc]\d+$/.test(h) && (h[0] === "m" ? metro.cbsa.has(h.slice(1)) : byCounty.has(h.slice(1)))) setView(h[0], h.slice(1));
+    else setView("m");
+    get("metros/metro_units.geojson").then(uj => {
+      for (const f of uj.features) { rewind(f.geometry); const m = metro.cbsa.get(f.properties.cbsa); if (m) m.units.push(f); }
+      if (state.view === "m") redraw();
+    }).catch(() => {});
+    get("pieces/subareas.geojson").then(sj2 => {
+      for (const f of sj2.features) { rewind(f.geometry); const c = f.properties.county_fips; if (!subByCounty.has(c)) subByCounty.set(c, []); subByCounty.get(c).push(f); }
+      if (state.view === "c") redraw();
+    }).catch(() => {});
+  }).catch(err => {
+    els.rows.html(`<tr><td colspan="6" class="status">Could not load the map data (${err.message}). Serve the regions folder over HTTP, for example with python3 -m http.server, and open map.html.</td></tr>`);
+  });
+})();
+</script>

@@ -25,6 +25,7 @@ import build_subareas as bs
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAME_MAX = 45
 LO, HI, WHOLE_MAX = 450_000, 1_100_000, 1_250_000
+CAP_MAX = 900_000  # counties in build_groups.CAP (rule 1a)
 
 
 def main():
@@ -51,8 +52,8 @@ def main():
     for c in counties:
         tr = {t["properties"]["GEOID"]: t["properties"]["POP100"] for t in bx.tracts(c)}
         pop.update(tr)
-        missing = set(tr) - {g for g in piece_of if g[:5] == c}
-        extra = {g for g in piece_of if g[:5] == c} - set(tr)
+        missing = set(tr) - {g for g in piece_of if bx.cty(g) == c}
+        extra = {g for g in piece_of if bx.cty(g) == c} - set(tr)
         if missing or extra:
             fail("coverage", f"{c}: {len(missing)} tracts missing, {len(extra)} extra")
 
@@ -88,7 +89,7 @@ def main():
     for c in counties:
         ps = [r for r in summ if r["county_fips"] == c]
         p20 = sum(int(r["pop2020"]) for r in ps); p25 = sum(int(r["pop2025_est"]) for r in ps)
-        t20 = sum(v for g, v in pop.items() if g[:5] == c)
+        t20 = sum(v for g, v in pop.items() if bx.cty(g) == c)
         if p20 != t20:
             fail("totals", f"{c}: pieces sum to {p20:,} (2020), tracts to {t20:,}")
         if abs(p25 - est[c][1]) > len(ps):
@@ -97,15 +98,15 @@ def main():
         for r in ps:
             v = int(r["pop2025_est"])
             if whole:
-                if c not in bg.WHOLE or len(ps) != 1 or not (1_000_000 <= v <= WHOLE_MAX):
+                if c not in bg.WHOLE or len(ps) != 1 or not (bg.MIN_COUNTY <= v <= WHOLE_MAX):
                     fail("size", f"{r['piece_id']}: whole county {v:,} not allowed")
-            elif not (LO <= v <= HI):
-                fail("size", f"{r['piece_id']}: {v:,} outside {LO:,}-{HI:,}")
+            elif not (LO <= v <= (CAP_MAX if c in bg.CAP else HI)):
+                fail("size", f"{r['piece_id']}: {v:,} outside {LO:,}-{(CAP_MAX if c in bg.CAP else HI):,}")
 
     # contiguity, necks, job centres
     for c in counties:
         land = bx.land_tracts({c})
-        assign = {g: (p, None, None) for g, p in piece_of.items() if g[:5] == c and g in land}
+        assign = {g: (p, None, None) for g, p in piece_of.items() if bx.cty(g) == c and g in land}
         by = collections.defaultdict(list)
         for g, (p, _, _) in assign.items():
             by[p].append(g)

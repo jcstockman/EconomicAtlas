@@ -6,7 +6,7 @@ Tables (latest year BEA publishes for counties):
   CAINC4 (personal income and its components, place of residence), 2024
   CAINC35 (transfer receipts by type), 2022
   CAEMP25N (employment by industry, including proprietors), 2022
-County units take BEA's published figures. In the 46 split counties each line is shared among the pieces by its key
+County units take BEA's published figures. In the split counties each line is shared among the pieces by its key
 (regions/keys): industries by wage-weighted private jobs (real estate by gdp_real_estate), government by federal,
 military and state/local keys (GDP's single government line is first split by the county's CAINC5N government
 earnings), residence components by ACS keys, 2024 transfers by the county's 2022 CAINC35 mix. A withheld line ((D))
@@ -113,10 +113,11 @@ def main():
     in_combo = {m: f for f, ms in combo_members.items() for m in ms}
     missing = sorted(c for c in cty if c not in names and c not in in_combo)
     areas = (cty & set(names)) | set(combo_members)
+    states = {a[:2] + "000" for a in areas}  # state rows: fallback transfer mix where a county has no CAINC35 (Connecticut regions)
 
     data, desc, year = {}, {}, {}
     for t in ZIPS:
-        data[t], desc[t], year[t] = load(t, areas)
+        data[t], desc[t], year[t] = load(t, areas | (states if t == "CAINC35" else set()))
 
     # Fairfax combination (51919): extend keys to Fairfax City (51600) and Falls Church (51610)
     ext = {}
@@ -239,6 +240,7 @@ def main():
                 emit(u["unit_id"], u["unit_type"], c, t, line, val, "published" if val is not None else "withheld")
 
     # split counties (and the Fairfax combination): allocate
+    notes_mix = []
     alloc_areas = sorted(split - ({"51059"} if fx_area else set())) + ([fx_area] if fx_area else [])
     for area in alloc_areas:
         ms = members(area)
@@ -287,7 +289,7 @@ def main():
         if (t, "2010") in res and not any(res[(t, "2010")].values()) and v.get("2010") is not None:
             sh = share(key("jobs_state_local", area)); res[(t, "2010")] = {m: v["2010"] * s for m, s in sh.items()}
         # transfers by type (2022)
-        t = "CAINC35"; v = data[t][area]
+        t = "CAINC35"; v = data[t].get(area, {})
         for l, kn in TRANSFER_LEAVES.items():
             if v.get(l) is not None:
                 sh = share(key(kn, area)) or share(key("res_population", area))
@@ -303,8 +305,12 @@ def main():
             res[(t, p)] = {m: sum(res[(t, c)].get(m, 0) for c in chs if (t, c) in res) for m in ms}
         # personal income components (2024); transfers by the county's 2022 transfer mix
         t = "CAINC4"; v = data[t][area]
-        mix = {l: data["CAINC35"][area].get(l) for l in TRANSFER_LEAVES}
+        mix = {l: data["CAINC35"].get(area, {}).get(l) for l in TRANSFER_LEAVES}
         tm = sum(x for x in mix.values() if x)
+        if not tm:  # no county transfer table (CAINC35 2022 still has Connecticut's old counties): the state's mix
+            mix = {l: data["CAINC35"].get(area[:2] + "000", {}).get(l) for l in TRANSFER_LEAVES}
+            tm = sum(x for x in mix.values() if x)
+            notes_mix.append(area)
         comp = collections.Counter()
         for l, x in mix.items():
             if x:
@@ -387,6 +393,8 @@ def main():
     n = collections.Counter(r["method"].split()[0] for r in rows)
     print(f"rows {len(rows):,} units {len({r['unit_id'] for r in rows}):,}; methods {dict(n)}; counties with no BEA area {missing}; "
           f"sum checks failed {len(bad)} {bad[:5]}")
+    if notes_mix:
+        print("transfer mix from the state's CAINC35 (no county table):", notes_mix)
 
 
 if __name__ == "__main__":

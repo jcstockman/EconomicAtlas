@@ -1,0 +1,332 @@
+id,level,name,confidence,note
+12060-D01,district,Cobb & Northwest Metro,high,"Cobb, Cherokee, Paulding, Bartow, Haralson; same area as S03"
+12060-D02,district,"DeKalb, Clayton & I-20 East",medium,Newton/Rockdale/Morgan/Jasper are the I-20 east corridor
+12060-D03,district,"Gwinnett, Walton & Barrow",high,"Drop list slash; ""Gwinnett County"" unit name"
+12060-D04,district,Atlanta & Southwest Metro,medium,"City + South Fulton with Coweta, Douglas, Carroll, Fayette; same area as S04"
+12060-D05,district,Buckhead & North Fulton,high,
+12060-D06,district,Forsyth & North Georgia,medium,"Forsyth with Pickens, Lumpkin, Dawson foothills"
+12060-D07,district,Henry & Griffin,medium,"Henry with Spalding (Griffin), Butts, Pike"
+12060-S01,subregion,"Gwinnett, North Fulton & Forsyth",high,North/northeast arc; lists the three districts
+12060-S02,subregion,"DeKalb, Clayton & Henry",medium,"East and south metro; also Newton, Rockdale, Spalding etc."
+12060-S03,subregion,Cobb & Northwest Metro,high,"OMB Marietta division; Marietta is one city, locals say Cobb/NW metro; same area as D01"
+12060-S04,subregion,Atlanta & Southwest Metro,medium,Same area as D04
+12420-D01,district,"Central & South Austin, Hays & Bastrop",medium,Same area as S02; Caldwell omitted
+12420-D02,district,Williamson County,high,Single-county rule
+12420-D03,district,North Austin & Pflugerville,high,
+12420-S01,subregion,North Austin & Williamson,high,
+12420-S02,subregion,"Central & South Austin, Hays & Bastrop",medium,Same area as D01; Caldwell omitted
+12580-D01,district,"Baltimore County, Harford & Carroll",high,Same area as S02
+12580-D02,district,"Anne Arundel, Howard & Queen Anne's",high,
+12580-D03,district,Baltimore City,high,Maryland usage; distinguishes from Baltimore County
+12580-S01,subregion,"Baltimore City, Anne Arundel & Howard",high,
+12580-S02,subregion,"Baltimore County, Harford & Carroll",high,"""County"" needed to tell from Baltimore City; same area as D01"
+13820-D01,district,Greater Birmingham,medium,Whole-CBSA district rule
+14460-D01,district,"Inner Core: Cambridge, Newton & Somerville",high,Kept piece name (41 chars)
+14460-D02,district,Outer Middlesex: Lowell & Framingham,high,
+14460-D03,district,Essex County,high,Single-county rule
+14460-D04,district,"Boston, Chelsea & Revere",high,Suffolk County MA; avoids confusion with Suffolk NY
+14460-D05,district,Norfolk County,high,Single-county rule
+14460-D06,district,Plymouth County,high,Single-county rule
+14460-D07,district,"Rockingham & Strafford, NH",high,State tag: neither county name is known outside NH
+14460-S01,subregion,"Middlesex, Essex & Seacoast NH",medium,"OMB Cambridge-Newton-Framingham plus Rockingham/Strafford; Rockingham also has Salem/Derry, so ""Seacoast"" is approximate"
+14460-S02,subregion,"Boston, Norfolk & Plymouth",high,"OMB ""Boston"" division is Suffolk+Norfolk+Plymouth, not just the city"
+15380-D01,district,"Amherst, Cheektowaga, Tonawanda & Niagara",high,"Amherst, Cheektowaga & Tonawanda piece + Niagara County"
+15380-D02,district,Buffalo & Southtowns,high,same area as the piece (new in pieces 1.3)
+16740-D01,district,"North & West Charlotte, Gaston & Iredell",medium,Lincoln omitted
+16740-D02,district,Central & South Charlotte & Union,high,Anson omitted
+16740-D03,district,"York, Lancaster & Chester",high,South Carolina side
+16740-D04,district,Cabarrus & Rowan,high,
+16740-S01,subregion,North & West Charlotte & Suburbs,low,"City north/west plus Gaston, Iredell, Lincoln, Cabarrus, Rowan; no established name"
+16740-S02,subregion,"Central & South Charlotte, Union & York",medium,"Also Anson, Lancaster, Chester"
+16980-D01,district,Northwest Cook & McHenry,medium,Piece is north & northwest suburban Cook
+16980-D02,district,South & Southwest Suburbs,high,same area as the piece
+16980-D03,district,West & Southwest Sides & Near West Suburbs,high,same area as the piece
+16980-D04,district,DuPage County,high,Single-county rule
+16980-D05,district,South Side & Far South Side,high,same area as the piece
+16980-D06,district,Downtown & North Side,high,
+16980-D07,district,Fox Valley & DeKalb,medium,"Kane, Kendall, DeKalb; same area as S05"
+16980-D08,district,Will & Grundy,high,
+16980-D09,district,Northwest Indiana,high,"Lake, Porter, Jasper, Newton IN; same area as S06"
+16980-D10,district,"Lake County, IL",high,Same area as S07
+16980-D11,district,Northwest Side & North Shore,high,same area as the piece
+16980-S01,subregion,"Northwest Cook, DuPage & McHenry",medium,Piece covers north and northwest suburban Cook
+16980-S02,subregion,West & South Sides,medium,Includes Cicero/Oak Park-area near west suburbs; Far South Side is in S03
+16980-S03,subregion,"South & Southwest Suburbs, Will & Grundy",high,
+16980-S04,subregion,"Downtown, North Side & North Shore",high,Downtown & North Side and Northwest Side & North Shore pieces
+16980-S05,subregion,Fox Valley & DeKalb,medium,"OMB Elgin division (Kane, Kendall, DeKalb); Fox Valley fits Kane+Kendall; same area as D07"
+16980-S06,subregion,Northwest Indiana,high,OMB Lake-Porter-Jasper division (+Newton); established name; same area as D09
+16980-S07,subregion,"Lake County, IL",high,OMB Lake County division; state tag avoids clash with Lake County IN; same area as D10
+17140-D01,district,Hamilton County & Northern Kentucky,high,Plus Dearborn/Franklin/Ohio IN
+17140-D02,district,"Butler, Warren & Clermont",high,Brown omitted
+17410-D01,district,"Cleveland, Lake & Geauga",medium,City + East Side suburbs; Ashtabula omitted
+17410-D02,district,"West & South Suburbs, Lorain & Medina",high,Keeps piece name
+18140-D01,district,"Central & West Columbus, Delaware & Union",medium,"Plus Pickaway, Madison, Morrow"
+18140-D02,district,"East Columbus, Licking & Fairfield",high,"Plus Perry, Hocking"
+19100-D01,district,"Fort Worth, Johnson & Parker",high,Wise omitted
+19100-D02,district,"East Dallas County, Rockwall & Kaufman",high,Same area as S04
+19100-D03,district,South & West Dallas County & Ellis,high,
+19100-D04,district,North Dallas & Downtown,high,
+19100-D05,district,South Collin: Plano & Allen,high,
+19100-D06,district,"Northeast Tarrant, Alliance & Wise",high,"Northeast Tarrant piece (Mid-Cities, Alliance) + Wise County"
+19100-D07,district,Arlington & Mansfield,high,
+19100-D08,district,Denton & Lewisville,high,
+19100-D09,district,North Collin: McKinney & Frisco,high,Frisco also in D10 name; see D10
+19100-D10,district,South Denton: Carrollton & The Colony,medium,"Reviewed piece name, but ""Frisco"" also names D09 in the same subregion"
+19100-S01,subregion,"Tarrant, Johnson & Parker",medium,"OMB Fort Worth-Arlington-Grapevine (+Wise); ""Fort Worth side"" is colloquial"
+19100-S02,subregion,Collin & Denton,high,Exactly Collin + Denton counties
+19100-S03,subregion,"Dallas, Irving & Ellis",medium,"Most of Dallas city, Irving, Grand Prairie, Richardson, plus Ellis"
+19100-S04,subregion,"East Dallas County, Rockwall & Kaufman",high,Same area as D02; Hunt omitted
+19740-D01,district,Denver,high,Consolidated city-county keeps city name
+19740-D02,district,Arapahoe & Elbert,high,
+19740-D03,district,Adams & Broomfield,high,
+19740-D04,district,Jefferson & Mountain Counties,high,"Park, Clear Creek, Gilpin"
+19740-D05,district,Douglas County,high,Single-county rule
+19740-S01,subregion,"Denver, Jefferson, Adams & Broomfield",high,"Plus Park, Clear Creek, Gilpin; the plan's subregion"
+19740-S02,subregion,South Metro Denver,high,"Arapahoe, Douglas, Elbert; established name (South Metro)"
+19820-D01,district,Macomb & St. Clair,high,
+19820-D02,district,Western Wayne & Downriver,high,
+19820-D03,district,South & West Oakland & Livingston,high,
+19820-D04,district,Detroit & Grosse Pointes,high,
+19820-D05,district,North Oakland & Lapeer,high,
+19820-S01,subregion,Oakland & Macomb,medium,"OMB Warren-Troy-Farmington Hills; also St. Clair, Livingston, Lapeer (~20%)"
+19820-S02,subregion,Wayne County,high,OMB Detroit-Dearborn-Livonia = Wayne County
+23420-D01,district,Fresno & Madera,high,Whole CBSA; two counties
+24340-D01,district,Greater Grand Rapids,medium,Whole-CBSA district rule
+24860-D01,district,Greater Greenville,medium,"Whole-CBSA rule; Greenville, Anderson, Pickens, Laurens (""Upstate"" is wider)"
+25540-D01,district,"Hartford, New Britain & Middletown",high,"Hartford, West Hartford & New Britain piece + Lower Connecticut River Valley region"
+25540-D02,district,North & East of Hartford,high,same area as the piece
+26420-D01,district,"East Harris, Bay Area & Liberty",medium,Chambers omitted
+26420-D02,district,"Northwest Harris: Cy-Fair, Memorial & Waller",high,
+26420-D03,district,Fort Bend & Austin County,high,"""County"" avoids confusion with the city of Austin"
+26420-D04,district,Montgomery & San Jacinto,high,
+26420-D05,district,"Northeast Harris: Humble, Kingwood & Aldine",high,
+26420-D06,district,West & Southwest Houston: Alief & Katy,high,same area as the piece
+26420-D07,district,Inner Houston,high,
+26420-D08,district,North Harris: Spring & Tomball,high,
+26420-D09,district,Brazoria County,high,Single-county rule
+26420-D10,district,Galveston County,high,Single-county rule
+26420-S01,subregion,North Houston & Montgomery,high,
+26420-S02,subregion,East Harris & Gulf Coast,high,"East Harris/Bay Area, Brazoria, Galveston, Liberty, Chambers"
+26420-S03,subregion,Inner Houston & Fort Bend,high,"Inner Houston piece, Fort Bend and Austin counties"
+26420-S04,subregion,"West Houston: Cypress, Memorial & Katy",high,"Cypress, Jersey Village & Memorial and Southwest Houston, Alief & Katy pieces; Waller"
+26900-D01,district,North & East Indianapolis & Suburbs,medium,"North & East Indianapolis piece; Madison, Hancock, Boone, Shelby"
+26900-D02,district,Hamilton & Tipton,high,
+26900-D03,district,"Downtown & South Indianapolis, Hendricks & Johnson",medium,"Downtown, West & South Indianapolis piece; Hendricks, Johnson, Morgan, Brown"
+27260-D01,district,"Southside, Beaches, St. Johns & Clay",high,
+27260-D02,district,"Downtown, Northside, Westside & Nassau",high,Baker omitted
+28140-D01,district,Johnson & Wyandotte,high,"Kansas side; plus Leavenworth, Miami, Linn"
+28140-D02,district,Jackson & Cass,high,
+28140-D03,district,Northland,high,"Clay + Platte; established name (Ray, Clinton, Caldwell fringe)"
+29820-D01,district,Las Vegas & North Las Vegas,high,
+29820-D02,district,Henderson & East Valley,high,
+29820-D03,district,Strip & Southwest Valley,high,
+31080-D01,district,South Bay & Harbor,high,
+31080-D02,district,"Pasadena, NELA & West San Gabriel Valley",high,
+31080-D03,district,South County & Newport-Mesa,high,same area as the piece
+31080-D04,district,West San Fernando Valley,high,
+31080-D05,district,East San Gabriel Valley & Pomona,high,
+31080-D06,district,"East Valley, Burbank & Glendale",high,
+31080-D07,district,"North County: Anaheim, Fullerton & Orange",high,same area as the piece
+31080-D08,district,"South LA, Compton & Southeast Cities",high,
+31080-D09,district,"Downtown, Hollywood & Wilshire",high,
+31080-D10,district,"Long Beach, Lakewood & Norwalk",high,
+31080-D11,district,West County: Huntington Beach & Garden Grove,high,same area as the piece
+31080-D12,district,Santa Clarita & Antelope Valley,high,
+31080-D13,district,Westside,high,
+31080-D14,district,"Central County: Santa Ana, Irvine & Tustin",high,same area as the piece
+31080-D15,district,Crenshaw & South Central,high,
+31080-D16,district,East LA & Whittier,high,
+31080-S01,subregion,Orange County,high,OMB Anaheim-Santa Ana-Irvine = Orange County
+31080-S02,subregion,San Gabriel Valley & East LA,high,
+31080-S03,subregion,"Westside, West Valley & North LA County",medium,"""North County"" alone clashes with Orange County piece names"
+31080-S04,subregion,"South Bay, Harbor & Long Beach",high,
+31080-S05,subregion,Central LA & East Valley,high,"Downtown/Hollywood/Wilshire + East SFV, Burbank, Glendale"
+31080-S06,subregion,South LA & Southeast Cities,high,
+31140-D01,district,Greater Louisville,medium,"Whole CBSA incl. Southern Indiana (""Kentuckiana"")"
+32820-D01,district,Greater Memphis,medium,Whole CBSA incl. North Mississippi and Crittenden AR
+33100-D01,district,West Kendall & South Dade,high,same area as the piece
+33100-D02,district,South County: Boca Raton & Boynton Beach,high,
+33100-D03,district,South Broward,high,
+33100-D04,district,Northeast Dade & the Beaches,high,
+33100-D05,district,Central Broward: Fort Lauderdale & Sunrise,high,
+33100-D06,district,"West Palm Beach, North County & Glades",high,
+33100-D07,district,North Broward: Coral Springs & Pompano Beach,high,
+33100-D08,district,Hialeah & Doral,high,
+33100-D09,district,"City of Miami, Coral Gables & Kendall",high,same area as the piece
+33100-S01,subregion,Miami-Dade County,high,OMB Miami-Miami Beach-Kendall = Miami-Dade
+33100-S02,subregion,Broward County,high,OMB division = Broward
+33100-S03,subregion,Palm Beach County,high,OMB division = Palm Beach
+33340-D01,district,"Milwaukee North Side, Ozaukee & Washington",high,"North Side, Wauwatosa & North Shore piece + Ozaukee, Washington"
+33340-D02,district,Waukesha County,high,Single-county rule
+33340-D03,district,Milwaukee South Side & South Suburbs,high,same area as the piece (new in pieces 1.3)
+33460-D01,district,North & West Suburbs & Exurbs,medium,"Suburban Hennepin + Scott, Wright, Carver, Sherburne, Le Sueur, Mille Lacs"
+33460-D02,district,Minneapolis & Bloomington,high,
+33460-D03,district,Ramsey County,high,Single-county rule (St. Paul)
+33460-D04,district,"Anoka, Chisago & Isanti",high,
+33460-D05,district,Dakota County,high,Single-county rule
+33460-D06,district,"Washington, St. Croix & Pierce",high,"Could be ""St. Croix Valley"" but that undercovers Woodbury"
+33460-S01,subregion,"Hennepin, Anoka & Western Counties",medium,"All Hennepin + Anoka, Scott, Wright, Carver, Sherburne etc."
+33460-S02,subregion,St. Paul & East Metro,high,"Ramsey, Dakota, Washington + St. Croix/Pierce WI"
+34980-D01,district,"Davidson, Sumner & Wilson",high,Plus six outer counties
+34980-D02,district,Williamson & Maury,high,Hickman omitted
+34980-D03,district,Rutherford & Cannon,high,
+35620-D01,district,Uptown Manhattan,high,
+35620-D02,district,Southern Bergen: Hackensack & Fort Lee,high,same area as the piece
+35620-D03,district,South Queens & the Rockaways,high,
+35620-D04,district,North Brooklyn & Downtown,high,
+35620-D05,district,East Brooklyn & Coney Island,high,
+35620-D06,district,South & East Bronx,high,
+35620-D07,district,Essex County,high,Single-county rule (also used in Boston; unique within metro)
+35620-D08,district,"Western Suffolk: Islip, Babylon & Huntington",high,
+35620-D09,district,Middlesex County,high,Single-county rule
+35620-D10,district,Western Queens,high,
+35620-D11,district,Town of Hempstead,high,
+35620-D12,district,Southwest Brooklyn & Midwood,high,
+35620-D13,district,"Morris, Sussex & Hunterdon",high,
+35620-D14,district,Hudson County,high,Single-county rule
+35620-D15,district,Ocean County,high,Single-county rule
+35620-D16,district,Midtown & Lower Manhattan,high,
+35620-D17,district,Eastern Suffolk: Brookhaven & East End,high,
+35620-D18,district,Monmouth County,high,Single-county rule
+35620-D19,district,"Central & North Westchester, Putnam",medium,
+35620-D20,district,Union County,high,Single-county rule
+35620-D21,district,North Hempstead & Oyster Bay,high,
+35620-D22,district,Northeast Queens: Flushing & Bayside,high,
+35620-D23,district,Passaic County,high,Single-county rule
+35620-D24,district,West & Northwest Bronx,high,
+35620-D25,district,Staten Island,high,Richmond County known by borough name
+35620-D26,district,Southern Westchester: Yonkers & New Rochelle,high,
+35620-D27,district,Rockland County,high,Single-county rule
+35620-D28,district,Somerset County,high,Single-county rule
+35620-D29,district,North & West Bergen,high,Same area as the piece
+35620-S01,subregion,Long Island,high,OMB Nassau County-Suffolk County
+35620-S02,subregion,Central Jersey,high,"OMB Lakewood-New Brunswick: Middlesex, Monmouth, Ocean, Somerset"
+35620-S03,subregion,Uptown Manhattan & the Bronx,high,
+35620-S04,subregion,Queens,high,All three pieces = whole borough
+35620-S05,subregion,"Newark, Union & Morris",medium,"OMB ""Newark"" division: Essex, Union, Morris, Sussex, Hunterdon"
+35620-S06,subregion,"Bergen, Hudson & Passaic",high,"Plain list, no slashes"
+35620-S07,subregion,South Brooklyn & Staten Island,high,
+35620-S08,subregion,"Midtown, Downtown & North Brooklyn",medium,
+35620-S09,subregion,Lower Hudson Valley,high,"Westchester, Rockland, Putnam: established name"
+36420-D01,district,Oklahoma County & Canadian,high,"Plus Logan, Lincoln"
+36420-D02,district,"Cleveland, Grady & McClain",high,Norman area
+36540-D01,district,Greater Omaha,medium,Whole CBSA incl. Council Bluffs IA
+36740-D01,district,Orlando & East Orange,high,
+36740-D02,district,West Orange & Tourist Corridor,high,
+36740-D03,district,Seminole County,high,Single-county rule
+36740-D04,district,Osceola County,high,Single-county rule
+36740-D05,district,Lake County,high,Single-county rule; unique within Orlando metro
+36740-S01,subregion,"Orlando, East Orange & Seminole",high,
+36740-S02,subregion,"West Orange, Osceola & Lake",high,
+37980-D01,district,"North, Northeast & Northwest Philly",high,
+37980-D02,district,Montgomery County,high,Single-county rule
+37980-D03,district,Camden & Gloucester,high,
+37980-D04,district,"New Castle, Cecil & Salem",high,Same area as S04
+37980-D05,district,Bucks County,high,Single-county rule
+37980-D06,district,Delaware County,high,Single-county rule
+37980-D07,district,"Center City, South & West Philadelphia",high,
+37980-D08,district,Chester County,high,Single-county rule
+37980-D09,district,Burlington County,high,Single-county rule
+37980-S01,subregion,Philadelphia & Delaware County,high,"OMB ""Philadelphia"" division includes Delaware County"
+37980-S02,subregion,"Montgomery, Bucks & Chester",high,"OMB title trimmed of ""County"""
+37980-S03,subregion,"Camden, Burlington & Gloucester",high,"OMB Camden division; ""South Jersey"" usually also includes Salem/Cumberland/Atlantic"
+37980-S04,subregion,"New Castle, Cecil & Salem",high,OMB Wilmington division; same area as D04
+38060-D01,district,West Valley,high,
+38060-D02,district,Mesa & Gilbert,high,
+38060-D03,district,Central & West Phoenix,high,
+38060-D04,district,"Tempe, Chandler & South Mountain",high,
+38060-D05,district,"Scottsdale, Paradise Valley & Arcadia",high,
+38060-D06,district,Pinal County,high,Single-county rule
+38060-D07,district,North Phoenix,high,
+38060-S01,subregion,West Valley & Central Phoenix,high,West Valley and Central & West Phoenix pieces
+38060-S02,subregion,East Valley & Pinal,high,"Mesa, Gilbert, Tempe, Chandler, South Mountain and Pinal County"
+38060-S03,subregion,North Phoenix & Scottsdale,high,
+38300-D01,district,"Pittsburgh, Butler & Beaver",medium,"City/North Hills/east + Lawrence, Armstrong"
+38300-D02,district,"South Hills, Mon Valley & Washington",high,
+38300-D03,district,Westmoreland & Fayette,high,
+38900-D01,district,Multnomah & Columbia,high,
+38900-D02,district,Washington County & Yamhill,high,"""County"" avoids reading as the state"
+38900-D03,district,Clark & Skamania,high,
+38900-D04,district,Clackamas County,high,Single-county rule
+38900-S01,subregion,Multnomah & Clark,high,Portland + Vancouver WA
+38900-S02,subregion,"Washington, Clackamas & Yamhill",high,
+39300-D01,district,Rhode Island,high,All five RI counties
+39300-D02,district,"Bristol County, MA",high,State tag avoids clash with Bristol RI
+39580-D01,district,"Raleigh, North Wake & Johnston",medium,Franklin omitted
+39580-D02,district,Southwest Wake: Cary & Apex,high,
+40060-D01,district,"Richmond, Henrico & Hanover",high,
+40060-D02,district,Chesterfield & Tri-Cities,high,"Petersburg, Hopewell, Colonial Heights = Tri-Cities"
+40140-D01,district,"Riverside, Corona & Moreno Valley",high,
+40140-D02,district,"Temecula, Hemet & the Pass",high,
+40140-D03,district,San Bernardino Valley,high,
+40140-D04,district,"West End: Ontario, Rancho & Chino",high,
+40140-D05,district,High Desert & Mountains,high,
+40140-D06,district,Coachella Valley & Desert,high,
+40140-S01,subregion,Western Riverside County,high,
+40140-S02,subregion,San Bernardino Valley & West End,high,
+40140-S03,subregion,Deserts & Mountains,medium,High Desert/mountains + Coachella Valley
+40380-D01,district,Greater Rochester,medium,Whole-CBSA district rule
+40900-D01,district,"Sacramento, Elk Grove, Yolo & El Dorado",medium,
+40900-D02,district,"Natomas, Arden & Folsom",high,
+40900-D03,district,Placer County,high,Single-county rule
+41180-D01,district,St. Louis City & North County,high,North & Central St. Louis County piece + St. Louis city
+41180-D03,district,"St. Charles, Lincoln & Warren",high,
+41180-D04,district,"West & South County, Jefferson & Franklin",high,"West & South St. Louis County piece; Jefferson, Franklin"
+41180-D05,district,Metro East,high,"Madison, St. Clair, Monroe, Macoupin, Clinton, Jersey, Bond; established name"
+41180-S01,subregion,"St. Louis City, North County & Metro East",high,
+41180-S03,subregion,West County & Missouri Suburbs,high,"West & South St. Louis County, St. Charles, Jefferson, Franklin, Lincoln, Warren; Calhoun IL"
+41620-D01,district,"Salt Lake City, West Valley & Tooele",high,
+41620-D02,district,South Valley: West Jordan & Sandy,high,
+41700-D01,district,"North San Antonio, Comal & Guadalupe",high,Same area as S02
+41700-D02,district,Outer West & South San Antonio,low,"Piece + Medina, Wilson, Atascosa, Bandera; check with locals"
+41700-D03,district,Inside Loop 410,high,
+41700-S01,subregion,"Central, West & South San Antonio",medium,"Plus Medina, Wilson, Atascosa, Bandera"
+41700-S02,subregion,"North San Antonio, Comal & Guadalupe",high,Same area as D01; Kendall omitted
+41740-D01,district,North County & Backcountry,high,
+41740-D02,district,Central San Diego & South Bay,high,
+41740-D03,district,"La Jolla, Mira Mesa, Poway & Encinitas",high,same area as the piece
+41740-D05,district,"Mid-City, Kearny Mesa & East County",high,same area as the piece (new in pieces 1.2)
+41740-S01,subregion,"Central, South Bay & East County",high,
+41740-S02,subregion,North County & North San Diego,medium,La Jolla/Mira Mesa/Poway + North County
+41860-D01,district,Contra Costa County,high,
+41860-D02,district,San Francisco & Marin,high,
+41860-D03,district,Southern Alameda & Tri-Valley,high,
+41860-D04,district,San Mateo County,high,Single-county rule
+41860-D05,district,Oakland & Berkeley,high,
+41860-S01,subregion,East Bay,high,OMB Oakland-Fremont-Berkeley = Alameda + Contra Costa
+41860-S02,subregion,"San Francisco, Peninsula & Marin",high,OMB SF-San Mateo-Redwood City + Marin
+41940-D01,district,"San Jose, West Valley & San Benito",medium,"South County (Gilroy, Morgan Hill) not in name"
+41940-D02,district,North County & East San Jose,high,
+42660-D01,district,Eastside,high,same area as the piece
+42660-D02,district,Pierce County,high,Single-county rule
+42660-D03,district,Snohomish County,high,Single-county rule
+42660-D04,district,Seattle & Shoreline,high,
+42660-D05,district,South & Southeast King,high,same area as the piece
+42660-S01,subregion,King County,high,OMB Seattle-Bellevue-Kent = King County
+42660-S02,subregion,Pierce County,high,OMB Tacoma-Lakewood = Pierce; same area as D02
+42660-S03,subregion,Snohomish County,high,OMB Everett = Snohomish; same area as D03
+45300-D01,district,St. Petersburg & South Pinellas,high,same area as the piece (new in pieces 1.3)
+45300-D02,district,Tampa & Northwest Hillsborough,high,
+45300-D03,district,Pasco & Hernando,high,
+45300-D04,district,Brandon & South County,high,
+45300-D05,district,Clearwater & North Pinellas,high,same area as the piece (new in pieces 1.3)
+45300-S01,subregion,"Hillsborough, Pasco & Hernando",high,"OMB ""Tampa"" division"
+45300-S02,subregion,Pinellas County,high,OMB St. Petersburg-Clearwater-Largo = Pinellas; same area as D01
+46060-D01,district,Pima County,high,Already matches single-county rule; whole CBSA
+46140-D01,district,Greater Tulsa,medium,Whole-CBSA district rule
+47260-D01,district,Virginia Peninsula,high,"Newport News, Hampton, Williamsburg, James City, York, Poquoson; Gloucester, Mathews"
+47260-D02,district,Virginia Beach & Norfolk,high,
+47260-D03,district,"Chesapeake, Portsmouth & Western Tidewater",medium,"Western Tidewater = Suffolk, Isle of Wight, Surry; also Currituck, Camden, Gates NC"
+47900-D01,district,Central & Southern Prince George's & Charles,high,
+47900-D02,district,"Prince William, Stafford & Fredericksburg",high,"Plus Spotsylvania, Fauquier, Culpeper, Rappahannock; Manassas and Manassas Park (enclosed by Prince William)"
+47900-D03,district,"I-270 Corridor, Upcounty & Frederick",high,
+47900-D04,district,District of Columbia,high,Kept: official name
+47900-D05,district,North & West Fairfax,high,"Piece name needs ""Fairfax""; includes Fairfax and Falls Church cities (Manassas and Manassas Park joined Prince William under the enclosed-unit rule)"
+47900-D06,district,Eastern Fairfax: Annandale & Springfield,high,
+47900-D07,district,Loudoun & Lower Shenandoah Valley,medium,"Jefferson WV, Clarke, Warren"
+47900-D08,district,Downcounty: Silver Spring & Bethesda,high,
+47900-D09,district,Arlington & Alexandria,high,
+47900-D10,district,Northern Prince George's,high,Same area as the piece
+47900-S01,subregion,Northern Virginia,high,OMB Arlington-Alexandria-Reston; includes Jefferson WV and Fredericksburg area
+47900-S02,subregion,"DC, Prince George's & Charles",high,"OMB ""Washington"" division"
+47900-S03,subregion,Montgomery & Frederick,high,OMB Frederick-Gaithersburg-Bethesda

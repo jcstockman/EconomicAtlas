@@ -64,7 +64,7 @@ def main():
     land = bx.land_tracts(set(counties))
     sub_of, how = {}, {}
     for c in counties:
-        gs = [g for g in piece_of if g[:5] == c]
+        gs = [g for g in piece_of if bx.cty(g) == c]
         lg = [g for g in gs if g in land]
         buf = {g: land[g].buffer(0.0005) for g in lg}
         tree = STRtree([buf[g] for g in lg]); adj = collections.defaultdict(dict)
@@ -185,10 +185,10 @@ def main():
     feats = []; cut = []
     geom = {}
     for c in counties:
-        geo = {g: x for g, x in land.items() if g[:5] == c}
+        geo = {g: x for g, x in land.items() if bx.cty(g) == c}
         by = collections.defaultdict(list)
         for g, s in sub_of.items():
-            if g[:5] == c and g in geo:
+            if bx.cty(g) == c and g in geo:
                 by[s].append(bgj.uninhabited_islands_removed(g, geo, cut))
         for s, xs in by.items():
             geom[s] = bgj.drop_specks(make_valid(unary_union([x.buffer(0.0005) for x in xs if x is not None]).buffer(-0.0005)))

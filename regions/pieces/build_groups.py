@@ -28,10 +28,15 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_crosswalk as bx  # noqa: E402  (shared loaders and caches)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MIN_COUNTY = 1_000_000
+MIN_COUNTY = 920_000
 TARGET, LO, HI = 800_000, 460_000, 1_070_000  # rule 1: about 0.8M within 0.45-1.1M; build limits leave margin
+# rule 1a (release 1.2): a 0.9M cap (build 0.88M) where a trial showed more even pieces with equal or better commuting,
+# demographic and geographic coherence (docs/specs/county-pieces.md, Cap 0.9M)
+CAP = {"53033": 880_000, "48439": 880_000, "06059": 880_000, "48201": 880_000, "06073": 880_000, "12086": 880_000,
+       "17031": 880_000, "12099": 880_000}  # Cook and Palm Beach since release 1.3
 ST = {"06": "ca", "48": "tx", "17": "il", "12": "fl", "36": "ny", "53": "wa", "42": "pa", "25": "ma", "26": "mi", "04": "az",
-      "32": "nv", "39": "oh", "27": "mn", "37": "nc", "49": "ut", "51": "va", "13": "ga", "24": "md"}
+      "32": "nv", "39": "oh", "27": "mn", "37": "nc", "49": "ut", "51": "va", "13": "ga", "24": "md", "09": "ct", "18": "in",
+      "29": "mo", "15": "hi", "34": "nj", "55": "wi"}
 LODES_YEAR = {"mi": "2021"}
 AG = bx.AG
 BRONX_MERGE = {"BX26": "BX08", "BX27": "BX11", "BX28": "BX10", "QN01": "BX02"}  # parks; Rikers Island (CDTA QN01) -> Hunts Point
@@ -82,7 +87,13 @@ INFERRED = {"48201", "48113", "32003", "04013", "06059"}  # no official division
 # ("place", names) = every tract in those places/CDPs; ("points", [(lon, lat)]) = the tracts containing the points.
 KEEP = {
     "32003": [("Las Vegas Strip and airport (Paradise)", "place", ["Paradise CDP"])],
-    "12086": [("Downtown Miami and Brickell", "points", [(-80.1918, 25.7743), (-80.1937, 25.7617), (-80.1960, 25.7550), (-80.1890, 25.7820)])],
+    "12086": [("Downtown Miami and Brickell", "points", [(-80.1918, 25.7743), (-80.1937, 25.7617), (-80.1960, 25.7550), (-80.1890, 25.7820),
+                                                          (-80.2196, 25.7655), (-80.2890, 25.7620)])],  # with Little Havana and Flagami (1.2)
+    "17031": [("Austin with Oak Park", "points", [(-87.7656, 41.8940), (-87.7845, 41.8850)]),
+              ("Ashburn and West Lawn with Beverly", "points", [(-87.7110, 41.7470), (-87.7225, 41.7725), (-87.6770, 41.7180)]),
+              ("Lincoln Square with North Center", "points", [(-87.6890, 41.9750), (-87.6800, 41.9480)])],
+    "12099": [("West Boca, Delray and Boynton with South County", "points", [(-80.1918, 26.3587), (-80.1500, 26.3600)])],
+    "06073": [("Escondido and its backcountry", "points", [(-117.0864, 33.1192), (-117.0342, 33.2184), (-116.9800, 33.3000)])],
     "48113": [("Downtown Dallas and the Park Cities", "place", ["Highland Park town", "University Park city"]),
               ("Downtown Dallas and the Park Cities", "points", [(-96.7970, 32.7767), (-96.8000, 32.7900)])],
     "48201": [("Memorial Villages", "place", ["Bunker Hill Village city", "Hedwig Village city", "Hilshire Village city",
@@ -91,6 +102,10 @@ KEEP = {
 # Anchor sets for counties where commuting alone draws a line across a strong local divide: the tracts holding each
 # set's points stay in one piece, and different sets go to different pieces.
 APART = {
+    "17031": [  # release 1.3: under the 0.9M cap the North Shore and the West Side otherwise share a piece
+        ("North Shore", [(-87.6877, 42.0451), (-87.7320, 42.0750)]),
+        ("West Side", [(-87.7200, 41.9020), (-87.7190, 41.8600)]),
+    ],
     "06037": [  # San Gabriel Mountains / Newhall Pass: North County apart from the San Fernando Valley
         ("North County (Santa Clarita and Antelope Valley)", [(-118.5400, 34.3900), (-118.1200, 34.5800), (-118.1500, 34.7000)]),
         ("Northeast San Fernando Valley", [(-118.4400, 34.2800), (-118.4100, 34.2600)]),
@@ -107,13 +122,17 @@ APART = {
 }
 SPLIT = {"06037": ["San Fernando"]}  # official units split into tracts even under the cap (San Fernando HD spans the mountains)
 # Counties of 1.0-1.25M with no natural two-way split stay one piece (rule 1 exception; review 2026-11-22):
-WHOLE = {"06013": "Mount Diablo divides any split", "04019": "a split rings Tucson", "06019": "a split joins Clovis to the Sierra",
+WHOLE = {"48157": "most workers leave for Houston; no split inside the county has a commuting basis",
+         "53053": "no two contiguous pieces of 0.46M+ exist (Tacoma and its suburbs hold most residents)",
+         "06029": "a split cuts Bakersfield and leaves a long desert and mountain piece",
+         "48215": "a split cuts the one continuous McAllen-Edinburg urban area",
+         "17043": "the township split is irregular and keeps little commuting inside (26-27%)", "06013": "Mount Diablo divides any split", "04019": "a split rings Tucson", "06019": "a split joins Clovis to the Sierra",
          "13135": "no split avoids a pinch"}
 CORE_DENSITY, CORE_JOBS = 10_000, 40_000  # jobs per km2 of land, jobs per core (LODES WAC 2024)
 MU = 1.0       # weight of boundary length (compactness) against modularity
 PUMA_WEIGHT = 3.0  # a boundary between two tracts of the same 2020 PUMA counts this many times (pieces follow PUMA lines)
 NECK = 0.0035  # degrees (~350 m): a piece whose body splits when shrunk this much is joined by a neck < ~700 m
-UNIT_NAMES = {"06037", "17031", "06073", "36047", "36081", "36061", "36005", "53033", "06067", "42101", "26163", "25017", "36103"}
+UNIT_NAMES = {"09110", "34003", "06037", "17031", "06073", "36047", "36081", "36061", "36005", "53033", "06067", "42101", "26163", "25017", "36103"}
 
 
 class Part:
@@ -380,7 +399,7 @@ def tract_flows(fips, cache):
     with gzip.open(p, "rt") as fh:
         r = csv.reader(fh); next(r)
         for w, h, n, *_ in r:
-            if h[:5] == fips and w[:5] == fips:
+            if h[:2] == fips[:2] and bx.cty(h) == fips and bx.cty(w) == fips:
                 F[(h[:11], w[:11])] += int(n)
     return F
 
@@ -409,6 +428,16 @@ def exhaustive(P, units, k):
 
 
 def build(fips, cache, name, p25, fallback=False):
+    global HI
+    saved = HI
+    HI = CAP.get(fips, HI)
+    try:
+        return _build(fips, cache, name, p25, fallback)
+    finally:
+        HI = saved
+
+
+def _build(fips, cache, name, p25, fallback=False):
     tr = {t["properties"]["GEOID"]: t["properties"] for t in bx.tracts(fips)}
     land = bx.land_tracts({fips})
     pop = {g: p["POP100"] for g, p in tr.items()}
@@ -678,7 +707,7 @@ def job_cores(fips, gids, land, tadj, unit_of, upop, scale, pop):
     with gzip.open(p, "rt") as fh:
         r = csv.reader(fh); next(r)
         for row in r:
-            if row[0][:5] == fips:
+            if row[0][:2] == fips[:2] and bx.cty(row[0]) == fips:
                 J[row[0][:11]] += int(row[1])
     dens = {g: J[g] / max(0.05, land[g].area * 111.32 ** 2 * math.cos(math.radians(land[g].centroid.y))) for g in gids}
     def comps(pool, thr):

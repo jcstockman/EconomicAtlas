@@ -1,5 +1,5 @@
 """Allocation keys for county-only data (docs/specs/allocation-keys.md): each split county's figures are shared among
-its pieces in proportion to a key. Only the 46 counties with more than one piece need keys.
+its pieces in proportion to a key. Only counties with more than one piece need keys.
 
 Keys (each summed from tracts to pieces, then expressed as a share of the county):
   workplace (LODES 8 WAC, 2024; Michigan 2021)
@@ -39,8 +39,11 @@ ACS_SHELLS = "https://www2.census.gov/programs-surveys/acs/summary_file/2024/tab
 ZBP = "https://www2.census.gov/programs-surveys/cbp/datasets/2023/zbp23detail.zip"
 ZCTA_TRACT = "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_tract20_natl.txt"
 QCEW = "https://data.bls.gov/cew/data/api/2024/a/area/{fips}.csv"
-ST = {"06": "ca", "48": "tx", "17": "il", "12": "fl", "36": "ny", "53": "wa", "42": "pa", "25": "ma", "26": "mi", "04": "az",
-      "32": "nv", "39": "oh", "27": "mn", "37": "nc", "49": "ut", "51": "va", "13": "ga", "24": "md"}
+ST = {"01": "al", "02": "ak", "04": "az", "05": "ar", "06": "ca", "08": "co", "09": "ct", "10": "de", "11": "dc", "12": "fl", "13": "ga",
+      "15": "hi", "16": "id", "17": "il", "18": "in", "19": "ia", "20": "ks", "21": "ky", "22": "la", "23": "me", "24": "md", "25": "ma",
+      "26": "mi", "27": "mn", "28": "ms", "29": "mo", "30": "mt", "31": "ne", "32": "nv", "33": "nh", "34": "nj", "35": "nm", "36": "ny",
+      "37": "nc", "38": "nd", "39": "oh", "40": "ok", "41": "or", "42": "pa", "44": "ri", "45": "sc", "46": "sd", "47": "tn", "48": "tx",
+      "49": "ut", "50": "vt", "51": "va", "53": "wa", "54": "wv", "55": "wi", "56": "wy"}
 LODES_YEAR = {"mi": "2021"}
 CNS = ["11", "21", "22", "23", "31-33", "42", "44-45", "48-49", "51", "52", "53", "54", "55", "56", "61", "62", "71", "72", "81", "92"]
 ZBP_SECTOR = {"11": "11", "21": "21", "22": "22", "23": "23", "31": "31-33", "42": "42", "44": "44-45", "48": "48-49", "51": "51",
@@ -95,7 +98,7 @@ def acs_table(table, tracts):
         for line in fh:
             if not line.startswith("1400000US"):
                 continue
-            f = line.rstrip("\n").split("|"); g = f[0][9:]
+            f = line.rstrip("\n").split("|"); g = bx.tract_2020(f[0][9:])  # Connecticut: 2022 codes -> 2020
             if g in tracts:
                 out[g] = {h.replace("_E", "_"): float(v) if v not in ("", "null") and not v.startswith("*") and float(v) >= 0 else None
                           for h, v in zip(head[1:], f[1:]) if "_E" in h}  # None: no estimate (negative annotation codes)
@@ -283,7 +286,7 @@ def main():
         release = r["pieces_release"]
     npieces = collections.Counter(p[:5] for p in set(piece_of.values()))
     split = {c for c, n in npieces.items() if n > 1}
-    piece_of = {g: p for g, p in piece_of.items() if g[:5] in split}
+    piece_of = {g: p for g, p in piece_of.items() if p[:5] in split}  # the piece ID carries the current county
     tracts = set(piece_of)
     keys = collections.defaultdict(collections.Counter)  # key -> piece -> value
     catalog = []

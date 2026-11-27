@@ -1,8 +1,8 @@
 # Atlas units
 
-Status: draft, 2026-11-27. Built from county pieces release 1.0.1 (`docs/specs/county-pieces.md`). Scripts and outputs in `regions/units/`.
+Status: draft, 2026-11-27. Built from county pieces release 1.3 (`docs/specs/county-pieces.md`). Scripts and outputs in `regions/units/`.
 
-Every 2020 census tract in the 50 states and DC belongs to exactly one **atlas unit**: a county piece in the 50 counties with 1.0M+ residents, a whole county everywhere else. Atlas units are the geography the atlas reports on and the base for subregions and districts.
+Every 2020 census tract in the 50 states and DC belongs to exactly one **atlas unit**: a county piece in the 64 counties with 0.92M+ residents, a whole county everywhere else. Atlas units are the geography the atlas reports on and the base for subregions and districts.
 
 ## Rules
 
@@ -22,9 +22,9 @@ Every 2020 census tract in the 50 states and DC belongs to exactly one **atlas u
 
 Inputs go through the pieces loaders, so they are logged and pinned in `regions/pieces/inputs/manifest.csv` (454 inputs after this build).
 
-## Build 2026-11-27 (pieces release 1.0.1)
+## Build 2026-11-27 (pieces release 1.3)
 
-- 84,414 tracts, all in exactly one unit. 3,228 units: 134 pieces (50 counties) and 3,094 whole counties.
+- 84,414 tracts, all in exactly one unit. 3,237 units: 157 pieces (64 counties) and 3,080 whole counties (release 1.2: 3,234 units, 147 pieces in 57 counties). Piece counties are read from the pieces crosswalk's `county_fips`, so the Capitol Planning Region (2020 tracts in Hartford and Tolland counties) is recognised; release 1.0.1 had 3,228 units (134 pieces).
 - 2020: 331,449,281 residents, the census total for the 50 states and DC. 2025: 341,784,858, one more than the Vintage 2025 total (per-piece rounding).
 - Every piece matches the pieces release (2020 and 2025 residents).
 - Shapes: each split county's pieces cover 98.6–100% of its 2024 county shape (Los Angeles lowest: uninhabited islands are left off) and extend at most 0.2% outside it (simplification and shoreline differences).

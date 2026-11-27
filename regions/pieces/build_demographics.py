@@ -16,7 +16,8 @@ PL = "https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistrict
 STATES = {"06": ("California", "ca"), "48": ("Texas", "tx"), "17": ("Illinois", "il"), "12": ("Florida", "fl"), "36": ("New_York", "ny"),
           "53": ("Washington", "wa"), "42": ("Pennsylvania", "pa"), "25": ("Massachusetts", "ma"), "26": ("Michigan", "mi"),
           "04": ("Arizona", "az"), "32": ("Nevada", "nv"), "39": ("Ohio", "oh"), "27": ("Minnesota", "mn"), "37": ("North_Carolina", "nc"),
-          "49": ("Utah", "ut"), "51": ("Virginia", "va"), "13": ("Georgia", "ga"), "24": ("Maryland", "md")}
+          "49": ("Utah", "ut"), "51": ("Virginia", "va"), "13": ("Georgia", "ga"), "24": ("Maryland", "md"),
+          "09": ("Connecticut", "ct"), "18": ("Indiana", "in"), "29": ("Missouri", "mo"), "15": ("Hawaii", "hi"), "34": ("New_Jersey", "nj"), "55": ("Wisconsin", "wi")}
 GROUPS = ["hispanic", "nh_white", "nh_black", "nh_asian", "nh_other"]
 
 
@@ -28,7 +29,7 @@ def tracts_for_state(cache, fips2, counties):
     with z.open(f"{st}geo2020.pl") as fh:
         for line in io.TextIOWrapper(fh, encoding="latin-1"):
             f = line.split("|")
-            if f[2] == "140" and f[9][:5] in counties:  # SUMLEV 140 = tract; GEOCODE = state+county+tract
+            if f[2] == "140" and bx.cty(f[9][:11]) in counties:  # SUMLEV 140 = tract; GEOCODE = state+county+tract
                 logrec[f[7]] = f[9]
     out = {}
     with z.open(f"{st}000012020.pl") as fh:

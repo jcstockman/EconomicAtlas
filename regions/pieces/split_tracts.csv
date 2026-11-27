@@ -1,4 +1,6 @@
 tract_geoid,county_fips,piece_id,piece_name,pop2020
+06073015502,06073,06073-01,North County & Backcountry,2
+06073015502,06073,06073-05,"Mid-City, Kearny Mesa & East County",2948
 06085503338,06085,06085-01,"San Jose, West Valley & South County",68
 06085503338,06085,06085-02,North County & East San Jose,4658
 06085505600,06085,06085-01,"San Jose, West Valley & South County",4195
@@ -14,21 +16,65 @@ tract_geoid,county_fips,piece_id,piece_name,pop2020
 12086000908,12086,12086-02,Northeast Dade & the Beaches,3705
 12086000908,12086,12086-03,Hialeah & Doral,11
 12086005003,12086,12086-03,Hialeah & Doral,86
-12086005003,12086,12086-04,City of Miami & Coral Gables,2889
-17031100500,17031,17031-02,North & Northwest Suburbs,6053
-17031100500,17031,17031-03,West Side & Near West Suburbs,63
-17031770602,17031,17031-02,North & Northwest Suburbs,3583
-17031770602,17031,17031-03,West Side & Near West Suburbs,1179
-17031808302,17031,17031-02,North & Northwest Suburbs,3618
-17031808302,17031,17031-06,"Far North Side, Evanston & Skokie",749
-17031810400,17031,17031-02,North & Northwest Suburbs,4432
-17031810400,17031,17031-03,West Side & Near West Suburbs,977
-17031820603,17031,17031-01,Far South Side & South Suburbs,3626
-17031820603,17031,17031-03,West Side & Near West Suburbs,1904
-17031820606,17031,17031-01,Far South Side & South Suburbs,2024
-17031820606,17031,17031-03,West Side & Near West Suburbs,1842
+12086005003,12086,12086-04,"City of Miami, Coral Gables & Kendall",2889
+12086008427,12086,12086-01,West Kendall & South Dade,16
+12086008427,12086,12086-04,"City of Miami, Coral Gables & Kendall",2399
+12099005412,12099,12099-01,South County: Boca Raton & Boynton Beach,1530
+12099005412,12099,12099-02,"West Palm Beach, North County & Glades",1471
+17031230100,17031,17031-03,West & Southwest Sides & Near West Suburbs,1489
+17031230100,17031,17031-05,Downtown & North Side,15
+17031801603,17031,17031-02,Northwest Suburbs & O'Hare,20
+17031801603,17031,17031-06,Northwest Side & North Shore,4118
+17031802402,17031,17031-02,Northwest Suburbs & O'Hare,5343
+17031802402,17031,17031-06,Northwest Side & North Shore,200
+17031805201,17031,17031-02,Northwest Suburbs & O'Hare,2107
+17031805201,17031,17031-06,Northwest Side & North Shore,1368
+17031805202,17031,17031-02,Northwest Suburbs & O'Hare,1484
+17031805202,17031,17031-06,Northwest Side & North Shore,2594
+17031808302,17031,17031-02,Northwest Suburbs & O'Hare,3618
+17031808302,17031,17031-06,Northwest Side & North Shore,749
+17031808600,17031,17031-02,Northwest Suburbs & O'Hare,514
+17031808600,17031,17031-06,Northwest Side & North Shore,1951
+17031810400,17031,17031-02,Northwest Suburbs & O'Hare,4106
+17031810400,17031,17031-06,Northwest Side & North Shore,1303
+17031810501,17031,17031-02,Northwest Suburbs & O'Hare,5287
+17031810501,17031,17031-06,Northwest Side & North Shore,6
+17031810600,17031,17031-02,Northwest Suburbs & O'Hare,4944
+17031810600,17031,17031-06,Northwest Side & North Shore,5
+17031811301,17031,17031-02,Northwest Suburbs & O'Hare,4642
+17031811301,17031,17031-03,West & Southwest Sides & Near West Suburbs,160
+17031811302,17031,17031-02,Northwest Suburbs & O'Hare,1252
+17031811302,17031,17031-03,West & Southwest Sides & Near West Suburbs,2313
+17031816600,17031,17031-02,Northwest Suburbs & O'Hare,78
+17031816600,17031,17031-03,West & Southwest Sides & Near West Suburbs,4444
+17031816700,17031,17031-02,Northwest Suburbs & O'Hare,2690
+17031816700,17031,17031-03,West & Southwest Sides & Near West Suburbs,3
+17031816800,17031,17031-02,Northwest Suburbs & O'Hare,419
+17031816800,17031,17031-03,West & Southwest Sides & Near West Suburbs,5346
+17031819000,17031,17031-01,South & Southwest Suburbs,552
+17031819000,17031,17031-03,West & Southwest Sides & Near West Suburbs,4216
+17031820103,17031,17031-01,South & Southwest Suburbs,1739
+17031820103,17031,17031-03,West & Southwest Sides & Near West Suburbs,2546
+17031821600,17031,17031-01,South & Southwest Suburbs,2
+17031821600,17031,17031-04,South Side & Far South Side,4540
+17031823304,17031,17031-01,South & Southwest Suburbs,5863
+17031823304,17031,17031-04,South Side & Far South Side,9
 24031701303,24031,24031-01,I-270 Corridor & Upcounty,3656
 24031701303,24031,24031-02,Downcounty: Silver Spring & Bethesda,133
+24033803520,24033,24033-01,Central & Southern Prince George's,4106
+24033803520,24033,24033-02,Northern Prince George's,245
+24033803601,24033,24033-01,Central & Southern Prince George's,997
+24033803601,24033,24033-02,Northern Prince George's,2666
+24033803602,24033,24033-01,Central & Southern Prince George's,549
+24033803602,24033,24033-02,Northern Prince George's,1671
+29189215201,29189,29189-01,North & Central St. Louis County,4450
+29189215201,29189,29189-02,West & South St. Louis County,2207
+29189215234,29189,29189-01,North & Central St. Louis County,749
+29189215234,29189,29189-02,West & South St. Louis County,1322
+29189217500,29189,29189-01,North & Central St. Louis County,3569
+29189217500,29189,29189-02,West & South St. Louis County,2018
+29189217600,29189,29189-01,North & Central St. Louis County,1896
+29189217600,29189,29189-02,West & South St. Louis County,5681
 37183052305,37183,37183-01,Raleigh & North Wake,2976
 37183052305,37183,37183-02,Southwest Wake: Cary & Apex,77
 37183052307,37183,37183-01,Raleigh & North Wake,2395
@@ -54,36 +100,26 @@ tract_geoid,county_fips,piece_id,piece_name,pop2020
 51059491705,51059,51059-01,Eastern Fairfax: Annandale & Springfield,2903
 51059491705,51059,51059-02,North & West County: Reston & Tysons,438
 53033011200,53033,53033-02,Seattle & Shoreline,3707
-53033011200,53033,53033-03,"South King: Burien, Kent & Auburn",29
-53033020401,53033,53033-01,Eastside & Southeast King,74
+53033011200,53033,53033-03,South & Southeast King,29
+53033020401,53033,53033-01,Eastside,74
 53033020401,53033,53033-02,Seattle & Shoreline,3843
-53033020402,53033,53033-01,Eastside & Southeast King,3833
+53033020402,53033,53033-01,Eastside,3833
 53033020402,53033,53033-02,Seattle & Shoreline,1849
-53033021300,53033,53033-01,Eastside & Southeast King,2575
+53033021300,53033,53033-01,Eastside,2575
 53033021300,53033,53033-02,Seattle & Shoreline,1455
-53033021400,53033,53033-01,Eastside & Southeast King,3411
+53033021400,53033,53033-01,Eastside,3411
 53033021400,53033,53033-02,Seattle & Shoreline,496
-53033026200,53033,53033-01,Eastside & Southeast King,44
-53033026200,53033,53033-03,"South King: Burien, Kent & Auburn",6425
+53033024704,53033,53033-01,Eastside,2667
+53033024704,53033,53033-03,South & Southeast King,1132
+53033025001,53033,53033-01,Eastside,2598
+53033025001,53033,53033-03,South & Southeast King,3040
+53033025006,53033,53033-01,Eastside,5748
+53033025006,53033,53033-03,South & Southeast King,865
+53033025007,53033,53033-01,Eastside,4807
+53033025007,53033,53033-03,South & Southeast King,61
 53033026500,53033,53033-02,Seattle & Shoreline,89
-53033026500,53033,53033-03,"South King: Burien, Kent & Auburn",4295
-53033029305,53033,53033-01,Eastside & Southeast King,1410
-53033029305,53033,53033-03,"South King: Burien, Kent & Auburn",3257
-53033029307,53033,53033-01,Eastside & Southeast King,2983
-53033029307,53033,53033-03,"South King: Burien, Kent & Auburn",920
-53033030600,53033,53033-01,Eastside & Southeast King,10
-53033030600,53033,53033-03,"South King: Burien, Kent & Auburn",5766
-53033031101,53033,53033-01,Eastside & Southeast King,18
-53033031101,53033,53033-03,"South King: Burien, Kent & Auburn",3708
-53033031202,53033,53033-01,Eastside & Southeast King,5639
-53033031202,53033,53033-03,"South King: Burien, Kent & Auburn",1079
-53033031207,53033,53033-01,Eastside & Southeast King,2
-53033031207,53033,53033-03,"South King: Burien, Kent & Auburn",5263
-53033031704,53033,53033-01,Eastside & Southeast King,229
-53033031704,53033,53033-03,"South King: Burien, Kent & Auburn",5972
-53033031707,53033,53033-01,Eastside & Southeast King,463
-53033031707,53033,53033-03,"South King: Burien, Kent & Auburn",3276
-53033031708,53033,53033-01,Eastside & Southeast King,85
-53033031708,53033,53033-03,"South King: Burien, Kent & Auburn",3888
-53033031800,53033,53033-01,Eastside & Southeast King,2641
-53033031800,53033,53033-03,"South King: Burien, Kent & Auburn",2303
+53033026500,53033,53033-03,South & Southeast King,4295
+53033032102,53033,53033-01,Eastside,819
+53033032102,53033,53033-03,South & Southeast King,4064
+53033032104,53033,53033-01,Eastside,5012
+53033032104,53033,53033-03,South & Southeast King,1282

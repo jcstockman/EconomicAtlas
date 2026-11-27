@@ -32,7 +32,8 @@ def land_tracts(cache, counties):
 HERE = os.path.dirname(os.path.abspath(__file__))
 SIMPLIFY = 0.0002  # about 20 m
 ST = {"06": "ca", "48": "tx", "17": "il", "12": "fl", "36": "ny", "53": "wa", "42": "pa", "25": "ma", "26": "mi", "04": "az", "32": "nv",
-      "39": "oh", "27": "mn", "37": "nc", "49": "ut", "51": "va", "13": "ga", "24": "md"}
+      "39": "oh", "27": "mn", "37": "nc", "49": "ut", "51": "va", "13": "ga", "24": "md",
+      "09": "ct", "18": "in", "29": "mo", "15": "hi", "34": "nj", "55": "wi"}
 YEAR = {"mi": "2021"}
 LODES = "https://lehd.ces.census.gov/data/lodes/LODES8/{st}/{kind}/{st}_{kind}_{part}JT00_{yr}.csv.gz"
 
@@ -123,10 +124,10 @@ def main():
     land = land_tracts(a.cache, set(counties))
     for c in counties:
         pop = {t["properties"]["GEOID"]: t["properties"]["POP100"] for t in bx.tracts(c)}
-        geo = {g: x for g, x in land.items() if g[:5] == c}
+        geo = {g: x for g, x in land.items() if bx.cty(g) == c}
         by = collections.defaultdict(list)
         for g, pc in piece_of.items():
-            if g[:5] != c or g not in geo:
+            if bx.cty(g) != c or g not in geo:
                 continue  # water-only tract: no land polygon
             by[pc].append(uninhabited_islands_removed(g, geo, cut))
         # close hairline gaps between neighbouring cartographic tracts: grow ~50 m, the adjacency tolerance build_groups.py uses, merge, shrink back

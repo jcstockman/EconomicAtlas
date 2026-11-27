@@ -130,8 +130,57 @@ def poly(feats, key):
     return [(key(f["properties"]), make_valid(shape(f["geometry"]))) for f in feats if f.get("geometry")]
 
 
+CT_REGIONS = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_ACS2024/MapServer/82"
+_CTY = {}
+
+
+def cty(g):
+    """Current county of a 2020 tract (or block) GEOID: its 2020 county, except in Connecticut, where the Vintage 2025
+    county-equivalents are the nine planning regions (2022): the region holding the tract's internal point (as in
+    regions/units)."""
+    if g[:2] != "09":
+        return g[:5]
+    _ct_load()
+    return _CTY[g[:11]]
+
+
+def _ct_load():
+    if not _CTY:
+        regions = poly(arcgis(CT_REGIONS, "STATE='09'", "GEOID,NAME"), lambda p: p["GEOID"])
+        for f in arcgis(TG + "6", "STATE='09'", "GEOID,POP100,INTPTLAT,INTPTLON", geometry=False):
+            p = f["properties"]; pt = Point(float(p["INTPTLON"]), float(p["INTPTLAT"]))
+            hit = [r for r, geo in regions if geo.contains(pt)]
+            _CTY[p["GEOID"]] = hit[0] if hit else min(regions, key=lambda r: r[1].distance(pt))[0]
+
+
+_CT20 = {}
+
+
+def tract_2020(g):
+    """2020 tract GEOID for a tract code from data released since 2022 (ACS), where Connecticut tracts carry their planning
+    region as county code with the tract number unchanged."""
+    if g[:2] != "09" or int(g[2:5]) < 100:
+        return g
+    if not _CT20:
+        _ct_load()
+        _CT20.update({r + t[5:]: t for t, r in _CTY.items()})
+    return _CT20.get(g, g)
+
+
+def county_codes(fips):
+    """2020 county codes whose tracts make up a current county (several for a Connecticut planning region)."""
+    if fips[:2] != "09" or int(fips[2:]) < 100:
+        return [fips]
+    _ct_load()
+    return sorted({g[:5] for g, r in _CTY.items() if r == fips})
+
+
 def ccd(fips, name=lambda v: v.replace(" CCD", ""), field="NAME"):
-    return poly(arcgis(TG + "20", f"STATE='{fips[:2]}' AND COUNTY='{fips[2:]}'"), lambda p: name(p[field]))
+    if fips in county_codes(fips):
+        return poly(arcgis(TG + "20", f"STATE='{fips[:2]}' AND COUNTY='{fips[2:]}'"), lambda p: name(p[field]))
+    # a Connecticut planning region: the towns (CCDs) of its 2020 counties lying in the region
+    region = unary_union([g for r, g in poly(arcgis(CT_REGIONS, "STATE='09'", "GEOID,NAME"), lambda p: p["GEOID"]) if r == fips])
+    return [(n, g) for c in county_codes(fips) for n, g in ccd(c, name, field) if region.contains(g.representative_point())]
 
 
 AG = "https://services.arcgis.com/"
@@ -139,7 +188,8 @@ NYC_MERGE = {"BK55": "BK06", "BK56": "BK18", "QN80": "QN03", "QN81": "QN04", "QN
 
 
 def tracts(fips):
-    return arcgis(TG + "6", f"STATE='{fips[:2]}' AND COUNTY='{fips[2:]}'", "GEOID,POP100,INTPTLAT,INTPTLON")
+    return [t for c in county_codes(fips) for t in arcgis(TG + "6", f"STATE='{c[:2]}' AND COUNTY='{c[2:]}'", "GEOID,POP100,INTPTLAT,INTPTLON")
+            if cty(t["properties"]["GEOID"]) == fips]
 
 
 def blocks(geoid):
@@ -157,6 +207,7 @@ def land_tracts(counties):
     key = tuple(sorted(counties))
     if key in _LAND:
         return _LAND[key]
+    codes = {c for x in counties for c in county_codes(x)}
     p = fetch(CB)
     z = zipfile.ZipFile(p)
     r = shapefile.Reader(shp=io.BytesIO(z.read("cb_2020_us_tract_500k.shp")), dbf=io.BytesIO(z.read("cb_2020_us_tract_500k.dbf")))
@@ -164,7 +215,7 @@ def land_tracts(counties):
     out = {}
     for sr in r.iterShapeRecords():
         g = sr.record[i]
-        if g[:5] in counties and sr.shape.points:
+        if g[:5] in codes and cty(g) in counties and sr.shape.points:
             out[g] = make_valid(shape(sr.shape.__geo_interface__))
     _LAND[key] = out
     return out
@@ -286,7 +337,7 @@ def main():
         # manual pins (pins.csv): tract -> piece_id, applied after grouping and contiguity repair
         byid = {v: i for i, v in pid.items()}
         for r in pins:
-            if r["tract_geoid"][:5] == fips:
+            if cty(r["tract_geoid"]) == fips:
                 if r["piece_id"] not in byid:
                     raise SystemExit(f"pins.csv: {r['tract_geoid']} -> unknown piece {r['piece_id']}")
                 piece_of[r["tract_geoid"]] = byid[r["piece_id"]]; how[r["tract_geoid"]] = "pinned"; share[r["tract_geoid"]] = 1.0

@@ -1,0 +1,125 @@
+{
+ "version": "1.2",
+ "released": "2026-11-27",
+ "git_commit_of_build_code": "31c4d49acbbd7b0d69c0bdd398f9dfa8b8186987",
+ "parameters": {
+  "TARGET": 800000,
+  "LO": 460000,
+  "HI": 1070000,
+  "MIN_COUNTY": 950000,
+  "MU": 1.0,
+  "PUMA_WEIGHT": 3.0,
+  "NECK": 0.0035,
+  "CORE_DENSITY": 10000,
+  "CORE_JOBS": 40000,
+  "WHOLE": [
+   "04019",
+   "06013",
+   "06019",
+   "13135",
+   "48157"
+  ],
+  "SPLIT": {
+   "06037": [
+    "San Fernando"
+   ]
+  }
+ },
+ "counts": {
+  "counties": 57,
+  "tracts": 25487,
+  "pieces": 147,
+  "subareas": 866
+ },
+ "checks": [
+  "pass  coverage",
+  "pass  registry",
+  "pass  totals",
+  "pass  size",
+  "pass  contiguity",
+  "pass  necks",
+  "pass  job centres",
+  "pass  subareas",
+  "pass  files",
+  "25,487 tracts, 147 pieces, 866 subareas, 57 counties"
+ ],
+ "sha256": {
+  "groups.json": "8f504dc289517ea03c6249f489b498d3533d37a7c772aa037d3daf9f690a3da6",
+  "crosswalk_tract_piece.csv": "828ae8e04aa23e90ab763f82729476338882f97d23545b0577d1960cec79d1c4",
+  "split_tracts.csv": "0fd9f2e9a55344fbb98a0f2b2c8368d4363b0da4caa3ba5db64ea60251cf9a81",
+  "pieces_summary.csv": "6d5376c6692cd96dc6216a136004862a9c87e4d9ac778a00c298c91feadb2b58",
+  "pieces.geojson": "eddfad4af571902c6e50129c8f2d439b66107b561a303948b2b1abdbad1fcdc3",
+  "tract_demographics.csv": "f3493be56698ed254ce8d5a5e9f801541bb90cae450832ace386db1d08718d20",
+  "piece_demographics.csv": "7af47ee9be890a9cb222489d2c14a5b87b5a1e26dea6a4fd1cc0f32310d5cc45",
+  "crosswalk_tract_subarea.csv": "c901c7545f314d2cf01d4c028f626f6a2154038d39456b7a61ba9db15cba4425",
+  "subareas_summary.csv": "a2be45363c4141a468041959afd629bbbf3975bd763f78c7c30c8b9a49feb771",
+  "subareas.geojson": "6bac80ab8d7d46624ea0b1625809b3cde2ce8f9039f3e4a18bdcab9fede19e84",
+  "piece_registry.csv": "18f97f4e9bab92f4775166f592aeaf8ce6fa9be94e3a3f718d1f7b46d50de80f",
+  "pins.csv": "deca0bdc4e576d93d637db38cc823ae591ca93e5184ad862db134bc576321560",
+  "inputs/manifest.csv": "469d1b1b8abcbe6a1399821043f37d608187a99983dad577f30bab8ab71b1898"
+ },
+ "changes": {
+  "previous": "1.1",
+  "tracts_changed_piece": 878,
+  "tracts_changed_subarea": 917,
+  "residents_moved_2020": 3946508,
+  "pieces_added": [
+   "06073-05"
+  ],
+  "pieces_retired": [
+   "06073-04"
+  ],
+  "largest_moves": [
+   {
+    "from": "06073-03",
+    "to": "06073-05",
+    "pop2020": 702095
+   },
+   {
+    "from": "06073-04",
+    "to": "06073-03",
+    "pop2020": 627304
+   },
+   {
+    "from": "48201-02",
+    "to": "48201-05",
+    "pop2020": 330242
+   },
+   {
+    "from": "06059-01",
+    "to": "06059-04",
+    "pop2020": 306547
+   },
+   {
+    "from": "53033-01",
+    "to": "53033-03",
+    "pop2020": 298022
+   },
+   {
+    "from": "12086-01",
+    "to": "12086-04",
+    "pop2020": 284618
+   },
+   {
+    "from": "48201-01",
+    "to": "48201-03",
+    "pop2020": 213576
+   },
+   {
+    "from": "48201-05",
+    "to": "48201-02",
+    "pop2020": 161060
+   },
+   {
+    "from": "06059-02",
+    "to": "06059-03",
+    "pop2020": 143880
+   },
+   {
+    "from": "06059-04",
+    "to": "06059-02",
+    "pop2020": 140946
+   }
+  ]
+ }
+}

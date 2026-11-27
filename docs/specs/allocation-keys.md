@@ -2,7 +2,7 @@
 
 Status: built, 2026-11-27. All five recommendations adopted (see Decisions); keys in `regions/keys/` (see Build).
 
-BEA's regional accounts and BLS's QCEW publish counties, not pieces. In the 46 counties split into several pieces (28.6% of US residents in 2025; `docs/specs/atlas-units.md`), each county figure must be shared among its pieces by a **key**: a sub-county measure that tracks the figure. Whole-county units (3,094 counties and the four whole-county pieces) need no key; they take the published number.
+BEA's regional accounts and BLS's QCEW publish counties, not pieces. In the 55 counties split into several pieces (31.1% of US residents in 2025; 52 counties and 30.3% in release 1.2; 46 counties and 28.6% before pieces release 1.1; `docs/specs/atlas-units.md`), each county figure must be shared among its pieces by a **key**: a sub-county measure that tracks the figure. Whole-county units (3,094 counties and the four whole-county pieces) need no key; they take the published number.
 
 ## Principles
 
@@ -74,7 +74,7 @@ All five recommendations were adopted on 2026-11-27.
 
 ## Build (2026-11-27)
 
-`regions/keys/build_keys.py --cache DIR` reads the atlas units (pieces release 1.0.1) and writes, for the 46 split counties (130 pieces):
+`regions/keys/build_keys.py --cache DIR` reads the atlas units (pieces release 1.3) and writes, for the 55 split counties (148 pieces):
 
 - `keys.csv`: `key_id, county_fips, piece_id, value, share`. 143 keys; within every county and key the shares sum to 1. A key whose county total is zero (475 county–key pairs, mostly state and local government jobs in private-only sectors) has no share, and the figure uses the fallback key.
 - `keys_catalog.csv`: what each key measures, its source and year.
@@ -202,3 +202,8 @@ Per capita personal income by county: mean absolute error 5.5% with the componen
 - **Weak lines:** Medicare (65+ population 3.3% vs. total population 2.9%; median 2.6% vs. 2.7%), other retirement and disability benefits (every key tried 6–8%) and military medical benefits (veterans 11.6%, armed forces 15.9%). These are small lines; the keys are kept.
 - Net earnings by residence follow the wage and self-employment key closely (3.0%); BEA's residence adjustment is itself built from commuting flows, which the ACS earnings at residence track well.
 
+**Pieces release 1.1 (2026-11-27).** Keys, QCEW and BEA rebuilt for the six newly split counties (Capitol Region CT, Marion, St. Louis County, Honolulu, Bergen, Prince George's); every key value and every QCEW and BEA row of the earlier counties is unchanged, and all sum checks pass. Two Connecticut fixes: ACS tract codes since 2022 carry the planning region (translated to 2020 codes with `bx.tract_2020`), and BEA's CAINC35 (2022) still has Connecticut's old counties, so the Capitol Region's transfer receipts (CAINC4 line 47) are shared by the state's transfer mix instead of the county's. Validation (metro-as-county) does not depend on which counties are split and is unchanged.
+
+**Pieces release 1.2 (2026-11-27).** Keys, QCEW and BEA rebuilt for the six counties with the 0.9M cap; counts unchanged (52 split counties, 142 pieces), all sum checks pass, validation unchanged.
+
+**Pieces release 1.3 (2026-11-27).** Keys, QCEW and BEA rebuilt for Cook and Palm Beach (capped) and the newly split Pinellas, Erie and Milwaukee; 55 split counties, 148 pieces; all sum checks pass; validation unchanged.

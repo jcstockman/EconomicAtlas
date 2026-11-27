@@ -1,0 +1,9 @@
+level,unit_id,with_unit,name,reason
+district,51800,51550,Suffolk city -> Chesapeake district,"Suffolk sends 44% of its workers to Chesapeake, Portsmouth, Norfolk and Virginia Beach, 13% to the Peninsula; the greedy joins had put it with the Peninsula through Isle of Wight"
+district,51093,51550,Isle of Wight County -> Chesapeake district,"Western Tidewater stays together (and contiguous) with Suffolk; its workers split between the Peninsula (25%) and the Southside (about 30%)"
+district,51181,51550,Surry County -> Chesapeake district,Western Tidewater: reaches the rest of Hampton Roads through Isle of Wight
+district,37073,51550,Gates County -> Chesapeake district,Western Tidewater: its commuters go to Suffolk (10%) and the Southside cities
+district,29510,29189-01,St. Louis city -> North & Central St. Louis County,"32% of the city's workers go to the North & Central piece and 16% to West & South County (2% to Metro East); without the pin the Metro East counties, which commute into downtown, draw the city into a 1.45M district with the piece"
+district,17119,17163,Madison County IL -> St. Clair County IL,"Metro East forms its own district (0.55M with Monroe) rather than attaching county by county to the city"
+district,17133,17163,Monroe County IL -> St. Clair County IL,"34% of its workers go to the Metro East and city district, 23% to the Missouri side (jobs inside Monroe excluded)"
+subregion,29183,29189-02,St. Charles -> West & South St. Louis County subregion,"Keeps St. Charles with the Missouri suburbs (18% of its workers go to West & South County, which it borders at Chesterfield); by commuting alone the grouping would pair St. Charles with Metro East around the core (70% of commuting kept inside subregions against 63% here), the wrap-around this pin avoids"
