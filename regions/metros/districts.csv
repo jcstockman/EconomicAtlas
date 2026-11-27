@@ -39,7 +39,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 16980-D11,16980,"Chicago-Naperville-Elgin, IL-IN",16980-S04,Northwest Side & North Shore,curated,Northwest Side & North Shore,842316,1,True,0.2318,Northwest Side & North Shore
 17140-D01,17140,"Cincinnati, OH-KY-IN",,Hamilton County & Northern Kentucky,curated,Hamilton / Kenton (+9),1394175,11,True,0.7367,Hamilton; Kenton; Boone; Campbell; Dearborn; Grant; Franklin; Pendleton; Gallatin; Bracken; Ohio
 17140-D02,17140,"Cincinnati, OH-KY-IN",,"Butler, Warren & Clermont",curated,Butler / Warren (+2),918683,4,True,0.4379,Butler; Warren; Clermont; Brown
-17410-D01,17410,"Cleveland, OH",,"Cleveland, Lake, Geauga & Ashtabula",curated,Cleveland & East Side / Lake (+2),1176856,4,True,0.7325,Cleveland & East Side; Lake; Ashtabula; Geauga
+17410-D01,17410,"Cleveland, OH",,"Cleveland, Lake, Geauga & Ashtabula",curated,Cleveland & Eastern Suburbs / Lake (+2),1176856,4,True,0.7325,Cleveland & Eastern Suburbs; Lake; Ashtabula; Geauga
 17410-D02,17410,"Cleveland, OH",,"West & South Suburbs, Lorain & Medina",curated,West & South Suburbs / Lorain / Medina,988919,3,True,0.484,West & South Suburbs; Lorain; Medina
 18140-D01,18140,"Columbus, OH",,"Central & West Columbus, Delaware & Union",curated,Central & West Columbus / Delaware (+4),1162189,6,True,0.6352,Central & West Columbus; Delaware; Union; Pickaway; Madison; Morrow
 18140-D02,18140,"Columbus, OH",,"East Columbus, Licking & Fairfield",curated,East Columbus: Westerville & Gahanna / Licking (+3),1079839,5,True,0.4832,East Columbus: Westerville & Gahanna; Licking; Fairfield; Perry; Hocking
@@ -50,7 +50,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 19100-D05,19100,"Dallas-Fort Worth-Arlington, TX",19100-S02,South Collin: Plano & Allen,curated,South Collin: Plano & Allen,726008,1,True,0.2852,South Collin: Plano & Allen
 19100-D06,19100,"Dallas-Fort Worth-Arlington, TX",19100-S01,"Northeast Tarrant, Alliance & Wise",curated,Northeast Tarrant: Mid-Cities & Alliance / Wise,855506,2,True,0.3046,Northeast Tarrant: Mid-Cities & Alliance; Wise
 19100-D07,19100,"Dallas-Fort Worth-Arlington, TX",19100-S01,Arlington & Mansfield,curated,Arlington & Mansfield,631130,1,True,0.2875,Arlington & Mansfield
-19100-D08,19100,"Dallas-Fort Worth-Arlington, TX",19100-S02,Denton & Lewisville,curated,Denton & Lewisville,588676,1,True,0.2872,Denton & Lewisville
+19100-D08,19100,"Dallas-Fort Worth-Arlington, TX",19100-S02,"Denton, Lewisville & Flower Mound",curated,"Denton, Lewisville & Flower Mound",588676,1,True,0.2872,"Denton, Lewisville & Flower Mound"
 19100-D09,19100,"Dallas-Fort Worth-Arlington, TX",19100-S02,North Collin: McKinney & Frisco,curated,North Collin: McKinney & Frisco,571171,1,True,0.2154,North Collin: McKinney & Frisco
 19100-D10,19100,"Dallas-Fort Worth-Arlington, TX",19100-S02,South Denton County: Carrollton & The Colony,curated,"Frisco, The Colony & Carrollton",480670,1,True,0.0844,"Frisco, The Colony & Carrollton"
 19740-D01,19740,"Denver-Aurora-Centennial, CO",19740-S01,Denver,curated,Denver,740613,1,True,0.4703,Denver
@@ -61,7 +61,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 19820-D01,19820,"Detroit-Warren-Dearborn, MI",19820-S01,Macomb & St. Clair,curated,Macomb / St. Clair,1046707,2,True,0.4607,Macomb; St. Clair
 19820-D02,19820,"Detroit-Warren-Dearborn, MI",19820-S02,Western Wayne & Downriver,curated,Western Wayne & Downriver,1040644,1,True,0.4621,Western Wayne & Downriver
 19820-D03,19820,"Detroit-Warren-Dearborn, MI",19820-S01,South & West Oakland & Livingston,curated,South & West Oakland: Southfield & Novi / Livingston,1007080,2,True,0.4017,South & West Oakland: Southfield & Novi; Livingston
-19820-D04,19820,"Detroit-Warren-Dearborn, MI",19820-S02,Detroit & Grosse Pointes,curated,Detroit & Grosse Pointes,728394,1,True,0.3201,Detroit & Grosse Pointes
+19820-D04,19820,"Detroit-Warren-Dearborn, MI",19820-S02,Detroit & the Grosse Pointes,curated,Detroit & the Grosse Pointes,728394,1,True,0.3201,Detroit & the Grosse Pointes
 19820-D05,19820,"Detroit-Warren-Dearborn, MI",19820-S01,North Oakland & Lapeer,curated,North Oakland: Troy & Pontiac / Lapeer,568088,2,True,0.4121,North Oakland: Troy & Pontiac; Lapeer
 23420-D01,23420,"Fresno, CA",,Fresno & Madera,curated,Fresno County / Madera,1203383,2,False,0.7366,Fresno County; Madera
 24340-D01,24340,"Grand Rapids-Wyoming-Kentwood, MI",,Greater Grand Rapids,curated,Kent / Ottawa (+3),1183645,5,False,0.7706,Kent; Ottawa; Montcalm; Ionia; Barry
@@ -81,7 +81,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 26900-D01,26900,"Indianapolis-Carmel-Greenwood, IN",,"North & East Indianapolis, Madison & Hancock",curated,North & East Indianapolis / Madison (+3),877043,5,True,0.4404,North & East Indianapolis; Madison; Hancock; Boone; Shelby
 26900-D02,26900,"Indianapolis-Carmel-Greenwood, IN",,Hamilton & Tipton,curated,Hamilton / Tipton,402355,2,True,0.3545,Hamilton; Tipton
 26900-D03,26900,"Indianapolis-Carmel-Greenwood, IN",,"Downtown, West & South Indianapolis, Hendricks & Johnson",curated,"Downtown, West & South Indianapolis / Hendricks (+3)",926297,5,True,0.5709,"Downtown, West & South Indianapolis; Hendricks; Johnson; Morgan; Brown"
-27260-D01,27260,"Jacksonville, FL",,"Southside, Beaches, St. Johns & Clay",curated,"Southside, Arlington & Beaches / St. Johns / Clay",1175848,3,True,0.598,"Southside, Arlington & Beaches; St. Johns; Clay"
+27260-D01,27260,"Jacksonville, FL",,"Southside, the Beaches, St. Johns & Clay",curated,"Southside, Arlington & the Beaches / St. Johns / Clay",1175848,3,True,0.598,"Southside, Arlington & the Beaches; St. Johns; Clay"
 27260-D02,27260,"Jacksonville, FL",,"Downtown, Northside, Westside & Nassau",curated,"Downtown, Northside & Westside / Nassau / Baker",609652,3,True,0.4277,"Downtown, Northside & Westside; Nassau; Baker"
 28140-D01,28140,"Kansas City, MO-KS",,Johnson & Wyandotte,curated,Johnson / Wyandotte (+3),938283,5,True,0.7146,Johnson; Wyandotte; Leavenworth; Miami; Linn
 28140-D02,28140,"Kansas City, MO-KS",,Jackson & Cass,curated,Jackson / Cass (+2),898896,4,True,0.6,Jackson; Cass; Lafayette; Bates
@@ -92,11 +92,11 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 31080-D01,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S04,South Bay & Harbor,curated,South Bay & Harbor,1046179,1,True,0.3541,South Bay & Harbor
 31080-D02,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S02,"Pasadena, NELA & West San Gabriel Valley",curated,"Pasadena, NELA & West San Gabriel Valley",1041557,1,True,0.2835,"Pasadena, NELA & West San Gabriel Valley"
 31080-D03,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S01,South County & Newport-Mesa,curated,South County & Newport-Mesa,798655,1,True,0.3842,South County & Newport-Mesa
-31080-D04,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S03,West San Fernando Valley,curated,West San Fernando Valley,985601,1,True,0.3351,West San Fernando Valley
+31080-D04,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S03,West & Central San Fernando Valley,curated,West & Central San Fernando Valley,985601,1,True,0.3351,West & Central San Fernando Valley
 31080-D05,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S02,East San Gabriel Valley & Pomona,curated,East San Gabriel Valley & Pomona,934318,1,True,0.2801,East San Gabriel Valley & Pomona
 31080-D06,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S05,"East Valley, Burbank & Glendale",curated,"East Valley, Burbank & Glendale",870659,1,True,0.357,"East Valley, Burbank & Glendale"
 31080-D07,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S01,"North County: Anaheim, Fullerton & Orange",curated,"North County: Anaheim, Fullerton & Orange",873681,1,True,0.3081,"North County: Anaheim, Fullerton & Orange"
-31080-D08,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S06,"South LA, Compton & Southeast Cities",curated,"South LA, Compton & Southeast Cities",849800,1,False,0.1741,"South LA, Compton & Southeast Cities"
+31080-D08,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S06,"Watts, Compton & Southeast Cities",curated,"Watts, Compton & Southeast Cities",849800,1,False,0.1741,"Watts, Compton & Southeast Cities"
 31080-D09,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S05,"Downtown, Hollywood & Wilshire",curated,"Downtown, Hollywood & Wilshire",807673,1,True,0.3042,"Downtown, Hollywood & Wilshire"
 31080-D10,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S04,"Long Beach, Lakewood & Norwalk",curated,"Long Beach, Lakewood & Norwalk",800289,1,True,0.2422,"Long Beach, Lakewood & Norwalk"
 31080-D11,31080,"Los Angeles-Long Beach-Anaheim, CA",31080-S01,West County: Huntington Beach & Garden Grove,curated,West County: Huntington Beach & Garden Grove,757840,1,True,0.2394,West County: Huntington Beach & Garden Grove
@@ -110,7 +110,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 33100-D01,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S01,West Kendall & South Dade,curated,West Kendall & South Dade,699705,1,True,0.2299,West Kendall & South Dade
 33100-D02,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S03,South County: Boca Raton & Boynton Beach,curated,South County: Boca Raton & Boynton Beach,741684,1,True,0.3996,South County: Boca Raton & Boynton Beach
 33100-D03,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S02,South Broward,curated,South Broward,808459,1,True,0.2971,South Broward
-33100-D04,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S01,Northeast Dade & the Beaches,curated,Northeast Dade & the Beaches,738237,1,True,0.2798,Northeast Dade & the Beaches
+33100-D04,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S01,North Dade & the Beaches,curated,North Dade & the Beaches,738237,1,True,0.2798,North Dade & the Beaches
 33100-D05,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S02,Central Broward: Fort Lauderdale & Sunrise,curated,Central Broward: Fort Lauderdale & Sunrise,627022,1,True,0.387,Central Broward: Fort Lauderdale & Sunrise
 33100-D06,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S03,"West Palm Beach, North County & Glades",curated,"West Palm Beach, North County & Glades",834042,1,True,0.5708,"West Palm Beach, North County & Glades"
 33100-D07,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S02,North Broward: Coral Springs & Pompano Beach,curated,North Broward: Coral Springs & Pompano Beach,577836,1,True,0.2678,North Broward: Coral Springs & Pompano Beach
@@ -118,7 +118,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 33100-D09,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",33100-S01,"City of Miami, Coral Gables & Kendall",curated,"City of Miami, Coral Gables & Kendall",801187,1,True,0.4828,"City of Miami, Coral Gables & Kendall"
 33340-D01,33340,"Milwaukee-Waukesha, WI",,"Milwaukee North Side, Ozaukee & Washington",curated,"North Side, Wauwatosa & North Shore / Washington / Ozaukee",696061,3,True,0.5574,"North Side, Wauwatosa & North Shore; Washington; Ozaukee"
 33340-D02,33340,"Milwaukee-Waukesha, WI",,Waukesha County,curated,Waukesha,417210,1,True,0.4794,Waukesha
-33340-D03,33340,"Milwaukee-Waukesha, WI",,Milwaukee South Side & South Suburbs,curated,South Side & South Suburbs,461739,1,True,0.3793,South Side & South Suburbs
+33340-D03,33340,"Milwaukee-Waukesha, WI",,"Milwaukee South Side, West Allis & South Suburbs",curated,"South Side, West Allis & South Suburbs",461739,1,True,0.3793,"South Side, West Allis & South Suburbs"
 33460-D01,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",33460-S01,"Suburban Hennepin, Scott, Wright & Carver",curated,North & West Suburbs / Scott (+5),1312738,7,True,0.5498,North & West Suburbs; Scott; Wright; Carver; Sherburne; Le Sueur; Mille Lacs
 33460-D02,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",33460-S01,Minneapolis & Bloomington,curated,Minneapolis & Bloomington,564401,1,True,0.476,Minneapolis & Bloomington
 33460-D03,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",33460-S02,Ramsey County,curated,Ramsey,541623,1,False,0.3984,Ramsey
@@ -131,7 +131,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 35620-D01,35620,"New York-Newark-Jersey City, NY-NJ",35620-S03,Uptown Manhattan,curated,Uptown Manhattan,994245,1,True,0.1846,Uptown Manhattan
 35620-D02,35620,"New York-Newark-Jersey City, NY-NJ",35620-S06,Southern Bergen: Hackensack & Fort Lee,curated,Southern Bergen: Hackensack & Fort Lee,511488,1,True,0.2294,Southern Bergen: Hackensack & Fort Lee
 35620-D03,35620,"New York-Newark-Jersey City, NY-NJ",35620-S04,South Queens & the Rockaways,curated,South Queens & the Rockaways,964221,1,True,0.1721,South Queens & the Rockaways
-35620-D04,35620,"New York-Newark-Jersey City, NY-NJ",35620-S08,North Brooklyn & Downtown,curated,North Brooklyn & Downtown,923292,1,True,0.1774,North Brooklyn & Downtown
+35620-D04,35620,"New York-Newark-Jersey City, NY-NJ",35620-S08,"North, Central & Downtown Brooklyn",curated,"North, Central & Downtown Brooklyn",923292,1,True,0.1774,"North, Central & Downtown Brooklyn"
 35620-D05,35620,"New York-Newark-Jersey City, NY-NJ",35620-S07,East Brooklyn & Coney Island,curated,East Brooklyn & Coney Island,916467,1,True,0.1648,East Brooklyn & Coney Island
 35620-D06,35620,"New York-Newark-Jersey City, NY-NJ",35620-S03,South & East Bronx,curated,South & East Bronx,899277,1,True,0.1751,South & East Bronx
 35620-D07,35620,"New York-Newark-Jersey City, NY-NJ",35620-S05,Essex County,curated,Essex,896379,1,True,0.3172,Essex
@@ -165,7 +165,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 36740-D03,36740,"Orlando-Kissimmee-Sanford, FL",36740-S01,Seminole County,curated,Seminole,491884,1,True,0.3139,Seminole
 36740-D04,36740,"Orlando-Kissimmee-Sanford, FL",36740-S02,Osceola County,curated,Osceola,481718,1,False,0.2158,Osceola
 36740-D05,36740,"Orlando-Kissimmee-Sanford, FL",36740-S02,Lake County,curated,Lake,456068,1,False,0.3111,Lake
-37980-D01,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",37980-S01,"North, Northeast & Northwest Philly",curated,"North, Northeast & Northwest Philly",1007645,1,True,0.2842,"North, Northeast & Northwest Philly"
+37980-D01,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",37980-S01,"North, Northeast & Northwest Philadelphia",curated,"North, Northeast & Northwest Philadelphia",1007645,1,True,0.2842,"North, Northeast & Northwest Philadelphia"
 37980-D02,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",37980-S02,Montgomery County,curated,Montgomery,877643,1,True,0.4583,Montgomery
 37980-D03,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",37980-S03,Camden & Gloucester,curated,Camden / Gloucester,848437,2,False,0.4574,Camden; Gloucester
 37980-D04,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",37980-S04,"New Castle, Cecil & Salem",curated,New Castle / Cecil / Salem,761437,3,False,0.685,New Castle; Cecil; Salem
@@ -178,11 +178,11 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 38060-D02,38060,"Phoenix-Mesa-Chandler, AZ",38060-S02,Mesa & Gilbert,curated,Mesa & Gilbert,934239,1,True,0.3241,Mesa & Gilbert
 38060-D03,38060,"Phoenix-Mesa-Chandler, AZ",38060-S01,Central & West Phoenix,curated,Central & West Phoenix,804782,1,True,0.3562,Central & West Phoenix
 38060-D04,38060,"Phoenix-Mesa-Chandler, AZ",38060-S02,"Tempe, Chandler & South Mountain",curated,"Tempe, Chandler & South Mountain",781933,1,True,0.4301,"Tempe, Chandler & South Mountain"
-38060-D05,38060,"Phoenix-Mesa-Chandler, AZ",38060-S03,"Scottsdale, Paradise Valley & Arcadia",curated,"Scottsdale, Paradise Valley & Arcadia",614753,1,False,0.3636,"Scottsdale, Paradise Valley & Arcadia"
+38060-D05,38060,"Phoenix-Mesa-Chandler, AZ",38060-S03,"Scottsdale, Paradise Valley & Camelback East",curated,"Scottsdale, Paradise Valley & Camelback East",614753,1,False,0.3636,"Scottsdale, Paradise Valley & Camelback East"
 38060-D06,38060,"Phoenix-Mesa-Chandler, AZ",38060-S02,Pinal County,curated,Pinal,539380,1,True,0.19,Pinal
 38060-D07,38060,"Phoenix-Mesa-Chandler, AZ",38060-S03,North Phoenix,curated,North Phoenix,507570,1,False,0.2284,North Phoenix
 38300-D01,38300,"Pittsburgh, PA",,"Pittsburgh, Butler & Beaver",curated,"Pittsburgh, North Hills & East / Butler (+3)",1268987,5,True,0.7045,"Pittsburgh, North Hills & East; Butler; Beaver; Lawrence; Armstrong"
-38300-D02,38300,"Pittsburgh, PA",,"South Hills, Mon Valley & Washington",curated,South Hills & Mon Valley / Washington,680660,2,True,0.4876,South Hills & Mon Valley; Washington
+38300-D02,38300,"Pittsburgh, PA",,"South & West Hills, Mon Valley & Washington",curated,"South Hills, West Hills & Mon Valley / Washington",680660,2,True,0.4876,"South Hills, West Hills & Mon Valley; Washington"
 38300-D03,38300,"Pittsburgh, PA",,Westmoreland & Fayette,curated,Westmoreland / Fayette,472345,2,True,0.4843,Westmoreland; Fayette
 38900-D01,38900,"Portland-Vancouver-Hillsboro, OR-WA",38900-S01,Multnomah & Columbia,curated,Multnomah / Columbia,849482,2,False,0.6217,Multnomah; Columbia
 38900-D02,38900,"Portland-Vancouver-Hillsboro, OR-WA",38900-S02,Washington County & Yamhill,curated,Washington / Yamhill,721732,2,False,0.5586,Washington; Yamhill
@@ -208,18 +208,18 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 41180-D03,41180,"St. Louis, MO-IL",41180-S03,"St. Charles, Lincoln & Warren",curated,St. Charles / Lincoln (+2),536491,4,False,0.4039,St. Charles; Lincoln; Warren; Calhoun
 41180-D04,41180,"St. Louis, MO-IL",41180-S03,"West & South County, Jefferson & Franklin",curated,West & South St. Louis County / Jefferson / Franklin,824838,3,False,0.4571,West & South St. Louis County; Jefferson; Franklin
 41180-D05,41180,"St. Louis, MO-IL",41180-S01,Metro East,curated,Madison / St. Clair (+5),667653,7,False,0.5657,Madison; St. Clair; Macoupin; Clinton; Monroe; Jersey; Bond
-41620-D01,41620,"Salt Lake City-Murray, UT",,"Salt Lake City, West Valley & Tooele",curated,Salt Lake City & West Valley / Tooele,748687,2,True,0.6445,Salt Lake City & West Valley; Tooele
+41620-D01,41620,"Salt Lake City-Murray, UT",,"Salt Lake City, West Valley & Tooele",curated,"Salt Lake City, West Valley & Millcreek / Tooele",748687,2,True,0.6445,"Salt Lake City, West Valley & Millcreek; Tooele"
 41620-D02,41620,"Salt Lake City-Murray, UT",,South Valley: West Jordan & Sandy,curated,South Valley: West Jordan & Sandy,559690,1,True,0.3827,South Valley: West Jordan & Sandy
 41700-D01,41700,"San Antonio-New Braunfels, TX",41700-S02,"North San Antonio, Comal & Guadalupe",curated,North & Northeast San Antonio / Comal (+2),1172367,4,False,0.4424,North & Northeast San Antonio; Comal; Guadalupe; Kendall
 41700-D02,41700,"San Antonio-New Braunfels, TX",41700-S01,"West & South Bexar, Medina & Wilson",curated,"Northwest, West & Far South Side / Medina (+3)",917846,5,True,0.3275,"Northwest, West & Far South Side; Medina; Wilson; Atascosa; Bandera"
 41700-D03,41700,"San Antonio-New Braunfels, TX",41700-S01,Inside Loop 410,curated,Inside Loop 410,722927,1,True,0.3798,Inside Loop 410
 41740-D01,41740,"San Diego-Chula Vista-Carlsbad, CA",41740-S02,North County & Backcountry,curated,North County & Backcountry,849670,1,True,0.4282,North County & Backcountry
 41740-D02,41740,"San Diego-Chula Vista-Carlsbad, CA",41740-S01,Central San Diego & South Bay,curated,Central San Diego & South Bay,831075,1,True,0.3691,Central San Diego & South Bay
-41740-D03,41740,"San Diego-Chula Vista-Carlsbad, CA",41740-S02,"La Jolla, Mira Mesa, Poway & Encinitas",curated,"La Jolla, Mira Mesa, Poway & Encinitas",791138,1,True,0.4441,"La Jolla, Mira Mesa, Poway & Encinitas"
+41740-D03,41740,"San Diego-Chula Vista-Carlsbad, CA",41740-S02,"La Jolla, Mira Mesa & Poway",curated,"La Jolla, Mira Mesa & Poway",791138,1,True,0.4441,"La Jolla, Mira Mesa & Poway"
 41740-D05,41740,"San Diego-Chula Vista-Carlsbad, CA",41740-S01,"Mid-City, Kearny Mesa & East County",curated,"Mid-City, Kearny Mesa & East County",810364,1,True,0.3699,"Mid-City, Kearny Mesa & East County"
 41860-D01,41860,"San Francisco-Oakland-Fremont, CA",41860-S01,Contra Costa County,curated,Contra Costa County,1170070,1,True,0.3563,Contra Costa County
 41860-D02,41860,"San Francisco-Oakland-Fremont, CA",41860-S02,San Francisco & Marin,curated,San Francisco / Marin,1079773,2,True,0.5955,San Francisco; Marin
-41860-D03,41860,"San Francisco-Oakland-Fremont, CA",41860-S01,Southern Alameda & Tri-Valley,curated,Southern Alameda & Tri-Valley,967627,1,True,0.3457,Southern Alameda & Tri-Valley
+41860-D03,41860,"San Francisco-Oakland-Fremont, CA",41860-S01,"Hayward, Fremont & Tri-Valley",curated,"Hayward, Fremont & Tri-Valley",967627,1,True,0.3457,"Hayward, Fremont & Tri-Valley"
 41860-D04,41860,"San Francisco-Oakland-Fremont, CA",41860-S02,San Mateo County,curated,San Mateo,743568,1,True,0.3823,San Mateo
 41860-D05,41860,"San Francisco-Oakland-Fremont, CA",41860-S01,Oakland & Berkeley,curated,Oakland & Berkeley,669003,1,True,0.3652,Oakland & Berkeley
 41940-D01,41940,"San Jose-Sunnyvale-Santa Clara, CA",,"San Jose, West Valley, South County & San Benito",curated,"San Jose, West Valley & South County / San Benito",1082823,2,True,0.3651,"San Jose, West Valley & South County; San Benito"
@@ -232,7 +232,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 45300-D01,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S02,St. Petersburg & South Pinellas,curated,St. Petersburg & South Pinellas,480869,1,False,0.4474,St. Petersburg & South Pinellas
 45300-D02,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S01,Tampa & Northwest Hillsborough,curated,Tampa & Northwest Hillsborough,921500,1,True,0.5497,Tampa & Northwest Hillsborough
 45300-D03,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S01,Pasco & Hernando,curated,Pasco / Hernando,896217,2,True,0.3294,Pasco; Hernando
-45300-D04,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S01,Brandon & South County,curated,Brandon & South County,652615,1,True,0.2524,Brandon & South County
+45300-D04,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S01,"Brandon, Plant City & South County",curated,"Brandon, Plant City & South County",652615,1,True,0.2524,"Brandon, Plant City & South County"
 45300-D05,45300,"Tampa-St. Petersburg-Clearwater, FL",45300-S02,Clearwater & North Pinellas,curated,Clearwater & North Pinellas,467694,1,False,0.4206,Clearwater & North Pinellas
 46060-D01,46060,"Tucson, AZ",,Pima County,curated,Pima County,1074685,1,False,0.7427,Pima County
 46140-D01,46140,"Tulsa, OK",,Greater Tulsa,curated,Tulsa / Rogers (+5),1069273,7,False,0.8177,Tulsa; Rogers; Wagoner; Creek; Osage; Okmulgee; Pawnee
@@ -244,7 +244,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 47900-D03,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S03,"I-270 Corridor, Upcounty & Frederick",curated,I-270 Corridor & Upcounty / Frederick,882749,2,False,0.4801,I-270 Corridor & Upcounty; Frederick
 47900-D04,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S02,District of Columbia,curated,District of Columbia,693645,1,True,0.6888,District of Columbia
 47900-D05,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S01,North & West Fairfax,curated,North & West County: Reston & Tysons / Fairfax city / Falls Church city,575869,3,True,0.3787,North & West County: Reston & Tysons; Fairfax city; Falls Church city
-47900-D06,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S01,Eastern Fairfax: Annandale & Springfield,curated,Eastern Fairfax: Annandale & Springfield,633935,1,True,0.2449,Eastern Fairfax: Annandale & Springfield
+47900-D06,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S01,South & East Fairfax: Annandale & Springfield,curated,South & East County: Annandale & Springfield,633935,1,True,0.2449,South & East County: Annandale & Springfield
 47900-D07,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S01,"Loudoun, Jefferson & Warren",curated,Loudoun / Jefferson (+2),571200,4,True,0.3303,Loudoun; Jefferson; Warren; Clarke
 47900-D08,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S03,Downcounty: Silver Spring & Bethesda,curated,Downcounty: Silver Spring & Bethesda,494716,1,False,0.2105,Downcounty: Silver Spring & Bethesda
 47900-D09,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",47900-S01,Arlington & Alexandria,curated,Arlington / Alexandria city,404593,2,True,0.2609,Arlington; Alexandria city

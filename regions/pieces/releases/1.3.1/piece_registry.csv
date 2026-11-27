@@ -1,0 +1,159 @@
+piece_id,county_fips,anchor_tract,piece_name,status,since_version,note
+04013-01,04013,04013061013,Central & West Phoenix,active,1.0,
+04013-02,04013,04013522903,"Tempe, Chandler & South Mountain",active,1.0,
+04013-03,04013,04013104215,West Valley,active,1.0,
+04013-04,04013,04013103206,North Phoenix,active,1.0,
+04013-05,04013,04013420710,Mesa & Gilbert,active,1.0,
+04013-06,04013,04013611500,"Scottsdale, Paradise Valley & Camelback East",active,1.0,"renamed 1.3.1 (was Scottsdale, Paradise Valley & Arcadia): local review"
+04019-01,04019,04019000800,Pima County,active,1.0,
+06001-01,06001,06001435103,"Hayward, Fremont & Tri-Valley",active,1.0,renamed 1.3.1 (was Southern Alameda & Tri-Valley): local review
+06001-02,06001,06001405200,Oakland & Berkeley,active,1.0,
+06013-01,06013,06013338201,Contra Costa County,active,1.0,
+06019-01,06019,06019002601,Fresno County,active,1.0,
+06029-01,06029,06029003208,Kern County,active,1.3,named in 1.3
+06037-01,06037,06037980005,South Bay & Harbor,active,1.0,
+06037-02,06037,06037702501,Westside,active,1.0,
+06037-03,06037,06037131801,West & Central San Fernando Valley,active,1.0,renamed 1.3.1 (was West San Fernando Valley): local review
+06037-04,06037,06037408005,East San Gabriel Valley & Pomona,active,1.0,
+06037-05,06037,06037102105,"East Valley, Burbank & Glendale",active,1.0,
+06037-06,06037,06037211420,"Downtown, Hollywood & Wilshire",active,1.0,
+06037-07,06037,06037571201,"Long Beach, Lakewood & Norwalk",active,1.0,
+06037-08,06037,06037431800,"Pasadena, NELA & West San Gabriel Valley",active,1.0,
+06037-09,06037,06037910814,Santa Clarita & Antelope Valley,active,1.0,
+06037-10,06037,06037532900,Crenshaw & South Central,active,1.0,
+06037-11,06037,06037242202,"Watts, Compton & Southeast Cities",active,1.0,"renamed 1.3.1 (was South LA, Compton & Southeast Cities): local review"
+06037-12,06037,06037500800,East LA & Whittier,active,1.0,
+06059-01,06059,06059062646,South County & Newport-Mesa,active,1.0,renamed in 1.3 (name review)
+06059-02,06059,06059011601,"North County: Anaheim, Fullerton & Orange",active,1.0,renamed in 1.2 (0.9M cap)
+06059-03,06059,06059099241,West County: Huntington Beach & Garden Grove,active,1.0,renamed in 1.2 (0.9M cap)
+06059-04,06059,06059074405,"Central County: Santa Ana, Irvine & Tustin",active,1.0,renamed in 1.2 (0.9M cap)
+06065-01,06065,06065031702,"Riverside, Corona & Moreno Valley",active,1.0,
+06065-02,06065,06065042726,"Temecula, Hemet & the Pass",active,1.0,
+06065-03,06065,06065045233,Coachella Valley & Desert,active,1.0,
+06067-01,06067,06067005101,"Sacramento, Elk Grove & Rancho Cordova",active,1.0,
+06067-02,06067,06067007503,"Natomas, Arden & Folsom",active,1.0,
+06071-01,06071,06071004902,San Bernardino Valley,active,1.0,
+06071-02,06071,06071001501,"West End: Ontario, Rancho & Chino",active,1.0,
+06071-03,06071,06071009712,High Desert & Mountains,active,1.0,
+06073-01,06073,06073020023,North County & Backcountry,active,1.0,
+06073-02,06073,06073012101,Central San Diego & South Bay,active,1.0,
+06073-03,06073,06073009706,"La Jolla, Mira Mesa & Poway",active,1.0,"renamed in 1.2 (0.9M cap); renamed 1.3.1 (was La Jolla, Mira Mesa, Poway & Encinitas): local review"
+06073-04,06073,06073008366,"La Jolla, Poway & Encinitas",retired,1.0,retired in 1.2: anchor tract no longer marks its own piece
+06073-05,06073,06073002904,"Mid-City, Kearny Mesa & East County",active,1.2,named in 1.2 (0.9M cap)
+06085-01,06085,06085512024,"San Jose, West Valley & South County",active,1.0,
+06085-02,06085,06085505007,North County & East San Jose,active,1.0,
+09110-01,09110,09003520400,"Hartford, West Hartford & New Britain",active,1.1,named in 1.1 (threshold lowered to 0.95M)
+09110-02,09110,09013881200,North & East of Hartford,active,1.1,renamed in 1.3 (name review)
+12011-01,12011,12011110308,South Broward,active,1.0,
+12011-02,12011,12011060402,Central Broward: Fort Lauderdale & Sunrise,active,1.0,
+12011-03,12011,12011020101,North Broward: Coral Springs & Pompano Beach,active,1.0,
+12031-01,12031,12031014414,"Southside, Arlington & the Beaches",active,1.0,"renamed 1.3.1 (was Southside, Arlington & Beaches): local review"
+12031-02,12031,12031002702,"Downtown, Northside & Westside",active,1.0,
+12057-01,12057,12057000601,Tampa & Northwest Hillsborough,active,1.0,
+12057-02,12057,12057013407,"Brandon, Plant City & South County",active,1.0,renamed 1.3.1 (was Brandon & South County): local review
+12086-01,12086,12086019401,West Kendall & South Dade,active,1.0,renamed in 1.3 (name review)
+12086-02,12086,12086000306,North Dade & the Beaches,active,1.0,renamed 1.3.1 (was Northeast Dade & the Beaches): local review
+12086-03,12086,12086013700,Hialeah & Doral,active,1.0,
+12086-04,12086,12086006401,"City of Miami, Coral Gables & Kendall",active,1.0,renamed in 1.2 (0.9M cap)
+12095-01,12095,12095013603,Orlando & East Orange,active,1.0,
+12095-02,12095,12095014814,West Orange & Tourist Corridor,active,1.0,
+12099-01,12099,12099005952,South County: Boca Raton & Boynton Beach,active,1.0,
+12099-02,12099,12099980100,"West Palm Beach, North County & Glades",active,1.0,
+12103-01,12103,12103024505,St. Petersburg & South Pinellas,active,1.3,named in 1.3
+12103-02,12103,12103027404,Clearwater & North Pinellas,active,1.3,named in 1.3
+13121-01,13121,13121007602,Atlanta & South Fulton,active,1.0,
+13121-02,13121,13121011436,Buckhead & North Fulton,active,1.0,
+13135-01,13135,13135050558,Gwinnett County,active,1.0,
+15003-01,15003,15003006704,Urban Honolulu & Windward Oahu,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+15003-02,15003,15003011500,"Leeward, Central & North Shore Oahu",active,1.1,named in 1.1 (threshold lowered to 0.95M)
+17031-01,17031,17031824300,South & Southwest Suburbs,active,1.0,renamed in 1.3 (0.9M cap)
+17031-02,17031,17031805110,Northwest Suburbs & O'Hare,active,1.0,renamed in 1.3 (0.9M cap)
+17031-03,17031,17031812301,West & Southwest Sides & Near West Suburbs,active,1.0,renamed in 1.3 (0.9M cap)
+17031-04,17031,17031670200,South Side & Far South Side,active,1.0,renamed in 1.3 (0.9M cap)
+17031-05,17031,17031832300,Downtown & North Side,active,1.0,
+17031-06,17031,17031020302,Northwest Side & North Shore,active,1.0,renamed in 1.3 (0.9M cap)
+17043-01,17043,17043841401,DuPage County,active,1.3,named in 1.3
+18097-01,18097,18097390409,North & East Indianapolis,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+18097-02,18097,18097380103,"Downtown, West & South Indianapolis",active,1.1,named in 1.1 (threshold lowered to 0.95M)
+24031-01,24031,24031700731,I-270 Corridor & Upcounty,active,1.0,
+24031-02,24031,24031703902,Downcounty: Silver Spring & Bethesda,active,1.0,
+24033-01,24033,24033800701,Central & Southern Prince George's,active,1.1,renamed in 1.3 (name review)
+24033-02,24033,24033980000,Northern Prince George's,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+25017-01,25017,25017350702,"Inner Core: Cambridge, Newton & Somerville",active,1.0,
+25017-02,25017,25017363105,Outer Middlesex: Lowell & Framingham,active,1.0,
+26125-01,26125,26125156900,South & West Oakland: Southfield & Novi,active,1.0,
+26125-02,26125,26125141002,North Oakland: Troy & Pontiac,active,1.0,
+26163-01,26163,26163570800,Western Wayne & Downriver,active,1.0,
+26163-02,26163,26163553800,Detroit & the Grosse Pointes,active,1.0,renamed 1.3.1 (was Detroit & Grosse Pointes): local review
+27053-01,27053,27053026505,North & West Suburbs,active,1.0,
+27053-02,27053,27053109400,Minneapolis & Bloomington,active,1.0,
+29189-01,29189,29189210912,North & Central St. Louis County,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+29189-02,29189,29189217702,West & South St. Louis County,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+32003-01,32003,32003003646,Las Vegas & North Las Vegas,active,1.0,
+32003-02,32003,32003005114,Henderson & East Valley,active,1.0,
+32003-03,32003,32003002962,Strip & Southwest Valley,active,1.0,
+34003-01,34003,34003052100,Southern Bergen: Hackensack & Fort Lee,active,1.1,renamed in 1.3 (name review)
+34003-02,34003,34003035100,North & West Bergen,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+36005-01,36005,36005023600,South & East Bronx,active,1.0,
+36005-02,36005,36005025100,West & Northwest Bronx,active,1.0,
+36029-01,36029,36029014206,"Amherst, Cheektowaga & Tonawanda",active,1.3,named in 1.3
+36029-02,36029,36029013501,Buffalo & Southtowns,active,1.3,named in 1.3
+36047-01,36047,36047024300,"North, Central & Downtown Brooklyn",active,1.0,renamed 1.3.1 (was North Brooklyn & Downtown): local review
+36047-02,36047,36047072200,East Brooklyn & Coney Island,active,1.0,
+36047-03,36047,36047023800,Southwest Brooklyn & Midwood,active,1.0,
+36059-01,36059,36059412800,Town of Hempstead,active,1.0,
+36059-02,36059,36059304204,North Hempstead & Oyster Bay,active,1.0,
+36061-01,36061,36061021800,Uptown Manhattan,active,1.0,
+36061-02,36061,36061005200,Midtown & Lower Manhattan,active,1.0,
+36081-01,36081,36081019000,South Queens & the Rockaways,active,1.0,
+36081-02,36081,36081026502,Western Queens,active,1.0,
+36081-03,36081,36081120701,Northeast Queens: Flushing & Bayside,active,1.0,
+36103-01,36103,36103201200,"Western Suffolk: Islip, Babylon & Huntington",active,1.0,
+36103-02,36103,36103158710,Eastern Suffolk: Brookhaven & East End,active,1.0,
+36119-01,36119,36119012102,Northern & Central Westchester,active,1.0,
+36119-02,36119,36119004500,Southern Westchester: Yonkers & New Rochelle,active,1.0,
+37119-01,37119,37119002004,Central & South Charlotte,active,1.0,
+37119-02,37119,37119005406,North & West Charlotte,active,1.0,
+37183-01,37183,37183052704,Raleigh & North Wake,active,1.0,
+37183-02,37183,37183053405,Southwest Wake: Cary & Apex,active,1.0,
+39035-01,39035,39035119402,Cleveland & Eastern Suburbs,active,1.0,renamed 1.3.1 (was Cleveland & East Side): local review
+39035-02,39035,39035138108,West & South Suburbs,active,1.0,
+39049-01,39049,39049006410,Central & West Columbus,active,1.0,
+39049-02,39049,39049980000,East Columbus: Westerville & Gahanna,active,1.0,
+42003-01,42003,42003101800,"Pittsburgh, North Hills & East",active,1.0,
+42003-02,42003,42003473300,"South Hills, West Hills & Mon Valley",active,1.0,renamed 1.3.1 (was South Hills & Mon Valley): local review
+42101-01,42101,42101029100,"North, Northeast & Northwest Philadelphia",active,1.0,"renamed 1.3.1 (was North, Northeast & Northwest Philly): local review"
+42101-02,42101,42101036901,"Center City, South & West Philadelphia",active,1.0,
+48029-01,48029,48029181727,"Northwest, West & Far South Side",active,1.0,
+48029-02,48029,48029170200,Inside Loop 410,active,1.0,
+48029-03,48029,48029121122,North & Northeast San Antonio,active,1.0,
+48085-01,48085,48085031611,South Collin: Plano & Allen,active,1.0,
+48085-02,48085,48085030545,North Collin: McKinney & Frisco,active,1.0,
+48113-01,48113,48113010704,South & West Dallas County,active,1.0,
+48113-02,48113,48113017819,East Dallas County,active,1.0,
+48113-03,48113,48113013102,North Dallas & Downtown,active,1.0,
+48121-01,48121,48121021512,"Denton, Lewisville & Flower Mound",active,1.0,renamed 1.3.1 (was Denton & Lewisville): local review
+48121-02,48121,48121021535,"Frisco, The Colony & Carrollton",active,1.0,
+48157-01,48157,48157673202,Fort Bend County,active,1.1,named in 1.1 (threshold lowered to 0.95M)
+48201-01,48201,48201322701,East Harris & Bay Area,active,1.0,
+48201-02,48201,48201541302,Northwest Harris: Cy-Fair & Memorial,active,1.0,renamed in 1.3 (name review)
+48201-03,48201,48201223001,"Northeast Harris: Humble, Kingwood & Aldine",active,1.0,
+48201-04,48201,48201412202,Inner Houston,active,1.0,
+48201-05,48201,48201432302,West & Southwest Houston: Alief & Katy,active,1.0,renamed in 1.3 (name review)
+48201-06,48201,48201553601,North Harris: Spring & Tomball,active,1.0,
+48215-01,48215,48215023803,Hidalgo County,active,1.3,named in 1.3
+48439-01,48439,48439123301,Fort Worth,active,1.0,
+48439-02,48439,48439113210,Northeast Tarrant: Mid-Cities & Alliance,active,1.0,
+48439-03,48439,48439111525,Arlington & Mansfield,active,1.0,
+48453-01,48453,48453032400,North Austin & Pflugerville,active,1.0,
+48453-02,48453,48453001308,Central & South Austin,active,1.0,
+49035-01,49035,49035113311,"Salt Lake City, West Valley & Millcreek",active,1.0,renamed 1.3.1 (was Salt Lake City & West Valley): local review
+49035-02,49035,49035113012,South Valley: West Jordan & Sandy,active,1.0,
+51059-01,51059,51059430700,South & East County: Annandale & Springfield,active,1.0,renamed 1.3.1 (was Eastern Fairfax: Annandale & Springfield): local review
+51059-02,51059,51059481600,North & West County: Reston & Tysons,active,1.0,
+53033-01,53033,53033023403,Eastside,active,1.0,renamed in 1.2 (0.9M cap)
+53033-02,53033,53033006701,Seattle & Shoreline,active,1.0,
+53033-03,53033,53033029102,South & Southeast King,active,1.0,renamed in 1.2 (0.9M cap)
+53053-01,53053,53053072908,Pierce County,active,1.3,named in 1.3
+55079-01,55079,55079000600,"North Side, Wauwatosa & North Shore",active,1.3,named in 1.3
+55079-02,55079,55079150100,"South Side, West Allis & South Suburbs",active,1.3,named in 1.3; renamed 1.3.1 (was South Side & South Suburbs): local review
