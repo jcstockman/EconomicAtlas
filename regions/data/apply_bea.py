@@ -16,6 +16,7 @@ BEA areas that combine counties (Virginia independent cities, Maui + Kalawao) ar
 are marked bea_combined_area. Fairfax County, a split county, is combined by BEA with Fairfax City and Falls Church
 (51919): that area is shared among the two Fairfax pieces and the two cities (workplace keys from LODES; residence keys
 from population x the Fairfax average).
+BEA's regional accounts do not cover Puerto Rico: its 78 municipio units get no BEA rows.
 
 Writes next to this script:
   bea_units.csv          unit_id, unit_type, county_fips, table, line, description, year, value, method
@@ -40,6 +41,7 @@ GDP_SECTORS = {"3": "11", "6": "21", "10": "22", "11": "23", "12": "31-33", "34"
 EARN_SECTORS = {"100": "11", "200": "21", "300": "22", "400": "23", "500": "31-33", "600": "42", "700": "44-45", "800": "48-49",
                 "900": "51", "1000": "52", "1100": "53", "1200": "54", "1300": "55", "1400": "56", "1500": "61", "1600": "62",
                 "1700": "71", "1800": "72", "1900": "81"}
+NO_BEA = {"72"}  # BEA's regional accounts do not cover Puerto Rico: its municipios get no BEA rows
 GOV_EARN = {"2001": "jobs_federal", "2002": "res_armed_forces", "2011": "jobs_state", "2012": "jobs_state_local"}
 TRANSFER_LEAVES = {"2110": "res_social_security_income", "2120": "res_pop65", "2210": "res_pop65", "2220": "res_medicaid",
                    "2230": "res_veterans", "2310": "res_ssi_pa_income", "2320": "res_ssi_pa_income", "2330": "res_ssi_pa_income",
@@ -76,6 +78,8 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--cache", required=True)
     a = ap.parse_args(); bx.CACHE = a.cache; bx.fix_hash_seed()
     units = list(csv.DictReader(open(os.path.join(HERE, "..", "units", "atlas_units.csv"))))
+    no_bea = sorted({u["county_fips"] for u in units if u["state_fips"] in NO_BEA})
+    units = [u for u in units if u["state_fips"] not in NO_BEA]
     cty = {u["county_fips"] for u in units}
     pieces_of = collections.defaultdict(list)
     upop = {u["unit_id"]: int(u["pop2020"]) for u in units}
@@ -397,7 +401,7 @@ def main():
         if pub is not None and l not in ("30",) and abs(s - pub) > max(2.0, 1e-6 * abs(pub)):
             bad.append((area, t, l, round(s), pub))
     n = collections.Counter(r["method"].split()[0] for r in rows)
-    print(f"rows {len(rows):,} units {len({r['unit_id'] for r in rows}):,}; methods {dict(n)}; counties with no BEA area {missing}; "
+    print(f"rows {len(rows):,} units {len({r['unit_id'] for r in rows}):,}; methods {dict(n)}; counties with no BEA area {missing}; not covered by BEA (Puerto Rico) {len(no_bea)}; "
           f"sum checks failed {len(bad)} {bad[:5]}")
     if notes_mix:
         print("transfer mix from the state's CAINC35 (no county table):", notes_mix)

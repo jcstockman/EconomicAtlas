@@ -121,7 +121,7 @@ Sources: LODES 8 WAC 2024 (Michigan 2021), all, private and federal job types; Q
 - `qcew_2024_units.csv` (published table): for every unit, `estabs, emplvl, total_wages, avg_weekly_wage` for the total, the four ownerships (federal, state, local, private) and the 11 private supersectors (decision 5), with `method`: `published` (county units and the four whole-county pieces), `allocated` (pieces of split counties), `withheld` (the county cell is withheld by BLS, so the pieces get none).
 - `qcew_2024_pieces_detail.csv` (internal): piece values by private NAICS sector, plus each piece's share of the county residual of withheld sectors.
 
-Method: private sectors are split by their keys; the residual of withheld sectors (county private total minus published sectors) by the summed keys of the withheld sectors; supersectors by the summed keys of their sectors, where the county supersector is published; ownership totals by the government keys. Each published county cell's piece values are finally scaled to the county figure, because BLS's cells do not always add up exactly. Checks: every split county's pieces sum to its published total, ownership and supersector figures (0 failures). 3,227 units are covered; Kalawao County, Hawaii (15005) has no QCEW row (BLS includes it with Maui). Of the pieces' rows, 4 supersector and 4 ownership cells are withheld.
+Method: private sectors are split by their keys; the residual of withheld sectors (county private total minus published sectors) by the summed keys of the withheld sectors; supersectors by the summed keys of their sectors, where the county supersector is published; ownership totals by the government keys. Each published county cell's piece values are finally scaled to the county figure, because BLS's cells do not always add up exactly. Checks: every split county's pieces sum to its published total, ownership and supersector figures (0 failures). 3,314 units are covered, Puerto Rico's 78 municipios included (published county figures); Kalawao County, Hawaii (15005) has no QCEW row (BLS includes it with Maui). Of the pieces' rows, 4 supersector and 4 ownership cells are withheld.
 
 Example: Midtown & Lower Manhattan 2,043,120 jobs at $3,434 a week on average, Uptown Manhattan 423,678 at $1,925; Inner Houston 667,576 jobs, the most of Harris County's six pieces.
 
@@ -263,3 +263,5 @@ State: 7% of jobs change piece, 13 counties more than 10%:
 - St. Petersburg & South Pinellas: 22% → 47%
 
 Small places' ACS federal counts carry wide margins, so a single piece's federal value is less certain than the validation average suggests.
+
+**Puerto Rico (2026-11-27).** The 78 municipio units take QCEW's published county figures; BEA does not cover Puerto Rico, so they have no BEA rows. Keys and validation are unchanged: no municipio is split.

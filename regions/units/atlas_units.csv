@@ -3236,3 +3236,81 @@ unit_id,unit_type,county_fips,county,state_fips,state,unit_name,pop2020,pop2025_
 56041,county,56041,Uinta County,56,Wyoming,Uinta County,20450,20728,6,1.3
 56043,county,56043,Washakie County,56,Wyoming,Washakie County,7685,7597,3,1.3
 56045,county,56045,Weston County,56,Wyoming,Weston County,6838,6840,2,1.3
+72001,county,72001,Adjuntas Municipio,72,Puerto Rico,Adjuntas Municipio,18020,17994,6,1.3
+72003,county,72003,Aguada Municipio,72,Puerto Rico,Aguada Municipio,38136,37319,10,1.3
+72005,county,72005,Aguadilla Municipio,72,Puerto Rico,Aguadilla Municipio,55101,53219,17,1.3
+72007,county,72007,Aguas Buenas Municipio,72,Puerto Rico,Aguas Buenas Municipio,24223,22838,6,1.3
+72009,county,72009,Aibonito Municipio,72,Puerto Rico,Aibonito Municipio,24637,24746,6,1.3
+72011,county,72011,Añasco Municipio,72,Puerto Rico,Añasco Municipio,25596,24449,8,1.3
+72013,county,72013,Arecibo Municipio,72,Puerto Rico,Arecibo Municipio,87754,85539,25,1.3
+72015,county,72015,Arroyo Municipio,72,Puerto Rico,Arroyo Municipio,15843,14744,5,1.3
+72017,county,72017,Barceloneta Municipio,72,Puerto Rico,Barceloneta Municipio,22657,22316,5,1.3
+72019,county,72019,Barranquitas Municipio,72,Puerto Rico,Barranquitas Municipio,28983,29509,6,1.3
+72021,county,72021,Bayamón Municipio,72,Puerto Rico,Bayamón Municipio,185187,180562,63,1.3
+72023,county,72023,Cabo Rojo Municipio,72,Puerto Rico,Cabo Rojo Municipio,47158,46580,15,1.3
+72025,county,72025,Caguas Municipio,72,Puerto Rico,Caguas Municipio,127244,124161,34,1.3
+72027,county,72027,Camuy Municipio,72,Puerto Rico,Camuy Municipio,32827,32691,8,1.3
+72029,county,72029,Canóvanas Municipio,72,Puerto Rico,Canóvanas Municipio,42337,41302,12,1.3
+72031,county,72031,Carolina Municipio,72,Puerto Rico,Carolina Municipio,154815,149874,45,1.3
+72033,county,72033,Cataño Municipio,72,Puerto Rico,Cataño Municipio,23155,21701,16,1.3
+72035,county,72035,Cayey Municipio,72,Puerto Rico,Cayey Municipio,41652,40027,11,1.3
+72037,county,72037,Ceiba Municipio,72,Puerto Rico,Ceiba Municipio,11307,10559,4,1.3
+72039,county,72039,Ciales Municipio,72,Puerto Rico,Ciales Municipio,16984,16652,4,1.3
+72041,county,72041,Cidra Municipio,72,Puerto Rico,Cidra Municipio,39970,39669,10,1.3
+72043,county,72043,Coamo Municipio,72,Puerto Rico,Coamo Municipio,34668,33076,9,1.3
+72045,county,72045,Comerío Municipio,72,Puerto Rico,Comerío Municipio,18883,18445,5,1.3
+72047,county,72047,Corozal Municipio,72,Puerto Rico,Corozal Municipio,34571,34531,6,1.3
+72049,county,72049,Culebra Municipio,72,Puerto Rico,Culebra Municipio,1792,1735,2,1.3
+72051,county,72051,Dorado Municipio,72,Puerto Rico,Dorado Municipio,35879,35891,9,1.3
+72053,county,72053,Fajardo Municipio,72,Puerto Rico,Fajardo Municipio,32124,30780,11,1.3
+72054,county,72054,Florida Municipio,72,Puerto Rico,Florida Municipio,11692,11371,2,1.3
+72055,county,72055,Guánica Municipio,72,Puerto Rico,Guánica Municipio,13787,11840,8,1.3
+72057,county,72057,Guayama Municipio,72,Puerto Rico,Guayama Municipio,36614,34043,10,1.3
+72059,county,72059,Guayanilla Municipio,72,Puerto Rico,Guayanilla Municipio,17784,16489,6,1.3
+72061,county,72061,Guaynabo Municipio,72,Puerto Rico,Guaynabo Municipio,89780,89055,27,1.3
+72063,county,72063,Gurabo Municipio,72,Puerto Rico,Gurabo Municipio,40622,39780,11,1.3
+72065,county,72065,Hatillo Municipio,72,Puerto Rico,Hatillo Municipio,38486,37810,7,1.3
+72067,county,72067,Hormigueros Municipio,72,Puerto Rico,Hormigueros Municipio,15654,15222,5,1.3
+72069,county,72069,Humacao Municipio,72,Puerto Rico,Humacao Municipio,50896,49249,14,1.3
+72071,county,72071,Isabela Municipio,72,Puerto Rico,Isabela Municipio,42943,42938,12,1.3
+72073,county,72073,Jayuya Municipio,72,Puerto Rico,Jayuya Municipio,14779,14423,3,1.3
+72075,county,72075,Juana Díaz Municipio,72,Puerto Rico,Juana Díaz Municipio,46538,45853,13,1.3
+72077,county,72077,Juncos Municipio,72,Puerto Rico,Juncos Municipio,37012,36639,7,1.3
+72079,county,72079,Lajas Municipio,72,Puerto Rico,Lajas Municipio,23334,22784,6,1.3
+72081,county,72081,Lares Municipio,72,Puerto Rico,Lares Municipio,28105,27744,8,1.3
+72083,county,72083,Las Marías Municipio,72,Puerto Rico,Las Marías Municipio,8874,8638,3,1.3
+72085,county,72085,Las Piedras Municipio,72,Puerto Rico,Las Piedras Municipio,35180,34723,8,1.3
+72087,county,72087,Loíza Municipio,72,Puerto Rico,Loíza Municipio,23693,21542,11,1.3
+72089,county,72089,Luquillo Municipio,72,Puerto Rico,Luquillo Municipio,17781,17190,6,1.3
+72091,county,72091,Manatí Municipio,72,Puerto Rico,Manatí Municipio,39492,38413,10,1.3
+72093,county,72093,Maricao Municipio,72,Puerto Rico,Maricao Municipio,4755,4336,2,1.3
+72095,county,72095,Maunabo Municipio,72,Puerto Rico,Maunabo Municipio,10589,10120,4,1.3
+72097,county,72097,Mayagüez Municipio,72,Puerto Rico,Mayagüez Municipio,73077,68905,26,1.3
+72099,county,72099,Moca Municipio,72,Puerto Rico,Moca Municipio,37460,37562,8,1.3
+72101,county,72101,Morovis Municipio,72,Puerto Rico,Morovis Municipio,28727,28170,7,1.3
+72103,county,72103,Naguabo Municipio,72,Puerto Rico,Naguabo Municipio,23386,22666,5,1.3
+72105,county,72105,Naranjito Municipio,72,Puerto Rico,Naranjito Municipio,29241,29627,5,1.3
+72107,county,72107,Orocovis Municipio,72,Puerto Rico,Orocovis Municipio,21434,21329,7,1.3
+72109,county,72109,Patillas Municipio,72,Puerto Rico,Patillas Municipio,15985,15077,5,1.3
+72111,county,72111,Peñuelas Municipio,72,Puerto Rico,Peñuelas Municipio,20399,19325,7,1.3
+72113,county,72113,Ponce Municipio,72,Puerto Rico,Ponce Municipio,137491,128384,46,1.3
+72115,county,72115,Quebradillas Municipio,72,Puerto Rico,Quebradillas Municipio,23638,23189,5,1.3
+72117,county,72117,Rincón Municipio,72,Puerto Rico,Rincón Municipio,15187,15582,6,1.3
+72119,county,72119,Río Grande Municipio,72,Puerto Rico,Río Grande Municipio,47060,44799,13,1.3
+72121,county,72121,Sabana Grande Municipio,72,Puerto Rico,Sabana Grande Municipio,22729,22055,6,1.3
+72123,county,72123,Salinas Municipio,72,Puerto Rico,Salinas Municipio,25789,24218,9,1.3
+72125,county,72125,San Germán Municipio,72,Puerto Rico,San Germán Municipio,31879,30809,7,1.3
+72127,county,72127,San Juan Municipio,72,Puerto Rico,San Juan Municipio,342259,329737,138,1.3
+72129,county,72129,San Lorenzo Municipio,72,Puerto Rico,San Lorenzo Municipio,37693,37275,9,1.3
+72131,county,72131,San Sebastián Municipio,72,Puerto Rico,San Sebastián Municipio,39345,39019,9,1.3
+72133,county,72133,Santa Isabel Municipio,72,Puerto Rico,Santa Isabel Municipio,20281,19547,6,1.3
+72135,county,72135,Toa Alta Municipio,72,Puerto Rico,Toa Alta Municipio,66852,65754,13,1.3
+72137,county,72137,Toa Baja Municipio,72,Puerto Rico,Toa Baja Municipio,75293,70931,24,1.3
+72139,county,72139,Trujillo Alto Municipio,72,Puerto Rico,Trujillo Alto Municipio,67740,66348,17,1.3
+72141,county,72141,Utuado Municipio,72,Puerto Rico,Utuado Municipio,28287,26894,8,1.3
+72143,county,72143,Vega Alta Municipio,72,Puerto Rico,Vega Alta Municipio,35395,34351,10,1.3
+72145,county,72145,Vega Baja Municipio,72,Puerto Rico,Vega Baja Municipio,54414,53505,14,1.3
+72147,county,72147,Vieques Municipio,72,Puerto Rico,Vieques Municipio,8249,7867,3,1.3
+72149,county,72149,Villalba Municipio,72,Puerto Rico,Villalba Municipio,22093,21133,6,1.3
+72151,county,72151,Yabucoa Municipio,72,Puerto Rico,Yabucoa Municipio,30426,28058,10,1.3
+72153,county,72153,Yauco Municipio,72,Puerto Rico,Yauco Municipio,34172,31608,11,1.3

@@ -64,7 +64,8 @@ def delineation():
     rows = list(openpyxl.load_workbook(bx.fetch(DELIN), read_only=True).active.iter_rows(values_only=True))
     hi = [i for i, r in enumerate(rows) if r and r[0] == "CBSA Code"][0]; h = rows[hi]
     out = [dict(zip(h, r)) for r in rows[hi + 1:] if r and r[0] and str(r[0]).isdigit()]
-    return [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area"]
+    # Puerto Rico's metros are left out: LODES, which the districts are grouped by, does not cover Puerto Rico
+    return [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area" and d["FIPS State Code"] != "72"]
 
 
 def group(nodes, pop, adj, flows, blen, k, lo, hi, apart=(), mu=None):
