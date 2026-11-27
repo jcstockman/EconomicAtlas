@@ -151,7 +151,7 @@ footer p { margin: 0; }
   </div>
 
   <footer>
-    <p id="foot-m">Metro areas: the 56 CBSAs of 1.0M+ residents (OMB July 2023 delineation, Vintage 2025 estimates). Districts (0.35–1.5M) are atlas units, that is county pieces and counties, of 0.35M+, with smaller counties joined by where their residents work. Subregions (0.6–3.5M, aiming at 1–2.5M) exist only in the 26 CBSAs of 2.5M+: OMB metropolitan divisions, with larger divisions and undivided CBSAs split by commuting. The district view is shown in subregions over 1.5M and in mid-size CBSAs with two or more districts; elsewhere it falls through to the subregion or CBSA. Work inside: employed residents whose job is in the same area (LEHD LODES 2024, Michigan 2021, cross-state commuting included). Spec: docs/specs/subregions-districts.md.</p>
+    <p id="foot-m">Metro areas: the 57 CBSAs of 1.0M+ residents (OMB July 2023 delineation, Vintage 2025 estimates). Districts (0.35–1.5M) are atlas units, that is county pieces and counties, of 0.35M+, with smaller counties joined by where their residents work. Subregions (0.6–3.5M, aiming at 1–2.5M) exist only in the 26 CBSAs of 2.5M+: OMB metropolitan divisions, with larger divisions and undivided CBSAs split by commuting. The district view is shown in subregions over 1.5M and in mid-size CBSAs with two or more districts; elsewhere it falls through to the subregion or CBSA. Work inside: employed residents whose job is in the same area (LEHD LODES 2024, Michigan 2021, cross-state commuting included; Puerto Rico, which LODES does not cover: ACS 2016–2020 county-to-county flows). Spec: docs/specs/subregions-districts.md.</p>
     <p id="foot-c">County pieces: Census 2020 tracts (cartographic boundaries) and Vintage 2025 county estimates; 2020 redistricting data (PL 94-171) for the population mix; LEHD LODES 2024 workplace and origin–destination files (Michigan 2021; in-state jobs only, so "work inside" excludes cross-state commuting). Official pieces follow each county's planning or statistical division; inferred pieces come from Louvain on commuting. Spec: docs/specs/county-pieces.md.</p>
   </footer>
 </div>
@@ -245,7 +245,7 @@ footer p { margin: 0; }
     const v = state.view, isM = v === "m";
     setPressed("#views", "v", v);
     $("lede").textContent = isM
-      ? "The 56 metro areas (CBSAs) of 1.0M+ residents, split into districts of 0.35–1.5M and, in the 26 of 2.5M+, subregions of 0.6–3.5M. Every district is a union of atlas units (county pieces and whole counties), so all atlas figures add up to it. Pick a metro area to see how it divides."
+      ? "The 57 metro areas (CBSAs) of 1.0M+ residents, split into districts of 0.35–1.5M and, in the 26 of 2.5M+, subregions of 0.6–3.5M. Every district is a union of atlas units (county pieces and whole counties), so all atlas figures add up to it. Pick a metro area to see how it divides."
       : "The 64 US counties with 0.92M+ residents, split into pieces of about 0.8M residents (0.45–1.1M) built from 2020 census tracts. Pick a county to see its pieces, their size and how much of their commuting stays inside.";
     $("place-label").textContent = isM ? "Metro area" : "County";
     $("sub-label").textContent = isM ? "County and piece lines" : "Subareas";

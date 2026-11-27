@@ -15,7 +15,9 @@ IDs: subregion <CBSA>-S<nn>, district <CBSA>-D<nn>, tied in metro_registry.csv t
 kept across rebuilds as for pieces. Figures for districts and subregions are sums of atlas-unit figures.
 
 Inputs: atlas units (regions/units), OMB July 2023 delineation (list1_2023.xlsx), LODES 8 OD main + aux (all jobs) for
-the 40 states of the covered CBSAs (latest year published, 2024 back to 2021).
+the 40 states of the covered CBSAs (latest year published, 2024 back to 2021). LODES does not cover Puerto Rico: there,
+commuting is the ACS 2016-2020 county-to-county flows (table 1, workers 16+), which suffice because every Puerto Rico
+unit is a whole municipio.
 Writes next to this script: crosswalk_unit_metro.csv, districts.csv, subregions.csv, districts.geojson,
 subregions.geojson, metro_units.geojson (the covered units' shapes, for the map), metro_registry.csv.
 usage: python3 build_metros.py --cache DIR
@@ -33,6 +35,8 @@ import build_crosswalk as bx  # noqa: E402
 import build_groups as bg  # noqa: E402
 
 DELIN = "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx"
+ACS_FLOWS = "https://www2.census.gov/programs-surveys/demo/tables/metro-micro/2020/commuting-flows-2020/table1.xlsx"
+ACS_FLOW_STATES = {"72"}  # states whose commuting comes from the ACS flows instead of LODES
 OD = "https://lehd.ces.census.gov/data/lodes/LODES8/{st}/od/{st}_od_{part}_JT00_{yr}.csv.gz"
 ABBR = {"01": "al", "04": "az", "05": "ar", "06": "ca", "08": "co", "09": "ct", "10": "de", "11": "dc", "12": "fl", "13": "ga",
         "17": "il", "18": "in", "19": "ia", "20": "ks", "21": "ky", "24": "md", "25": "ma", "26": "mi", "27": "mn", "28": "ms",
@@ -64,8 +68,24 @@ def delineation():
     rows = list(openpyxl.load_workbook(bx.fetch(DELIN), read_only=True).active.iter_rows(values_only=True))
     hi = [i for i, r in enumerate(rows) if r and r[0] == "CBSA Code"][0]; h = rows[hi]
     out = [dict(zip(h, r)) for r in rows[hi + 1:] if r and r[0] and str(r[0]).isdigit()]
-    # Puerto Rico's metros are left out: LODES, which the districts are grouped by, does not cover Puerto Rico
-    return [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area" and d["FIPS State Code"] != "72"]
+    return [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area"]
+
+
+def acs_flows(units_in):
+    """ACS 2016-2020 county-to-county flows for the ACS_FLOW_STATES: ({(home unit, work unit): workers}, {home unit:
+    workers}) among units_in (whole counties). Workers by home count every workplace, in or outside the units."""
+    import openpyxl
+    flows, jobs_of = collections.Counter(), collections.Counter()
+    ws = openpyxl.load_workbook(bx.fetch(ACS_FLOWS, "acs_commuting_flows_2016_2020_table1.xlsx"), read_only=True).active
+    for r in ws.iter_rows(min_row=9, values_only=True):
+        if r[0] in ACS_FLOW_STATES and r[1] and r[8]:
+            h = r[0] + r[1]
+            if h in units_in:
+                jobs_of[h] += int(r[8])
+                w = (r[4] or "")[-2:] + (r[5] or "")
+                if w in units_in:
+                    flows[(h, w)] += int(r[8])
+    return flows, jobs_of
 
 
 def group(nodes, pop, adj, flows, blen, k, lo, hi, apart=(), mu=None):
@@ -166,12 +186,13 @@ def main():
     # commuting between units: LODES OD main (in-state) + aux (home in another state), residents -> jobs
     flows = collections.Counter(); years = {}
     jobs_of = collections.Counter()  # residents' jobs anywhere in the files read, by home unit
-    ods = [(s2, part) + od_file(ABBR[s2], part) for s2 in sorted({units[k]["county_fips"][:2] for k in cov_units}) for part in ("main", "aux")]
+    ods = [(s2, part) + od_file(ABBR[s2], part) for s2 in sorted({units[k]["county_fips"][:2] for k in cov_units} - ACS_FLOW_STATES)
+           for part in ("main", "aux")]
     years = {ABBR[s2]: yr for s2, part, p, yr in ods}
     # the unit flows are cached (a derived file, keyed by the OD files and the unit crosswalk) so rebuilds are quick
     import hashlib, pickle
     fkey = hashlib.md5(json.dumps([os.path.basename(p) for *_, p, yr in ods] + [os.path.getsize(p) for *_, p, yr in ods] +
-                                  [os.path.getsize(os.path.join(U, "crosswalk_tract_unit.csv")), sorted(cov_units)]).encode()).hexdigest()
+                                  [os.path.getsize(os.path.join(U, "crosswalk_tract_unit.csv")), sorted(k for k in cov_units if units[k]["state_fips"] not in ACS_FLOW_STATES)]).encode()).hexdigest()
     fcache = os.path.join(bx.CACHE, f"metro_flows_{fkey}.pkl")
     if os.path.exists(fcache):
         flows, jobs_of = pickle.load(open(fcache, "rb"))
@@ -190,6 +211,11 @@ def main():
         print("  OD", st, part, yr, flush=True)
     if not os.path.exists(fcache):
         pickle.dump((flows, jobs_of), open(fcache, "wb"))
+    acs_units = {k for k in cov_units if units[k]["state_fips"] in ACS_FLOW_STATES}
+    if acs_units:  # Puerto Rico: ACS county-to-county commuting (no LODES)
+        af, aj = acs_flows(acs_units)
+        flows.update(af); jobs_of.update(aj)
+        print(f"  ACS flows: {len(acs_units)} units, {sum(af.values()):,} workers among them", flush=True)
 
     def work_inside(ks):  # share of the group's employed residents whose job is in the group
         tot = sum(jobs_of[k] for k in ks)
