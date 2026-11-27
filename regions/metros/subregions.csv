@@ -7,9 +7,9 @@ subregion_id,cbsa,cbsa_title,name,name_source,auto_name,pop2025,units,districts,
 12420-S02,12420,"Austin-Round Rock-San Marcos, TX","Central & South Austin, Hays & Bastrop",curated,Central & South Austin / Hays (+2),1140856,4,1,False,0.541
 12580-S01,12580,"Baltimore-Columbia-Towson, MD","Baltimore City, Anne Arundel & Howard",curated,Anne Arundel / Baltimore city (+2),1567008,4,2,True,0.5685
 12580-S02,12580,"Baltimore-Columbia-Towson, MD","Baltimore County, Harford & Carroll",curated,Baltimore / Harford / Carroll,1290773,3,1,False,0.482
-14460-S01,14460,"Boston-Cambridge-Newton, MA-NH","Middlesex, Essex & Seacoast NH",curated,Cambridge-Newton-Framingham,2955752,5,4,True,0.6578
+14460-S01,14460,"Boston-Cambridge-Newton, MA-NH","Middlesex, Essex & Southeast NH",curated,Cambridge-Newton-Framingham,2955752,5,4,True,0.6578
 14460-S02,14460,"Boston-Cambridge-Newton, MA-NH","Boston, Norfolk & Plymouth",curated,Boston,2078469,3,3,True,0.6744
-16740-S01,16740,"Charlotte-Concord-Gastonia, NC-SC",North & West Charlotte & Suburbs,curated,North & West Charlotte / Cabarrus (+4),1557890,6,2,True,0.5441
+16740-S01,16740,"Charlotte-Concord-Gastonia, NC-SC","North & West Charlotte, Gaston & Cabarrus",curated,North & West Charlotte / Cabarrus (+4),1557890,6,2,True,0.5441
 16740-S02,16740,"Charlotte-Concord-Gastonia, NC-SC","Central & South Charlotte, Union & York",curated,Central & South Charlotte / York (+4),1380940,6,2,False,0.5799
 16980-S01,16980,"Chicago-Naperville-Elgin, IL-IN","Northwest Cook, DuPage & McHenry",curated,DuPage County / Northwest Suburbs & O'Hare / McHenry,2131946,3,2,True,0.5326
 16980-S02,16980,"Chicago-Naperville-Elgin, IL-IN",West & South Sides,curated,West & Southwest Sides & Near West Suburbs / South Side & Far South Side,1757814,2,2,True,0.2692
@@ -39,16 +39,16 @@ subregion_id,cbsa,cbsa_title,name,name_source,auto_name,pop2025,units,districts,
 33100-S01,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",Miami-Dade County,curated,Miami-Miami Beach-Kendall,2802030,4,4,True,0.7635
 33100-S02,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",Broward County,curated,Fort Lauderdale-Pompano Beach-Sunrise,2013317,3,3,True,0.5966
 33100-S03,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",Palm Beach County,curated,West Palm Beach-Boca Raton-Delray Beach,1575726,2,2,True,0.6635
-33460-S01,33460,"Minneapolis-St. Paul-Bloomington, MN-WI","Hennepin, Anoka & Western Counties",curated,North & West Suburbs / Minneapolis & Bloomington (+9),2362272,11,3,True,0.7699
+33460-S01,33460,"Minneapolis-St. Paul-Bloomington, MN-WI","Minneapolis, North & West Metro",curated,North & West Suburbs / Minneapolis & Bloomington (+9),2362272,11,3,True,0.7699
 33460-S02,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",St. Paul & East Metro,curated,Ramsey / Dakota (+3),1428023,5,3,False,0.5503
 35620-S01,35620,"New York-Newark-Jersey City, NY-NJ",Long Island,curated,Nassau County-Suffolk County,2945029,4,4,True,0.6318
 35620-S02,35620,"New York-Newark-Jersey City, NY-NJ",Central Jersey,curated,Lakewood-New Brunswick,2564602,4,4,True,0.5974
 35620-S03,35620,"New York-Newark-Jersey City, NY-NJ",Uptown Manhattan & the Bronx,curated,Uptown Manhattan / South & East Bronx / West & Northwest Bronx,2400577,3,3,True,0.2918
 35620-S04,35620,"New York-Newark-Jersey City, NY-NJ",Queens,curated,South Queens & the Rockaways / Western Queens / Northeast Queens: Flushing & Bayside,2358182,3,3,True,0.2982
-35620-S05,35620,"New York-Newark-Jersey City, NY-NJ","Newark, Union & Morris",curated,Newark,2302337,5,3,True,0.5097
+35620-S05,35620,"New York-Newark-Jersey City, NY-NJ","Essex, Union & Morris",curated,Newark,2302337,5,3,True,0.5097
 35620-S06,35620,"New York-Newark-Jersey City, NY-NJ","Bergen, Hudson & Passaic",curated,Hudson / Passaic (+2),2243683,4,4,True,0.4813
 35620-S07,35620,"New York-Newark-Jersey City, NY-NJ",South Brooklyn & Staten Island,curated,East Brooklyn & Coney Island / Southwest Brooklyn & Midwood / Richmond,2231960,3,3,True,0.3299
-35620-S08,35620,"New York-Newark-Jersey City, NY-NJ","Midtown, Downtown & North Brooklyn",curated,North Brooklyn & Downtown / Midtown & Lower Manhattan,1593909,2,2,True,0.6533
+35620-S08,35620,"New York-Newark-Jersey City, NY-NJ","Midtown, Lower Manhattan & North Brooklyn",curated,North Brooklyn & Downtown / Midtown & Lower Manhattan,1593909,2,2,True,0.6533
 35620-S09,35620,"New York-Newark-Jersey City, NY-NJ",Lower Hudson Valley,curated,Northern & Central Westchester / Southern Westchester: Yonkers & New Rochelle (+2),1472168,4,3,False,0.4521
 36740-S01,36740,"Orlando-Kissimmee-Sanford, FL","Orlando, East Orange & Seminole",curated,Orlando & East Orange / Seminole,1521735,2,2,True,0.5798
 36740-S02,36740,"Orlando-Kissimmee-Sanford, FL","West Orange, Osceola & Lake",curated,West Orange & Tourist Corridor / Osceola / Lake,1435937,3,3,False,0.4545
@@ -63,13 +63,13 @@ subregion_id,cbsa,cbsa_title,name,name_source,auto_name,pop2025,units,districts,
 38900-S02,38900,"Portland-Vancouver-Hillsboro, OR-WA","Washington, Clackamas & Yamhill",curated,Washington / Clackamas / Yamhill,1148012,3,2,False,0.6019
 40140-S01,40140,"Riverside-San Bernardino-Ontario, CA",Western Riverside County,curated,"Riverside, Corona & Moreno Valley / Temecula, Hemet & the Pass",2041438,2,2,True,0.4201
 40140-S02,40140,"Riverside-San Bernardino-Ontario, CA",San Bernardino Valley & West End,curated,"San Bernardino Valley / West End: Ontario, Rancho & Chino",1605073,2,2,True,0.4418
-40140-S03,40140,"Riverside-San Bernardino-Ontario, CA",Deserts & Mountains,curated,High Desert & Mountains / Coachella Valley & Desert,1122495,2,2,False,0.4584
+40140-S03,40140,"Riverside-San Bernardino-Ontario, CA",High Desert & Coachella Valley,curated,High Desert & Mountains / Coachella Valley & Desert,1122495,2,2,False,0.4584
 41180-S01,41180,"St. Louis, MO-IL","St. Louis City, North County & Metro East",curated,North & Central St. Louis County / St. Louis city (+7),1453092,9,2,False,0.7198
 41180-S03,41180,"St. Louis, MO-IL",West County & Missouri Suburbs,curated,West & South St. Louis County / St. Charles (+5),1361329,7,2,False,0.54
 41700-S01,41700,"San Antonio-New Braunfels, TX","Central, West & South San Antonio",curated,"Northwest, West & Far South Side / Inside Loop 410 (+4)",1640773,6,2,True,0.557
 41700-S02,41700,"San Antonio-New Braunfels, TX","North San Antonio, Comal & Guadalupe",curated,North & Northeast San Antonio / Comal (+2),1172367,4,1,False,0.4424
 41740-S01,41740,"San Diego-Chula Vista-Carlsbad, CA","Central, South Bay & East County",curated,"Central San Diego & South Bay / Mid-City, Kearny Mesa & East County",1641439,2,2,True,0.5671
-41740-S02,41740,"San Diego-Chula Vista-Carlsbad, CA",North County & North San Diego,curated,"North County & Backcountry / La Jolla, Mira Mesa, Poway & Encinitas",1640808,2,2,True,0.5652
+41740-S02,41740,"San Diego-Chula Vista-Carlsbad, CA","North County, La Jolla & Poway",curated,"North County & Backcountry / La Jolla, Mira Mesa, Poway & Encinitas",1640808,2,2,True,0.5652
 41860-S01,41860,"San Francisco-Oakland-Fremont, CA",East Bay,curated,Oakland-Fremont-Berkeley,2806700,3,3,True,0.5299
 41860-S02,41860,"San Francisco-Oakland-Fremont, CA","San Francisco, Peninsula & Marin",curated,San Francisco-San Mateo-Redwood City,1823341,3,2,True,0.6584
 42660-S01,42660,"Seattle-Tacoma-Bellevue, WA",King County,curated,Seattle-Bellevue-Kent,2344939,3,3,True,0.8341
