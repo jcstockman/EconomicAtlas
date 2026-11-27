@@ -12,7 +12,9 @@ Inputs (logged and pinned through the pieces loaders): TAB2010_TAB2020_ST<ss>.zi
 Writes next to this script:
   crosswalk_tract2010_unit.csv  tract2010_geoid, county2010_fips, unit_id, pop2010, hu2010, jobs_lodes7, aland_m2,
                                 pop_share, hu_share, jobs_share, aland_share (shares of the 2010 tract; a tract with no
-                                residents takes housing units, then jobs, then land, for pop_share)
+                                residents takes housing units, then jobs, then land, for pop_share; a water-only
+                                tract splits equally). Slivers from boundary realignments (under 0.1% of a tract's
+                                residents, housing and jobs, under 1% of its land) are folded into its largest unit.
   tract2010_summary.csv         per state: 2010 tracts, tracts in more than one unit, residents, housing units, jobs
 usage: python3 build_tract2010.py --cache DIR
 """
@@ -99,7 +101,8 @@ def main():
                     tot[b10] = (int(row[ix["AREALAND_2010"]] or 0), int(row[ix["AREAWATER_2010"]] or 0))
         st_tracts = set()
         for b10, parts in rows.items():
-            land, water = tot[b10]
+            # shares by the overlaps' own totals: in a few blocks the overlaps' land falls slightly short of the block's
+            land, water = sum(l for _, l, _ in parts), sum(wa for _, _, wa in parts)
             if land > 0:
                 w = [(b20, l / land, l) for b20, l, _ in parts if l > 0]
             elif water > 0:
@@ -123,27 +126,27 @@ def main():
     by_tract = collections.defaultdict(list)
     for (t, u), v in acc.items():
         by_tract[t].append((u, v))
-    out = []
+    # slivers from small boundary realignments (under 0.1% of a tract's residents, housing units and jobs, and under 1%
+    # of its land: a few hundredths of a person at most) fold into the tract's largest unit, so totals stay exact
+    keep, dropped = [], 0
     for t, parts in sorted(by_tract.items()):
         tp = [sum(v[i] for _, v in parts) for i in range(4)]
+        frac = lambda v, i: v[i] / tp[i] if tp[i] else 0
+        small = [(u, v) for u, v in parts if all(frac(v, i) < 0.001 for i in range(3)) and frac(v, 3) < 0.01]
+        big = [(u, v) for u, v in parts if (u, v) not in small] or [max(parts, key=lambda x: (x[1][0], x[1][3]))]
+        if small and len(big) < len(parts):
+            host = max(big, key=lambda x: (x[1][0], x[1][3]))[1]
+            for u, v in small:
+                if v is not host:
+                    for i in range(4):
+                        host[i] += v[i]
+                    dropped += 1
         basis = next((i for i in range(4) if tp[i] > 0), 3)
-        for u, v in sorted(parts):
-            sh = lambda i: round(v[i] / tp[i], 6) if tp[i] else None
-            out.append({"tract2010_geoid": t, "county2010_fips": t[:5], "unit_id": u, "pop2010": round(v[0], 3), "hu2010": round(v[1], 3),
-                        "jobs_lodes7": round(v[2], 3), "aland_m2": int(v[3]), "pop_share": sh(basis), "hu_share": sh(1) if tp[1] else sh(basis),
-                        "jobs_share": sh(2) if tp[2] else sh(basis), "aland_share": sh(3)})
-    # drop slivers that carry nothing (no residents, housing, jobs, and under 1% of the tract's land)
-    keep = [r for r in out if r["pop2010"] or r["hu2010"] or r["jobs_lodes7"] or (r["aland_share"] or 0) >= 0.01]
-    dropped = len(out) - len(keep)
-    # renormalise shares after dropping slivers
-    sums = collections.defaultdict(lambda: [0.0] * 4)
-    for r in keep:
-        for i, k in enumerate(("pop_share", "hu_share", "jobs_share", "aland_share")):
-            sums[r["tract2010_geoid"]][i] += r[k] or 0
-    for r in keep:
-        for i, k in enumerate(("pop_share", "hu_share", "jobs_share", "aland_share")):
-            if r[k] is not None and sums[r["tract2010_geoid"]][i]:
-                r[k] = round(r[k] / sums[r["tract2010_geoid"]][i], 6)
+        for u, v in sorted(big):
+            sh = lambda i: round(v[i] / tp[i], 6) if tp[i] else round(1 / len(big), 6)  # water-only tracts: equal shares
+            keep.append({"tract2010_geoid": t, "county2010_fips": t[:5], "unit_id": u, "pop2010": round(v[0], 3), "hu2010": round(v[1], 3),
+                         "jobs_lodes7": round(v[2], 3), "aland_m2": int(v[3]), "pop_share": sh(basis), "hu_share": sh(1) if tp[1] else sh(basis),
+                         "jobs_share": sh(2) if tp[2] else sh(basis), "aland_share": sh(3)})
     with open(os.path.join(HERE, "crosswalk_tract2010_unit.csv"), "w", newline="") as fh:
         w = csv.DictWriter(fh, list(keep[0])); w.writeheader(); w.writerows(keep)
     nsplit = collections.Counter(r["tract2010_geoid"] for r in keep)
@@ -159,10 +162,9 @@ def main():
     print(f"2010 tracts {len(nsplit):,}; in more than one unit {sum(1 for n in nsplit.values() if n > 1):,} ({split_pop / tp:.2%} of residents); "
           f"rows {len(keep):,} (empty slivers dropped {dropped:,})")
     print(f"residents {tp:,} (census {POP_2010:,}; crosswalk sums to {xp:,.0f}); housing units {th:,} (census {HU_2010:,})")
-    bad = [t for t, (p, _, _, _) in sums.items() if abs(p - 1) > 1e-6 and p]
-    if tp != POP_2010 or th != HU_2010:
+    if tp != POP_2010 or th != HU_2010 or abs(xp - POP_2010) > 50:
         raise SystemExit("2010 totals do not match the census")
-    print("checks: totals match; shares renormalised per tract")
+    print("checks: totals match")
 
 
 if __name__ == "__main__":
