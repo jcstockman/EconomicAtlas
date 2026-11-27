@@ -5,7 +5,8 @@ shared among the 2020 blocks it overlaps in proportion to the land they share (C
 files; water area where a block has no land). A 2020 block belongs to its 2020 tract and so to one atlas unit. Summed
 by 2010 tract and unit, this gives the share of each 2010 tract's residents, housing units, jobs and land in each unit.
 County changes since 2010 (Connecticut's planning regions, Bedford city VA, Shannon/Oglala Lakota SD, Wade Hampton/
-Kusilvak AK, Valdez-Cordova AK) are handled by the blocks themselves. 50 states and DC; Puerto Rico is not in the atlas.
+Kusilvak AK, Valdez-Cordova AK) are handled by the blocks themselves. 50 states, DC and Puerto Rico; LODES does not
+cover Puerto Rico, so its tracts have no jobs (jobs_lodes7 0; jobs_share follows residents, as for any tract without jobs).
 
 Inputs (logged and pinned through the pieces loaders): TAB2010_TAB2020_ST<ss>.zip, <st>2010.pl.zip, LODES 7 WAC
 (all jobs, the latest year published, 2019 back to 2015), and regions/units/crosswalk_tract_unit.csv.
@@ -37,7 +38,9 @@ STATES = {"01": ("Alabama", "al"), "02": ("Alaska", "ak"), "04": ("Arizona", "az
           "37": ("North_Carolina", "nc"), "38": ("North_Dakota", "nd"), "39": ("Ohio", "oh"), "40": ("Oklahoma", "ok"), "41": ("Oregon", "or"),
           "42": ("Pennsylvania", "pa"), "44": ("Rhode_Island", "ri"), "45": ("South_Carolina", "sc"), "46": ("South_Dakota", "sd"),
           "47": ("Tennessee", "tn"), "48": ("Texas", "tx"), "49": ("Utah", "ut"), "50": ("Vermont", "vt"), "51": ("Virginia", "va"),
-          "53": ("Washington", "wa"), "54": ("West_Virginia", "wv"), "55": ("Wisconsin", "wi"), "56": ("Wyoming", "wy")}
+          "53": ("Washington", "wa"), "54": ("West_Virginia", "wv"), "55": ("Wisconsin", "wi"), "56": ("Wyoming", "wy"),
+          "72": ("Puerto_Rico", "pr")}
+NO_LODES = {"pr"}  # LEHD does not cover Puerto Rico
 POP_2010, HU_2010 = 308_745_538, 131_704_730  # 2010 census, 50 states + DC
 
 
@@ -65,6 +68,8 @@ def pl_blocks(ss):
 
 
 def lodes7(st):
+    if st in NO_LODES:
+        return {}, ""
     for yr in ("2019", "2018", "2017", "2016", "2015"):
         try:
             p = bx.fetch(LODES7.format(st=st, yr=yr), f"lodes7_{st}_wac_S000_JT00_{yr}.csv.gz")

@@ -1,14 +1,16 @@
-"""All-US atlas units (docs/specs/atlas-units.md): every 2020 census tract in the 50 states and DC mapped to one unit.
+"""All-US atlas units (docs/specs/atlas-units.md): every 2020 census tract in the 50 states, DC and Puerto Rico mapped to
+one unit.
 
 A unit is a county piece (regions/pieces, a frozen release) in the counties with 1.0M+ residents, and a whole county
-everywhere else. Counties are the county-equivalents of the Census Vintage 2025 estimates, so Connecticut uses its nine
+everywhere else (Puerto Rico's 78 municipios are all county units). Counties are the county-equivalents of the Census
+Vintage 2025 estimates (municipios: the Puerto Rico file of the same vintage), so Connecticut uses its nine
 planning regions (2022): each 2020 tract goes to the planning region holding its internal point (tracts nest in towns,
 towns in regions). Everything else keeps the tract's own 2020 county.
 
 Inputs (through the pieces loaders: logged, hash-pinned or snapshotted; see regions/pieces/freeze_inputs.py):
   TIGERweb Census 2020 tracts (GEOID, POP100, internal point), all states
   TIGERweb ACS 2024 counties, Connecticut planning regions
-  co-est2025-alldata.csv (Vintage 2025), cb_2024_us_county_500k.zip (county shapes), pieces release <PIECES>
+  co-est2025-alldata.csv and cc-est2025-agesex-72.csv (Vintage 2025), cb_2024_us_county_500k.zip (county shapes), pieces release <PIECES>
 Writes next to this script:
   crosswalk_tract_unit.csv  tract_geoid, county_fips_2020, county_fips, unit_id, unit_type
   atlas_units.csv           unit_id, unit_type (piece | county), county_fips, county, state_fips, state, unit_name,
@@ -35,6 +37,8 @@ import build_geojson as bgj  # noqa: E402
 CT_REGIONS = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_ACS2024/MapServer/82"
 COUNTY_SHAPES = "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip"
 EST = "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/counties/totals/co-est2025-alldata.csv"
+PR_EST = "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/puerto-rico/asrh/cc-est2025-agesex-72.csv"
+PR_YEAR = "7"  # YEAR code of the 2025-07-01 estimate in the Puerto Rico file (1 = 2020 base, 2 = 2020-07-01, ...)
 SIMPLIFY = 0.002  # degrees (~200 m) for county shapes; pieces keep their own simplification
 
 
@@ -49,6 +53,9 @@ def main():
     for r in csv.DictReader(open(bx.fetch(EST), encoding="latin-1")):
         if r["SUMLEV"] == "050":
             counties[r["STATE"] + r["COUNTY"]] = {"county": r["CTYNAME"], "state": r["STNAME"], "pop2025": int(r["POPESTIMATE2025"])}
+    for r in csv.DictReader(open(bx.fetch(PR_EST), encoding="latin-1")):
+        if r["SUMLEV"] == "050" and r["YEAR"] == PR_YEAR:
+            counties["72" + r["MUNICIPIO"]] = {"county": r["NAME"], "state": "Puerto Rico", "pop2025": int(r["POPESTIMATE"])}
     states = sorted({c[:2] for c in counties})
 
     # tracts, all states
