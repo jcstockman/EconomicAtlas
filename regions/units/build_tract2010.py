@@ -41,7 +41,7 @@ STATES = {"01": ("Alabama", "al"), "02": ("Alaska", "ak"), "04": ("Arizona", "az
           "53": ("Washington", "wa"), "54": ("West_Virginia", "wv"), "55": ("Wisconsin", "wi"), "56": ("Wyoming", "wy"),
           "72": ("Puerto_Rico", "pr")}
 NO_LODES = {"pr"}  # LEHD does not cover Puerto Rico
-POP_2010, HU_2010 = 308_745_538, 131_704_730  # 2010 census, 50 states + DC
+POP_2010, HU_2010 = 308_745_538 + 3_725_789, 131_704_730 + 1_636_946  # 2010 census: 50 states + DC, Puerto Rico
 
 
 def pl_blocks(ss):
