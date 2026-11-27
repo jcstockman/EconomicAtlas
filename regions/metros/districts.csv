@@ -80,7 +80,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 26420-D10,26420,"Houston-Pasadena-The Woodlands, TX",26420-S02,Galveston County,curated,Galveston,372207,1,True,0.3707,Galveston
 26900-D01,26900,"Indianapolis-Carmel-Greenwood, IN",,"North & East Indianapolis, Madison & Hancock",curated,North & East Indianapolis / Madison (+3),877043,5,True,0.4404,North & East Indianapolis; Madison; Hancock; Boone; Shelby
 26900-D02,26900,"Indianapolis-Carmel-Greenwood, IN",,Hamilton & Tipton,curated,Hamilton / Tipton,402355,2,True,0.3545,Hamilton; Tipton
-26900-D03,26900,"Indianapolis-Carmel-Greenwood, IN",,"West & South Indianapolis, Hendricks & Johnson",curated,"Downtown, West & South Indianapolis / Hendricks (+3)",926297,5,True,0.5709,"Downtown, West & South Indianapolis; Hendricks; Johnson; Morgan; Brown"
+26900-D03,26900,"Indianapolis-Carmel-Greenwood, IN",,"Downtown, West & South Indianapolis, Hendricks & Johnson",curated,"Downtown, West & South Indianapolis / Hendricks (+3)",926297,5,True,0.5709,"Downtown, West & South Indianapolis; Hendricks; Johnson; Morgan; Brown"
 27260-D01,27260,"Jacksonville, FL",,"Southside, Beaches, St. Johns & Clay",curated,"Southside, Arlington & Beaches / St. Johns / Clay",1175848,3,True,0.598,"Southside, Arlington & Beaches; St. Johns; Clay"
 27260-D02,27260,"Jacksonville, FL",,"Downtown, Northside, Westside & Nassau",curated,"Downtown, Northside & Westside / Nassau / Baker",609652,3,True,0.4277,"Downtown, Northside & Westside; Nassau; Baker"
 28140-D01,28140,"Kansas City, MO-KS",,Johnson & Wyandotte,curated,Johnson / Wyandotte (+3),938283,5,True,0.7146,Johnson; Wyandotte; Leavenworth; Miami; Linn
@@ -146,7 +146,7 @@ district_id,cbsa,cbsa_title,subregion_id,name,name_source,auto_name,pop2025,unit
 35620-D16,35620,"New York-Newark-Jersey City, NY-NJ",35620-S08,Midtown & Lower Manhattan,curated,Midtown & Lower Manhattan,670617,1,True,0.6395,Midtown & Lower Manhattan
 35620-D17,35620,"New York-Newark-Jersey City, NY-NJ",35620-S01,Eastern Suffolk: Brookhaven & East End,curated,Eastern Suffolk: Brookhaven & East End,655893,1,True,0.4137,Eastern Suffolk: Brookhaven & East End
 35620-D18,35620,"New York-Newark-Jersey City, NY-NJ",35620-S02,Monmouth County,curated,Monmouth,651035,1,True,0.4222,Monmouth
-35620-D19,35620,"New York-Newark-Jersey City, NY-NJ",35620-S09,"White Plains, Northern Westchester & Putnam",curated,Northern & Central Westchester / Putnam,646652,2,False,0.3799,Northern & Central Westchester; Putnam
+35620-D19,35620,"New York-Newark-Jersey City, NY-NJ",35620-S09,Northern & Central Westchester & Putnam,curated,Northern & Central Westchester / Putnam,646652,2,False,0.3799,Northern & Central Westchester; Putnam
 35620-D20,35620,"New York-Newark-Jersey City, NY-NJ",35620-S05,Union County,curated,Union,601863,1,True,0.2767,Union
 35620-D21,35620,"New York-Newark-Jersey City, NY-NJ",35620-S01,North Hempstead & Oyster Bay,curated,North Hempstead & Oyster Bay,568622,1,True,0.2885,North Hempstead & Oyster Bay
 35620-D22,35620,"New York-Newark-Jersey City, NY-NJ",35620-S04,Northeast Queens: Flushing & Bayside,curated,Northeast Queens: Flushing & Bayside,540446,1,True,0.1992,Northeast Queens: Flushing & Bayside

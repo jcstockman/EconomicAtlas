@@ -36,7 +36,7 @@ id,level,name,confidence,note
 16740-D02,district,Central & South Charlotte & Union,high,Anson omitted
 16740-D03,district,"York, Lancaster & Chester",high,South Carolina side
 16740-D04,district,Cabarrus & Rowan,high,
-16740-S01,subregion,"North & West Charlotte, Gaston & Cabarrus",medium,Parallels S02's style; names the two largest outer counties on each side; local to confirm vs a 'Lake Norman' variant
+16740-S01,subregion,"North & West Charlotte, Gaston & Cabarrus",high,"Lake Norman covers only the lakeside towns, not Gaston, Cabarrus or Rowan; the two largest outer counties are named. Review 3"
 16740-S02,subregion,"Central & South Charlotte, Union & York",high,Union and York are the main members; Anson/Lancaster/Chester small
 16980-D01,district,Northwest Cook & McHenry,high,'Northwest Cook' is a common county-level term; distinct from city 'Northwest Side' (D11)
 16980-D02,district,South & Southwest Suburbs,high,same area as the piece
@@ -111,7 +111,7 @@ id,level,name,confidence,note
 26420-S04,subregion,"West Houston: Cypress, Memorial & Katy",high,"Cypress, Jersey Village & Memorial and Southwest Houston, Alief & Katy pieces; Waller"
 26900-D01,district,"North & East Indianapolis, Madison & Hancock",high,"'& Suburbs' overclaims: the main north suburbs (Carmel, Fishers) are in Hamilton & Tipton"
 26900-D02,district,Hamilton & Tipton,high,
-26900-D03,district,"West & South Indianapolis, Hendricks & Johnson",medium,"Current name drops West (Speedway, Hendricks side); parallels D01; local to confirm whether to keep 'Downtown' at the cost of length"
+26900-D03,district,"Downtown, West & South Indianapolis, Hendricks & Johnson",high,"Piece name kept whole, so the district holding Downtown says so (as Chicago, Dallas, LA); Hendricks and Johnson are the two largest outer counties. Review 3"
 27260-D01,district,"Southside, Beaches, St. Johns & Clay",high,
 27260-D02,district,"Downtown, Northside, Westside & Nassau",high,Baker omitted
 28140-D01,district,Johnson & Wyandotte,high,"Kansas side; plus Leavenworth, Miami, Linn"
@@ -188,7 +188,7 @@ id,level,name,confidence,note
 35620-D16,district,Midtown & Lower Manhattan,high,
 35620-D17,district,Eastern Suffolk: Brookhaven & East End,high,
 35620-D18,district,Monmouth County,high,Single-county rule
-35620-D19,district,"White Plains, Northern Westchester & Putnam",medium,Fixes the awkward comma; White Plains marks the central part; local to confirm the Port Chester/Rye Sound Shore part is fine under it
+35620-D19,district,Northern & Central Westchester & Putnam,high,"Piece name: covers White Plains, the Sound Shore towns (Rye, Port Chester) and the northern towns; pairs with Southern Westchester. Review 3"
 35620-D20,district,Union County,high,Single-county rule
 35620-D21,district,North Hempstead & Oyster Bay,high,
 35620-D22,district,Northeast Queens: Flushing & Bayside,high,
@@ -278,7 +278,7 @@ id,level,name,confidence,note
 41620-D01,district,"Salt Lake City, West Valley & Tooele",high,
 41620-D02,district,South Valley: West Jordan & Sandy,high,
 41700-D01,district,"North San Antonio, Comal & Guadalupe",high,Same area as S02
-41700-D02,district,"West & South Bexar, Medina & Wilson",medium,'Outer' is not a local term; covers Northwest/Far West Side (Alamo Ranch) and Far South Side; local to confirm 'Bexar' vs 'Side' wording
+41700-D02,district,"West & South Bexar, Medina & Wilson",high,Alamo Ranch and the Far West Side are unincorporated Bexar County ('west Bexar County' in local press); 'Side' names are for the city. Review 3
 41700-D03,district,Inside Loop 410,high,
 41700-S01,subregion,"Central, West & South San Antonio",high,Central (Inside Loop 410) plus west and south; distinct from D02 after rename
 41700-S02,subregion,"North San Antonio, Comal & Guadalupe",high,Same area as D01; Kendall omitted
