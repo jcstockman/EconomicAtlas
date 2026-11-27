@@ -119,5 +119,5 @@ A second review (2026-11-27) of the 50 medium- and low-confidence names renamed 
   - **D02** "Bayamón, North Coast & Central Mountains" (620k, 61%)
   - **D03** "Caguas, Cayey & Humacao" (464k, 72%)
 - **No subregions:** the metro is under 2.5M.
-- **Names:** medium confidence, for a local to confirm.
+- **Names:** a local review kept all three, now high confidence. "The Northeast" follows the National Weather Service's Northeast zone and the Corredor Ecológico del Noreste; "North Coast" and "Central Mountains" are the tourism regions' English names; "Valle del Turabo" would cover only part of D03.
 - **Other metros:** unchanged. All checks pass (57 CBSAs, 253 districts, 196 in the view, 81 subregions). Work-inside shares for San Juan use the ACS flows (2016–2020), not LODES 2024.
