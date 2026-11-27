@@ -40,7 +40,7 @@ GDP_SECTORS = {"3": "11", "6": "21", "10": "22", "11": "23", "12": "31-33", "34"
 EARN_SECTORS = {"100": "11", "200": "21", "300": "22", "400": "23", "500": "31-33", "600": "42", "700": "44-45", "800": "48-49",
                 "900": "51", "1000": "52", "1100": "53", "1200": "54", "1300": "55", "1400": "56", "1500": "61", "1600": "62",
                 "1700": "71", "1800": "72", "1900": "81"}
-GOV_EARN = {"2001": "jobs_federal", "2002": "res_armed_forces", "2011": "jobs_state_local", "2012": "jobs_state_local"}
+GOV_EARN = {"2001": "jobs_federal", "2002": "res_armed_forces", "2011": "jobs_state", "2012": "jobs_state_local"}
 TRANSFER_LEAVES = {"2110": "res_social_security_income", "2120": "res_pop65", "2210": "res_pop65", "2220": "res_medicaid",
                    "2230": "res_veterans", "2310": "res_ssi_pa_income", "2320": "res_ssi_pa_income", "2330": "res_ssi_pa_income",
                    "2340": "res_ssi_pa_income", "2400": "res_unemployed", "2500": "res_veterans", "2600": "res_population",
@@ -137,7 +137,10 @@ def main():
             cp = sum(tp[g] for g in area_of if g[:5] == c)
             for key, d in K.items():
                 fx_tot = sum(d.get(p, 0) for p in pieces_of["51059"])
-                if key.startswith(("jobs_", "est_")):
+                if key == "jobs_state":  # cities: LODES state and local x Fairfax County's ACS state share
+                    fx_sl = sum(K["jobs_state_local"].get(p, 0) for p in pieces_of["51059"])
+                    v = lk["jobs_state_local"].get(c, 0) * (fx_tot / fx_sl if fx_sl else 0)
+                elif key.startswith(("jobs_", "est_")):
                     v = lk.get(key, {}).get(c, 0)
                 elif key.startswith("wages_private_"):
                     v = lk.get(key.replace("wages_", "jobs_"), {}).get(c, 0) * index[c]
@@ -257,8 +260,11 @@ def main():
                 res[(t, l)] = d
             # government: split by the county's CAINC5N government earnings mix
             ge = data["CAINC5N"][area]
-            parts = {"2001": ge.get("2001"), "2002": ge.get("2002"), "2010": ge.get("2010")}
-            kmap = {"2001": "jobs_federal", "2002": "res_armed_forces", "2010": "jobs_state_local"}
+            if ge.get("2011") is not None and ge.get("2012") is not None:
+                parts = {"2001": ge.get("2001"), "2002": ge.get("2002"), "2011": ge["2011"], "2012": ge["2012"]}
+            else:
+                parts = {"2001": ge.get("2001"), "2002": ge.get("2002"), "2010": ge.get("2010")}
+            kmap = {"2001": "jobs_federal", "2002": "res_armed_forces", "2010": "jobs_state_local", "2011": "jobs_state", "2012": "jobs_state_local"}
             tot = sum(x for x in parts.values() if x)
             gv = v.get("83") or 0
             res[(t, "83")] = collections.Counter()

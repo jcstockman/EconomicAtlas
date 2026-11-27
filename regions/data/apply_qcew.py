@@ -2,7 +2,7 @@
 
 County units take BLS's published figures. In the split counties each county figure is shared among its pieces by
 its allocation key (regions/keys/keys.csv, measure_keys.csv):
-  ownership totals   federal: jobs_federal; state, local: jobs_state_local; private: sum of its sectors
+  ownership totals   federal: jobs_federal; state: jobs_state; local: jobs_state_local; private: sum of its sectors
   private sectors    employment jobs_private_<s>, wages wages_private_<s>, establishments est_<s> (fallback: the total key)
   withheld cells     where BLS withholds a county cell, the county's residual (parent total minus the published cells)
                      is shared by the keys of the withheld cells; no piece value is published for a withheld cell
@@ -135,7 +135,7 @@ def main():
                     for p in ps:
                         alloc[m][("5", ss)][p] = q[(c, "5", ss)][m] * kk[p] / t
             # ownership totals; private = county private total split as the sum of its sector allocations
-            gov = {"1": "jobs_federal", "2": "jobs_state_local", "3": "jobs_state_local"}
+            gov = {"1": "jobs_federal", "2": "jobs_state", "3": "jobs_state_local"}
             own_parts = {o: q[(c, o, "10")][m] for o in gov if (c, o, "10") in q}
             own_keys = {o: k(gov[o], c, "jobs_total") for o in own_parts}
             psum = collections.Counter()

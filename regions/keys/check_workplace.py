@@ -22,7 +22,6 @@ sys.path.insert(0, os.path.join(HERE, "..", "pieces")); sys.path.insert(0, HERE)
 import build_crosswalk as bx  # noqa: E402
 import build_keys as bk  # noqa: E402
 
-ACS = "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-{t}.dat"
 BAF = "https://www2.census.gov/geo/docs/maps-data/data/baf2020/BlockAssign_ST{ss}_{ST}.zip"
 MIN_WORKERS = 10_000
 # LODES sector columns (CNS01-CNS20) grouped to the ACS industry groups of B08526 (002-014)
@@ -34,15 +33,7 @@ IND = {"Agriculture and mining": (["CNS01", "CNS02"], 2), "Construction": (["CNS
 
 
 def acs(t, prefix):
-    out = {}
-    with open(bx.fetch(ACS.format(t=t), f"acsdt5y2024-{t}.dat"), encoding="latin-1") as fh:
-        head = fh.readline().rstrip("\n").split("|")
-        for line in fh:
-            if line.startswith(prefix):
-                f = line.rstrip("\n").split("|")
-                out[f[0][9:]] = {h: float(v) if v not in ("", "null") and not v.startswith("*") and float(v) >= 0 else 0.0
-                                 for h, v in zip(head[1:], f[1:]) if "_E" in h}
-    return out
+    return bk.acs_geo(t, (prefix,))
 
 
 def main():
