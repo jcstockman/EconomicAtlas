@@ -1,4 +1,4 @@
-"""Subregions and districts for the 56 CBSAs of 1.0M+ (docs/specs/subregions-districts.md).
+"""Subregions and districts for the 57 CBSAs of 1.0M+ (docs/specs/subregions-districts.md).
 
 Districts (0.35-1.5M): every atlas unit of 0.35M+ (a county piece, or a county) is a district; counties under 0.35M
 join, by LODES commuting (their residents' jobs), an adjacent district or small-county group in the same region, until
