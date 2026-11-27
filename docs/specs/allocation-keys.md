@@ -207,3 +207,20 @@ Per capita personal income by county: mean absolute error 5.5% with the componen
 **Pieces release 1.2 (2026-11-27).** Keys, QCEW and BEA rebuilt for the six counties with the 0.9M cap; counts unchanged (52 split counties, 142 pieces), all sum checks pass, validation unchanged.
 
 **Pieces release 1.3 (2026-11-27).** Keys, QCEW and BEA rebuilt for Cook and Palm Beach (capped) and the newly split Pinellas, Erie and Milwaukee; 55 split counties, 148 pieces; all sum checks pass; validation unchanged.
+
+## Workplace check (2026-11-27)
+
+`regions/keys/check_workplace.py --cache DIR` tests where LODES puts jobs inside the split counties against where workers say they work. CTPP 2017-2021 (by workplace tract) is not reachable from the build environment, so the check uses the ACS's workplace-geography tables (2020-2024 five-year: B08528 class of worker, B08526 industry), which go down to places. In each of the 55 split counties, every place of 10,000+ ACS workers lying wholly in the county, plus the rest of the county, gets its share of the county's LODES jobs (2024; blocks to places by the Census 2020 block assignment files) and of its ACS workers; the misplaced share is sum |LODES share - ACS share| / 2. All jobs, 5.0% (job-weighted over the 55 counties), is the baseline: ACS sampling error, jobs vs workers, 2020 vs 2024 place lines.
+
+| Class | Misplaced | Where it comes from (largest cases) |
+| --- | --- | --- |
+| All jobs (baseline) | 5.0% | |
+| Private | 5.2% | |
+| Education and health care | 5.8% | |
+| State and local government | 12.4% | county and school-district payrolls at one office: Miami-Dade (LODES 84% in Miami city, ACS 35%), Fairfax (62% in Springfield CDP, ACS 3%), Broward (32% in Sunrise, ACS 5%), Los Angeles (59% in Los Angeles city, ACS 43%) |
+| Public administration | 17.4% | the same, plus state government in Sacramento city (LODES 78%, ACS 55%) and Montgomery County MD government in Rockville (29% against 10%) |
+| Federal government | 31.1% | LODES counts far fewer federal jobs than the ACS finds workers (Los Angeles 19,000 against 86,000) and puts them at a few addresses: Hillsborough (76% in University CDP, ACS 12%), Montgomery MD (26% in Potomac, ACS 5%; none at the Bethesda campuses) |
+| Information | 18.8% | mostly industry coding, not place: LODES files studio and software payrolls at headquarters (Burbank 43% of Los Angeles County's information jobs, ACS 9%; Redmond 45% of King's, ACS 11%) while workers report other industries |
+| Construction | 11.8% | LODES counts contractors' offices, the ACS the job site |
+
+The check confirms the validation's weak spots (federal and state government) and locates them: a few counties whose government payrolls sit at one address. Private employment, the bulk of every key, places as well as the baseline. Results in `workplace_check.csv` (county x class) and `workplace_check_areas.csv` (county x area x class).
