@@ -205,7 +205,7 @@ def gov_keys(groups, unit_of_block, min_workers=GOV_MIN_WORKERS):
     out = {"jobs_federal": collections.Counter(), "jobs_state": collections.Counter()}
     by_group = collections.defaultdict(dict)
     for k, v in L.items():
-        by_group[k[0]][k] = {x: max(0, y) for x, y in v.items()}
+        by_group[k[0]][k] = collections.Counter({x: max(0, y) for x, y in v.items()})
     for g, cells in by_group.items():
         LT = collections.Counter()
         for v in cells.values():
