@@ -5,7 +5,15 @@ Keys (each summed from tracts to pieces, then expressed as a share of the county
   workplace (LODES 8 WAC, 2024; Michigan 2021)
     jobs_total, jobs_<naics>                 all jobs, by NAICS sector (CNS01-CNS20)
     jobs_private_<naics>                     private jobs (JT02)
-    jobs_federal, jobs_state_local[_<naics>] federal (JT04); state and local = all - private - federal
+    jobs_state_local[_<naics>]               state and local government = all - private - federal (JT00 - JT02 - JT04);
+                                             splits local government and government by sector
+  government, ACS-calibrated (gov_keys; validated in validate_keys.py)
+    jobs_federal                             federal civilian jobs: shared among the county's places of 10,000+ ACS
+                                             workers (wholly in the county) and its rest by ACS workplace counts (B08528
+                                             federal workers less B23025 armed forces, at residence), then within each by
+                                             LODES federal jobs (JT04)
+    jobs_state                               state government jobs: the same with ACS state workers (B08528_E007), then
+                                             within each area by LODES state and local jobs (LODES has no state/local split)
     wages_<naics>, wages_private_<naics>     jobs x the piece's pay index (decision 1)
   establishments (ZIP Code Business Patterns 2023, ZIP -> tract by population share of the 2020 ZCTA-tract overlap)
     est_total, est_<naics>                   private establishments by sector (CBP has no public administration)
@@ -48,6 +56,8 @@ LODES_YEAR = {"mi": "2021"}
 CNS = ["11", "21", "22", "23", "31-33", "42", "44-45", "48-49", "51", "52", "53", "54", "55", "56", "61", "62", "71", "72", "81", "92"]
 ZBP_SECTOR = {"11": "11", "21": "21", "22": "22", "23": "23", "31": "31-33", "42": "42", "44": "44-45", "48": "48-49", "51": "51",
               "52": "52", "53": "53", "54": "54", "55": "55", "56": "56", "61": "61", "62": "62", "71": "71", "72": "72", "81": "81"}
+BAF = "https://www2.census.gov/geo/docs/maps-data/data/baf2020/BlockAssign_ST{ss}_{ST}.zip"
+GOV_MIN_WORKERS = 10_000    # places with at least this many ACS workers (all classes) are calibration areas
 BAND_MID = (625.0, 2292.0)  # midpoints of the two closed LODES earnings bands, $/month
 RENT_TO_VALUE = 0.05        # annual imputed rent per dollar of owner-occupied home value (assumption; see spec)
 BEA_VA = "https://apps.bea.gov/industry/Release/XLS/GDPxInd/ValueAdded.xlsx"  # GDP by industry, table TVA105
@@ -126,13 +136,106 @@ def lodes_keys(area_of):
                         for k in range(3):
                             bands[p][k] += int(row[ix[f"CE0{k + 1}"]])
     for p in list(keys["jobs_total"]):
-        keys["jobs_federal"][p] = keys["jobs_federal_total"][p]
+        keys["jobs_federal"][p] = keys["jobs_federal_total"][p]  # LODES federal; build_keys replaces it with gov_keys
         keys["jobs_state_local"][p] = max(0, keys["jobs_total"][p] - keys["jobs_private_total"][p] - keys["jobs_federal"][p])
         for s in CNS:
             keys[f"jobs_state_local_{s}"][p] = max(0, keys[f"jobs_{s}"][p] - keys[f"jobs_private_{s}"][p] - keys[f"jobs_federal_{s}"][p])
     for s in CNS + ["total"]:
         keys.pop(f"jobs_federal_{s}", None)
     return keys, bands
+
+
+def acs_geo(t, prefixes=("1600000US", "0500000US")):
+    """ACS 5-year estimates of table t for places and counties: {geoid: {variable: value}} (missing or annotated -> 0)."""
+    out = {}
+    with open(bx.fetch(ACS.format(t=t), f"acsdt5y2024-{t}.dat"), encoding="latin-1") as fh:
+        head = fh.readline().rstrip("\n").split("|")
+        for line in fh:
+            if line.startswith(prefixes):
+                f = line.rstrip("\n").split("|")
+                out[f[0][9:]] = {h: float(v) if v not in ("", "null") and not v.startswith("*") and float(v) >= 0 else 0.0
+                                 for h, v in zip(head[1:], f[1:]) if "_E" in h}
+    return out
+
+
+def gov_keys(groups, unit_of_block, min_workers=GOV_MIN_WORKERS):
+    """ACS-calibrated government keys. groups: {group: set of counties} (a split county, or a test metro);
+    unit_of_block(block) -> unit (piece or county) or None. Within each group, federal civilian and state government
+    jobs are shared among areas (places of min_workers+ ACS workers lying wholly in the group, and the rest of the group)
+    by ACS workplace counts, then within each area among units by LODES (federal: JT04; state: JT00 - JT02 - JT04; an area
+    with none of those jobs in LODES: all jobs). Values are in LODES jobs: federal sums to the group's LODES federal
+    jobs, state to its LODES state and local jobs x the ACS state share of state and local. A group without ACS counts
+    keeps the LODES keys. Returns {"jobs_federal": {unit: v}, "jobs_state": {unit: v}}."""
+    b28, b25 = acs_geo("b08528"), acs_geo("b23025")
+
+    def acs(g):
+        c = b28.get(g)
+        if c is None:
+            return None
+        return {"all": sum(c[f"B08528_E{k:03d}"] for k in (2, 5, 6, 7, 8)), "sl": c["B08528_E006"] + c["B08528_E007"],
+                "fed": max(0.0, c["B08528_E008"] - b25.get(g, {}).get("B23025_E006", 0.0)), "state": c["B08528_E007"]}
+    group_of = {c: g for g, cs in groups.items() for c in cs}
+    L = collections.defaultdict(collections.Counter)  # (group, calibration place or None, unit) -> all, fed, sl
+    for ss in sorted({c[:2] for c in group_of}):
+        st = ST[ss]; up = st.upper()
+        place_of, pc = {}, collections.defaultdict(set)
+        with zipfile.ZipFile(bx.fetch(BAF.format(ss=ss, ST=up))).open(f"BlockAssign_ST{ss}_{up}_INCPLACE_CDP.txt") as fh:
+            r = csv.reader(io.TextIOWrapper(fh, encoding="latin-1"), delimiter="|"); next(r)
+            for b, p in r:
+                if p:
+                    place_of[b] = ss + p; pc[ss + p].add(bx.cty(b))
+        gs = {p: {group_of.get(c) for c in cs} for p, cs in pc.items()}
+        ok = {p for p, g in gs.items() if len(g) == 1 and None not in g and (acs(p) or {}).get("all", 0) >= min_workers}
+        yr = LODES_YEAR.get(st, "2024")
+        for jt in ("JT00", "JT02", "JT04"):
+            with gzip.open(bx.fetch(LODES.format(st=st, jt=jt, yr=yr)), "rt") as fh:
+                r = csv.reader(fh); h = next(r); ci = h.index("C000")
+                for row in r:
+                    b = row[0]; g = group_of.get(bx.cty(b))
+                    u = unit_of_block(b) if g is not None else None
+                    if u is None:
+                        continue
+                    p = place_of.get(b); k = (g, p if p in ok else None, u); n = int(row[ci])
+                    if jt == "JT00":
+                        L[k]["all"] += n; L[k]["sl"] += n
+                    elif jt == "JT02":
+                        L[k]["sl"] -= n
+                    else:
+                        L[k]["fed"] += n; L[k]["sl"] -= n
+    out = {"jobs_federal": collections.Counter(), "jobs_state": collections.Counter()}
+    by_group = collections.defaultdict(dict)
+    for k, v in L.items():
+        by_group[k[0]][k] = collections.Counter({x: max(0, y) for x, y in v.items()})
+    for g, cells in by_group.items():
+        LT = collections.Counter()
+        for v in cells.values():
+            LT.update(v)
+        gt = collections.Counter()
+        for c in groups[g]:
+            gt.update(acs(c) or {})
+        places = sorted({k[1] for k in cells if k[1]})
+        A = {p: acs(p) for p in places}
+        A[None] = {x: max(0.0, gt[x] - sum(A[p][x] for p in places)) for x in ("fed", "state")}
+        for kid, cl, lk in (("jobs_federal", "fed", "fed"), ("jobs_state", "state", "sl")):
+            total = LT[lk] * (gt["state"] / gt["sl"] if cl == "state" and gt["sl"] else 1)
+            atot = sum(a[cl] for a in A.values())
+            if not atot:  # no ACS counts: LODES as is
+                for k, v in cells.items():
+                    out[kid][k[2]] += v[lk] * (total / LT[lk] if LT[lk] else 0)
+                continue
+            for p, a in A.items():
+                sub = collections.Counter()
+                for k, v in cells.items():
+                    if k[1] == p:
+                        sub[k[2]] += v[lk]
+                if not sum(sub.values()):
+                    for k, v in cells.items():
+                        if k[1] == p:
+                            sub[k[2]] += v["all"]
+                s = sum(sub.values())
+                for u, x in sub.items():
+                    out[kid][u] += total * a[cl] / atot * x / s if s else 0
+    return out
 
 
 def pay_index(bands, county_of_area, pay):
@@ -303,6 +406,8 @@ def main():
     index, pay_rows = pay_index(bands, {p: p[:5] for p in bands}, pay)
     for k, d in wage_keys(keys, index).items():
         keys[k].update(d)
+    for k, d in gov_keys({c: {c} for c in split}, lambda b: piece_of.get(b[:11])).items():
+        keys[k] = collections.Counter(d)
     ek, unmatched = zbp_keys(piece_of)
     for k, d in ek.items():
         keys[k].update(d)
@@ -310,8 +415,9 @@ def main():
     catalog += [(f"jobs_{s}", "work", f"Jobs in NAICS {s}", f"LODES 8 WAC JT00 CNS{i:02d}", "2024 (MI 2021)") for i, s in enumerate(CNS, 1)]
     catalog += [("jobs_private_total", "work", "Private jobs", "LODES 8 WAC JT02 C000", "2024 (MI 2021)")]
     catalog += [(f"jobs_private_{s}", "work", f"Private jobs in NAICS {s}", f"LODES 8 WAC JT02 CNS{i:02d}", "2024 (MI 2021)") for i, s in enumerate(CNS, 1)]
-    catalog += [("jobs_federal", "work", "Federal jobs", "LODES 8 WAC JT04 C000", "2024 (MI 2021)"),
-                ("jobs_state_local", "work", "State and local government jobs (all - private - federal)", "LODES 8 WAC JT00, JT02, JT04", "2024 (MI 2021)")]
+    catalog += [("jobs_federal", "work", "Federal civilian jobs: places of 10,000+ ACS workers and the rest of the county by ACS workplace counts (federal workers less armed forces), then by LODES federal jobs", "ACS 2020-2024 B08528, B23025 (places, counties) + LODES 8 WAC JT04", "2020-2024 / 2024 (MI 2021)"),
+                ("jobs_state", "work", "State government jobs: places of 10,000+ ACS workers and the rest of the county by ACS state workers, then by LODES state and local jobs", "ACS 2020-2024 B08528 (places, counties) + LODES 8 WAC JT00, JT02, JT04", "2020-2024 / 2024 (MI 2021)"),
+                ("jobs_state_local", "work", "State and local government jobs (all - private - federal); the key for local government", "LODES 8 WAC JT00, JT02, JT04", "2024 (MI 2021)")]
     catalog += [(f"jobs_state_local_{s}", "work", f"State and local government jobs in NAICS {s}", "LODES 8 WAC JT00, JT02, JT04", "2024 (MI 2021)") for s in CNS]
     catalog += [(f"wages_{s}", "work", f"Wage-weighted jobs, {'all sectors' if s == 'total' else 'NAICS ' + s} (jobs x pay index)", "LODES 8 WAC + QCEW 2024 county average pay", "2024 (MI 2021)") for s in ["total"] + CNS]
     catalog += [(f"wages_private_{s}", "work", f"Wage-weighted private jobs, {'all sectors' if s == 'total' else 'NAICS ' + s}", "LODES 8 WAC JT02 + QCEW 2024", "2024 (MI 2021)") for s in ["total"] + CNS]
@@ -398,20 +504,22 @@ def write_maps():
     m = [
         ("QCEW", "Employment, private, NAICS sector s", "jobs_private_<s>", "jobs_<s>"),
         ("QCEW", "Employment, federal government (any sector)", "jobs_federal", "jobs_total"),
+        ("QCEW", "Employment, state government (any sector)", "jobs_state", "jobs_state_local"),
+        ("QCEW", "Employment, local government (any sector)", "jobs_state_local", "jobs_total"),
         ("QCEW", "Employment, state or local government, NAICS sector s", "jobs_state_local_<s>", "jobs_state_local"),
         ("QCEW", "Total wages and average weekly wage, private, sector s", "wages_private_<s>", "wages_<s>"),
-        ("QCEW", "Total wages, government (federal, state, local)", "jobs_federal / jobs_state_local (x pay index not applied)", "jobs_total"),
+        ("QCEW", "Total wages, government (federal, state, local)", "jobs_federal / jobs_state / jobs_state_local (x pay index not applied)", "jobs_total"),
         ("QCEW", "Establishments, private, sector s", "est_<s>", "est_total"),
-        ("QCEW", "Establishments, government", "jobs_federal / jobs_state_local", "jobs_total"),
+        ("QCEW", "Establishments, government (federal, state, local)", "jobs_federal / jobs_state / jobs_state_local", "jobs_total"),
         ("BEA CAEMP25N", "Employment by private industry (includes proprietors)", "jobs_private_<s>", "jobs_private_total"),
         ("BEA CAEMP25N", "Proprietors employment (nonfarm and farm)", "res_selfemployed_workers", "res_population"),
         ("BEA CAINC5N / CAINC6N", "Earnings by private industry", "wages_private_<s>", "wages_private_total"),
         ("BEA CAINC4", "Earnings by place of work, wages and salaries, supplements, contributions for social insurance", "(sum of industry earnings) / wages_total", "wages_total"),
         ("BEA CAINC5N", "Proprietors' income", "res_selfemp_income", "res_selfemployed_workers"),
-        ("BEA CAINC5N", "Government earnings: federal civilian / military / state and local", "jobs_federal / res_armed_forces / jobs_state_local", "jobs_total"),
+        ("BEA CAINC5N", "Government earnings and employment: federal civilian / military / state / local", "jobs_federal / res_armed_forces / jobs_state / jobs_state_local", "jobs_total"),
         ("BEA CAGDP2 / CAGDP9", "GDP by industry (current, real), private sectors except real estate", "wages_private_<s>", "wages_private_total"),
         ("BEA CAGDP2 / CAGDP9", "GDP, real estate (NAICS 53 real estate part)", "gdp_real_estate", "wages_53"),
-        ("BEA CAGDP2 / CAGDP9", "GDP, government (one line): split by the county's federal civilian / military / state and local earnings (CAINC5N), each by its key", "jobs_federal / res_armed_forces / jobs_state_local", "jobs_total"),
+        ("BEA CAGDP2 / CAGDP9", "GDP, government (one line): split by the county's federal civilian / military / state / local earnings (CAINC5N), each by its key", "jobs_federal / res_armed_forces / jobs_state / jobs_state_local", "jobs_total"),
         ("BEA CAINC4", "Net earnings by place of residence", "res_wage_selfemp_income", "res_population"),
         ("BEA CAINC4", "Dividends, interest and rent", "res_dir_income", "res_population"),
         ("BEA CAINC35", "Social Security benefits", "res_social_security_income", "res_pop65"),

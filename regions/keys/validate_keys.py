@@ -9,7 +9,8 @@ Compared methods, per measure:
   employment, private, by sector   key jobs_private_<s>          baselines: population, all jobs
   wages, private, by sector        wages_private_<s> (pay index) vs jobs_private_<s> (no index: decision 1); baselines
   establishments, private, sector  est_<s> (ZBP)                 vs jobs_private_<s> (decision 3); baselines
-  employment, federal / state / local  jobs_federal / jobs_state_local   baselines
+  employment, federal / state / local  jobs_federal / jobs_state (ACS-calibrated, gov_keys) / jobs_state_local; also
+                                       the LODES keys alone (federal JT04, state and local); baselines
 Residence keys (--part residence) are tested the same way against BEA personal income by county:
   CAINC4 2024   net earnings by residence (res_wage_selfemp_income), dividends interest and rent (res_dir_income),
                 transfers (the metro's 2022 CAINC35 mix x each type's key), personal income (sum of the three)
@@ -79,10 +80,12 @@ def main():
     index, _ = bk.pay_index(bands, metro_of, pay)
     wk = bk.wage_keys(lk, index)
     ek, _ = bk.zbp_keys(area_of)
+    gk = bk.gov_keys({m: set(cs) for m, cs in METROS.items()}, lambda b: b[:5])
+    lodes_gov = {"jobs_federal_lodes": lk["jobs_federal"], "jobs_state_lodes": lk["jobs_state_local"]}
     popk = collections.Counter()
     for g, c in area_of.items():
         popk[c] += tp[g]
-    K = lambda name: {**lk, **wk, **ek}.get(name, {})
+    K = lambda name: {**lk, **wk, **ek, **gk, **lodes_gov}.get(name, {})
     rows = []
     for m, cs in METROS.items():
         base = {"population": {c: popk[c] for c in cs}, "all jobs": {c: lk["jobs_total"][c] for c in cs}}
@@ -96,10 +99,11 @@ def main():
                     if s == "92" and meas == "estabs":
                         continue
                     tests.append((f"private {meas}", s, cells, meas, methods))
-        for own, kname in (("1", "jobs_federal"), ("2", "jobs_state_local"), ("3", "jobs_state_local")):
+        for own, methods in (("1", {"key": "jobs_federal", "LODES only": "jobs_federal_lodes"}),
+                             ("2", {"key": "jobs_state", "LODES only": "jobs_state_lodes"}), ("3", {"key": "jobs_state_local"})):
             cells = [(c, own, "10") for c in cs]
             if all(x in q for x in cells):
-                tests.append((f"ownership {own} emplvl", "10", cells, "emplvl", {"key": kname}))
+                tests.append((f"ownership {own} emplvl", "10", cells, "emplvl", methods))
         cells = [(c, "0", "10") for c in cs]
         tests.append(("total emplvl", "10", cells, "emplvl", {"key": "jobs_total"}))
         tests.append(("total total_wages", "10", cells, "total_wages", {"key (pay index)": "wages_total", "jobs, no pay index": "jobs_total"}))

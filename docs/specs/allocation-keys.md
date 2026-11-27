@@ -30,7 +30,7 @@ BEA's regional accounts and BLS's QCEW publish counties, not pieces. In the 55 c
 | Data | Measure | Key (tract level, summed to pieces) | Source |
 |---|---|---|---|
 | QCEW | Employment by NAICS sector | Jobs by sector at the workplace | LODES WAC, CNS01–CNS20 |
-| QCEW | Employment by ownership (private, federal, state, local) | Private: WAC JT02 by sector. Federal: WAC JT04. State and local: JT00 − JT02 − JT04 | LODES WAC by job type |
+| QCEW | Employment by ownership (private, federal, state, local) | Private: WAC JT02 by sector. Federal (civilian) and state: ACS-calibrated (see Government keys). Local: JT00 − JT02 − JT04 | LODES WAC by job type; ACS B08528, B23025 (places, counties) |
 | QCEW | Total wages, average weekly wage by sector | Sector jobs × the piece's wage index (decision 1) | LODES WAC CNS, CE01–CE03 |
 | QCEW | Establishments by sector | Establishments by sector in ZIP codes, ZCTA-to-tract by 2020 population | Census ZIP Code Business Patterns; 2020 ZCTA–tract relationship file |
 | BEA CAEMP25N | Total employment by industry (wage and salary plus proprietors) | Wage and salary: as QCEW. Proprietors: self-employed workers at residence (no workplace source) | LODES WAC; ACS B24080 |
@@ -76,7 +76,7 @@ All five recommendations were adopted on 2026-11-27.
 
 `regions/keys/build_keys.py --cache DIR` reads the atlas units (pieces release 1.3) and writes, for the 55 split counties (148 pieces):
 
-- `keys.csv`: `key_id, county_fips, piece_id, value, share`. 143 keys; within every county and key the shares sum to 1. A key whose county total is zero (475 county–key pairs, mostly state and local government jobs in private-only sectors) has no share, and the figure uses the fallback key.
+- `keys.csv`: `key_id, county_fips, piece_id, value, share`. 144 keys; within every county and key the shares sum to 1. A key whose county total is zero (582 county–key pairs, mostly state and local government jobs in private-only sectors) has no share, and the figure uses the fallback key.
 - `keys_catalog.csv`: what each key measures, its source and year.
 - `measure_keys.csv`: which key splits which BEA or QCEW figure, with a fallback key.
 - `sector_groups.csv`: NAICS sectors to the 10 publishing groups (decision 5: BLS supersectors, with public administration as its own group).
@@ -135,14 +135,14 @@ Example: Midtown & Lower Manhattan 2,043,120 jobs at $3,434 a week on average, U
 | Private wages, by sector | 261 | **5.0%** | 6.3% (jobs only) | 16.7% | 25.4% |
 | Private establishments, by sector | 261 | **4.6%** | 7.4% (jobs instead of ZBP) | 7.8% | 10.4% |
 | Total wages | 15 | **6.2%** | 8.4% | 8.4% | 20.2% |
-| Federal employment | 15 | **14.2%** | | 18.5% | 22.0% |
-| State government employment | 14 | **17.2%** | | 18.2% | 24.4% |
+| Federal employment | 15 | **10.2%** | 14.2% (LODES only) | 18.5% | 22.0% |
+| State government employment | 14 | **13.9%** | 17.2% (LODES only) | 18.2% | 24.4% |
 | Local government employment | 14 | **5.9%** | | 9.3% | 6.8% |
 
 - **Decisions 1 and 3 hold:** the pay index lowers wage error from 6.3% to 5.0%, and ZIP Code Business Patterns lowers establishment error from 7.4% to 4.6%.
 - **Private employment by sector is close to exact** (median 1.2%); the worst cells are tiny sectors (Bay Area mining).
 - **Wages are weakest in arts and entertainment** (sector 71: 19–29% in Boston, Philadelphia, LA and Detroit). Pro-sports payrolls are far above what the LODES earnings bands can show.
-- **Government is the weak spot.** Federal and state jobs are placed at the wrong address in LODES for some employers: federal errors reach 51% (Salt Lake) and 35% (Detroit, also on LODES 2021), and state errors 35% (Bay Area). Tested alternatives: ACS government workers at residence (federal 19.1%, state 20.9%, local 8.9%) and a 50/50 blend with LODES (federal 11.1% weighted but a worse median, 9.9% vs. 8.7%; state 18.9%; local 5.7%). Neither is a clear improvement, so the LODES keys stay. For federal and state pieces, treat values as indicative, and publish them only at the ownership level.
+- **Government is the weak spot.** LODES alone places federal and state jobs at the wrong address for some employers: federal errors of 51% (Salt Lake) and 35% (Detroit, also on LODES 2021), state errors of 35% (Bay Area). The ACS-calibrated keys (Government keys, below) lower federal error from 14.2% to 10.2% (better in 10 of 15 metros; Detroit 35% to 13%, Salt Lake 51% to 34%, Twin Cities 18% to 5%; worse in Philadelphia, 5% to 15%, and the Bay Area, 4% to 10%) and state error from 17.2% to 13.9% (better in 13 of 14). Earlier alternatives were no clear improvement: ACS government workers at residence (federal 19.1%, state 20.9%, local 8.9%) and a 50/50 blend with LODES (federal 11.1% weighted but a worse median; state 18.9%; local 5.7%). Federal and state values for pieces are still indicative; publish them only at the ownership level.
 - These tests split metros into counties of about 1M people; pieces are of similar size, so the errors should carry over, but splits inside one county may behave differently (for example, one large state campus).
 
 ## BEA by atlas unit (2026-11-27)
@@ -161,7 +161,7 @@ Outputs: `bea_units.csv` (every unit: totals, components and the industry groups
 
 Method, beyond the key table (`regions/keys/measure_keys.csv`, rebuilt with private-only keys for private industries):
 - **Private industries** by wage-weighted private jobs (GDP and earnings) or private jobs (employment); real estate GDP by `gdp_real_estate`.
-- **Government GDP** is one line for counties: it is first split by the county's 2024 government earnings mix (federal civilian, military, state and local, CAINC5N), each part by its key.
+- **Government GDP** is one line for counties: it is first split by the county's 2024 government earnings mix (federal civilian, military, state, local, CAINC5N; state and local together where BEA withholds the split), each part by its key.
 - **Withheld lines** ((D)) get their parent's residual, split among the withheld lines at the county by comparable proxy totals (wage-weighted jobs for industries), then among pieces by each line's key; pieces get no published value for a line BEA withholds.
 - **Personal income** = net earnings by residence + dividends, interest and rent + transfers, each allocated with its residence key. 2024 transfers use the county's 2022 transfer mix (CAINC35) times each type's key. The adjustment for residence is derived per piece (net earnings by residence − earnings by place of work + contributions), so the BEA identity holds for every piece. Population: BEA's county population × each unit's 2020 share; per capita income = income ÷ population.
 - **Exact sums:** every published county line's piece values are scaled to it. Check: 0 failures across all published lines.
@@ -207,3 +207,59 @@ Per capita personal income by county: mean absolute error 5.5% with the componen
 **Pieces release 1.2 (2026-11-27).** Keys, QCEW and BEA rebuilt for the six counties with the 0.9M cap; counts unchanged (52 split counties, 142 pieces), all sum checks pass, validation unchanged.
 
 **Pieces release 1.3 (2026-11-27).** Keys, QCEW and BEA rebuilt for Cook and Palm Beach (capped) and the newly split Pinellas, Erie and Milwaukee; 55 split counties, 148 pieces; all sum checks pass; validation unchanged.
+
+## Workplace check (2026-11-27)
+
+`regions/keys/check_workplace.py --cache DIR` tests where LODES puts jobs inside the split counties against where workers say they work. CTPP 2017-2021 (by workplace tract) is not reachable from the build environment, so the check uses the ACS's workplace-geography tables (2020-2024 five-year: B08528 class of worker, B08526 industry), which go down to places. In each of the 55 split counties, every place of 10,000+ ACS workers lying wholly in the county, plus the rest of the county, gets its share of the county's LODES jobs (2024; blocks to places by the Census 2020 block assignment files) and of its ACS workers; the misplaced share is sum |LODES share - ACS share| / 2. All jobs, 5.0% (job-weighted over the 55 counties), is the baseline: ACS sampling error, jobs vs workers, 2020 vs 2024 place lines.
+
+| Class | Misplaced | Where it comes from (largest cases) |
+| --- | --- | --- |
+| All jobs (baseline) | 5.0% | |
+| Private | 5.2% | |
+| Education and health care | 5.8% | |
+| State and local government | 12.4% | county and school-district payrolls at one office: Miami-Dade (LODES 84% in Miami city, ACS 35%), Fairfax (62% in Springfield CDP, ACS 3%), Broward (32% in Sunrise, ACS 5%), Los Angeles (59% in Los Angeles city, ACS 43%) |
+| Public administration | 17.4% | the same, plus state government in Sacramento city (LODES 78%, ACS 55%) and Montgomery County MD government in Rockville (29% against 10%) |
+| Federal government | 31.1% | LODES counts far fewer federal jobs than the ACS finds workers (Los Angeles 19,000 against 86,000) and puts them at a few addresses: Hillsborough (76% in University CDP, ACS 12%), Montgomery MD (26% in Potomac, ACS 5%; none at the Bethesda campuses) |
+| Information | 18.8% | mostly industry coding, not place: LODES files studio and software payrolls at headquarters (Burbank 43% of Los Angeles County's information jobs, ACS 9%; Redmond 45% of King's, ACS 11%) while workers report other industries |
+| Construction | 11.8% | LODES counts contractors' offices, the ACS the job site |
+
+The check confirms the validation's weak spots (federal and state government) and locates them: a few counties whose government payrolls sit at one address. It led to the ACS-calibrated government keys below. Private employment, the bulk of every key, places as well as the baseline. Results in `workplace_check.csv` (county x class) and `workplace_check_areas.csv` (county x area x class).
+
+## Government keys (2026-11-27)
+
+Federal civilian and state government jobs are no longer keyed by LODES alone (`build_keys.gov_keys`, also used by the validation). Within each split county:
+
+1. **Areas.** Every place of 10,000+ ACS workers lying wholly in the county, plus the rest of the county (as in the workplace check).
+2. **Areas get their share of the county by ACS workplace counts** (2020–2024, B08528). Federal: federal workers minus armed forces at residence (B23025), because the ACS counts active-duty military as federal workers while QCEW and LODES count civilians. State: state government workers.
+3. **Pieces get each area's jobs by LODES**: federal jobs (JT04); for state, state and local jobs (JT00 − JT02 − JT04), since LODES has no state/local split. An area with none of those jobs in LODES uses all jobs.
+
+Key values stay in LODES jobs: federal sums to the county's LODES federal jobs, state to its LODES state and local jobs × the ACS state share. A county without ACS counts keeps the LODES key.
+
+Uses:
+- QCEW state employment uses `jobs_state`.
+- BEA state government earnings and employment (CAINC5N and CAEMP25N line 2011) use `jobs_state`.
+- Local government, and government by sector, keep `jobs_state_local`.
+- For the Fairfax combination, the two cities' `jobs_state` is their LODES state and local jobs × Fairfax County's ACS state share.
+
+Rejected:
+- **ACS local government key.** The validation was a coin flip: 5.9% to 5.5%, better in 7 of 14 metros, and South Florida 3% to 14%.
+- **One ACS key for state and local together.** State error rose to 19.5%.
+- **Raw ACS federal, without removing armed forces.** 10.9%; it moves federal jobs toward bases, for example San Bernardino's desert piece from 19% to 67%.
+
+**What moves.** 16% of the split counties' federal jobs change piece, with 33 of 55 counties moving more than 10%, mostly from central-city pieces outward. LODES's federal jobs come from federal personnel records and sit at a few office addresses, while QCEW also counts dispersed federal workers such as postal workers. Largest moves (old → new share of the county):
+- Las Vegas & North Las Vegas: 77% → 26%
+- Oakland & Berkeley: 92% → 44%
+- Westside (Los Angeles): 59% → 15%
+- Detroit & Grosse Pointes: 94% → 54%
+- Urban Honolulu: 92% → 51%
+- Pittsburgh: 85% → 48%
+- Central & West Phoenix: 83% → 47%
+
+State: 7% of jobs change piece, 13 counties more than 10%:
+- Las Vegas: 76% → 43%
+- City of Miami, Coral Gables & Kendall: 90% → 58%
+- Eastern Fairfax: 93% → 63%
+- I-270 Corridor & Upcounty: 79% → 55%
+- St. Petersburg & South Pinellas: 22% → 47%
+
+Small places' ACS federal counts carry wide margins, so a single piece's federal value is less certain than the validation average suggests.
