@@ -154,9 +154,11 @@ New York (5 boroughs),private estabs,81,jobs instead of ZBP,33435,0.0713
 New York (5 boroughs),private estabs,81,baseline: population,33435,0.3261
 New York (5 boroughs),private estabs,81,baseline: all jobs,33435,0.0247
 New York (5 boroughs),ownership 1 emplvl,10,key,45969,0.1553
+New York (5 boroughs),ownership 1 emplvl,10,LODES only,45969,0.1553
 New York (5 boroughs),ownership 1 emplvl,10,baseline: population,45969,0.262
 New York (5 boroughs),ownership 1 emplvl,10,baseline: all jobs,45969,0.1325
 New York (5 boroughs),ownership 2 emplvl,10,key,34796,0.1317
+New York (5 boroughs),ownership 2 emplvl,10,LODES only,34796,0.1317
 New York (5 boroughs),ownership 2 emplvl,10,baseline: population,34796,0.2317
 New York (5 boroughs),ownership 2 emplvl,10,baseline: all jobs,34796,0.1173
 New York (5 boroughs),ownership 3 emplvl,10,key,485816,0.0913
@@ -356,10 +358,12 @@ Bay Area core,private estabs,81,key (ZBP),21600,0.0968
 Bay Area core,private estabs,81,jobs instead of ZBP,21600,0.0479
 Bay Area core,private estabs,81,baseline: population,21600,0.1477
 Bay Area core,private estabs,81,baseline: all jobs,21600,0.087
-Bay Area core,ownership 1 emplvl,10,key,37263,0.039
+Bay Area core,ownership 1 emplvl,10,key,37263,0.105
+Bay Area core,ownership 1 emplvl,10,LODES only,37263,0.039
 Bay Area core,ownership 1 emplvl,10,baseline: population,37263,0.1721
 Bay Area core,ownership 1 emplvl,10,baseline: all jobs,37263,0.1206
-Bay Area core,ownership 2 emplvl,10,key,83024,0.347
+Bay Area core,ownership 2 emplvl,10,key,83024,0.3255
+Bay Area core,ownership 2 emplvl,10,LODES only,83024,0.347
 Bay Area core,ownership 2 emplvl,10,baseline: population,83024,0.5121
 Bay Area core,ownership 2 emplvl,10,baseline: all jobs,83024,0.4658
 Bay Area core,ownership 3 emplvl,10,key,277709,0.1116
@@ -581,7 +585,8 @@ Dallas-Fort Worth,private estabs,81,key (ZBP),14184,0.0769
 Dallas-Fort Worth,private estabs,81,jobs instead of ZBP,14184,0.021
 Dallas-Fort Worth,private estabs,81,baseline: population,14184,0.086
 Dallas-Fort Worth,private estabs,81,baseline: all jobs,14184,0.0148
-Dallas-Fort Worth,ownership 1 emplvl,10,key,46584,0.0715
+Dallas-Fort Worth,ownership 1 emplvl,10,key,46584,0.0347
+Dallas-Fort Worth,ownership 1 emplvl,10,LODES only,46584,0.0715
 Dallas-Fort Worth,ownership 1 emplvl,10,baseline: population,46584,0.1712
 Dallas-Fort Worth,ownership 1 emplvl,10,baseline: all jobs,46584,0.1148
 Dallas-Fort Worth,total emplvl,10,key,3696875,0.013
@@ -800,10 +805,12 @@ Houston,private estabs,81,key (ZBP),13406,0.061
 Houston,private estabs,81,jobs instead of ZBP,13406,0.0058
 Houston,private estabs,81,baseline: population,13406,0.0687
 Houston,private estabs,81,baseline: all jobs,13406,0.0027
-Houston,ownership 1 emplvl,10,key,31464,0.0804
+Houston,ownership 1 emplvl,10,key,31464,0.0149
+Houston,ownership 1 emplvl,10,LODES only,31464,0.0804
 Houston,ownership 1 emplvl,10,baseline: population,31464,0.133
 Houston,ownership 1 emplvl,10,baseline: all jobs,31464,0.0622
-Houston,ownership 2 emplvl,10,key,65998,0.1718
+Houston,ownership 2 emplvl,10,key,65998,0.1163
+Houston,ownership 2 emplvl,10,LODES only,65998,0.1718
 Houston,ownership 2 emplvl,10,baseline: population,65998,0.1797
 Houston,ownership 2 emplvl,10,baseline: all jobs,65998,0.1089
 Houston,ownership 3 emplvl,10,key,265939,0.0474
@@ -992,10 +999,12 @@ Atlanta,private estabs,81,key (ZBP),10539,0.0831
 Atlanta,private estabs,81,jobs instead of ZBP,10539,0.0283
 Atlanta,private estabs,81,baseline: population,10539,0.15
 Atlanta,private estabs,81,baseline: all jobs,10539,0.0298
-Atlanta,ownership 1 emplvl,10,key,49591,0.1591
+Atlanta,ownership 1 emplvl,10,key,49591,0.1679
+Atlanta,ownership 1 emplvl,10,LODES only,49591,0.1591
 Atlanta,ownership 1 emplvl,10,baseline: population,49591,0.3751
 Atlanta,ownership 1 emplvl,10,baseline: all jobs,49591,0.2705
-Atlanta,ownership 2 emplvl,10,key,52525,0.2189
+Atlanta,ownership 2 emplvl,10,key,52525,0.1278
+Atlanta,ownership 2 emplvl,10,LODES only,52525,0.2189
 Atlanta,ownership 2 emplvl,10,baseline: population,52525,0.3414
 Atlanta,ownership 2 emplvl,10,baseline: all jobs,52525,0.1993
 Atlanta,ownership 3 emplvl,10,key,141676,0.0791
@@ -1173,10 +1182,12 @@ Twin Cities,private estabs,81,key (ZBP),10568,0.0425
 Twin Cities,private estabs,81,jobs instead of ZBP,10568,0.0408
 Twin Cities,private estabs,81,baseline: population,10568,0.0872
 Twin Cities,private estabs,81,baseline: all jobs,10568,0.0436
-Twin Cities,ownership 1 emplvl,10,key,19467,0.1771
+Twin Cities,ownership 1 emplvl,10,key,19467,0.0515
+Twin Cities,ownership 1 emplvl,10,LODES only,19467,0.1771
 Twin Cities,ownership 1 emplvl,10,baseline: population,19467,0.2444
 Twin Cities,ownership 1 emplvl,10,baseline: all jobs,19467,0.1665
-Twin Cities,ownership 2 emplvl,10,key,57745,0.1978
+Twin Cities,ownership 2 emplvl,10,key,57745,0.19
+Twin Cities,ownership 2 emplvl,10,LODES only,57745,0.1978
 Twin Cities,ownership 2 emplvl,10,baseline: population,57745,0.2933
 Twin Cities,ownership 2 emplvl,10,baseline: all jobs,57745,0.2891
 Twin Cities,ownership 3 emplvl,10,key,119461,0.0941
@@ -1376,10 +1387,12 @@ Philadelphia,private estabs,81,key (ZBP),11412,0.0132
 Philadelphia,private estabs,81,jobs instead of ZBP,11412,0.0269
 Philadelphia,private estabs,81,baseline: population,11412,0.0624
 Philadelphia,private estabs,81,baseline: all jobs,11412,0.0488
-Philadelphia,ownership 1 emplvl,10,key,39095,0.0464
+Philadelphia,ownership 1 emplvl,10,key,39095,0.1546
+Philadelphia,ownership 1 emplvl,10,LODES only,39095,0.0464
 Philadelphia,ownership 1 emplvl,10,baseline: population,39095,0.41
 Philadelphia,ownership 1 emplvl,10,baseline: all jobs,39095,0.4265
-Philadelphia,ownership 2 emplvl,10,key,21303,0.1049
+Philadelphia,ownership 2 emplvl,10,key,21303,0.0632
+Philadelphia,ownership 2 emplvl,10,LODES only,21303,0.1049
 Philadelphia,ownership 2 emplvl,10,baseline: population,21303,0.1282
 Philadelphia,ownership 2 emplvl,10,baseline: all jobs,21303,0.1216
 Philadelphia,ownership 3 emplvl,10,key,150315,0.0075
@@ -1579,10 +1592,12 @@ Detroit,private estabs,81,key (ZBP),9351,0.0174
 Detroit,private estabs,81,jobs instead of ZBP,9351,0.0326
 Detroit,private estabs,81,baseline: population,9351,0.0536
 Detroit,private estabs,81,baseline: all jobs,9351,0.0449
-Detroit,ownership 1 emplvl,10,key,28061,0.3507
+Detroit,ownership 1 emplvl,10,key,28061,0.1278
+Detroit,ownership 1 emplvl,10,LODES only,28061,0.3507
 Detroit,ownership 1 emplvl,10,baseline: population,28061,0.1546
 Detroit,ownership 1 emplvl,10,baseline: all jobs,28061,0.2531
-Detroit,ownership 2 emplvl,10,key,19001,0.2407
+Detroit,ownership 2 emplvl,10,key,19001,0.2037
+Detroit,ownership 2 emplvl,10,LODES only,19001,0.2407
 Detroit,ownership 2 emplvl,10,baseline: population,19001,0.2691
 Detroit,ownership 2 emplvl,10,baseline: all jobs,19001,0.3353
 Detroit,ownership 3 emplvl,10,key,119580,0.0173
@@ -1804,10 +1819,12 @@ LA basin,private estabs,81,key (ZBP),38299,0.0299
 LA basin,private estabs,81,jobs instead of ZBP,38299,0.0259
 LA basin,private estabs,81,baseline: population,38299,0.0175
 LA basin,private estabs,81,baseline: all jobs,38299,0.0382
-LA basin,ownership 1 emplvl,10,key,59301,0.0741
+LA basin,ownership 1 emplvl,10,key,59301,0.0033
+LA basin,ownership 1 emplvl,10,LODES only,59301,0.0741
 LA basin,ownership 1 emplvl,10,baseline: population,59301,0.0582
 LA basin,ownership 1 emplvl,10,baseline: all jobs,59301,0.0788
-LA basin,ownership 2 emplvl,10,key,117252,0.033
+LA basin,ownership 2 emplvl,10,key,117252,0.019
+LA basin,ownership 2 emplvl,10,LODES only,117252,0.033
 LA basin,ownership 2 emplvl,10,baseline: population,117252,0.012
 LA basin,ownership 2 emplvl,10,baseline: all jobs,117252,0.0086
 LA basin,ownership 3 emplvl,10,key,574160,0.0142
@@ -2029,10 +2046,12 @@ South Florida,private estabs,81,key (ZBP),20753,0.0368
 South Florida,private estabs,81,jobs instead of ZBP,20753,0.0348
 South Florida,private estabs,81,baseline: population,20753,0.0409
 South Florida,private estabs,81,baseline: all jobs,20753,0.044
-South Florida,ownership 1 emplvl,10,key,36450,0.0865
+South Florida,ownership 1 emplvl,10,key,36450,0.057
+South Florida,ownership 1 emplvl,10,LODES only,36450,0.0865
 South Florida,ownership 1 emplvl,10,baseline: population,36450,0.1551
 South Florida,ownership 1 emplvl,10,baseline: all jobs,36450,0.1518
-South Florida,ownership 2 emplvl,10,key,40522,0.1668
+South Florida,ownership 2 emplvl,10,key,40522,0.1225
+South Florida,ownership 2 emplvl,10,LODES only,40522,0.1668
 South Florida,ownership 2 emplvl,10,baseline: population,40522,0.1175
 South Florida,ownership 2 emplvl,10,baseline: all jobs,40522,0.1173
 South Florida,ownership 3 emplvl,10,key,230752,0.0329
@@ -2254,10 +2273,12 @@ Seattle,private estabs,81,key (ZBP),12322,0.0899
 Seattle,private estabs,81,jobs instead of ZBP,12322,0.0229
 Seattle,private estabs,81,baseline: population,12322,0.1377
 Seattle,private estabs,81,baseline: all jobs,12322,0.0036
-Seattle,ownership 1 emplvl,10,key,32888,0.2097
+Seattle,ownership 1 emplvl,10,key,32888,0.0951
+Seattle,ownership 1 emplvl,10,LODES only,32888,0.2097
 Seattle,ownership 1 emplvl,10,baseline: population,32888,0.1281
 Seattle,ownership 1 emplvl,10,baseline: all jobs,32888,0.1889
-Seattle,ownership 2 emplvl,10,key,65697,0.1224
+Seattle,ownership 2 emplvl,10,key,65697,0.0942
+Seattle,ownership 2 emplvl,10,LODES only,65697,0.1224
 Seattle,ownership 2 emplvl,10,baseline: population,65697,0.2058
 Seattle,ownership 2 emplvl,10,baseline: all jobs,65697,0.071
 Seattle,ownership 3 emplvl,10,key,181252,0.0465
@@ -2457,10 +2478,12 @@ Boston,private estabs,81,key (ZBP),14075,0.0469
 Boston,private estabs,81,jobs instead of ZBP,14075,0.1012
 Boston,private estabs,81,baseline: population,14075,0.051
 Boston,private estabs,81,baseline: all jobs,14075,0.0909
-Boston,ownership 1 emplvl,10,key,30629,0.1613
+Boston,ownership 1 emplvl,10,key,30629,0.1199
+Boston,ownership 1 emplvl,10,LODES only,30629,0.1613
 Boston,ownership 1 emplvl,10,baseline: population,30629,0.2629
 Boston,ownership 1 emplvl,10,baseline: all jobs,30629,0.1564
-Boston,ownership 2 emplvl,10,key,65033,0.2541
+Boston,ownership 2 emplvl,10,key,65033,0.1841
+Boston,ownership 2 emplvl,10,LODES only,65033,0.2541
 Boston,ownership 2 emplvl,10,baseline: population,65033,0.3868
 Boston,ownership 2 emplvl,10,baseline: all jobs,65033,0.2803
 Boston,ownership 3 emplvl,10,key,154311,0.1545
@@ -2660,10 +2683,12 @@ Cleveland,private estabs,81,key (ZBP),4838,0.0355
 Cleveland,private estabs,81,jobs instead of ZBP,4838,0.041
 Cleveland,private estabs,81,baseline: population,4838,0.053
 Cleveland,private estabs,81,baseline: all jobs,4838,0.0567
-Cleveland,ownership 1 emplvl,10,key,18140,0.0425
+Cleveland,ownership 1 emplvl,10,key,18140,0.0327
+Cleveland,ownership 1 emplvl,10,LODES only,18140,0.0425
 Cleveland,ownership 1 emplvl,10,baseline: population,18140,0.2607
 Cleveland,ownership 1 emplvl,10,baseline: all jobs,18140,0.151
-Cleveland,ownership 2 emplvl,10,key,5564,0.1284
+Cleveland,ownership 2 emplvl,10,key,5564,0.1175
+Cleveland,ownership 2 emplvl,10,LODES only,5564,0.1284
 Cleveland,ownership 2 emplvl,10,baseline: population,5564,0.1743
 Cleveland,ownership 2 emplvl,10,baseline: all jobs,5564,0.1225
 Cleveland,ownership 3 emplvl,10,key,100477,0.002
@@ -2863,10 +2888,12 @@ Charlotte,private estabs,81,key (ZBP),5679,0.0769
 Charlotte,private estabs,81,jobs instead of ZBP,5679,0.0235
 Charlotte,private estabs,81,baseline: population,5679,0.0892
 Charlotte,private estabs,81,baseline: all jobs,5679,0.0329
-Charlotte,ownership 1 emplvl,10,key,6432,0.0422
+Charlotte,ownership 1 emplvl,10,key,6432,0.0846
+Charlotte,ownership 1 emplvl,10,LODES only,6432,0.0422
 Charlotte,ownership 1 emplvl,10,baseline: population,6432,0.1962
 Charlotte,ownership 1 emplvl,10,baseline: all jobs,6432,0.0741
-Charlotte,ownership 2 emplvl,10,key,9319,0.1068
+Charlotte,ownership 2 emplvl,10,key,9319,0.1062
+Charlotte,ownership 2 emplvl,10,LODES only,9319,0.1068
 Charlotte,ownership 2 emplvl,10,baseline: population,9319,0.1474
 Charlotte,ownership 2 emplvl,10,baseline: all jobs,9319,0.0254
 Charlotte,ownership 3 emplvl,10,key,90562,0.0099
@@ -3088,10 +3115,12 @@ Salt Lake,private estabs,81,key (ZBP),5963,0.0306
 Salt Lake,private estabs,81,jobs instead of ZBP,5963,0.0054
 Salt Lake,private estabs,81,baseline: population,5963,0.1033
 Salt Lake,private estabs,81,baseline: all jobs,5963,0.0122
-Salt Lake,ownership 1 emplvl,10,key,27739,0.5119
+Salt Lake,ownership 1 emplvl,10,key,27739,0.3419
+Salt Lake,ownership 1 emplvl,10,LODES only,27739,0.5119
 Salt Lake,ownership 1 emplvl,10,baseline: population,27739,0.3652
 Salt Lake,ownership 1 emplvl,10,baseline: all jobs,27739,0.4206
-Salt Lake,ownership 2 emplvl,10,key,61990,0.1476
+Salt Lake,ownership 2 emplvl,10,key,61990,0.127
+Salt Lake,ownership 2 emplvl,10,LODES only,61990,0.1476
 Salt Lake,ownership 2 emplvl,10,baseline: population,61990,0.2953
 Salt Lake,ownership 2 emplvl,10,baseline: all jobs,61990,0.1868
 Salt Lake,ownership 3 emplvl,10,key,87005,0.1408
@@ -3313,10 +3342,12 @@ Phoenix-Tucson (control: distant),private estabs,81,key (ZBP),11160,0.0123
 Phoenix-Tucson (control: distant),private estabs,81,jobs instead of ZBP,11160,0.0154
 Phoenix-Tucson (control: distant),private estabs,81,baseline: population,11160,0.012
 Phoenix-Tucson (control: distant),private estabs,81,baseline: all jobs,11160,0.041
-Phoenix-Tucson (control: distant),ownership 1 emplvl,10,key,35272,0.0135
+Phoenix-Tucson (control: distant),ownership 1 emplvl,10,key,35272,0.0529
+Phoenix-Tucson (control: distant),ownership 1 emplvl,10,LODES only,35272,0.0135
 Phoenix-Tucson (control: distant),ownership 1 emplvl,10,baseline: population,35272,0.1768
 Phoenix-Tucson (control: distant),ownership 1 emplvl,10,baseline: all jobs,35272,0.2298
-Phoenix-Tucson (control: distant),ownership 2 emplvl,10,key,60914,0.1031
+Phoenix-Tucson (control: distant),ownership 2 emplvl,10,key,60914,0.0643
+Phoenix-Tucson (control: distant),ownership 2 emplvl,10,LODES only,60914,0.1031
 Phoenix-Tucson (control: distant),ownership 2 emplvl,10,baseline: population,60914,0.1328
 Phoenix-Tucson (control: distant),ownership 2 emplvl,10,baseline: all jobs,60914,0.1858
 Phoenix-Tucson (control: distant),ownership 3 emplvl,10,key,193714,0.0154
