@@ -69,7 +69,7 @@ id,level,name,confidence,note
 19100-D05,district,South Collin: Plano & Allen,high,
 19100-D06,district,"Northeast Tarrant, Alliance & Wise",high,"Northeast Tarrant piece (Mid-Cities, Alliance) + Wise County"
 19100-D07,district,Arlington & Mansfield,high,
-19100-D08,district,Denton & Lewisville,high,
+19100-D08,district,"Denton, Lewisville & Flower Mound",high,; follows piece rename 1.3.1 (was Denton & Lewisville)
 19100-D09,district,North Collin: McKinney & Frisco,high,Frisco also in D10 name; see D10
 19100-D10,district,South Denton County: Carrollton & The Colony,high,'South Denton' reads as the south side of Denton city (D08 'Denton & Lewisville'); adding 'County' removes that
 19100-S01,subregion,"Tarrant, Johnson & Parker",high,Clear county description of the Fort Worth division; Wise is small
@@ -86,7 +86,7 @@ id,level,name,confidence,note
 19820-D01,district,Macomb & St. Clair,high,
 19820-D02,district,Western Wayne & Downriver,high,
 19820-D03,district,South & West Oakland & Livingston,high,
-19820-D04,district,Detroit & Grosse Pointes,high,
+19820-D04,district,Detroit & the Grosse Pointes,high,; follows piece rename 1.3.1 (was Detroit & Grosse Pointes)
 19820-D05,district,North Oakland & Lapeer,high,
 19820-S01,subregion,Oakland & Macomb,high,'Oakland & Macomb' is how locals name the north suburbs; St. Clair/Livingston/Lapeer ~20%
 19820-S02,subregion,Wayne County,high,OMB Detroit-Dearborn-Livonia = Wayne County
@@ -112,7 +112,7 @@ id,level,name,confidence,note
 26900-D01,district,"North & East Indianapolis, Madison & Hancock",high,"'& Suburbs' overclaims: the main north suburbs (Carmel, Fishers) are in Hamilton & Tipton"
 26900-D02,district,Hamilton & Tipton,high,
 26900-D03,district,"Downtown, West & South Indianapolis, Hendricks & Johnson",high,"Piece name kept whole, so the district holding Downtown says so (as Chicago, Dallas, LA); Hendricks and Johnson are the two largest outer counties. Review 3"
-27260-D01,district,"Southside, Beaches, St. Johns & Clay",high,
+27260-D01,district,"Southside, the Beaches, St. Johns & Clay",high,"; follows piece rename 1.3.1 (was Southside, Beaches, St. Johns & Clay)"
 27260-D02,district,"Downtown, Northside, Westside & Nassau",high,Baker omitted
 28140-D01,district,Johnson & Wyandotte,high,"Kansas side; plus Leavenworth, Miami, Linn"
 28140-D02,district,Jackson & Cass,high,
@@ -123,11 +123,11 @@ id,level,name,confidence,note
 31080-D01,district,South Bay & Harbor,high,
 31080-D02,district,"Pasadena, NELA & West San Gabriel Valley",high,
 31080-D03,district,South County & Newport-Mesa,high,same area as the piece
-31080-D04,district,West San Fernando Valley,high,
+31080-D04,district,West & Central San Fernando Valley,high,; follows piece rename 1.3.1 (was West San Fernando Valley)
 31080-D05,district,East San Gabriel Valley & Pomona,high,
 31080-D06,district,"East Valley, Burbank & Glendale",high,
 31080-D07,district,"North County: Anaheim, Fullerton & Orange",high,same area as the piece
-31080-D08,district,"South LA, Compton & Southeast Cities",high,
+31080-D08,district,"Watts, Compton & Southeast Cities",high,"; follows piece rename 1.3.1 (was South LA, Compton & Southeast Cities)"
 31080-D09,district,"Downtown, Hollywood & Wilshire",high,
 31080-D10,district,"Long Beach, Lakewood & Norwalk",high,
 31080-D11,district,West County: Huntington Beach & Garden Grove,high,same area as the piece
@@ -147,7 +147,7 @@ id,level,name,confidence,note
 33100-D01,district,West Kendall & South Dade,high,same area as the piece
 33100-D02,district,South County: Boca Raton & Boynton Beach,high,
 33100-D03,district,South Broward,high,
-33100-D04,district,Northeast Dade & the Beaches,high,
+33100-D04,district,North Dade & the Beaches,high,; follows piece rename 1.3.1 (was Northeast Dade & the Beaches)
 33100-D05,district,Central Broward: Fort Lauderdale & Sunrise,high,
 33100-D06,district,"West Palm Beach, North County & Glades",high,
 33100-D07,district,North Broward: Coral Springs & Pompano Beach,high,
@@ -158,7 +158,7 @@ id,level,name,confidence,note
 33100-S03,subregion,Palm Beach County,high,OMB division = Palm Beach
 33340-D01,district,"Milwaukee North Side, Ozaukee & Washington",high,"North Side, Wauwatosa & North Shore piece + Ozaukee, Washington"
 33340-D02,district,Waukesha County,high,Single-county rule
-33340-D03,district,Milwaukee South Side & South Suburbs,high,same area as the piece (new in pieces 1.3)
+33340-D03,district,"Milwaukee South Side, West Allis & South Suburbs",high,same area as the piece (new in pieces 1.3); follows piece rename 1.3.1 (was Milwaukee South Side & South Suburbs)
 33460-D01,district,"Suburban Hennepin, Scott, Wright & Carver",high,"Scott is south metro and Anoka (the north metro) is D04, so 'North & West Suburbs & Exurbs' misleads; Bloomington/Richfield are named in D02"
 33460-D02,district,Minneapolis & Bloomington,high,
 33460-D03,district,Ramsey County,high,Single-county rule (St. Paul)
@@ -173,7 +173,7 @@ id,level,name,confidence,note
 35620-D01,district,Uptown Manhattan,high,
 35620-D02,district,Southern Bergen: Hackensack & Fort Lee,high,same area as the piece
 35620-D03,district,South Queens & the Rockaways,high,
-35620-D04,district,North Brooklyn & Downtown,high,
+35620-D04,district,"North, Central & Downtown Brooklyn",high,; follows piece rename 1.3.1 (was North Brooklyn & Downtown)
 35620-D05,district,East Brooklyn & Coney Island,high,
 35620-D06,district,South & East Bronx,high,
 35620-D07,district,Essex County,high,Single-county rule (also used in Boston; unique within metro)
@@ -206,7 +206,7 @@ id,level,name,confidence,note
 35620-S05,subregion,"Essex, Union & Morris",high,"Use counties consistently ('Newark' stands for Essex, whose district is 'Essex County'); no everyday name for the OMB Newark division"
 35620-S06,subregion,"Bergen, Hudson & Passaic",high,"Plain list, no slashes"
 35620-S07,subregion,South Brooklyn & Staten Island,high,
-35620-S08,subregion,"Midtown, Lower Manhattan & North Brooklyn",high,'Downtown' is ambiguous (Downtown Manhattan vs Downtown Brooklyn)
+35620-S08,subregion,"Midtown, Lower Manhattan & North-Central Brooklyn",high,"'Downtown' is ambiguous (Downtown Manhattan vs Downtown Brooklyn); follows piece rename 1.3.1 (was Midtown, Lower Manhattan & North Brooklyn)"
 35620-S09,subregion,Lower Hudson Valley,high,"Westchester, Rockland, Putnam: established name"
 36420-D01,district,Oklahoma County & Canadian,high,"Plus Logan, Lincoln"
 36420-D02,district,"Cleveland, Grady & McClain",high,Norman area
@@ -218,7 +218,7 @@ id,level,name,confidence,note
 36740-D05,district,Lake County,high,Single-county rule; unique within Orlando metro
 36740-S01,subregion,"Orlando, East Orange & Seminole",high,
 36740-S02,subregion,"West Orange, Osceola & Lake",high,
-37980-D01,district,"North, Northeast & Northwest Philly",high,
+37980-D01,district,"North, Northeast & Northwest Philadelphia",high,"; follows piece rename 1.3.1 (was North, Northeast & Northwest Philly)"
 37980-D02,district,Montgomery County,high,Single-county rule
 37980-D03,district,Camden & Gloucester,high,
 37980-D04,district,"New Castle, Cecil & Salem",high,Same area as S04
@@ -235,14 +235,14 @@ id,level,name,confidence,note
 38060-D02,district,Mesa & Gilbert,high,
 38060-D03,district,Central & West Phoenix,high,
 38060-D04,district,"Tempe, Chandler & South Mountain",high,
-38060-D05,district,"Scottsdale, Paradise Valley & Arcadia",high,
+38060-D05,district,"Scottsdale, Paradise Valley & Camelback East",high,"; follows piece rename 1.3.1 (was Scottsdale, Paradise Valley & Arcadia)"
 38060-D06,district,Pinal County,high,Single-county rule
 38060-D07,district,North Phoenix,high,
 38060-S01,subregion,West Valley & Central Phoenix,high,West Valley and Central & West Phoenix pieces
 38060-S02,subregion,East Valley & Pinal,high,"Mesa, Gilbert, Tempe, Chandler, South Mountain and Pinal County"
 38060-S03,subregion,North Phoenix & Scottsdale,high,
 38300-D01,district,"Pittsburgh, Butler & Beaver",high,City + North Hills + Butler/Beaver are the core; Lawrence/Armstrong small; contrasts with D02 South Hills
-38300-D02,district,"South Hills, Mon Valley & Washington",high,
+38300-D02,district,"South & West Hills, Mon Valley & Washington",high,"; follows piece rename 1.3.1 (was South Hills, Mon Valley & Washington)"
 38300-D03,district,Westmoreland & Fayette,high,
 38900-D01,district,Multnomah & Columbia,high,
 38900-D02,district,Washington County & Yamhill,high,"""County"" avoids reading as the state"
@@ -284,13 +284,13 @@ id,level,name,confidence,note
 41700-S02,subregion,"North San Antonio, Comal & Guadalupe",high,Same area as D01; Kendall omitted
 41740-D01,district,North County & Backcountry,high,
 41740-D02,district,Central San Diego & South Bay,high,
-41740-D03,district,"La Jolla, Mira Mesa, Poway & Encinitas",high,same area as the piece
+41740-D03,district,"La Jolla, Mira Mesa & Poway",high,"same area as the piece; follows piece rename 1.3.1 (was La Jolla, Mira Mesa, Poway & Encinitas)"
 41740-D05,district,"Mid-City, Kearny Mesa & East County",high,same area as the piece (new in pieces 1.2)
 41740-S01,subregion,"Central, South Bay & East County",high,
 41740-S02,subregion,"North County, La Jolla & Poway",high,'North County & North San Diego' is redundant/confusing; La Jolla and Poway name the non-North-County part
 41860-D01,district,Contra Costa County,high,
 41860-D02,district,San Francisco & Marin,high,
-41860-D03,district,Southern Alameda & Tri-Valley,high,
+41860-D03,district,"Hayward, Fremont & Tri-Valley",high,; follows piece rename 1.3.1 (was Southern Alameda & Tri-Valley)
 41860-D04,district,San Mateo County,high,Single-county rule
 41860-D05,district,Oakland & Berkeley,high,
 41860-S01,subregion,East Bay,high,OMB Oakland-Fremont-Berkeley = Alameda + Contra Costa
@@ -308,7 +308,7 @@ id,level,name,confidence,note
 45300-D01,district,St. Petersburg & South Pinellas,high,same area as the piece (new in pieces 1.3)
 45300-D02,district,Tampa & Northwest Hillsborough,high,
 45300-D03,district,Pasco & Hernando,high,
-45300-D04,district,Brandon & South County,high,
+45300-D04,district,"Brandon, Plant City & South County",high,; follows piece rename 1.3.1 (was Brandon & South County)
 45300-D05,district,Clearwater & North Pinellas,high,same area as the piece (new in pieces 1.3)
 45300-S01,subregion,"Hillsborough, Pasco & Hernando",high,"OMB ""Tampa"" division"
 45300-S02,subregion,Pinellas County,high,OMB St. Petersburg-Clearwater-Largo = Pinellas; same area as D01
@@ -322,7 +322,7 @@ id,level,name,confidence,note
 47900-D03,district,"I-270 Corridor, Upcounty & Frederick",high,
 47900-D04,district,District of Columbia,high,Kept: official name
 47900-D05,district,North & West Fairfax,high,"Piece name needs ""Fairfax""; includes Fairfax and Falls Church cities (Manassas and Manassas Park joined Prince William under the enclosed-unit rule)"
-47900-D06,district,Eastern Fairfax: Annandale & Springfield,high,
+47900-D06,district,South & East Fairfax: Annandale & Springfield,high,; follows piece rename 1.3.1 (was Eastern Fairfax: Annandale & Springfield)
 47900-D07,district,"Loudoun, Jefferson & Warren",high,"'Lower Shenandoah Valley' centres on Winchester/Frederick, which are outside this CBSA; name the counties"
 47900-D08,district,Downcounty: Silver Spring & Bethesda,high,
 47900-D09,district,Arlington & Alexandria,high,

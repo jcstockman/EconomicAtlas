@@ -686,6 +686,29 @@ Geometry notes: see Review (contiguity and offshore areas).
 - **Names:** a review of the 25 pieces named in 1.1–1.2 renamed seven (Central & Southern Prince George's; Northwest Harris: Cy-Fair & Memorial; South County & Newport-Mesa; North & East of Hartford; West Kendall & South Dade; Southern Bergen: Hackensack & Fort Lee; West & Southwest Houston: Alief & Katy).
 - **Result:** 2,069 tracts changed piece; 10 pieces added (new splits and whole-county pieces), none retired. All checks pass.
 
+**Release 1.3.1 (2026-11-27): names only.** A county-by-county local review of all 157 names renamed 17 pieces. No tract moved, and the IDs are unchanged.
+- **The name missed or mislabelled a large part:**
+  - Hayward, Fremont & Tri-Valley (was Southern Alameda & Tri-Valley)
+  - Denton, Lewisville & Flower Mound
+  - North Dade & the Beaches (was Northeast Dade)
+  - North, Central & Downtown Brooklyn
+  - West & Central San Fernando Valley
+  - Watts, Compton & Southeast Cities (was South LA, Compton & Southeast Cities, which overlapped Crenshaw & South Central)
+  - South Hills, West Hills & Mon Valley
+  - South & East County: Annandale & Springfield (was Eastern Fairfax)
+  - Cleveland & Eastern Suburbs
+  - South Side, West Allis & South Suburbs (Milwaukee)
+  - Brandon, Plant City & South County
+  - Salt Lake City, West Valley & Millcreek
+  - Scottsdale, Paradise Valley & Camelback East (was Arcadia)
+  - La Jolla, Mira Mesa & Poway (Encinitas dropped, to keep three parts)
+- **Style:**
+  - Detroit & the Grosse Pointes
+  - Southside, Arlington & the Beaches
+  - North, Northeast & Northwest Philadelphia (was Philly)
+
+Sixteen district and subregion names that repeat these follow them in `regions/metros/metro_names.csv`.
+
 **Editing later.**
 - Rename a piece: edit `piece_name` in `piece_registry.csv`, re-run `build_crosswalk.py` and the later steps (about 15 minutes).
 - Move single tracts: add `tract_geoid, piece_id, note` rows to `pins.csv` (applied after grouping and repair), re-run `build_crosswalk.py` onward. `check_pieces.py` catches pins that break contiguity, size or a job centre.
