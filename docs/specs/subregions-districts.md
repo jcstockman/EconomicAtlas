@@ -2,7 +2,7 @@
 
 Status: built, 2026-11-27 (`regions/metros/`, from atlas units on pieces release 1.3; first built on 1.0.1). The four decisions at the end were taken as proposed; results are under **Built**.
 
-Two levels sit between atlas units (`docs/specs/atlas-units.md`) and CBSAs in the 56 largest metros: **subregions** in the 26 CBSAs of 2.5M+, and **districts** (an optional finer view) in those subregions and in mid-size CBSAs. Both are unions of atlas units, so every figure the atlas holds for units (QCEW, BEA, ACS, LODES) adds up to them with no new allocation.
+Two levels sit between atlas units (`docs/specs/atlas-units.md`) and CBSAs in the 57 largest metros: **subregions** in the 26 CBSAs of 2.5M+, and **districts** (an optional finer view) in those subregions and in mid-size CBSAs. Both are unions of atlas units, so every figure the atlas holds for units (QCEW, BEA, ACS, LODES) adds up to them with no new allocation.
 
 The plan (*Metro Economic Atlas: Index Framework and Integration Plan*, sub-metropolitan units, decided 2026-11-21) set the rules below. They were written when pieces covered counties of 1.5M+ at 0.4–1.5M; pieces now cover counties of 1.0M+ at about 0.8M (0.45–1.1M), which simplifies districts. Overrides of the plan are marked **Change** with the reason.
 
@@ -106,10 +106,18 @@ A second review (2026-11-27) of the 50 medium- and low-confidence names renamed 
 
 **Open.** The subregion and district IDs were tidied once before any release (St. Louis S01/S02 and Denver S02 then named the adjusted areas). The metros build is not yet part of a numbered release.
 
-**Map.** `regions/map.html`, Metro areas view: pick one of the 56 CBSAs; districts are filled by subregion (categorical slots in ID order) with subregion boundaries drawn heavier, numbered as in the table, with optional county and piece lines, zoom, and shading by work inside or residents. Districts outside the district view are greyed in the table. `districts.csv` and `subregions.csv` carry `work_inside` (employed residents whose LODES job is in the same area, cross-state commuting included) and districts carry `members` (unit names, largest first); `metro_units.geojson` holds the covered units' shapes for the map.
+**Map.** `regions/map.html`, Metro areas view: pick one of the 57 CBSAs; districts are filled by subregion (categorical slots in ID order) with subregion boundaries drawn heavier, numbered as in the table, with optional county and piece lines, zoom, and shading by work inside or residents. Districts outside the district view are greyed in the table. `districts.csv` and `subregions.csv` carry `work_inside` (employed residents whose LODES job is in the same area, cross-state commuting included) and districts carry `members` (unit names, largest first); `metro_units.geojson` holds the covered units' shapes for the map.
 
 **Pieces release 1.2 (2026-11-27).** Districts follow the reshaped pieces in King, Tarrant, Orange CA, Harris, San Diego and Miami-Dade; their composition by unit changes only in San Diego (Mid-City, Kearny Mesa & East County replaces La Jolla, Poway & Encinitas as a district, 41740-D05; subregions Central, South Bay & East County and North County & North San Diego regroup), Dallas-Fort Worth (Wise joins Northeast Tarrant, Alliance & Wise) and Houston (subregions Inner Houston & Fort Bend and West Houston: Cypress, Memorial & Katy). District names that repeat a piece's name follow the piece. 247 districts, 188 in the district view; 81 subregions; all checks pass.
 
 **Pieces release 1.3 (2026-11-27).** New districts from the new splits: St. Petersburg & South Pinellas and Clearwater & North Pinellas (Tampa); Buffalo & Southtowns and Amherst, Cheektowaga, Tonawanda & Niagara (Buffalo, now with a district view); Milwaukee North Side, Ozaukee & Washington and Milwaukee South Side & South Suburbs. Cook's districts follow its reshaped pieces (names updated; subregions South & Southwest Suburbs, Will & Grundy and Downtown, North Side & North Shore). Pierce and DuPage are now whole-county pieces, their districts unchanged. District names that repeat a piece's name follow the seven review renames. 250 districts, 193 in the district view; 81 subregions; all checks pass.
 
-**Puerto Rico (2026-11-27).** Puerto Rico's municipios are atlas units now, but its metros are left out of subregions and districts (`delineation()` skips state 72): LODES, which the districts are grouped by, does not cover Puerto Rico. San Juan-Bayamón-Caguas (2.02M) would otherwise be covered. The build is otherwise unchanged (56 CBSAs, 250 districts, 81 subregions; all checks pass).
+**Puerto Rico and San Juan (2026-11-27).** San Juan-Bayamón-Caguas (2.02M) is the 57th CBSA covered.
+- **Commuting:** LODES does not cover Puerto Rico, so its commuting comes from the ACS 2016–2020 county-to-county flows (table 1, workers 16+; 670,799 workers between its 40 municipios). These are enough because every Puerto Rico unit is a whole municipio.
+- **Districts:** the rules are unchanged, and no municipio reaches 0.35M, so all are joined by commuting into three districts, shown in the district view:
+  - **D01** "San Juan, Carolina & the Northeast" (939k, 89% work inside)
+  - **D02** "Bayamón, North Coast & Central Mountains" (620k, 61%)
+  - **D03** "Caguas, Cayey & Humacao" (464k, 72%)
+- **No subregions:** the metro is under 2.5M.
+- **Names:** a local review kept all three, now high confidence. "The Northeast" follows the National Weather Service's Northeast zone and the Corredor Ecológico del Noreste; "North Coast" and "Central Mountains" are the tourism regions' English names; "Valle del Turabo" would cover only part of D03.
+- **Other metros:** unchanged. All checks pass (57 CBSAs, 253 districts, 196 in the view, 81 subregions). Work-inside shares for San Juan use the ACS flows (2016–2020), not LODES 2024.

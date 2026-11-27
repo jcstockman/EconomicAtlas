@@ -300,6 +300,9 @@ id,level,cbsa,anchor_unit,status,since_version
 41860-S02,subregion,41860,06075,active,1.0
 41940-D01,district,41940,06085-01,active,1.0
 41940-D02,district,41940,06085-02,active,1.0
+41980-D01,district,41980,72127,active,1.0
+41980-D02,district,41980,72021,active,1.0
+41980-D03,district,41980,72025,active,1.0
 42660-D01,district,42660,53033-01,active,1.0
 42660-D02,district,42660,53053-01,active,1.0
 42660-D03,district,42660,53061,active,1.0

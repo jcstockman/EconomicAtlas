@@ -330,3 +330,6 @@ id,level,name,confidence,note
 47900-S01,subregion,Northern Virginia,high,OMB Arlington-Alexandria-Reston; includes Jefferson WV and Fredericksburg area
 47900-S02,subregion,"DC, Prince George's & Charles",high,"OMB ""Washington"" division"
 47900-S03,subregion,Montgomery & Frederick,high,OMB Frederick-Gaithersburg-Bethesda
+41980-D01,district,"San Juan, Carolina & the Northeast",high,"'the Northeast' as in the NWS Northeast zone and the Corredor Ecológico del Noreste (Fajardo, Luquillo, Ceiba, Río Grande, Naguabo); 'Región Este' would overlap D03. Review"
+41980-D02,district,"Bayamón, North Coast & Central Mountains",high,North Coast = Costa Norte (Porta Atlántico); Central Mountains = Discover Puerto Rico's name for the Cordillera Central towns. Review
+41980-D03,district,"Caguas, Cayey & Humacao",high,"Caguas valley, Cayey mountains and Humacao on the east coast; Valle del Turabo covers only part. Review"
