@@ -1,0 +1,61 @@
+{
+ "version": "1.0",
+ "released": "2026-11-27",
+ "git_commit_of_build_code": "ce6a3ed66154561d6ef4f01c5f35309cdc160dda",
+ "parameters": {
+  "TARGET": 800000,
+  "LO": 460000,
+  "HI": 1070000,
+  "MIN_COUNTY": 1000000,
+  "MU": 1.0,
+  "PUMA_WEIGHT": 3.0,
+  "NECK": 0.0035,
+  "CORE_DENSITY": 10000,
+  "CORE_JOBS": 40000,
+  "WHOLE": [
+   "04019",
+   "06013",
+   "06019",
+   "13135"
+  ],
+  "SPLIT": {
+   "06037": [
+    "San Fernando"
+   ]
+  }
+ },
+ "counts": {
+  "counties": 50,
+  "tracts": 23869,
+  "pieces": 134,
+  "subareas": 809
+ },
+ "checks": [
+  "pass  coverage",
+  "pass  registry",
+  "pass  totals",
+  "pass  size",
+  "pass  contiguity",
+  "pass  necks",
+  "pass  job centres",
+  "pass  subareas",
+  "pass  files",
+  "23,869 tracts, 134 pieces, 809 subareas, 50 counties"
+ ],
+ "sha256": {
+  "groups.json": "86e5fd580d2361750f386bc7ff8e2101fa79f39c7e714a9e3bea08df4a2d4c47",
+  "crosswalk_tract_piece.csv": "0619dc89b4ca53b13b7b04fce996d4d58f7249d427650a802d8f9c321475460f",
+  "split_tracts.csv": "2d0ac43a14855c7f4f6cf339d0ddfbd6f5c4fc44da37b13d066ffa4ae0ccc06c",
+  "pieces_summary.csv": "59383f73eeee9dd8ad4c37022d8829caada2611e548ff037fb339332f83156bb",
+  "pieces.geojson": "75e0aa66293fdce888cfa7ce940a0f5125ca5860e3f36b794f65933689366d0f",
+  "tract_demographics.csv": "30261b87a8ac542ece94a6c7cb24fe141cf6993e44fe2f2def56ca8a66fe67dc",
+  "piece_demographics.csv": "c4e1686ab4152b6107bed7b622724d98efd257e158652da130cec8417bf70814",
+  "crosswalk_tract_subarea.csv": "d7c430c5f465fa070da5f1ba27fc526523acb39145d340f4fc798ce2c8866372",
+  "subareas_summary.csv": "f9461c3ba3152f80378fe7eb1435e73a10fa22c4852990ed2434bc1591b9fbd3",
+  "subareas.geojson": "9e0087806b6742f5f5bb2559a6e72e2ffbab67d1de7a757273e3dd0266253bde",
+  "piece_registry.csv": "572eaa9c8e6bb4d78c5b2cc7348bd7e8ab4bd3222784282016d6cb6e1359a70b",
+  "pins.csv": "719b04b577424508c259e2a5f6355d1fa1fb4f391ccc8265e25e6ef5e65b3341",
+  "inputs/manifest.csv": "cf4e6beaa511dc44397f99b0079b7fd865e03cac6436d9f15d9b836ab07c4ce1"
+ },
+ "changes": {}
+}

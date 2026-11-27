@@ -1,0 +1,856 @@
+metro,family,line,method,metro_total,error
+New York (5 boroughs),net earnings by residence,45,key,476426938,0.1077
+New York (5 boroughs),net earnings by residence,45,baseline: population,476426938,0.2622
+New York (5 boroughs),net earnings by residence,45,baseline: one key (household income),476426938,0.1018
+New York (5 boroughs),"dividends, interest, rent",46,key,165952956,0.1268
+New York (5 boroughs),"dividends, interest, rent",46,baseline: population,165952956,0.5004
+New York (5 boroughs),"dividends, interest, rent",46,baseline: one key (household income),165952956,0.34
+New York (5 boroughs),transfers (composite),47,key,143320508,0.044
+New York (5 boroughs),transfers (composite),47,baseline: population,143320508,0.017
+New York (5 boroughs),transfers (composite),47,baseline: one key (household income),143320508,0.1511
+New York (5 boroughs),personal income,10,key (by component),785700402,0.0964
+New York (5 boroughs),personal income,10,baseline: population,785700402,0.2664
+New York (5 boroughs),personal income,10,baseline: one key (household income),785700402,0.106
+New York (5 boroughs),transfer 2110,2110,key,21917993,0.0227
+New York (5 boroughs),transfer 2110,2110,baseline: population,21917993,0.0762
+New York (5 boroughs),transfer 2110,2110,baseline: one key (household income),21917993,0.1482
+New York (5 boroughs),transfer 2120,2120,key,842482,0.1608
+New York (5 boroughs),transfer 2120,2120,baseline: population,842482,0.1789
+New York (5 boroughs),transfer 2120,2120,baseline: one key (household income),842482,0.0508
+New York (5 boroughs),transfer 2210,2210,key,25161805,0.042
+New York (5 boroughs),transfer 2210,2210,baseline: population,25161805,0.0133
+New York (5 boroughs),transfer 2210,2210,baseline: one key (household income),25161805,0.1579
+New York (5 boroughs),transfer 2220,2220,key,51338377,0.1006
+New York (5 boroughs),transfer 2220,2220,baseline: population,51338377,0.0041
+New York (5 boroughs),transfer 2220,2220,baseline: one key (household income),51338377,0.1644
+New York (5 boroughs),transfer 2230,2230,key,19086,0.0565
+New York (5 boroughs),transfer 2230,2230,baseline: population,19086,0.085
+New York (5 boroughs),transfer 2230,2230,baseline: one key (household income),19086,0.1744
+New York (5 boroughs),transfer 2310,2310,key,2838010,0.052
+New York (5 boroughs),transfer 2310,2310,baseline: population,2838010,0.1387
+New York (5 boroughs),transfer 2310,2310,baseline: one key (household income),2838010,0.2377
+New York (5 boroughs),transfer 2320,2320,key,2125658,0.064
+New York (5 boroughs),transfer 2320,2320,baseline: population,2125658,0.1176
+New York (5 boroughs),transfer 2320,2320,baseline: one key (household income),2125658,0.2458
+New York (5 boroughs),transfer 2330,2330,key,6071014,0.0895
+New York (5 boroughs),transfer 2330,2330,baseline: population,6071014,0.009
+New York (5 boroughs),transfer 2330,2330,baseline: one key (household income),6071014,0.1658
+New York (5 boroughs),transfer 2340,2340,key,8247852,0.0617
+New York (5 boroughs),transfer 2340,2340,baseline: population,8247852,0.0384
+New York (5 boroughs),transfer 2340,2340,baseline: one key (household income),8247852,0.1945
+New York (5 boroughs),transfer 2400,2400,key,1059346,0.0251
+New York (5 boroughs),transfer 2400,2400,baseline: population,1059346,0.0348
+New York (5 boroughs),transfer 2400,2400,baseline: one key (household income),1059346,0.17
+New York (5 boroughs),transfer 2500,2500,key,858489,0.0581
+New York (5 boroughs),transfer 2500,2500,baseline: population,858489,0.0719
+New York (5 boroughs),transfer 2500,2500,baseline: one key (household income),858489,0.1963
+New York (5 boroughs),transfer 2600,2600,key,1927148,0.3129
+New York (5 boroughs),transfer 2600,2600,baseline: population,1927148,0.3125
+New York (5 boroughs),transfer 2600,2600,baseline: one key (household income),1927148,0.1716
+New York (5 boroughs),transfer 2700,2700,key,1526831,0.0251
+New York (5 boroughs),transfer 2700,2700,baseline: population,1526831,0.0277
+New York (5 boroughs),transfer 2700,2700,baseline: one key (household income),1526831,0.1791
+New York (5 boroughs),transfer 3000,3000,key,2331691,0.009
+New York (5 boroughs),transfer 3000,3000,baseline: population,2331691,0.011
+New York (5 boroughs),transfer 3000,3000,baseline: one key (household income),2331691,0.1698
+New York (5 boroughs),transfer 4000,4000,key,1647790,0.007
+New York (5 boroughs),transfer 4000,4000,baseline: population,1647790,0.009
+New York (5 boroughs),transfer 4000,4000,baseline: one key (household income),1647790,0.1658
+Bay Area core,net earnings by residence,45,key,611852006,0.0388
+Bay Area core,net earnings by residence,45,baseline: population,611852006,0.0932
+Bay Area core,net earnings by residence,45,baseline: one key (household income),611852006,0.0403
+Bay Area core,"dividends, interest, rent",46,key,194725140,0.0698
+Bay Area core,"dividends, interest, rent",46,baseline: population,194725140,0.1524
+Bay Area core,"dividends, interest, rent",46,baseline: one key (household income),194725140,0.087
+Bay Area core,transfers (composite),47,key,82865672,0.0379
+Bay Area core,transfers (composite),47,baseline: population,82865672,0.0531
+Bay Area core,transfers (composite),47,baseline: one key (household income),82865672,0.098
+Bay Area core,personal income,10,key (by component),889442818,0.036
+Bay Area core,personal income,10,baseline: population,889442818,0.0944
+Bay Area core,personal income,10,baseline: one key (household income),889442818,0.0338
+Bay Area core,transfer 2110,2110,key,18529014,0.0064
+Bay Area core,transfer 2110,2110,baseline: population,18529014,0.0582
+Bay Area core,transfer 2110,2110,baseline: one key (household income),18529014,0.0887
+Bay Area core,transfer 2120,2120,key,1994784,0.0248
+Bay Area core,transfer 2120,2120,baseline: population,1994784,0.0174
+Bay Area core,transfer 2120,2120,baseline: one key (household income),1994784,0.048
+Bay Area core,transfer 2210,2210,key,15652117,0.0211
+Bay Area core,transfer 2210,2210,baseline: population,15652117,0.0422
+Bay Area core,transfer 2210,2210,baseline: one key (household income),15652117,0.0783
+Bay Area core,transfer 2220,2220,key,17313247,0.112
+Bay Area core,transfer 2220,2220,baseline: population,17313247,0.1337
+Bay Area core,transfer 2220,2220,baseline: one key (household income),17313247,0.1511
+Bay Area core,transfer 2230,2230,key,93555,0.0479
+Bay Area core,transfer 2230,2230,baseline: population,93555,0.105
+Bay Area core,transfer 2230,2230,baseline: one key (household income),93555,0.1704
+Bay Area core,transfer 2310,2310,key,1327594,0.0553
+Bay Area core,transfer 2310,2310,baseline: population,1327594,0.1325
+Bay Area core,transfer 2310,2310,baseline: one key (household income),1327594,0.1446
+Bay Area core,transfer 2320,2320,key,589276,0.0842
+Bay Area core,transfer 2320,2320,baseline: population,589276,0.0785
+Bay Area core,transfer 2320,2320,baseline: one key (household income),589276,0.1439
+Bay Area core,transfer 2330,2330,key,1435020,0.1066
+Bay Area core,transfer 2330,2330,baseline: population,1435020,0.0647
+Bay Area core,transfer 2330,2330,baseline: one key (household income),1435020,0.0896
+Bay Area core,transfer 2340,2340,key,4590019,0.0502
+Bay Area core,transfer 2340,2340,baseline: population,4590019,0.1327
+Bay Area core,transfer 2340,2340,baseline: one key (household income),4590019,0.1395
+Bay Area core,transfer 2400,2400,key,561084,0.0291
+Bay Area core,transfer 2400,2400,baseline: population,561084,0.0348
+Bay Area core,transfer 2400,2400,baseline: one key (household income),561084,0.0891
+Bay Area core,transfer 2500,2500,key,1244970,0.0394
+Bay Area core,transfer 2500,2500,baseline: population,1244970,0.0935
+Bay Area core,transfer 2500,2500,baseline: one key (household income),1244970,0.1471
+Bay Area core,transfer 2600,2600,key,1637201,0.0435
+Bay Area core,transfer 2600,2600,baseline: population,1637201,0.0408
+Bay Area core,transfer 2600,2600,baseline: one key (household income),1637201,0.0636
+Bay Area core,transfer 2700,2700,key,1989955,0.0665
+Bay Area core,transfer 2700,2700,baseline: population,1989955,0.0655
+Bay Area core,transfer 2700,2700,baseline: one key (household income),1989955,0.1221
+Bay Area core,transfer 3000,3000,key,1614477,0.0043
+Bay Area core,transfer 3000,3000,baseline: population,1614477,0.0079
+Bay Area core,transfer 3000,3000,baseline: one key (household income),1614477,0.0714
+Bay Area core,transfer 4000,4000,key,1229905,0.0047
+Bay Area core,transfer 4000,4000,baseline: population,1229905,0.0086
+Bay Area core,transfer 4000,4000,baseline: one key (household income),1229905,0.0715
+Dallas-Fort Worth,net earnings by residence,45,key,392354240,0.0236
+Dallas-Fort Worth,net earnings by residence,45,baseline: population,392354240,0.0703
+Dallas-Fort Worth,net earnings by residence,45,baseline: one key (household income),392354240,0.0213
+Dallas-Fort Worth,"dividends, interest, rent",46,key,122234858,0.0368
+Dallas-Fort Worth,"dividends, interest, rent",46,baseline: population,122234858,0.0873
+Dallas-Fort Worth,"dividends, interest, rent",46,baseline: one key (household income),122234858,0.1101
+Dallas-Fort Worth,transfers (composite),47,key,63113707,0.0038
+Dallas-Fort Worth,transfers (composite),47,baseline: population,63113707,0.022
+Dallas-Fort Worth,transfers (composite),47,baseline: one key (household income),63113707,0.0964
+Dallas-Fort Worth,personal income,10,key (by component),577702805,0.0229
+Dallas-Fort Worth,personal income,10,baseline: population,577702805,0.0452
+Dallas-Fort Worth,personal income,10,baseline: one key (household income),577702805,0.0406
+Dallas-Fort Worth,transfer 2110,2110,key,16898801,0.0082
+Dallas-Fort Worth,transfer 2110,2110,baseline: population,16898801,0.023
+Dallas-Fort Worth,transfer 2110,2110,baseline: one key (household income),16898801,0.068
+Dallas-Fort Worth,transfer 2120,2120,key,392606,0.1808
+Dallas-Fort Worth,transfer 2120,2120,baseline: population,392606,0.1895
+Dallas-Fort Worth,transfer 2120,2120,baseline: one key (household income),392606,0.2236
+Dallas-Fort Worth,transfer 2210,2210,key,14067636,0.0354
+Dallas-Fort Worth,transfer 2210,2210,baseline: population,14067636,0.0289
+Dallas-Fort Worth,transfer 2210,2210,baseline: one key (household income),14067636,0.1033
+Dallas-Fort Worth,transfer 2220,2220,key,8284042,0.0537
+Dallas-Fort Worth,transfer 2220,2220,baseline: population,8284042,0.1843
+Dallas-Fort Worth,transfer 2220,2220,baseline: one key (household income),8284042,0.2587
+Dallas-Fort Worth,transfer 2230,2230,key,285749,0.114
+Dallas-Fort Worth,transfer 2230,2230,baseline: population,285749,0.1985
+Dallas-Fort Worth,transfer 2230,2230,baseline: one key (household income),285749,0.1915
+Dallas-Fort Worth,transfer 2310,2310,key,782732,0.094
+Dallas-Fort Worth,transfer 2310,2310,baseline: population,782732,0.1405
+Dallas-Fort Worth,transfer 2310,2310,baseline: one key (household income),782732,0.2149
+Dallas-Fort Worth,transfer 2320,2320,key,1672411,0.0493
+Dallas-Fort Worth,transfer 2320,2320,baseline: population,1672411,0.1147
+Dallas-Fort Worth,transfer 2320,2320,baseline: one key (household income),1672411,0.1891
+Dallas-Fort Worth,transfer 2330,2330,key,2023992,0.0963
+Dallas-Fort Worth,transfer 2330,2330,baseline: population,2023992,0.1616
+Dallas-Fort Worth,transfer 2330,2330,baseline: one key (household income),2023992,0.236
+Dallas-Fort Worth,transfer 2340,2340,key,3010664,0.0512
+Dallas-Fort Worth,transfer 2340,2340,baseline: population,3010664,0.1165
+Dallas-Fort Worth,transfer 2340,2340,baseline: one key (household income),3010664,0.1909
+Dallas-Fort Worth,transfer 2400,2400,key,398070,0.0065
+Dallas-Fort Worth,transfer 2400,2400,baseline: population,398070,0.0113
+Dallas-Fort Worth,transfer 2400,2400,baseline: one key (household income),398070,0.0857
+Dallas-Fort Worth,transfer 2500,2500,key,2703671,0.023
+Dallas-Fort Worth,transfer 2500,2500,baseline: population,2703671,0.095
+Dallas-Fort Worth,transfer 2500,2500,baseline: one key (household income),2703671,0.1085
+Dallas-Fort Worth,transfer 2600,2600,key,1124478,0.0431
+Dallas-Fort Worth,transfer 2600,2600,baseline: population,1124478,0.0465
+Dallas-Fort Worth,transfer 2600,2600,baseline: one key (household income),1124478,0.0747
+Dallas-Fort Worth,transfer 2700,2700,key,2350712,0.03
+Dallas-Fort Worth,transfer 2700,2700,baseline: population,2350712,0.0267
+Dallas-Fort Worth,transfer 2700,2700,baseline: one key (household income),2350712,0.058
+Dallas-Fort Worth,transfer 3000,3000,key,1716844,0.004
+Dallas-Fort Worth,transfer 3000,3000,baseline: population,1716844,0.0108
+Dallas-Fort Worth,transfer 3000,3000,baseline: one key (household income),1716844,0.0637
+Dallas-Fort Worth,transfer 4000,4000,key,1383190,0.0016
+Dallas-Fort Worth,transfer 4000,4000,baseline: population,1383190,0.0164
+Dallas-Fort Worth,transfer 4000,4000,baseline: one key (household income),1383190,0.0581
+Houston,net earnings by residence,45,key,363769959,0.0235
+Houston,net earnings by residence,45,baseline: population,363769959,0.0198
+Houston,net earnings by residence,45,baseline: one key (household income),363769959,0.0226
+Houston,"dividends, interest, rent",46,key,106146097,0.0234
+Houston,"dividends, interest, rent",46,baseline: population,106146097,0.0148
+Houston,"dividends, interest, rent",46,baseline: one key (household income),106146097,0.0371
+Houston,transfers (composite),47,key,63708432,0.0026
+Houston,transfers (composite),47,baseline: population,63708432,0.0141
+Houston,transfers (composite),47,baseline: one key (household income),63708432,0.0352
+Houston,personal income,10,key (by component),533624488,0.0206
+Houston,personal income,10,baseline: population,533624488,0.0154
+Houston,personal income,10,baseline: one key (household income),533624488,0.027
+Houston,transfer 2110,2110,key,15341784,0.0051
+Houston,transfer 2110,2110,baseline: population,15341784,0.0426
+Houston,transfer 2110,2110,baseline: one key (household income),15341784,0.0155
+Houston,transfer 2120,2120,key,296592,0.0417
+Houston,transfer 2120,2120,baseline: population,296592,0.0466
+Houston,transfer 2120,2120,baseline: one key (household income),296592,0.052
+Houston,transfer 2210,2210,key,13676895,0.0276
+Houston,transfer 2210,2210,baseline: population,13676895,0.0275
+Houston,transfer 2210,2210,baseline: one key (household income),13676895,0.0379
+Houston,transfer 2220,2220,key,9698752,0.0583
+Houston,transfer 2220,2220,baseline: population,9698752,0.1308
+Houston,transfer 2220,2220,baseline: one key (household income),9698752,0.1731
+Houston,transfer 2230,2230,key,145382,0.107
+Houston,transfer 2230,2230,baseline: population,145382,0.1611
+Houston,transfer 2230,2230,baseline: one key (household income),145382,0.1188
+Houston,transfer 2310,2310,key,875885,0.0373
+Houston,transfer 2310,2310,baseline: population,875885,0.0745
+Houston,transfer 2310,2310,baseline: one key (household income),875885,0.1168
+Houston,transfer 2320,2320,key,1821864,0.0165
+Houston,transfer 2320,2320,baseline: population,1821864,0.0536
+Houston,transfer 2320,2320,baseline: one key (household income),1821864,0.096
+Houston,transfer 2330,2330,key,2506845,0.0575
+Houston,transfer 2330,2330,baseline: population,2506845,0.0946
+Houston,transfer 2330,2330,baseline: one key (household income),2506845,0.137
+Houston,transfer 2340,2340,key,3018040,0.02
+Houston,transfer 2340,2340,baseline: population,3018040,0.0571
+Houston,transfer 2340,2340,baseline: one key (household income),3018040,0.0995
+Houston,transfer 2400,2400,key,385909,0.0349
+Houston,transfer 2400,2400,baseline: population,385909,0.0132
+Houston,transfer 2400,2400,baseline: one key (household income),385909,0.0555
+Houston,transfer 2500,2500,key,2229533,0.0142
+Houston,transfer 2500,2500,baseline: population,2229533,0.0683
+Houston,transfer 2500,2500,baseline: one key (household income),2229533,0.042
+Houston,transfer 2600,2600,key,1123032,0.1038
+Houston,transfer 2600,2600,baseline: population,1123032,0.0916
+Houston,transfer 2600,2600,baseline: one key (household income),1123032,0.134
+Houston,transfer 2700,2700,key,2824368,0.0421
+Houston,transfer 2700,2700,baseline: population,2824368,0.0478
+Houston,transfer 2700,2700,baseline: one key (household income),2824368,0.0561
+Houston,transfer 3000,3000,key,1585410,0.0027
+Houston,transfer 3000,3000,baseline: population,1585410,0.0095
+Houston,transfer 3000,3000,baseline: one key (household income),1585410,0.0329
+Houston,transfer 4000,4000,key,1276550,0.0019
+Houston,transfer 4000,4000,baseline: population,1276550,0.0141
+Houston,transfer 4000,4000,baseline: one key (household income),1276550,0.0282
+Atlanta,net earnings by residence,45,key,197026444,0.0181
+Atlanta,net earnings by residence,45,baseline: population,197026444,0.1165
+Atlanta,net earnings by residence,45,baseline: one key (household income),197026444,0.0142
+Atlanta,"dividends, interest, rent",46,key,71434978,0.0379
+Atlanta,"dividends, interest, rent",46,baseline: population,71434978,0.226
+Atlanta,"dividends, interest, rent",46,baseline: one key (household income),71434978,0.1386
+Atlanta,transfers (composite),47,key,39006899,0.0108
+Atlanta,transfers (composite),47,baseline: population,39006899,0.0133
+Atlanta,transfers (composite),47,baseline: one key (household income),39006899,0.1034
+Atlanta,personal income,10,key (by component),307468321,0.0073
+Atlanta,personal income,10,baseline: population,307468321,0.1225
+Atlanta,personal income,10,baseline: one key (household income),307468321,0.0302
+Atlanta,transfer 2110,2110,key,10009785,0.0119
+Atlanta,transfer 2110,2110,baseline: population,10009785,0.0396
+Atlanta,transfer 2110,2110,baseline: one key (household income),10009785,0.0903
+Atlanta,transfer 2120,2120,key,180529,0.0719
+Atlanta,transfer 2120,2120,baseline: population,180529,0.0807
+Atlanta,transfer 2120,2120,baseline: one key (household income),180529,0.1018
+Atlanta,transfer 2210,2210,key,7621571,0.0255
+Atlanta,transfer 2210,2210,baseline: population,7621571,0.053
+Atlanta,transfer 2210,2210,baseline: one key (household income),7621571,0.0781
+Atlanta,transfer 2220,2220,key,4044311,0.0938
+Atlanta,transfer 2220,2220,baseline: population,4044311,0.1231
+Atlanta,transfer 2220,2220,baseline: one key (household income),4044311,0.142
+Atlanta,transfer 2230,2230,key,176307,0.0994
+Atlanta,transfer 2230,2230,baseline: population,176307,0.1501
+Atlanta,transfer 2230,2230,baseline: one key (household income),176307,0.1877
+Atlanta,transfer 2310,2310,key,536802,0.0588
+Atlanta,transfer 2310,2310,baseline: population,536802,0.1607
+Atlanta,transfer 2310,2310,baseline: one key (household income),536802,0.136
+Atlanta,transfer 2320,2320,key,1147826,0.0901
+Atlanta,transfer 2320,2320,baseline: population,1147826,0.0828
+Atlanta,transfer 2320,2320,baseline: one key (household income),1147826,0.1857
+Atlanta,transfer 2330,2330,key,1512846,0.077
+Atlanta,transfer 2330,2330,baseline: population,1512846,0.1789
+Atlanta,transfer 2330,2330,baseline: one key (household income),1512846,0.1828
+Atlanta,transfer 2340,2340,key,2049408,0.0936
+Atlanta,transfer 2340,2340,baseline: population,2049408,0.0703
+Atlanta,transfer 2340,2340,baseline: one key (household income),2049408,0.1732
+Atlanta,transfer 2400,2400,key,59652,0.0353
+Atlanta,transfer 2400,2400,baseline: population,59652,0.0492
+Atlanta,transfer 2400,2400,baseline: one key (household income),59652,0.095
+Atlanta,transfer 2500,2500,key,1674159,0.0525
+Atlanta,transfer 2500,2500,baseline: population,1674159,0.0505
+Atlanta,transfer 2500,2500,baseline: one key (household income),1674159,0.0998
+Atlanta,transfer 2600,2600,key,1001976,0.0921
+Atlanta,transfer 2600,2600,baseline: population,1001976,0.0916
+Atlanta,transfer 2600,2600,baseline: one key (household income),1001976,0.0387
+Atlanta,transfer 2700,2700,key,1749000,0.1712
+Atlanta,transfer 2700,2700,baseline: population,1749000,0.1737
+Atlanta,transfer 2700,2700,baseline: one key (household income),1749000,0.2609
+Atlanta,transfer 3000,3000,key,1060354,0.0039
+Atlanta,transfer 3000,3000,baseline: population,1060354,0.0058
+Atlanta,transfer 3000,3000,baseline: one key (household income),1060354,0.1065
+Atlanta,transfer 4000,4000,key,774865,0.0034
+Atlanta,transfer 4000,4000,baseline: population,774865,0.0062
+Atlanta,transfer 4000,4000,baseline: one key (household income),774865,0.1063
+Twin Cities,net earnings by residence,45,key,155006217,0.0185
+Twin Cities,net earnings by residence,45,baseline: population,155006217,0.0697
+Twin Cities,net earnings by residence,45,baseline: one key (household income),155006217,0.0192
+Twin Cities,"dividends, interest, rent",46,key,58836561,0.0101
+Twin Cities,"dividends, interest, rent",46,baseline: population,58836561,0.1346
+Twin Cities,"dividends, interest, rent",46,baseline: one key (household income),58836561,0.0863
+Twin Cities,transfers (composite),47,key,37074576,0.0191
+Twin Cities,transfers (composite),47,baseline: population,37074576,0.0262
+Twin Cities,transfers (composite),47,baseline: one key (household income),37074576,0.0658
+Twin Cities,personal income,10,key (by component),250917354,0.0108
+Twin Cities,personal income,10,baseline: population,250917354,0.0736
+Twin Cities,personal income,10,baseline: one key (household income),250917354,0.0208
+Twin Cities,transfer 2110,2110,key,10049459,0.0065
+Twin Cities,transfer 2110,2110,baseline: population,10049459,0.0203
+Twin Cities,transfer 2110,2110,baseline: one key (household income),10049459,0.0632
+Twin Cities,transfer 2120,2120,key,172078,0.1578
+Twin Cities,transfer 2120,2120,baseline: population,172078,0.1629
+Twin Cities,transfer 2120,2120,baseline: one key (household income),172078,0.207
+Twin Cities,transfer 2210,2210,key,6273316,0.01
+Twin Cities,transfer 2210,2210,baseline: population,6273316,0.0186
+Twin Cities,transfer 2210,2210,baseline: one key (household income),6273316,0.065
+Twin Cities,transfer 2220,2220,key,8799122,0.0733
+Twin Cities,transfer 2220,2220,baseline: population,8799122,0.1192
+Twin Cities,transfer 2220,2220,baseline: one key (household income),8799122,0.106
+Twin Cities,transfer 2230,2230,key,47278,0.1312
+Twin Cities,transfer 2230,2230,baseline: population,47278,0.172
+Twin Cities,transfer 2230,2230,baseline: one key (household income),47278,0.188
+Twin Cities,transfer 2310,2310,key,484169,0.0968
+Twin Cities,transfer 2310,2310,baseline: population,484169,0.1499
+Twin Cities,transfer 2310,2310,baseline: one key (household income),484169,0.1392
+Twin Cities,transfer 2320,2320,key,382106,0.043
+Twin Cities,transfer 2320,2320,baseline: population,382106,0.0732
+Twin Cities,transfer 2320,2320,baseline: one key (household income),382106,0.1237
+Twin Cities,transfer 2330,2330,key,973624,0.1024
+Twin Cities,transfer 2330,2330,baseline: population,973624,0.1556
+Twin Cities,transfer 2330,2330,baseline: one key (household income),973624,0.1419
+Twin Cities,transfer 2340,2340,key,1417993,0.0472
+Twin Cities,transfer 2340,2340,baseline: population,1417993,0.1003
+Twin Cities,transfer 2340,2340,baseline: one key (household income),1417993,0.1156
+Twin Cities,transfer 2400,2400,key,369497,0.0408
+Twin Cities,transfer 2400,2400,baseline: population,369497,0.0139
+Twin Cities,transfer 2400,2400,baseline: one key (household income),369497,0.0645
+Twin Cities,transfer 2500,2500,key,765590,0.062
+Twin Cities,transfer 2500,2500,baseline: population,765590,0.1289
+Twin Cities,transfer 2500,2500,baseline: one key (household income),765590,0.1449
+Twin Cities,transfer 2600,2600,key,721560,0.0795
+Twin Cities,transfer 2600,2600,baseline: population,721560,0.0722
+Twin Cities,transfer 2600,2600,baseline: one key (household income),721560,0.0562
+Twin Cities,transfer 2700,2700,key,265798,0.0145
+Twin Cities,transfer 2700,2700,baseline: population,265798,0.0218
+Twin Cities,transfer 2700,2700,baseline: one key (household income),265798,0.0598
+Twin Cities,transfer 3000,3000,key,843400,0.0025
+Twin Cities,transfer 3000,3000,baseline: population,843400,0.0098
+Twin Cities,transfer 3000,3000,baseline: one key (household income),843400,0.0565
+Twin Cities,transfer 4000,4000,key,573990,0.005
+Twin Cities,transfer 4000,4000,baseline: population,573990,0.0123
+Twin Cities,transfer 4000,4000,baseline: one key (household income),573990,0.0568
+Philadelphia,net earnings by residence,45,key,220810320,0.0394
+Philadelphia,net earnings by residence,45,baseline: population,220810320,0.1285
+Philadelphia,net earnings by residence,45,baseline: one key (household income),220810320,0.0379
+Philadelphia,"dividends, interest, rent",46,key,80047821,0.0623
+Philadelphia,"dividends, interest, rent",46,baseline: population,80047821,0.2037
+Philadelphia,"dividends, interest, rent",46,baseline: one key (household income),80047821,0.1131
+Philadelphia,transfers (composite),47,key,62014963,0.0081
+Philadelphia,transfers (composite),47,baseline: population,62014963,0.0487
+Philadelphia,transfers (composite),47,baseline: one key (household income),62014963,0.1449
+Philadelphia,personal income,10,key (by component),362873104,0.0355
+Philadelphia,personal income,10,baseline: population,362873104,0.1148
+Philadelphia,personal income,10,baseline: one key (household income),362873104,0.0242
+Philadelphia,transfer 2110,2110,key,15838342,0.0163
+Philadelphia,transfer 2110,2110,baseline: population,15838342,0.1075
+Philadelphia,transfer 2110,2110,baseline: one key (household income),15838342,0.0427
+Philadelphia,transfer 2120,2120,key,314045,0.0833
+Philadelphia,transfer 2120,2120,baseline: population,314045,0.1168
+Philadelphia,transfer 2120,2120,baseline: one key (household income),314045,0.1081
+Philadelphia,transfer 2210,2210,key,12547577,0.0447
+Philadelphia,transfer 2210,2210,baseline: population,12547577,0.0302
+Philadelphia,transfer 2210,2210,baseline: one key (household income),12547577,0.0844
+Philadelphia,transfer 2220,2220,key,17387888,0.0316
+Philadelphia,transfer 2220,2220,baseline: population,17387888,0.2474
+Philadelphia,transfer 2220,2220,baseline: one key (household income),17387888,0.338
+Philadelphia,transfer 2230,2230,key,53146,0.1553
+Philadelphia,transfer 2230,2230,baseline: population,53146,0.2151
+Philadelphia,transfer 2230,2230,baseline: one key (household income),53146,0.1174
+Philadelphia,transfer 2310,2310,key,1000250,0.1798
+Philadelphia,transfer 2310,2310,baseline: population,1000250,0.3797
+Philadelphia,transfer 2310,2310,baseline: one key (household income),1000250,0.4703
+Philadelphia,transfer 2320,2320,key,707649,0.0459
+Philadelphia,transfer 2320,2320,baseline: population,707649,0.2274
+Philadelphia,transfer 2320,2320,baseline: one key (household income),707649,0.3252
+Philadelphia,transfer 2330,2330,key,2185590,0.1246
+Philadelphia,transfer 2330,2330,baseline: population,2185590,0.3245
+Philadelphia,transfer 2330,2330,baseline: one key (household income),2185590,0.4151
+Philadelphia,transfer 2340,2340,key,1906469,0.1049
+Philadelphia,transfer 2340,2340,baseline: population,1906469,0.3048
+Philadelphia,transfer 2340,2340,baseline: one key (household income),1906469,0.3954
+Philadelphia,transfer 2400,2400,key,369027,0.0705
+Philadelphia,transfer 2400,2400,baseline: population,369027,0.0567
+Philadelphia,transfer 2400,2400,baseline: one key (household income),369027,0.1544
+Philadelphia,transfer 2500,2500,key,1150537,0.089
+Philadelphia,transfer 2500,2500,baseline: population,1150537,0.0331
+Philadelphia,transfer 2500,2500,baseline: one key (household income),1150537,0.0929
+Philadelphia,transfer 2600,2600,key,770591,0.0721
+Philadelphia,transfer 2600,2600,baseline: population,770591,0.067
+Philadelphia,transfer 2600,2600,baseline: one key (household income),770591,0.1642
+Philadelphia,transfer 2700,2700,key,940126,0.0501
+Philadelphia,transfer 2700,2700,baseline: population,940126,0.0531
+Philadelphia,transfer 2700,2700,baseline: one key (household income),940126,0.0732
+Philadelphia,transfer 3000,3000,key,1142497,0.0029
+Philadelphia,transfer 3000,3000,baseline: population,1142497,0.0077
+Philadelphia,transfer 3000,3000,baseline: one key (household income),1142497,0.09
+Philadelphia,transfer 4000,4000,key,826048,0.0048
+Philadelphia,transfer 4000,4000,baseline: population,826048,0.0104
+Philadelphia,transfer 4000,4000,baseline: one key (household income),826048,0.0873
+Detroit,net earnings by residence,45,key,165633916,0.0257
+Detroit,net earnings by residence,45,baseline: population,165633916,0.1391
+Detroit,net earnings by residence,45,baseline: one key (household income),165633916,0.031
+Detroit,"dividends, interest, rent",46,key,54212765,0.0125
+Detroit,"dividends, interest, rent",46,baseline: population,54212765,0.2183
+Detroit,"dividends, interest, rent",46,baseline: one key (household income),54212765,0.1102
+Detroit,transfers (composite),47,key,54033328,0.0262
+Detroit,transfers (composite),47,baseline: population,54033328,0.0494
+Detroit,transfers (composite),47,baseline: one key (household income),54033328,0.1452
+Detroit,personal income,10,key (by component),273880009,0.0161
+Detroit,personal income,10,baseline: population,273880009,0.1204
+Detroit,personal income,10,baseline: one key (household income),273880009,0.0142
+Detroit,transfer 2110,2110,key,16010478,0.0033
+Detroit,transfer 2110,2110,baseline: population,16010478,0.0392
+Detroit,transfer 2110,2110,baseline: one key (household income),16010478,0.0838
+Detroit,transfer 2120,2120,key,167336,0.0841
+Detroit,transfer 2120,2120,baseline: population,167336,0.0556
+Detroit,transfer 2120,2120,baseline: one key (household income),167336,0.1514
+Detroit,transfer 2210,2210,key,12160227,0.0261
+Detroit,transfer 2210,2210,baseline: population,12160227,0.0135
+Detroit,transfer 2210,2210,baseline: one key (household income),12160227,0.116
+Detroit,transfer 2220,2220,key,9052504,0.0891
+Detroit,transfer 2220,2220,baseline: population,9052504,0.2585
+Detroit,transfer 2220,2220,baseline: one key (household income),9052504,0.3543
+Detroit,transfer 2230,2230,key,45242,0.1242
+Detroit,transfer 2230,2230,baseline: population,45242,0.132
+Detroit,transfer 2230,2230,baseline: one key (household income),45242,0.1444
+Detroit,transfer 2310,2310,key,963171,0.0904
+Detroit,transfer 2310,2310,baseline: population,963171,0.1951
+Detroit,transfer 2310,2310,baseline: one key (household income),963171,0.2909
+Detroit,transfer 2320,2320,key,871889,0.0709
+Detroit,transfer 2320,2320,baseline: population,871889,0.1756
+Detroit,transfer 2320,2320,baseline: one key (household income),871889,0.2714
+Detroit,transfer 2330,2330,key,1902034,0.1242
+Detroit,transfer 2330,2330,baseline: population,1902034,0.2289
+Detroit,transfer 2330,2330,baseline: one key (household income),1902034,0.3247
+Detroit,transfer 2340,2340,key,1776789,0.1206
+Detroit,transfer 2340,2340,baseline: population,1776789,0.2253
+Detroit,transfer 2340,2340,baseline: one key (household income),1776789,0.3211
+Detroit,transfer 2400,2400,key,236155,0.0409
+Detroit,transfer 2400,2400,baseline: population,236155,0.0509
+Detroit,transfer 2400,2400,baseline: one key (household income),236155,0.1591
+Detroit,transfer 2500,2500,key,1045108,0.0215
+Detroit,transfer 2500,2500,baseline: population,1045108,0.0417
+Detroit,transfer 2500,2500,baseline: one key (household income),1045108,0.144
+Detroit,transfer 2600,2600,key,944651,0.0376
+Detroit,transfer 2600,2600,baseline: population,944651,0.0342
+Detroit,transfer 2600,2600,baseline: one key (household income),944651,0.13
+Detroit,transfer 2700,2700,key,615148,0.0817
+Detroit,transfer 2700,2700,baseline: population,615148,0.0851
+Detroit,transfer 2700,2700,baseline: one key (household income),615148,0.0839
+Detroit,transfer 3000,3000,key,1031721,0.0013
+Detroit,transfer 3000,3000,baseline: population,1031721,0.0024
+Detroit,transfer 3000,3000,baseline: one key (household income),1031721,0.1067
+Detroit,transfer 4000,4000,key,783291,0.0007
+Detroit,transfer 4000,4000,baseline: population,783291,0.0039
+Detroit,transfer 4000,4000,baseline: one key (household income),783291,0.1057
+LA basin,net earnings by residence,45,key,671789220,0.0018
+LA basin,net earnings by residence,45,baseline: population,671789220,0.0358
+LA basin,net earnings by residence,45,baseline: one key (household income),671789220,0.0005
+LA basin,"dividends, interest, rent",46,key,240868114,0.0076
+LA basin,"dividends, interest, rent",46,baseline: population,240868114,0.0683
+LA basin,"dividends, interest, rent",46,baseline: one key (household income),240868114,0.033
+LA basin,transfers (composite),47,key,203980802,0.0478
+LA basin,transfers (composite),47,baseline: population,203980802,0.0584
+LA basin,transfers (composite),47,baseline: one key (household income),203980802,0.0937
+LA basin,personal income,10,key (by component),1116638136,0.006
+LA basin,personal income,10,baseline: population,1116638136,0.0256
+LA basin,personal income,10,baseline: one key (household income),1116638136,0.0097
+LA basin,transfer 2110,2110,key,34550595,0.0005
+LA basin,transfer 2110,2110,baseline: population,34550595,0.0385
+LA basin,transfer 2110,2110,baseline: one key (household income),34550595,0.0033
+LA basin,transfer 2120,2120,key,3822518,0.0181
+LA basin,transfer 2120,2120,baseline: population,3822518,0.0024
+LA basin,transfer 2120,2120,baseline: one key (household income),3822518,0.0377
+LA basin,transfer 2210,2210,key,38015084,0.0305
+LA basin,transfer 2210,2210,baseline: population,38015084,0.0149
+LA basin,transfer 2210,2210,baseline: one key (household income),38015084,0.0502
+LA basin,transfer 2220,2220,key,50129673,0.1004
+LA basin,transfer 2220,2220,baseline: population,50129673,0.1493
+LA basin,transfer 2220,2220,baseline: one key (household income),50129673,0.1846
+LA basin,transfer 2230,2230,key,161869,0.1064
+LA basin,transfer 2230,2230,baseline: population,161869,0.1587
+LA basin,transfer 2230,2230,baseline: one key (household income),161869,0.1234
+LA basin,transfer 2310,2310,key,3586451,0.0272
+LA basin,transfer 2310,2310,baseline: population,3586451,0.0816
+LA basin,transfer 2310,2310,baseline: one key (household income),3586451,0.1169
+LA basin,transfer 2320,2320,key,2462974,0.0041
+LA basin,transfer 2320,2320,baseline: population,2462974,0.0584
+LA basin,transfer 2320,2320,baseline: one key (household income),2462974,0.0937
+LA basin,transfer 2330,2330,key,6454588,0.0304
+LA basin,transfer 2330,2330,baseline: population,6454588,0.0848
+LA basin,transfer 2330,2330,baseline: one key (household income),6454588,0.1201
+LA basin,transfer 2340,2340,key,14859874,0.0508
+LA basin,transfer 2340,2340,baseline: population,14859874,0.1051
+LA basin,transfer 2340,2340,baseline: one key (household income),14859874,0.1404
+LA basin,transfer 2400,2400,key,1648639,0.0243
+LA basin,transfer 2400,2400,baseline: population,1648639,0.0709
+LA basin,transfer 2400,2400,baseline: one key (household income),1648639,0.1062
+LA basin,transfer 2500,2500,key,2763379,0.0381
+LA basin,transfer 2500,2500,baseline: population,2763379,0.0142
+LA basin,transfer 2500,2500,baseline: one key (household income),2763379,0.0211
+LA basin,transfer 2600,2600,key,4151386,0.003
+LA basin,transfer 2600,2600,baseline: population,4151386,0.0056
+LA basin,transfer 2600,2600,baseline: one key (household income),4151386,0.0297
+LA basin,transfer 2700,2700,key,3252650,0.0177
+LA basin,transfer 2700,2700,baseline: population,3252650,0.0203
+LA basin,transfer 2700,2700,baseline: one key (household income),3252650,0.015
+LA basin,transfer 3000,3000,key,3362088,0.0007
+LA basin,transfer 3000,3000,baseline: population,3362088,0.0033
+LA basin,transfer 3000,3000,baseline: one key (household income),3362088,0.032
+LA basin,transfer 4000,4000,key,2560708,0.0016
+LA basin,transfer 4000,4000,baseline: population,2560708,0.0042
+LA basin,transfer 4000,4000,baseline: one key (household income),2560708,0.0311
+South Florida,net earnings by residence,45,key,277790795,0.0185
+South Florida,net earnings by residence,45,baseline: population,277790795,0.0323
+South Florida,net earnings by residence,45,baseline: one key (household income),277790795,0.0105
+South Florida,"dividends, interest, rent",46,key,210803496,0.0337
+South Florida,"dividends, interest, rent",46,baseline: population,210803496,0.2397
+South Florida,"dividends, interest, rent",46,baseline: one key (household income),210803496,0.198
+South Florida,transfers (composite),47,key,86906140,0.0451
+South Florida,transfers (composite),47,baseline: population,86906140,0.032
+South Florida,transfers (composite),47,baseline: one key (household income),86906140,0.0513
+South Florida,personal income,10,key (by component),575500431,0.0194
+South Florida,personal income,10,baseline: population,575500431,0.1056
+South Florida,personal income,10,baseline: one key (household income),575500431,0.0639
+South Florida,transfer 2110,2110,key,20006794,0.0245
+South Florida,transfer 2110,2110,baseline: population,20006794,0.1103
+South Florida,transfer 2110,2110,baseline: one key (household income),20006794,0.0696
+South Florida,transfer 2120,2120,key,169570,0.055
+South Florida,transfer 2120,2120,baseline: population,169570,0.0795
+South Florida,transfer 2120,2120,baseline: one key (household income),169570,0.0454
+South Florida,transfer 2210,2210,key,21960737,0.0685
+South Florida,transfer 2210,2210,baseline: population,21960737,0.0446
+South Florida,transfer 2210,2210,baseline: one key (household income),21960737,0.0491
+South Florida,transfer 2220,2220,key,11177879,0.0484
+South Florida,transfer 2220,2220,baseline: population,11177879,0.1393
+South Florida,transfer 2220,2220,baseline: one key (household income),11177879,0.1733
+South Florida,transfer 2230,2230,key,95655,0.0506
+South Florida,transfer 2230,2230,baseline: population,95655,0.1384
+South Florida,transfer 2230,2230,baseline: one key (household income),95655,0.1044
+South Florida,transfer 2310,2310,key,1526124,0.1851
+South Florida,transfer 2310,2310,baseline: population,1526124,0.2596
+South Florida,transfer 2310,2310,baseline: one key (household income),1526124,0.2936
+South Florida,transfer 2320,2320,key,2094881,0.0097
+South Florida,transfer 2320,2320,baseline: population,2094881,0.0739
+South Florida,transfer 2320,2320,baseline: one key (household income),2094881,0.108
+South Florida,transfer 2330,2330,key,2156926,0.0596
+South Florida,transfer 2330,2330,baseline: population,2156926,0.1341
+South Florida,transfer 2330,2330,baseline: one key (household income),2156926,0.1681
+South Florida,transfer 2340,2340,key,2501297,0.0324
+South Florida,transfer 2340,2340,baseline: population,2501297,0.0421
+South Florida,transfer 2340,2340,baseline: one key (household income),2501297,0.0761
+South Florida,transfer 2400,2400,key,109426,0.007
+South Florida,transfer 2400,2400,baseline: population,109426,0.0323
+South Florida,transfer 2400,2400,baseline: one key (household income),109426,0.0357
+South Florida,transfer 2500,2500,key,1545087,0.0632
+South Florida,transfer 2500,2500,baseline: population,1545087,0.1269
+South Florida,transfer 2500,2500,baseline: one key (household income),1545087,0.0928
+South Florida,transfer 2600,2600,key,1669360,0.0502
+South Florida,transfer 2600,2600,baseline: population,1669360,0.0482
+South Florida,transfer 2600,2600,baseline: one key (household income),1669360,0.0822
+South Florida,transfer 2700,2700,key,8215196,0.1362
+South Florida,transfer 2700,2700,baseline: population,8215196,0.1343
+South Florida,transfer 2700,2700,baseline: one key (household income),8215196,0.1683
+South Florida,transfer 3000,3000,key,1462485,0.0025
+South Florida,transfer 3000,3000,baseline: population,1462485,0.0037
+South Florida,transfer 3000,3000,baseline: one key (household income),1462485,0.04
+South Florida,transfer 4000,4000,key,1760358,0.1477
+South Florida,transfer 4000,4000,baseline: population,1760358,0.1457
+South Florida,transfer 4000,4000,baseline: one key (household income),1760358,0.1797
+Seattle,net earnings by residence,45,key,286369334,0.0254
+Seattle,net earnings by residence,45,baseline: population,286369334,0.121
+Seattle,net earnings by residence,45,baseline: one key (household income),286369334,0.0268
+Seattle,"dividends, interest, rent",46,key,102767509,0.0566
+Seattle,"dividends, interest, rent",46,baseline: population,102767509,0.228
+Seattle,"dividends, interest, rent",46,baseline: one key (household income),102767509,0.1337
+Seattle,transfers (composite),47,key,44187203,0.0129
+Seattle,transfers (composite),47,baseline: population,44187203,0.0422
+Seattle,transfers (composite),47,baseline: one key (household income),44187203,0.1321
+Seattle,personal income,10,key (by component),433324046,0.0297
+Seattle,personal income,10,baseline: population,433324046,0.1302
+Seattle,personal income,10,baseline: one key (household income),433324046,0.0359
+Seattle,transfer 2110,2110,key,12439913,0.0139
+Seattle,transfer 2110,2110,baseline: population,12439913,0.0384
+Seattle,transfer 2110,2110,baseline: one key (household income),12439913,0.1327
+Seattle,transfer 2120,2120,key,1672150,0.1444
+Seattle,transfer 2120,2120,baseline: population,1672150,0.1299
+Seattle,transfer 2120,2120,baseline: one key (household income),1672150,0.0356
+Seattle,transfer 2210,2210,key,7659664,0.0151
+Seattle,transfer 2210,2210,baseline: population,7659664,0.0237
+Seattle,transfer 2210,2210,baseline: one key (household income),7659664,0.118
+Seattle,transfer 2220,2220,key,7550320,0.0259
+Seattle,transfer 2220,2220,baseline: population,7550320,0.0632
+Seattle,transfer 2220,2220,baseline: one key (household income),7550320,0.1334
+Seattle,transfer 2230,2230,key,210829,0.2076
+Seattle,transfer 2230,2230,baseline: population,210829,0.3508
+Seattle,transfer 2230,2230,baseline: one key (household income),210829,0.4147
+Seattle,transfer 2310,2310,key,478723,0.0166
+Seattle,transfer 2310,2310,baseline: population,478723,0.0519
+Seattle,transfer 2310,2310,baseline: one key (household income),478723,0.1201
+Seattle,transfer 2320,2320,key,398505,0.0358
+Seattle,transfer 2320,2320,baseline: population,398505,0.0829
+Seattle,transfer 2320,2320,baseline: one key (household income),398505,0.1725
+Seattle,transfer 2330,2330,key,1202663,0.0352
+Seattle,transfer 2330,2330,baseline: population,1202663,0.0785
+Seattle,transfer 2330,2330,baseline: one key (household income),1202663,0.1719
+Seattle,transfer 2340,2340,key,1369137,0.0277
+Seattle,transfer 2340,2340,baseline: population,1369137,0.085
+Seattle,transfer 2340,2340,baseline: one key (household income),1369137,0.1637
+Seattle,transfer 2400,2400,key,425775,0.0822
+Seattle,transfer 2400,2400,baseline: population,425775,0.0672
+Seattle,transfer 2400,2400,baseline: one key (household income),425775,0.151
+Seattle,transfer 2500,2500,key,1792741,0.1523
+Seattle,transfer 2500,2500,baseline: population,1792741,0.2955
+Seattle,transfer 2500,2500,baseline: one key (household income),1792741,0.3594
+Seattle,transfer 2600,2600,key,1009245,0.0221
+Seattle,transfer 2600,2600,baseline: population,1009245,0.0204
+Seattle,transfer 2600,2600,baseline: one key (household income),1009245,0.0739
+Seattle,transfer 2700,2700,key,574215,0.0164
+Seattle,transfer 2700,2700,baseline: population,574215,0.0166
+Seattle,transfer 2700,2700,baseline: one key (household income),574215,0.0842
+Seattle,transfer 3000,3000,key,1078463,0.0019
+Seattle,transfer 3000,3000,baseline: population,1078463,0.0036
+Seattle,transfer 3000,3000,baseline: one key (household income),1078463,0.0978
+Seattle,transfer 4000,4000,key,803539,0.0022
+Seattle,transfer 4000,4000,baseline: population,803539,0.0041
+Seattle,transfer 4000,4000,baseline: one key (household income),803539,0.0977
+Boston,net earnings by residence,45,key,282023304,0.0079
+Boston,net earnings by residence,45,baseline: population,282023304,0.0511
+Boston,net earnings by residence,45,baseline: one key (household income),282023304,0.0109
+Boston,"dividends, interest, rent",46,key,99858849,0.0586
+Boston,"dividends, interest, rent",46,baseline: population,99858849,0.0711
+Boston,"dividends, interest, rent",46,baseline: one key (household income),99858849,0.0387
+Boston,transfers (composite),47,key,52081343,0.0486
+Boston,transfers (composite),47,baseline: population,52081343,0.076
+Boston,transfers (composite),47,baseline: one key (household income),52081343,0.1294
+Boston,personal income,10,key (by component),433963496,0.0229
+Boston,personal income,10,baseline: population,433963496,0.0405
+Boston,personal income,10,baseline: one key (household income),433963496,0.0196
+Boston,transfer 2110,2110,key,12679970,0.0141
+Boston,transfer 2110,2110,baseline: population,12679970,0.0706
+Boston,transfer 2110,2110,baseline: one key (household income),12679970,0.0742
+Boston,transfer 2120,2120,key,146826,0.0292
+Boston,transfer 2120,2120,baseline: population,146826,0.0398
+Boston,transfer 2120,2120,baseline: one key (household income),146826,0.0342
+Boston,transfer 2210,2210,key,10708109,0.0158
+Boston,transfer 2210,2210,baseline: population,10708109,0.0469
+Boston,transfer 2210,2210,baseline: one key (household income),10708109,0.0625
+Boston,transfer 2220,2220,key,11387953,0.1795
+Boston,transfer 2220,2220,baseline: population,11387953,0.2663
+Boston,transfer 2220,2220,baseline: one key (household income),11387953,0.3198
+Boston,transfer 2230,2230,key,38031,0.0997
+Boston,transfer 2230,2230,baseline: population,38031,0.1337
+Boston,transfer 2230,2230,baseline: one key (household income),38031,0.1286
+Boston,transfer 2310,2310,key,619487,0.1102
+Boston,transfer 2310,2310,baseline: population,619487,0.1993
+Boston,transfer 2310,2310,baseline: one key (household income),619487,0.2527
+Boston,transfer 2320,2320,key,414876,0.0756
+Boston,transfer 2320,2320,baseline: population,414876,0.1647
+Boston,transfer 2320,2320,baseline: one key (household income),414876,0.2181
+Boston,transfer 2330,2330,key,1713145,0.1342
+Boston,transfer 2330,2330,baseline: population,1713145,0.2233
+Boston,transfer 2330,2330,baseline: one key (household income),1713145,0.2768
+Boston,transfer 2340,2340,key,4275400,0.0254
+Boston,transfer 2340,2340,baseline: population,4275400,0.1087
+Boston,transfer 2340,2340,baseline: one key (household income),4275400,0.1621
+Boston,transfer 2400,2400,key,578994,0.0383
+Boston,transfer 2400,2400,baseline: population,578994,0.039
+Boston,transfer 2400,2400,baseline: one key (household income),578994,0.0924
+Boston,transfer 2500,2500,key,878618,0.0553
+Boston,transfer 2500,2500,baseline: population,878618,0.0505
+Boston,transfer 2500,2500,baseline: one key (household income),878618,0.0653
+Boston,transfer 2600,2600,key,692638,0.1135
+Boston,transfer 2600,2600,baseline: population,692638,0.1102
+Boston,transfer 2600,2600,baseline: one key (household income),692638,0.1341
+Boston,transfer 2700,2700,key,700824,0.0451
+Boston,transfer 2700,2700,baseline: population,700824,0.0426
+Boston,transfer 2700,2700,baseline: one key (household income),700824,0.096
+Boston,transfer 3000,3000,key,958399,0.0068
+Boston,transfer 3000,3000,baseline: population,958399,0.0097
+Boston,transfer 3000,3000,baseline: one key (household income),958399,0.0482
+Boston,transfer 4000,4000,key,766718,0.0074
+Boston,transfer 4000,4000,baseline: population,766718,0.0107
+Boston,transfer 4000,4000,baseline: one key (household income),766718,0.0472
+Cleveland,net earnings by residence,45,key,81180631,0.005
+Cleveland,net earnings by residence,45,baseline: population,81180631,0.0181
+Cleveland,net earnings by residence,45,baseline: one key (household income),81180631,0.0067
+Cleveland,"dividends, interest, rent",46,key,29933981,0.0405
+Cleveland,"dividends, interest, rent",46,baseline: population,29933981,0.0777
+Cleveland,"dividends, interest, rent",46,baseline: one key (household income),29933981,0.0851
+Cleveland,transfers (composite),47,key,28178721,0.0034
+Cleveland,transfers (composite),47,baseline: population,28178721,0.0112
+Cleveland,transfers (composite),47,baseline: one key (household income),28178721,0.0279
+Cleveland,personal income,10,key (by component),139293333,0.0079
+Cleveland,personal income,10,baseline: population,139293333,0.0198
+Cleveland,personal income,10,baseline: one key (household income),139293333,0.0211
+Cleveland,transfer 2110,2110,key,7940048,0.0057
+Cleveland,transfer 2110,2110,baseline: population,7940048,0.0421
+Cleveland,transfer 2110,2110,baseline: one key (household income),7940048,0.0388
+Cleveland,transfer 2120,2120,key,190683,0.0323
+Cleveland,transfer 2120,2120,baseline: population,190683,0.0482
+Cleveland,transfer 2120,2120,baseline: one key (household income),190683,0.0441
+Cleveland,transfer 2210,2210,key,6205712,0.0073
+Cleveland,transfer 2210,2210,baseline: population,6205712,0.017
+Cleveland,transfer 2210,2210,baseline: one key (household income),6205712,0.0218
+Cleveland,transfer 2220,2220,key,5524580,0.0323
+Cleveland,transfer 2220,2220,baseline: population,5524580,0.1284
+Cleveland,transfer 2220,2220,baseline: one key (household income),5524580,0.1357
+Cleveland,transfer 2230,2230,key,30194,0.0692
+Cleveland,transfer 2230,2230,baseline: population,30194,0.1206
+Cleveland,transfer 2230,2230,baseline: one key (household income),30194,0.1143
+Cleveland,transfer 2310,2310,key,436792,0.0769
+Cleveland,transfer 2310,2310,baseline: population,436792,0.1629
+Cleveland,transfer 2310,2310,baseline: one key (household income),436792,0.1702
+Cleveland,transfer 2320,2320,key,446391,0.0136
+Cleveland,transfer 2320,2320,baseline: population,446391,0.0894
+Cleveland,transfer 2320,2320,baseline: one key (household income),446391,0.0994
+Cleveland,transfer 2330,2330,key,922407,0.0753
+Cleveland,transfer 2330,2330,baseline: population,922407,0.1612
+Cleveland,transfer 2330,2330,baseline: one key (household income),922407,0.1686
+Cleveland,transfer 2340,2340,key,917871,0.01
+Cleveland,transfer 2340,2340,baseline: population,917871,0.0874
+Cleveland,transfer 2340,2340,baseline: one key (household income),917871,0.0958
+Cleveland,transfer 2400,2400,key,112239,0.1157
+Cleveland,transfer 2400,2400,baseline: population,112239,0.0113
+Cleveland,transfer 2400,2400,baseline: one key (household income),112239,0.0256
+Cleveland,transfer 2500,2500,key,667663,0.029
+Cleveland,transfer 2500,2500,baseline: population,667663,0.0428
+Cleveland,transfer 2500,2500,baseline: one key (household income),667663,0.0418
+Cleveland,transfer 2600,2600,key,453196,0.0235
+Cleveland,transfer 2600,2600,baseline: population,453196,0.0209
+Cleveland,transfer 2600,2600,baseline: one key (household income),453196,0.0379
+Cleveland,transfer 2700,2700,key,277152,0.042
+Cleveland,transfer 2700,2700,baseline: population,277152,0.046
+Cleveland,transfer 2700,2700,baseline: one key (household income),277152,0.0386
+Cleveland,transfer 3000,3000,key,570969,0.002
+Cleveland,transfer 3000,3000,baseline: population,570969,0.0051
+Cleveland,transfer 3000,3000,baseline: one key (household income),570969,0.0132
+Cleveland,transfer 4000,4000,key,391889,0.0028
+Cleveland,transfer 4000,4000,baseline: population,391889,0.0073
+Cleveland,transfer 4000,4000,baseline: one key (household income),391889,0.0123
+Charlotte,net earnings by residence,45,key,94524175,0.0088
+Charlotte,net earnings by residence,45,baseline: population,94524175,0.0367
+Charlotte,net earnings by residence,45,baseline: one key (household income),94524175,0.0108
+Charlotte,"dividends, interest, rent",46,key,26515633,0.0279
+Charlotte,"dividends, interest, rent",46,baseline: population,26515633,0.0912
+Charlotte,"dividends, interest, rent",46,baseline: one key (household income),26515633,0.0565
+Charlotte,transfers (composite),47,key,17942990,0.0147
+Charlotte,transfers (composite),47,baseline: population,17942990,0.01
+Charlotte,transfers (composite),47,baseline: one key (household income),17942990,0.0447
+Charlotte,personal income,10,key (by component),138982798,0.0125
+Charlotte,personal income,10,baseline: population,138982798,0.0411
+Charlotte,personal income,10,baseline: one key (household income),138982798,0.01
+Charlotte,transfer 2110,2110,key,4520212,0.0051
+Charlotte,transfer 2110,2110,baseline: population,4520212,0.0387
+Charlotte,transfer 2110,2110,baseline: one key (household income),4520212,0.0734
+Charlotte,transfer 2120,2120,key,43505,0.0251
+Charlotte,transfer 2120,2120,baseline: population,43505,0.0369
+Charlotte,transfer 2120,2120,baseline: one key (household income),43505,0.0623
+Charlotte,transfer 2210,2210,key,3158094,0.0139
+Charlotte,transfer 2210,2210,baseline: population,3158094,0.0425
+Charlotte,transfer 2210,2210,baseline: one key (household income),3158094,0.0772
+Charlotte,transfer 2220,2220,key,2383406,0.0404
+Charlotte,transfer 2220,2220,baseline: population,2383406,0.0315
+Charlotte,transfer 2220,2220,baseline: one key (household income),2383406,0.0237
+Charlotte,transfer 2230,2230,key,62334,0.0134
+Charlotte,transfer 2230,2230,baseline: population,62334,0.0551
+Charlotte,transfer 2230,2230,baseline: one key (household income),62334,0.0898
+Charlotte,transfer 2310,2310,key,177098,0.0521
+Charlotte,transfer 2310,2310,baseline: population,177098,0.0427
+Charlotte,transfer 2310,2310,baseline: one key (household income),177098,0.0334
+Charlotte,transfer 2320,2320,key,359337,0.052
+Charlotte,transfer 2320,2320,baseline: population,359337,0.0345
+Charlotte,transfer 2320,2320,baseline: one key (household income),359337,0.0244
+Charlotte,transfer 2330,2330,key,685455,0.0877
+Charlotte,transfer 2330,2330,baseline: population,685455,0.0702
+Charlotte,transfer 2330,2330,baseline: one key (household income),685455,0.0355
+Charlotte,transfer 2340,2340,key,679415,0.0489
+Charlotte,transfer 2340,2340,baseline: population,679415,0.0314
+Charlotte,transfer 2340,2340,baseline: one key (household income),679415,0.0182
+Charlotte,transfer 2400,2400,key,23758,0.0231
+Charlotte,transfer 2400,2400,baseline: population,23758,0.0329
+Charlotte,transfer 2400,2400,baseline: one key (household income),23758,0.0108
+Charlotte,transfer 2500,2500,key,721008,0.0284
+Charlotte,transfer 2500,2500,baseline: population,721008,0.0367
+Charlotte,transfer 2500,2500,baseline: one key (household income),721008,0.0654
+Charlotte,transfer 2600,2600,key,395335,0.0509
+Charlotte,transfer 2600,2600,baseline: population,395335,0.048
+Charlotte,transfer 2600,2600,baseline: one key (household income),395335,0.0133
+Charlotte,transfer 2700,2700,key,536103,0.0156
+Charlotte,transfer 2700,2700,baseline: population,536103,0.0177
+Charlotte,transfer 2700,2700,baseline: one key (household income),536103,0.0402
+Charlotte,transfer 3000,3000,key,439186,0.0018
+Charlotte,transfer 3000,3000,baseline: population,439186,0.0047
+Charlotte,transfer 3000,3000,baseline: one key (household income),439186,0.0394
+Charlotte,transfer 4000,4000,key,326285,0.002
+Charlotte,transfer 4000,4000,baseline: population,326285,0.0049
+Charlotte,transfer 4000,4000,baseline: one key (household income),326285,0.0396
+Salt Lake,net earnings by residence,45,key,106850853,0.0065
+Salt Lake,net earnings by residence,45,baseline: population,106850853,0.0233
+Salt Lake,net earnings by residence,45,baseline: one key (household income),106850853,0.0079
+Salt Lake,"dividends, interest, rent",46,key,34617515,0.0264
+Salt Lake,"dividends, interest, rent",46,baseline: population,34617515,0.0534
+Salt Lake,"dividends, interest, rent",46,baseline: one key (household income),34617515,0.0258
+Salt Lake,transfers (composite),47,key,19542131,0.0121
+Salt Lake,transfers (composite),47,baseline: population,19542131,0.0487
+Salt Lake,transfers (composite),47,baseline: one key (household income),19542131,0.021
+Salt Lake,personal income,10,key (by component),161010499,0.004
+Salt Lake,personal income,10,baseline: population,161010499,0.0329
+Salt Lake,personal income,10,baseline: one key (household income),161010499,0.0057
+Salt Lake,transfer 2110,2110,key,5139087,0.0048
+Salt Lake,transfer 2110,2110,baseline: population,5139087,0.0583
+Salt Lake,transfer 2110,2110,baseline: one key (household income),5139087,0.0359
+Salt Lake,transfer 2120,2120,key,106949,0.1129
+Salt Lake,transfer 2120,2120,baseline: population,106949,0.145
+Salt Lake,transfer 2120,2120,baseline: one key (household income),106949,0.1252
+Salt Lake,transfer 2210,2210,key,3325722,0.0054
+Salt Lake,transfer 2210,2210,baseline: population,3325722,0.0641
+Salt Lake,transfer 2210,2210,baseline: one key (household income),3325722,0.0417
+Salt Lake,transfer 2220,2220,key,3008663,0.0852
+Salt Lake,transfer 2220,2220,baseline: population,3008663,0.0986
+Salt Lake,transfer 2220,2220,baseline: one key (household income),3008663,0.071
+Salt Lake,transfer 2230,2230,key,107879,0.1777
+Salt Lake,transfer 2230,2230,baseline: population,107879,0.2612
+Salt Lake,transfer 2230,2230,baseline: one key (household income),107879,0.2665
+Salt Lake,transfer 2310,2310,key,141006,0.0626
+Salt Lake,transfer 2310,2310,baseline: population,141006,0.1174
+Salt Lake,transfer 2310,2310,baseline: one key (household income),141006,0.0898
+Salt Lake,transfer 2320,2320,key,310234,0.0293
+Salt Lake,transfer 2320,2320,baseline: population,310234,0.0344
+Salt Lake,transfer 2320,2320,baseline: one key (household income),310234,0.0171
+Salt Lake,transfer 2330,2330,key,309596,0.0655
+Salt Lake,transfer 2330,2330,baseline: population,309596,0.1203
+Salt Lake,transfer 2330,2330,baseline: one key (household income),309596,0.0926
+Salt Lake,transfer 2340,2340,key,1088841,0.0783
+Salt Lake,transfer 2340,2340,baseline: population,1088841,0.0369
+Salt Lake,transfer 2340,2340,baseline: one key (household income),1088841,0.0593
+Salt Lake,transfer 2400,2400,key,86794,0.0324
+Salt Lake,transfer 2400,2400,baseline: population,86794,0.0338
+Salt Lake,transfer 2400,2400,baseline: one key (household income),86794,0.0101
+Salt Lake,transfer 2500,2500,key,626430,0.0314
+Salt Lake,transfer 2500,2500,baseline: population,626430,0.115
+Salt Lake,transfer 2500,2500,baseline: one key (household income),626430,0.1202
+Salt Lake,transfer 2600,2600,key,768675,0.1039
+Salt Lake,transfer 2600,2600,baseline: population,768675,0.0989
+Salt Lake,transfer 2600,2600,baseline: one key (household income),768675,0.0936
+Salt Lake,transfer 2700,2700,key,766702,0.0378
+Salt Lake,transfer 2700,2700,baseline: population,766702,0.0495
+Salt Lake,transfer 2700,2700,baseline: one key (household income),766702,0.0719
+Salt Lake,transfer 3000,3000,key,556707,0.0061
+Salt Lake,transfer 3000,3000,baseline: population,556707,0.0068
+Salt Lake,transfer 3000,3000,baseline: one key (household income),556707,0.0344
+Salt Lake,transfer 4000,4000,key,451597,0.0021
+Salt Lake,transfer 4000,4000,baseline: population,451597,0.011
+Salt Lake,transfer 4000,4000,baseline: one key (household income),451597,0.0386

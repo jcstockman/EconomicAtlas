@@ -1,0 +1,32 @@
+dataset,measure,key,fallback_key_if_county_total_is_zero
+QCEW,"Employment, private, NAICS sector s",jobs_private_<s>,jobs_<s>
+QCEW,"Employment, federal government (any sector)",jobs_federal,jobs_total
+QCEW,"Employment, state or local government, NAICS sector s",jobs_state_local_<s>,jobs_state_local
+QCEW,"Total wages and average weekly wage, private, sector s",wages_private_<s>,wages_<s>
+QCEW,"Total wages, government (federal, state, local)",jobs_federal / jobs_state_local (x pay index not applied),jobs_total
+QCEW,"Establishments, private, sector s",est_<s>,est_total
+QCEW,"Establishments, government",jobs_federal / jobs_state_local,jobs_total
+BEA CAEMP25N,Employment by private industry (includes proprietors),jobs_private_<s>,jobs_private_total
+BEA CAEMP25N,Proprietors employment (nonfarm and farm),res_selfemployed_workers,res_population
+BEA CAINC5N / CAINC6N,Earnings by private industry,wages_private_<s>,wages_private_total
+BEA CAINC4,"Earnings by place of work, wages and salaries, supplements, contributions for social insurance",(sum of industry earnings) / wages_total,wages_total
+BEA CAINC5N,Proprietors' income,res_selfemp_income,res_selfemployed_workers
+BEA CAINC5N,Government earnings: federal civilian / military / state and local,jobs_federal / res_armed_forces / jobs_state_local,jobs_total
+BEA CAGDP2 / CAGDP9,"GDP by industry (current, real), private sectors except real estate",wages_private_<s>,wages_private_total
+BEA CAGDP2 / CAGDP9,"GDP, real estate (NAICS 53 real estate part)",gdp_real_estate,wages_53
+BEA CAGDP2 / CAGDP9,"GDP, government (one line): split by the county's federal civilian / military / state and local earnings (CAINC5N), each by its key",jobs_federal / res_armed_forces / jobs_state_local,jobs_total
+BEA CAINC4,Net earnings by place of residence,res_wage_selfemp_income,res_population
+BEA CAINC4,"Dividends, interest and rent",res_dir_income,res_population
+BEA CAINC35,Social Security benefits,res_social_security_income,res_pop65
+BEA CAINC35,Medicare benefits,res_pop65,res_population
+BEA CAINC35,Medicaid,res_medicaid,res_population
+BEA CAINC35,"Income maintenance benefits (SSI, SNAP, family assistance, other)",res_ssi_pa_income,res_population
+BEA CAINC35,Unemployment insurance compensation,res_unemployed,res_population
+BEA CAINC35,Veterans' benefits,res_veterans,res_population
+BEA CAINC35,Other retirement and disability benefits (excl. Social Security),res_pop65,res_population
+BEA CAINC35,Military medical insurance benefits,res_veterans,res_population
+BEA CAINC35,"EITC, SNAP, other income maintenance",res_ssi_pa_income,res_population
+BEA CAINC35,"Education and training, other government, nonprofit, business transfers, refundable tax credits",res_population,
+BEA CAINC4,Personal current transfer receipts (latest year): county's CAINC35 mix (latest year) x each component's key,(composite),res_population
+BEA CAINC1 / CAINC4,Personal income: sum of the allocated components above,(components),
+BEA CAINC1,Population; per capita personal income = allocated income / unit population,atlas units population,

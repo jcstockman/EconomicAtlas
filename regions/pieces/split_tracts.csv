@@ -1,0 +1,89 @@
+tract_geoid,county_fips,piece_id,piece_name,pop2020
+06085503338,06085,06085-01,"San Jose, West Valley & South County",68
+06085503338,06085,06085-02,North County & East San Jose,4658
+06085505600,06085,06085-01,"San Jose, West Valley & South County",4195
+06085505600,06085,06085-02,North County & East San Jose,143
+06085506000,06085,06085-01,"San Jose, West Valley & South County",4907
+06085506000,06085,06085-02,North County & East San Jose,31
+06085510100,06085,06085-01,"San Jose, West Valley & South County",36
+06085510100,06085,06085-02,North County & East San Jose,2980
+06085512001,06085,06085-01,"San Jose, West Valley & South County",6866
+06085512001,06085,06085-02,North County & East San Jose,159
+12057014300,12057,12057-01,Tampa & Northwest Hillsborough,339
+12057014300,12057,12057-02,Brandon & South County,4470
+12086000908,12086,12086-02,Northeast Dade & the Beaches,3705
+12086000908,12086,12086-03,Hialeah & Doral,11
+12086005003,12086,12086-03,Hialeah & Doral,86
+12086005003,12086,12086-04,City of Miami & Coral Gables,2889
+17031100500,17031,17031-02,North & Northwest Suburbs,6053
+17031100500,17031,17031-03,West Side & Near West Suburbs,63
+17031770602,17031,17031-02,North & Northwest Suburbs,3583
+17031770602,17031,17031-03,West Side & Near West Suburbs,1179
+17031808302,17031,17031-02,North & Northwest Suburbs,3618
+17031808302,17031,17031-06,"Far North Side, Evanston & Skokie",749
+17031810400,17031,17031-02,North & Northwest Suburbs,4432
+17031810400,17031,17031-03,West Side & Near West Suburbs,977
+17031820603,17031,17031-01,Far South Side & South Suburbs,3626
+17031820603,17031,17031-03,West Side & Near West Suburbs,1904
+17031820606,17031,17031-01,Far South Side & South Suburbs,2024
+17031820606,17031,17031-03,West Side & Near West Suburbs,1842
+24031701303,24031,24031-01,I-270 Corridor & Upcounty,3656
+24031701303,24031,24031-02,Downcounty: Silver Spring & Bethesda,133
+37183052305,37183,37183-01,Raleigh & North Wake,2976
+37183052305,37183,37183-02,Southwest Wake: Cary & Apex,77
+37183052307,37183,37183-01,Raleigh & North Wake,2395
+37183052307,37183,37183-02,Southwest Wake: Cary & Apex,2224
+37183052401,37183,37183-01,Raleigh & North Wake,5996
+37183052401,37183,37183-02,Southwest Wake: Cary & Apex,319
+37183052509,37183,37183-01,Raleigh & North Wake,3983
+37183052509,37183,37183-02,Southwest Wake: Cary & Apex,6
+37183053009,37183,37183-01,Raleigh & North Wake,1074
+37183053009,37183,37183-02,Southwest Wake: Cary & Apex,8180
+37183053011,37183,37183-01,Raleigh & North Wake,1041
+37183053011,37183,37183-02,Southwest Wake: Cary & Apex,3183
+37183054502,37183,37183-01,Raleigh & North Wake,2982
+37183054502,37183,37183-02,Southwest Wake: Cary & Apex,916
+51059440100,51059,51059-01,Eastern Fairfax: Annandale & Springfield,763
+51059440100,51059,51059-02,North & West County: Reston & Tysons,6740
+51059440202,51059,51059-01,Eastern Fairfax: Annandale & Springfield,41
+51059440202,51059,51059-02,North & West County: Reston & Tysons,5991
+51059450601,51059,51059-01,Eastern Fairfax: Annandale & Springfield,2460
+51059450601,51059,51059-02,North & West County: Reston & Tysons,1732
+51059461202,51059,51059-01,Eastern Fairfax: Annandale & Springfield,4790
+51059461202,51059,51059-02,North & West County: Reston & Tysons,1712
+51059491705,51059,51059-01,Eastern Fairfax: Annandale & Springfield,2903
+51059491705,51059,51059-02,North & West County: Reston & Tysons,438
+53033011200,53033,53033-02,Seattle & Shoreline,3707
+53033011200,53033,53033-03,"South King: Burien, Kent & Auburn",29
+53033020401,53033,53033-01,Eastside & Southeast King,74
+53033020401,53033,53033-02,Seattle & Shoreline,3843
+53033020402,53033,53033-01,Eastside & Southeast King,3833
+53033020402,53033,53033-02,Seattle & Shoreline,1849
+53033021300,53033,53033-01,Eastside & Southeast King,2575
+53033021300,53033,53033-02,Seattle & Shoreline,1455
+53033021400,53033,53033-01,Eastside & Southeast King,3411
+53033021400,53033,53033-02,Seattle & Shoreline,496
+53033026200,53033,53033-01,Eastside & Southeast King,44
+53033026200,53033,53033-03,"South King: Burien, Kent & Auburn",6425
+53033026500,53033,53033-02,Seattle & Shoreline,89
+53033026500,53033,53033-03,"South King: Burien, Kent & Auburn",4295
+53033029305,53033,53033-01,Eastside & Southeast King,1410
+53033029305,53033,53033-03,"South King: Burien, Kent & Auburn",3257
+53033029307,53033,53033-01,Eastside & Southeast King,2983
+53033029307,53033,53033-03,"South King: Burien, Kent & Auburn",920
+53033030600,53033,53033-01,Eastside & Southeast King,10
+53033030600,53033,53033-03,"South King: Burien, Kent & Auburn",5766
+53033031101,53033,53033-01,Eastside & Southeast King,18
+53033031101,53033,53033-03,"South King: Burien, Kent & Auburn",3708
+53033031202,53033,53033-01,Eastside & Southeast King,5639
+53033031202,53033,53033-03,"South King: Burien, Kent & Auburn",1079
+53033031207,53033,53033-01,Eastside & Southeast King,2
+53033031207,53033,53033-03,"South King: Burien, Kent & Auburn",5263
+53033031704,53033,53033-01,Eastside & Southeast King,229
+53033031704,53033,53033-03,"South King: Burien, Kent & Auburn",5972
+53033031707,53033,53033-01,Eastside & Southeast King,463
+53033031707,53033,53033-03,"South King: Burien, Kent & Auburn",3276
+53033031708,53033,53033-01,Eastside & Southeast King,85
+53033031708,53033,53033-03,"South King: Burien, Kent & Auburn",3888
+53033031800,53033,53033-01,Eastside & Southeast King,2641
+53033031800,53033,53033-03,"South King: Burien, Kent & Auburn",2303

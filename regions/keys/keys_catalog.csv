@@ -1,0 +1,144 @@
+key_id,basis,description,source,year
+est_11,work,Private establishments in NAICS 11,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_21,work,Private establishments in NAICS 21,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_22,work,Private establishments in NAICS 22,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_23,work,Private establishments in NAICS 23,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_31-33,work,Private establishments in NAICS 31-33,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_42,work,Private establishments in NAICS 42,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_44-45,work,Private establishments in NAICS 44-45,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_48-49,work,Private establishments in NAICS 48-49,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_51,work,Private establishments in NAICS 51,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_52,work,Private establishments in NAICS 52,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_53,work,Private establishments in NAICS 53,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_54,work,Private establishments in NAICS 54,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_55,work,Private establishments in NAICS 55,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_56,work,Private establishments in NAICS 56,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_61,work,Private establishments in NAICS 61,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_62,work,Private establishments in NAICS 62,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_71,work,Private establishments in NAICS 71,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_72,work,Private establishments in NAICS 72,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_81,work,Private establishments in NAICS 81,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+est_total,work,Private establishments,ZIP Code Business Patterns 2023 (ZIP -> tract),2023
+gdp_real_estate,mixed,0.715 x housing_services share + 0.285 x wages_53 share (housing share: BEA TVA105 2024),ACS + LODES + BEA,2020-2024 / 2024
+housing_services,residence,"Housing services: 12 x gross rent + 0.05 x home value (B25065, B25079)","ACS 5-year 2020-2024, tracts",2020-2024
+jobs_11,work,Jobs in NAICS 11,LODES 8 WAC JT00 CNS01,2024 (MI 2021)
+jobs_21,work,Jobs in NAICS 21,LODES 8 WAC JT00 CNS02,2024 (MI 2021)
+jobs_22,work,Jobs in NAICS 22,LODES 8 WAC JT00 CNS03,2024 (MI 2021)
+jobs_23,work,Jobs in NAICS 23,LODES 8 WAC JT00 CNS04,2024 (MI 2021)
+jobs_31-33,work,Jobs in NAICS 31-33,LODES 8 WAC JT00 CNS05,2024 (MI 2021)
+jobs_42,work,Jobs in NAICS 42,LODES 8 WAC JT00 CNS06,2024 (MI 2021)
+jobs_44-45,work,Jobs in NAICS 44-45,LODES 8 WAC JT00 CNS07,2024 (MI 2021)
+jobs_48-49,work,Jobs in NAICS 48-49,LODES 8 WAC JT00 CNS08,2024 (MI 2021)
+jobs_51,work,Jobs in NAICS 51,LODES 8 WAC JT00 CNS09,2024 (MI 2021)
+jobs_52,work,Jobs in NAICS 52,LODES 8 WAC JT00 CNS10,2024 (MI 2021)
+jobs_53,work,Jobs in NAICS 53,LODES 8 WAC JT00 CNS11,2024 (MI 2021)
+jobs_54,work,Jobs in NAICS 54,LODES 8 WAC JT00 CNS12,2024 (MI 2021)
+jobs_55,work,Jobs in NAICS 55,LODES 8 WAC JT00 CNS13,2024 (MI 2021)
+jobs_56,work,Jobs in NAICS 56,LODES 8 WAC JT00 CNS14,2024 (MI 2021)
+jobs_61,work,Jobs in NAICS 61,LODES 8 WAC JT00 CNS15,2024 (MI 2021)
+jobs_62,work,Jobs in NAICS 62,LODES 8 WAC JT00 CNS16,2024 (MI 2021)
+jobs_71,work,Jobs in NAICS 71,LODES 8 WAC JT00 CNS17,2024 (MI 2021)
+jobs_72,work,Jobs in NAICS 72,LODES 8 WAC JT00 CNS18,2024 (MI 2021)
+jobs_81,work,Jobs in NAICS 81,LODES 8 WAC JT00 CNS19,2024 (MI 2021)
+jobs_92,work,Jobs in NAICS 92,LODES 8 WAC JT00 CNS20,2024 (MI 2021)
+jobs_federal,work,Federal jobs,LODES 8 WAC JT04 C000,2024 (MI 2021)
+jobs_private_11,work,Private jobs in NAICS 11,LODES 8 WAC JT02 CNS01,2024 (MI 2021)
+jobs_private_21,work,Private jobs in NAICS 21,LODES 8 WAC JT02 CNS02,2024 (MI 2021)
+jobs_private_22,work,Private jobs in NAICS 22,LODES 8 WAC JT02 CNS03,2024 (MI 2021)
+jobs_private_23,work,Private jobs in NAICS 23,LODES 8 WAC JT02 CNS04,2024 (MI 2021)
+jobs_private_31-33,work,Private jobs in NAICS 31-33,LODES 8 WAC JT02 CNS05,2024 (MI 2021)
+jobs_private_42,work,Private jobs in NAICS 42,LODES 8 WAC JT02 CNS06,2024 (MI 2021)
+jobs_private_44-45,work,Private jobs in NAICS 44-45,LODES 8 WAC JT02 CNS07,2024 (MI 2021)
+jobs_private_48-49,work,Private jobs in NAICS 48-49,LODES 8 WAC JT02 CNS08,2024 (MI 2021)
+jobs_private_51,work,Private jobs in NAICS 51,LODES 8 WAC JT02 CNS09,2024 (MI 2021)
+jobs_private_52,work,Private jobs in NAICS 52,LODES 8 WAC JT02 CNS10,2024 (MI 2021)
+jobs_private_53,work,Private jobs in NAICS 53,LODES 8 WAC JT02 CNS11,2024 (MI 2021)
+jobs_private_54,work,Private jobs in NAICS 54,LODES 8 WAC JT02 CNS12,2024 (MI 2021)
+jobs_private_55,work,Private jobs in NAICS 55,LODES 8 WAC JT02 CNS13,2024 (MI 2021)
+jobs_private_56,work,Private jobs in NAICS 56,LODES 8 WAC JT02 CNS14,2024 (MI 2021)
+jobs_private_61,work,Private jobs in NAICS 61,LODES 8 WAC JT02 CNS15,2024 (MI 2021)
+jobs_private_62,work,Private jobs in NAICS 62,LODES 8 WAC JT02 CNS16,2024 (MI 2021)
+jobs_private_71,work,Private jobs in NAICS 71,LODES 8 WAC JT02 CNS17,2024 (MI 2021)
+jobs_private_72,work,Private jobs in NAICS 72,LODES 8 WAC JT02 CNS18,2024 (MI 2021)
+jobs_private_81,work,Private jobs in NAICS 81,LODES 8 WAC JT02 CNS19,2024 (MI 2021)
+jobs_private_92,work,Private jobs in NAICS 92,LODES 8 WAC JT02 CNS20,2024 (MI 2021)
+jobs_private_total,work,Private jobs,LODES 8 WAC JT02 C000,2024 (MI 2021)
+jobs_state_local,work,State and local government jobs (all - private - federal),"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_11,work,State and local government jobs in NAICS 11,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_21,work,State and local government jobs in NAICS 21,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_22,work,State and local government jobs in NAICS 22,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_23,work,State and local government jobs in NAICS 23,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_31-33,work,State and local government jobs in NAICS 31-33,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_42,work,State and local government jobs in NAICS 42,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_44-45,work,State and local government jobs in NAICS 44-45,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_48-49,work,State and local government jobs in NAICS 48-49,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_51,work,State and local government jobs in NAICS 51,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_52,work,State and local government jobs in NAICS 52,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_53,work,State and local government jobs in NAICS 53,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_54,work,State and local government jobs in NAICS 54,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_55,work,State and local government jobs in NAICS 55,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_56,work,State and local government jobs in NAICS 56,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_61,work,State and local government jobs in NAICS 61,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_62,work,State and local government jobs in NAICS 62,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_71,work,State and local government jobs in NAICS 71,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_72,work,State and local government jobs in NAICS 72,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_81,work,State and local government jobs in NAICS 81,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_state_local_92,work,State and local government jobs in NAICS 92,"LODES 8 WAC JT00, JT02, JT04",2024 (MI 2021)
+jobs_total,work,All jobs at the workplace,LODES 8 WAC JT00 C000,2024 (MI 2021)
+res_armed_forces,residence,"People in the Armed Forces, at residence (B23025)","ACS 5-year 2020-2024, tracts",2020-2024
+res_dir_income,residence,"Aggregate interest, dividends or net rental income (B19064)","ACS 5-year 2020-2024, tracts",2020-2024
+res_gross_rent,residence,Aggregate monthly gross rent (B25065),"ACS 5-year 2020-2024, tracts",2020-2024
+res_home_value,residence,Aggregate owner-occupied home value (B25079),"ACS 5-year 2020-2024, tracts",2020-2024
+res_medicaid,residence,People with Medicaid or means-tested coverage (C27007),"ACS 5-year 2020-2024, tracts",2020-2024
+res_pop65,residence,People 65 and over (B01001),"ACS 5-year 2020-2024, tracts",2020-2024
+res_population,residence,Population (B01003),"ACS 5-year 2020-2024, tracts",2020-2024
+res_selfemp_income,residence,Aggregate self-employment income (B19063),"ACS 5-year 2020-2024, tracts",2020-2024
+res_selfemployed_workers,residence,"Self-employed workers, not incorporated (B24080)","ACS 5-year 2020-2024, tracts",2020-2024
+res_social_security_income,residence,Aggregate Social Security income (B19065),"ACS 5-year 2020-2024, tracts",2020-2024
+res_ssi_pa_income,residence,Aggregate SSI + public assistance income (B19066 + B19067),"ACS 5-year 2020-2024, tracts",2020-2024
+res_unemployed,residence,Unemployed people (B23025),"ACS 5-year 2020-2024, tracts",2020-2024
+res_veterans,residence,Civilian veterans (B21001),"ACS 5-year 2020-2024, tracts",2020-2024
+res_wage_income,residence,Aggregate household wage or salary income (B19062),"ACS 5-year 2020-2024, tracts",2020-2024
+res_wage_selfemp_income,residence,Wage or salary + self-employment income (B19062 + B19063),"ACS 5-year 2020-2024, tracts",2020-2024
+wages_11,work,"Wage-weighted jobs, NAICS 11 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_21,work,"Wage-weighted jobs, NAICS 21 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_22,work,"Wage-weighted jobs, NAICS 22 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_23,work,"Wage-weighted jobs, NAICS 23 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_31-33,work,"Wage-weighted jobs, NAICS 31-33 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_42,work,"Wage-weighted jobs, NAICS 42 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_44-45,work,"Wage-weighted jobs, NAICS 44-45 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_48-49,work,"Wage-weighted jobs, NAICS 48-49 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_51,work,"Wage-weighted jobs, NAICS 51 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_52,work,"Wage-weighted jobs, NAICS 52 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_53,work,"Wage-weighted jobs, NAICS 53 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_54,work,"Wage-weighted jobs, NAICS 54 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_55,work,"Wage-weighted jobs, NAICS 55 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_56,work,"Wage-weighted jobs, NAICS 56 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_61,work,"Wage-weighted jobs, NAICS 61 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_62,work,"Wage-weighted jobs, NAICS 62 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_71,work,"Wage-weighted jobs, NAICS 71 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_72,work,"Wage-weighted jobs, NAICS 72 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_81,work,"Wage-weighted jobs, NAICS 81 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_92,work,"Wage-weighted jobs, NAICS 92 (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
+wages_private_11,work,"Wage-weighted private jobs, NAICS 11",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_21,work,"Wage-weighted private jobs, NAICS 21",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_22,work,"Wage-weighted private jobs, NAICS 22",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_23,work,"Wage-weighted private jobs, NAICS 23",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_31-33,work,"Wage-weighted private jobs, NAICS 31-33",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_42,work,"Wage-weighted private jobs, NAICS 42",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_44-45,work,"Wage-weighted private jobs, NAICS 44-45",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_48-49,work,"Wage-weighted private jobs, NAICS 48-49",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_51,work,"Wage-weighted private jobs, NAICS 51",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_52,work,"Wage-weighted private jobs, NAICS 52",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_53,work,"Wage-weighted private jobs, NAICS 53",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_54,work,"Wage-weighted private jobs, NAICS 54",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_55,work,"Wage-weighted private jobs, NAICS 55",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_56,work,"Wage-weighted private jobs, NAICS 56",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_61,work,"Wage-weighted private jobs, NAICS 61",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_62,work,"Wage-weighted private jobs, NAICS 62",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_71,work,"Wage-weighted private jobs, NAICS 71",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_72,work,"Wage-weighted private jobs, NAICS 72",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_81,work,"Wage-weighted private jobs, NAICS 81",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_92,work,"Wage-weighted private jobs, NAICS 92",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_private_total,work,"Wage-weighted private jobs, all sectors",LODES 8 WAC JT02 + QCEW 2024,2024 (MI 2021)
+wages_total,work,"Wage-weighted jobs, all sectors (jobs x pay index)",LODES 8 WAC + QCEW 2024 county average pay,2024 (MI 2021)
