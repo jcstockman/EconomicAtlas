@@ -12,8 +12,8 @@ tract_geoid,county_fips,piece_id,piece_name,pop2020
 06085512001,06085,06085-01,"San Jose, West Valley & South County",6866
 06085512001,06085,06085-02,North County & East San Jose,159
 12057014300,12057,12057-01,Tampa & Northwest Hillsborough,339
-12057014300,12057,12057-02,Brandon & South County,4470
-12086000908,12086,12086-02,Northeast Dade & the Beaches,3705
+12057014300,12057,12057-02,"Brandon, Plant City & South County",4470
+12086000908,12086,12086-02,North Dade & the Beaches,3705
 12086000908,12086,12086-03,Hialeah & Doral,11
 12086005003,12086,12086-03,Hialeah & Doral,86
 12086005003,12086,12086-04,"City of Miami, Coral Gables & Kendall",2889
@@ -89,15 +89,15 @@ tract_geoid,county_fips,piece_id,piece_name,pop2020
 37183053011,37183,37183-02,Southwest Wake: Cary & Apex,3183
 37183054502,37183,37183-01,Raleigh & North Wake,2982
 37183054502,37183,37183-02,Southwest Wake: Cary & Apex,916
-51059440100,51059,51059-01,Eastern Fairfax: Annandale & Springfield,763
+51059440100,51059,51059-01,South & East County: Annandale & Springfield,763
 51059440100,51059,51059-02,North & West County: Reston & Tysons,6740
-51059440202,51059,51059-01,Eastern Fairfax: Annandale & Springfield,41
+51059440202,51059,51059-01,South & East County: Annandale & Springfield,41
 51059440202,51059,51059-02,North & West County: Reston & Tysons,5991
-51059450601,51059,51059-01,Eastern Fairfax: Annandale & Springfield,2460
+51059450601,51059,51059-01,South & East County: Annandale & Springfield,2460
 51059450601,51059,51059-02,North & West County: Reston & Tysons,1732
-51059461202,51059,51059-01,Eastern Fairfax: Annandale & Springfield,4790
+51059461202,51059,51059-01,South & East County: Annandale & Springfield,4790
 51059461202,51059,51059-02,North & West County: Reston & Tysons,1712
-51059491705,51059,51059-01,Eastern Fairfax: Annandale & Springfield,2903
+51059491705,51059,51059-01,South & East County: Annandale & Springfield,2903
 51059491705,51059,51059-02,North & West County: Reston & Tysons,438
 53033011200,53033,53033-02,Seattle & Shoreline,3707
 53033011200,53033,53033-03,South & Southeast King,29

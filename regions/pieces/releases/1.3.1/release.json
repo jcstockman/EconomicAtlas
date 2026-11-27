@@ -1,0 +1,74 @@
+{
+ "version": "1.3.1",
+ "released": "2026-11-27",
+ "git_commit_of_build_code": "5ed3663043b715c57930e055a99ac47d95e3c1a0",
+ "parameters": {
+  "TARGET": 800000,
+  "LO": 460000,
+  "HI": 1070000,
+  "MIN_COUNTY": 920000,
+  "MU": 1.0,
+  "PUMA_WEIGHT": 3.0,
+  "NECK": 0.0035,
+  "CORE_DENSITY": 10000,
+  "CORE_JOBS": 40000,
+  "WHOLE": [
+   "04019",
+   "06013",
+   "06019",
+   "06029",
+   "13135",
+   "17043",
+   "48157",
+   "48215",
+   "53053"
+  ],
+  "SPLIT": {
+   "06037": [
+    "San Fernando"
+   ]
+  }
+ },
+ "counts": {
+  "counties": 64,
+  "tracts": 27185,
+  "pieces": 157,
+  "subareas": 918
+ },
+ "checks": [
+  "pass  coverage",
+  "pass  registry",
+  "pass  totals",
+  "pass  size",
+  "pass  contiguity",
+  "pass  necks",
+  "pass  job centres",
+  "pass  subareas",
+  "pass  files",
+  "27,185 tracts, 157 pieces, 918 subareas, 64 counties"
+ ],
+ "sha256": {
+  "groups.json": "9b0e96d8f8d08f23c7529dd9d6769f4aa3db8970fb6429d21bc05934b0a23c1f",
+  "crosswalk_tract_piece.csv": "8f3687c25f0e94bb08d177ccd7fb2ed25dbc67c6e2004779c6cdfdb71f4ce42f",
+  "split_tracts.csv": "a1d1f5f4a744db69aab8a281209b6bb1643bcae9b9b505d842cf1c97d6a1fd3f",
+  "pieces_summary.csv": "e03259f7f69a122398ad067ae5c296873b3cc38ffadcfadd03d2bc963ffda3cd",
+  "pieces.geojson": "5ffa07bceb169266edcefb3628b7e04f7b119d1bd70b6e7e037ae8729bb3f486",
+  "tract_demographics.csv": "48a8a0999783ad54dd15203890c75e009bddff461ec12130945d198f5b66edff",
+  "piece_demographics.csv": "0ab8cff1e84e0319cc62134b30e50a124f2ce28f3508a3ada2774269e3a07fe6",
+  "crosswalk_tract_subarea.csv": "82a7ace5659081e75ab54fdda26330f8371c384a82c779efac83fa8d8691503d",
+  "subareas_summary.csv": "9c37d6b74bf17a7848860c1faa26efac7210dde31c07d44bf2f365ec163df34f",
+  "subareas.geojson": "dab79dc0f5431fa4de763794de39df0012fb20ee34242cdb4f0b61d3a9fd8d2c",
+  "piece_registry.csv": "ade3fe1d7ab14cbeaed06ad47ddd78fa02bff7e4bca870bf5ef23038c7ab6533",
+  "pins.csv": "deca0bdc4e576d93d637db38cc823ae591ca93e5184ad862db134bc576321560",
+  "inputs/manifest.csv": "d86f3ad56989020daff9f6ff95b31e8a982da8644e65c5ae8aa54847ba5d1ece"
+ },
+ "changes": {
+  "previous": "1.3",
+  "tracts_changed_piece": 0,
+  "tracts_changed_subarea": 0,
+  "residents_moved_2020": 0,
+  "pieces_added": [],
+  "pieces_retired": [],
+  "largest_moves": []
+ }
+}
