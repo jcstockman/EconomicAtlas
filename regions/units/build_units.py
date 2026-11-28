@@ -16,7 +16,9 @@ Writes next to this script:
   atlas_units.csv           unit_id, unit_type (piece | county), county_fips, county, state_fips, state, unit_name,
                             pop2020, pop2025_est, tracts, pieces_release
   atlas_units.geojson       pieces from the release's pieces.geojson, counties from the 2024 cartographic file
-pop2020 is the 2020 census count (tracts). pop2025_est is the county's Vintage 2025 estimate; a piece takes its 2020 share
+pop2020 is the 2020 census count (tracts). pop2025_est is the county's Vintage 2025 estimate; a piece (release 1.4 on) takes
+the sum of its tracts' sub-county estimates (regions/pieces/tract_pop2025.csv), rounded so a county's pieces add up to its
+estimate; before 1.4 a piece took its 2020 share
 of its county, rounded per piece exactly as in regions/pieces (so a split county's pieces can sum to within one resident
 per piece of its estimate).
 
@@ -104,6 +106,10 @@ def main():
     cpop = collections.Counter(); upop = collections.Counter(); ntr = collections.Counter()
     for g, t in tracts.items():
         cpop[county_of[g]] += t["pop"]; upop[unit_of[g]] += t["pop"]; ntr[unit_of[g]] += 1
+    p25 = {}
+    if os.path.exists(os.path.join(PIECES, "tract_pop2025.csv")):
+        import build_tract_estimates as te
+        p25 = te.piece_pop2025(piece_of)
     units = []
     for u in sorted(upop):
         c = u[:5]; is_piece = "-" in u
@@ -111,7 +117,7 @@ def main():
         units.append({"unit_id": u, "unit_type": "piece" if is_piece else "county", "county_fips": c,
                       "county": counties[c]["county"], "state_fips": c[:2], "state": counties[c]["state"],
                       "unit_name": pname[u] if is_piece else counties[c]["county"], "pop2020": upop[u],
-                      "pop2025_est": round(counties[c]["pop2025"] * share), "tracts": ntr[u], "pieces_release": release})
+                      "pop2025_est": p25[u] if u in p25 else round(counties[c]["pop2025"] * share), "tracts": ntr[u], "pieces_release": release})
     with open(os.path.join(HERE, "crosswalk_tract_unit.csv"), "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["tract_geoid", "county_fips_2020", "county_fips", "unit_id", "unit_type"])
         for g in sorted(tracts):

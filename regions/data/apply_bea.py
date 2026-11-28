@@ -83,6 +83,7 @@ def main():
     cty = {u["county_fips"] for u in units}
     pieces_of = collections.defaultdict(list)
     upop = {u["unit_id"]: int(u["pop2020"]) for u in units}
+    upop25 = {u["unit_id"]: int(u["pop2025_est"]) for u in units}  # BEA population shared like the 2025 estimate
     for u in units:
         if u["unit_type"] == "piece":
             pieces_of[u["county_fips"]].append(u["unit_id"])
@@ -331,10 +332,10 @@ def main():
             res[(t, l)] = {m: (v.get(l) or 0) * s for m, s in sh.items()}
         res[(t, "47")] = {m: (v.get("47") or 0) * comp[m] for m in ms}
         res[(t, "35")] = dict(res[("CAINC5N", "35")])
-        cpop = sum(upop[m] for m in ms)
+        cpop = sum(upop25[m] for m in ms)
         for m in ms:
             res[(t, "10")][m] = res[(t, "45")][m] + res[(t, "46")][m] + res[(t, "47")][m]
-            res[(t, "20")][m] = (v.get("20") or 0) * upop[m] / cpop
+            res[(t, "20")][m] = (v.get("20") or 0) * upop25[m] / cpop
         # employment by industry (2022)
         t = "CAEMP25N"; v = data[t][area]
         out, wh = tree(area, v, "90", list(EARN_SECTORS), lambda l: f"jobs_private_{EARN_SECTORS[l]}", lambda l: f"jobs_private_{EARN_SECTORS[l]}", "jobs_private_total")
