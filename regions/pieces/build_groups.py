@@ -10,6 +10,9 @@ Job centres (rule 12): dense LODES job cores and the named KEEP districts are co
 line cuts them. APART anchor sets go to different pieces.
 Search: Louvain (networkx) over resolutions and seeds, split into contiguous parts, merged to the target count, refined
 by single-unit moves within the build limits LO-HI (2025 estimate), rebalanced where a piece falls outside them.
+2025 sizes: each tract's 2025 estimate from the sub-county method (tract_pop2025.csv, build_tract_estimates.py: blocks
+grown by their city or town's 2020-2025 growth, controlled to the county estimate); before release 1.4, the county's
+2025/2020 ratio applied to every tract.
 Score = modularity - MU x share of internal boundary cut (compactness; boundaries inside one 2020 PUMA count PUMA_WEIGHT
 times, so lines follow PUMA lines where commuting allows). The best-scoring grouping whose tract assignment is
 contiguous and has no neck narrower than ~2 x NECK wins.
@@ -442,6 +445,13 @@ def _build(fips, cache, name, p25, fallback=False):
     land = bx.land_tracts({fips})
     pop = {g: p["POP100"] for g, p in tr.items()}
     scale = p25 / sum(pop.values())
+    # sizing weights: tract 2025 estimates (sub-county method) in 2020-equivalent units, so that weight x scale = 2025
+    # estimate; pop20 keeps the 2020 counts for reporting
+    pop20 = dict(pop)
+    if os.path.exists(os.path.join(HERE, "tract_pop2025.csv")):
+        import build_tract_estimates as te
+        est = te.load()
+        pop = {g: (est[g][3] / scale if g in est else pop20[g]) for g in pop20}
     pt = {g: Point(float(p["INTPTLON"]), float(p["INTPTLAT"])) for g, p in tr.items()}
     gids = [g for g in tr if g in land]  # water-only tracts have no land; build_crosswalk places them
     bbox = (min(land[g].bounds[0] for g in gids), min(land[g].bounds[1] for g in gids), max(land[g].bounds[2] for g in gids), max(land[g].bounds[3] for g in gids))
@@ -453,12 +463,12 @@ def _build(fips, cache, name, p25, fallback=False):
     if fips in WHOLE:  # one piece: the whole county
         assign = {g: (0, "nested", 1.0) for g in gids}
         cnt = collections.Counter((city_of[g] or cdp_of[g] or "unincorporated").replace(" city", "").replace(" CDP", "") for g in gids)
-        p20 = sum(pop[g] for g in gids)
+        p20 = sum(pop20[g] for g in gids); w25 = sum(pop[g] for g in gids)
         print(f"{fips} {name}: whole county ({WHOLE[fips]})", flush=True)
         return {"fips": fips, "county": name, "method": "whole", "source_id": "whole_county", "k": 1, "modularity": 0.0,
                 "boundary_cut": 0.0, "job_centres": [], "resolution": None, "seed": None, "units": 1, "split_units": [],
                 "pieces": [{"name": " / ".join(n for n, _ in cnt.most_common(3)), "units": [], "tracts": sorted(gids),
-                            "pop2020": p20, "pop2025_est": round(p20 * scale)}], "assign": assign, "splits": []}
+                            "pop2020": p20, "pop2025_est": round(w25 * scale)}], "assign": assign, "splits": []}
     method, source, labels = "inferred", "lodes_2024_louvain", {}
     unit_of = None; units = None
     if fips in OFFICIAL and not fallback:
@@ -625,7 +635,7 @@ def _build(fips, cache, name, p25, fallback=False):
     chosen = None; fallback_pick = None
     for sc, q, parts, r, seed in ranked[:60]:
         parts = sorted(expand(parts), key=lambda c: -sum(upop[u] for u in c))
-        assign, splits = final_assignment(fips, gids, pop, unit_of, units if method == "official" else None, parts, split_units)
+        assign, splits = final_assignment(fips, gids, pop20, unit_of, units if method == "official" else None, parts, split_units)
         if not contiguous(assign, land, pop):
             continue
         nk = necks(assign, land, pop)
@@ -654,10 +664,10 @@ def _build(fips, cache, name, p25, fallback=False):
                 cnt[(city_of[g] or cdp_of[g] or "unincorporated").replace(" city", "").replace(" town", "").replace(" CDP", "").replace(" village", "")] += pop[g]
         nm = " / ".join(n for n, _ in cnt.most_common(3))
         pieces.append({"name": nm, "units": sorted(u for u in c if not u.startswith("T:")), "tracts": sorted(tg),
-                       "pop2020": sum(pop[g] for g in tg), "pop2025_est": round(sum(pop[g] for g in tg) * scale)})
+                       "pop2020": sum(pop20[g] for g in tg), "pop2025_est": round(sum(pop[g] for g in tg) * scale)})
     for i, pc in enumerate(pieces):
         pc["tracts"] = sorted(g for g, (j, _, _) in assign.items() if j == i)
-        pc["pop2020"] = sum(pop[g] for g in pc["tracts"]); pc["pop2025_est"] = round(pc["pop2020"] * scale)
+        pc["pop2020"] = sum(pop20[g] for g in pc["tracts"]); pc["pop2025_est"] = round(sum(pop[g] for g in pc["tracts"]) * scale)
     print(f"{fips} {name}: {method} ({source}), {len(upop)} units, split units {split_units}, k={k}, modularity {q:.4f}, cut {(q - sc) / MU if MU else 0:.3f}, locks {len(locks)}, "
           f"sizes {[round(p['pop2025_est'] / 1e6, 2) for p in pieces]}", flush=True)
     return {"fips": fips, "county": name, "method": method, "source_id": source, "k": k, "modularity": round(q, 4), "boundary_cut": round(q - sc, 4) if MU else None, "job_centres": lock_report,

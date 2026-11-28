@@ -1,10 +1,11 @@
 piece_id,county_fips,anchor_tract,piece_name,status,since_version,note
-04013-01,04013,04013061013,Central & West Phoenix,active,1.0,
-04013-02,04013,04013522903,"Tempe, Chandler & South Mountain",active,1.0,
-04013-03,04013,04013104215,West Valley,active,1.0,
-04013-04,04013,04013103206,North Phoenix,active,1.0,
-04013-05,04013,04013420710,Mesa & Gilbert,active,1.0,
-04013-06,04013,04013611500,"Scottsdale, Paradise Valley & Camelback East",active,1.0,"renamed 1.3.1 (was Scottsdale, Paradise Valley & Arcadia): local review"
+04013-01,04013,04013061013,Outer West Valley: Surprise & Goodyear,active,1.0,1.4: Maricopa re-split on sub-county 2025 estimates (was Central & West Phoenix)
+04013-02,04013,04013522903,"Tempe, Chandler & Gilbert",active,1.0,"1.4: Maricopa re-split on sub-county 2025 estimates (was Tempe, Chandler & South Mountain)"
+04013-03,04013,04013104215,"North Phoenix, Glendale & Peoria",active,1.0,1.4: Maricopa re-split on sub-county 2025 estimates (was West Valley)
+04013-04,04013,04013103206,Scottsdale & Northeast Phoenix,active,1.0,1.4: Maricopa re-split on sub-county 2025 estimates (was North Phoenix)
+04013-05,04013,04013420710,Mesa,active,1.0,1.4: Maricopa re-split on sub-county 2025 estimates (was Mesa & Gilbert)
+04013-06,04013,04013611500,"Scottsdale, Paradise Valley & Camelback East",retired,1.0,retired in 1.4: anchor tract no longer marks its own piece
+04013-07,04013,04013107201,"Central, South & West Phoenix",active,1.4,1.4: Maricopa re-split on sub-county 2025 estimates (was Phoenix / unincorporated / Tolleson)
 04019-01,04019,04019000800,Pima County,active,1.0,
 06001-01,06001,06001435103,"Hayward, Fremont & Tri-Valley",active,1.0,renamed 1.3.1 (was Southern Alameda & Tri-Valley): local review
 06001-02,06001,06001405200,Oakland & Berkeley,active,1.0,

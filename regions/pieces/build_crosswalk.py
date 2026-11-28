@@ -345,6 +345,10 @@ def main():
         for g, i in piece_of.items():
             tot[i] += pop[g]
         scale = sum(p["pop2025_est"] for p in c["pieces"]) / max(1, sum(p["pop2020"] for p in c["pieces"]))
+        p25 = None
+        if os.path.exists(os.path.join(HERE, "tract_pop2025.csv")):  # sub-county 2025 estimates (release 1.4 on)
+            import build_tract_estimates as te
+            p25 = te.piece_pop2025({g: pid[i] for g, i in piece_of.items()})
         order = sorted(tot, key=lambda i: pid[i])
         comp = {i: c["pieces"][i]["name"] for i in order}
         src = c["source_id"] if c["method"] in ("official", "whole") else "lodes_2024_louvain"
@@ -355,7 +359,7 @@ def main():
         for g, i, n in c["splits"]:
             split_rows.append({"tract_geoid": g, "county_fips": fips, "piece_id": pid[i], "piece_name": pname[i], "pop2020": n})
         for i in order:
-            summary.append((pid[i], fips, name, pname[i], comp[i], c["method"], tot[i], round(tot[i] * scale)))
+            summary.append((pid[i], fips, name, pname[i], comp[i], c["method"], tot[i], p25[pid[i]] if p25 else round(tot[i] * scale)))
         print(fips, name, len(tr), "tracts", dict(collections.Counter(how.values())), "pieces", len(order), flush=True)
     cols = ["tract_geoid", "county_fips", "piece_id", "piece_name", "method", "source_id", "assign", "pop2020_share"]
     with open(os.path.join(HERE, "crosswalk_tract_piece.csv"), "w", newline="") as fh:

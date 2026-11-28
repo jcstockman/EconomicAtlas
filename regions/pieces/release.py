@@ -15,7 +15,7 @@ import argparse, collections, csv, datetime, hashlib, json, os, shutil, subproce
 import build_groups as bg
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUTPUTS = ["groups.json", "crosswalk_tract_piece.csv", "split_tracts.csv", "pieces_summary.csv", "pieces.geojson",
+OUTPUTS = ["groups.json", "tract_pop2025.csv", "crosswalk_tract_piece.csv", "split_tracts.csv", "pieces_summary.csv", "pieces.geojson",
            "tract_demographics.csv", "piece_demographics.csv", "crosswalk_tract_subarea.csv", "subareas_summary.csv",
            "subareas.geojson", "piece_registry.csv", "pins.csv", "inputs/manifest.csv"]
 FROZEN = ["crosswalk_tract_piece.csv", "crosswalk_tract_subarea.csv", "piece_registry.csv"]
