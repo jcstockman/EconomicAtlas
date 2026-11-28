@@ -709,6 +709,23 @@ Geometry notes: see Review (contiguity and offshore areas).
 
 Sixteen district and subregion names that repeat these follow them in `regions/metros/metro_names.csv`.
 
+**Release 1.4 (2026-11-28): sub-county 2025 estimates; Maricopa re-split.**
+- **Tract 2025 estimates** (`build_tract_estimates.py` → `tract_pop2025.csv`, every tract of the 64 piece counties). Pieces used to be sized as 2020 counts times one county-wide 2025/2020 ratio, so every piece of a county grew alike. Now:
+  1. Each 2020 block (PL 94-171) is grown by its area's April 2020–July 2025 growth in the Census Bureau's Vintage 2025 city and town estimates (`sub-est2025`): the place part of a county subdivision where those are estimated, otherwise the incorporated place, otherwise the balance of the county.
+  2. Blocks are summed to tracts and controlled to the county estimate.
+  3. A tract's 2020 base is the county's estimates base times its share of the 2020 count.
+  4. A piece's 2025 estimate is the sum of its tracts, rounded by largest remainder so a county's pieces add up exactly.
+- **Where the estimates are used:** `build_groups.py` sizes pieces with them, `build_crosswalk.py` reports them, and the atlas units, BEA population and indicators use them.
+- **Changes:** 118 of 255 districts changed population, from −13.6% (South Collin) to +17.2% (North Collin). Phoenix's West Valley reached 1.11M, above the 1.1M maximum, so Maricopa was rebuilt with the new weights.
+- **Maricopa's six pieces** (563 tracts moved; 04013-06 retired, 04013-07 added), named after a local review:
+  - Far West Valley: Surprise & Goodyear (0.74M)
+  - Tempe, Chandler & Gilbert (0.95M)
+  - Northwest Phoenix, Glendale & Peoria (0.90M)
+  - Scottsdale & Northeast Phoenix (0.80M)
+  - Mesa (0.56M)
+  - Central, South & West Phoenix (0.73M)
+- **Other counties:** no piece outside Maricopa moved or broke a size rule. All checks pass.
+
 **Editing later.**
 - Rename a piece: edit `piece_name` in `piece_registry.csv`, re-run `build_crosswalk.py` and the later steps (about 15 minutes).
 - Move single tracts: add `tract_geoid, piece_id, note` rows to `pins.csv` (applied after grouping and repair), re-run `build_crosswalk.py` onward. `check_pieces.py` catches pins that break contiguity, size or a job centre.
