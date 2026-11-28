@@ -1,0 +1,47 @@
+indicator_id,label,unit,kind,numerator,denominator,scale,source,year
+pop2020,"Population, 2020 census",persons,count,pop2020,,1,"Census 2020 (PL 94-171, tracts)",2020
+pop2025,"Population, 2025 estimate",persons,count,pop2025,,1,Census Vintage 2025 estimates,2025
+pop_change_2020_25,"Population change, 2020 to 2025",%,change,pop2025,pop2020,100,"Census 2020, Vintage 2025",2020-2025
+density_2025,"Residents per square mile of land, 2025",per sq mi,ratio,pop2025,land_sqmi,1,Vintage 2025; 2020 Gazetteer,2025
+share_under18,Residents under 18,%,rate,acs_under18,acs_pop,100,ACS 2020-2024 B01001,2020-2024
+share_65plus,Residents 65 and over,%,rate,acs_65plus,acs_pop,100,ACS 2020-2024 B01001,2020-2024
+share_hispanic,Hispanic or Latino,%,rate,acs_hispanic,acs_hisp_base,100,ACS 2020-2024 B03002,2020-2024
+share_nh_white,"White alone, not Hispanic",%,rate,acs_nh_white,acs_hisp_base,100,ACS 2020-2024 B03002,2020-2024
+share_nh_black,"Black alone, not Hispanic",%,rate,acs_nh_black,acs_hisp_base,100,ACS 2020-2024 B03002,2020-2024
+share_nh_asian,"Asian alone, not Hispanic",%,rate,acs_nh_asian,acs_hisp_base,100,ACS 2020-2024 B03002,2020-2024
+share_foreign_born,Foreign-born residents,%,rate,acs_foreign_born,acs_nativity_base,100,ACS 2020-2024 B05002,2020-2024
+households,Households,households,count,acs_households,,1,ACS 2020-2024 B11001,2020-2024
+median_hh_income,Median household income (estimated from brackets),$ (2024),median,acs_inc_b*,,1,ACS 2020-2024 B19001,2020-2024
+poverty_rate,Residents below the poverty line,%,rate,acs_poverty,acs_pov_base,100,ACS 2020-2024 B17001,2020-2024
+share_bachelors,"Bachelor's degree or higher, 25 and over",%,rate,acs_bachelors_plus,acs_pop25,100,ACS 2020-2024 B15003,2020-2024
+lf_participation,"Labour force participation, 16 and over",%,rate,acs_labor_force,acs_pop16,100,ACS 2020-2024 B23025,2020-2024
+unemployment_rate,Unemployment rate (civilian labour force),%,rate,acs_unemployed,acs_civ_lf,100,ACS 2020-2024 B23025,2020-2024
+share_uninsured,Residents without health insurance,%,rate,acs_uninsured,acs_ins_base,100,ACS 2020-2024 B27010,2020-2024
+share_owner_occupied,Owner-occupied homes,%,rate,acs_owner_occ,acs_occ_units,100,ACS 2020-2024 B25003,2020-2024
+median_home_value,Median owner-occupied home value (estimated from brackets),$ (2024),median,acs_val_b*,,1,ACS 2020-2024 B25075,2020-2024
+share_rent_burdened,Renters paying 30%+ of income on rent,%,rate,acs_rent_burdened,acs_renters_computed,100,ACS 2020-2024 B25070,2020-2024
+share_no_vehicle,Households without a vehicle,%,rate,acs_hh_no_vehicle,acs_hh_vehicles_base,100,ACS 2020-2024 B08201,2020-2024
+share_work_home,Workers working from home,%,rate,acs_work_home,acs_workers,100,ACS 2020-2024 B08301,2020-2024
+mean_commute_min,Mean travel time to work (those not working from home),minutes,ratio,acs_travel_minutes,acs_commuters,1,"ACS 2020-2024 B08013, B08301",2020-2024
+qcew_estabs,Establishments,establishments,count,qcew_estabs,,1,BLS QCEW 2024 annual,2024
+qcew_jobs,Jobs (annual average employment),jobs,count,qcew_jobs,,1,BLS QCEW 2024 annual,2024
+qcew_avg_weekly_wage,Average weekly wage,$,ratio,qcew_wages,qcew_job_weeks,1,BLS QCEW 2024 annual,2024
+jobs_per_employed_resident,Jobs per employed resident,ratio,ratio,qcew_jobs,acs_employed,1,QCEW 2024; ACS 2020-2024 B23025,2024 / 2020-2024
+share_jobs_government,"Jobs in government (federal, state, local)",%,rate,qcew_jobs_gov,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1011,Private jobs: Natural resources and mining,%,rate,qcew_jobs_1011,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1012,Private jobs: Construction,%,rate,qcew_jobs_1012,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1013,Private jobs: Manufacturing,%,rate,qcew_jobs_1013,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1021,"Private jobs: Trade, transportation and utilities",%,rate,qcew_jobs_1021,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1022,Private jobs: Information,%,rate,qcew_jobs_1022,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1023,Private jobs: Financial activities,%,rate,qcew_jobs_1023,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1024,Private jobs: Professional and business services,%,rate,qcew_jobs_1024,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1025,Private jobs: Education and health services,%,rate,qcew_jobs_1025,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1026,Private jobs: Leisure and hospitality,%,rate,qcew_jobs_1026,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1027,Private jobs: Other services,%,rate,qcew_jobs_1027,qcew_jobs,100,BLS QCEW 2024 annual,2024
+share_jobs_1029,Private jobs: Unclassified,%,rate,qcew_jobs_1029,qcew_jobs,100,BLS QCEW 2024 annual,2024
+gdp,GDP (current dollars),$ thousands,count,bea_gdp,,1,BEA CAGDP2 2024,2024
+gdp_real,Real GDP (chained 2017 dollars),$ thousands,count,bea_gdp_real,,1,BEA CAGDP9 2024,2024
+gdp_per_job,GDP per QCEW job,$,ratio,bea_gdp,qcew_jobs,1000,BEA CAGDP2 2024; QCEW 2024,2024
+personal_income,Personal income,$ thousands,count,bea_personal_income,,1,BEA CAINC4 2024,2024
+pc_personal_income,Per capita personal income,$,ratio,bea_personal_income,bea_population,1000,BEA CAINC4 2024,2024
+share_income_transfers,Personal income from transfer receipts,%,rate,bea_transfers,bea_personal_income,100,BEA CAINC4 2024,2024
