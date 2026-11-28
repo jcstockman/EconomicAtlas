@@ -235,12 +235,14 @@ id,level,cbsa,anchor_unit,status,since_version
 38060-D02,district,38060,04013-05,active,1.0
 38060-D03,district,38060,04013-01,active,1.0
 38060-D04,district,38060,04013-02,active,1.0
-38060-D05,district,38060,04013-06,active,1.0
+38060-D05,district,38060,04013-02,retired,1.0
 38060-D06,district,38060,04021,active,1.0
 38060-D07,district,38060,04013-04,active,1.0
+38060-D08,district,38060,04013-07,active,1.0
 38060-S01,subregion,38060,04013-03,active,1.0
 38060-S02,subregion,38060,04013-05,active,1.0
-38060-S03,subregion,38060,04013-06,active,1.0
+38060-S03,subregion,38060,04013-02,retired,1.0
+38060-S04,subregion,38060,04013-01,active,1.0
 38300-D01,district,38300,42003-01,active,1.0
 38300-D02,district,38300,42003-02,active,1.0
 38300-D03,district,38300,42129,active,1.0

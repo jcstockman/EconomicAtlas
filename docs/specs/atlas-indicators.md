@@ -1,6 +1,6 @@
 # Atlas indicators
 
-Status: draft, 2026-11-28. Built on atlas units (pieces release 1.3.1), QCEW 2024 and BEA 2024 by unit, and the districts and subregions. Scripts and outputs are in `regions/atlas/`.
+Status: draft, 2026-11-28. Built on atlas units (pieces release 1.4), QCEW 2024 and BEA 2024 by unit, and the districts and subregions. Scripts and outputs are in `regions/atlas/`.
 
 The atlas publishes one indicator table per level:
 - atlas units (3,315);
@@ -37,7 +37,7 @@ Every level is computed in the same way from additive components per unit. As a 
      3. A piece's 2020 base is the county's estimates base times the piece's share of the 2020 count.
      4. A piece's BEA population, the denominator of per capita income, is shared like its 2025 estimate.
    - **Example:** North Collin (McKinney & Frisco) grew 42.6% against 5.2% for South Collin (Plano & Allen), where both showed the county's 21.7% before.
-   - **Geography files:** the atlas units and districts files still carry the county-share 2025 population for pieces, so their figures differ from these tables in 118 districts (−13.6% to +17.2%).
+   - **Geography files:** since pieces release 1.4 these figures are also the atlas units' 2025 populations (`regions/pieces/tract_pop2025.csv`), so districts, subregions and the tables agree. Maricopa was re-split, and Pinal County is pinned to the East Valley subregion.
 6. **Mean commute time** counts commuters (workers not working from home) only in tracts that have an aggregate travel time (B08013), to match its numerator. 1,016 tracts have no travel time; nearly all are empty or tiny.
 
 ## Indicators

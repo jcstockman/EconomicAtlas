@@ -231,16 +231,14 @@ id,level,name,confidence,note
 37980-S02,subregion,"Montgomery, Bucks & Chester",high,"OMB title trimmed of ""County"""
 37980-S03,subregion,"Camden, Burlington & Gloucester",high,"OMB Camden division; ""South Jersey"" usually also includes Salem/Cumberland/Atlantic"
 37980-S04,subregion,"New Castle, Cecil & Salem",high,OMB Wilmington division; same area as D04
-38060-D01,district,West Valley,high,
-38060-D02,district,Mesa & Gilbert,high,
-38060-D03,district,Central & West Phoenix,high,
-38060-D04,district,"Tempe, Chandler & South Mountain",high,
-38060-D05,district,"Scottsdale, Paradise Valley & Camelback East",high,"; follows piece rename 1.3.1 (was Scottsdale, Paradise Valley & Arcadia)"
+38060-D01,district,"Northwest Phoenix, Glendale & Peoria",high,follows its piece (release 1.4; was West Valley)
+38060-D02,district,Mesa,high,follows its piece (release 1.4; was Mesa & Gilbert)
+38060-D03,district,Far West Valley: Surprise & Goodyear,high,follows its piece (release 1.4; was Central & West Phoenix)
+38060-D04,district,"Tempe, Chandler & Gilbert",high,"follows its piece (release 1.4; was Tempe, Chandler & South Mountain)"
 38060-D06,district,Pinal County,high,Single-county rule
-38060-D07,district,North Phoenix,high,
-38060-S01,subregion,West Valley & Central Phoenix,high,West Valley and Central & West Phoenix pieces
-38060-S02,subregion,East Valley & Pinal,high,"Mesa, Gilbert, Tempe, Chandler, South Mountain and Pinal County"
-38060-S03,subregion,North Phoenix & Scottsdale,high,
+38060-D07,district,Scottsdale & Northeast Phoenix,high,follows its piece (release 1.4; was North Phoenix)
+38060-S01,subregion,"North Phoenix, Glendale & Scottsdale",medium,release 1.4 regrouping (was West Valley & Central Phoenix)
+38060-S02,subregion,East Valley & Pinal,medium,release 1.4 regrouping (was East Valley & Pinal)
 38300-D01,district,"Pittsburgh, Butler & Beaver",high,City + North Hills + Butler/Beaver are the core; Lawrence/Armstrong small; contrasts with D02 South Hills
 38300-D02,district,"South & West Hills, Mon Valley & Washington",high,"; follows piece rename 1.3.1 (was South Hills, Mon Valley & Washington)"
 38300-D03,district,Westmoreland & Fayette,high,
@@ -335,3 +333,5 @@ id,level,name,confidence,note
 41980-D03,district,"Caguas, Cayey & Humacao",high,"Caguas valley, Cayey mountains and Humacao on the east coast; Valle del Turabo covers only part. Review; Naguabo joined by pin (boundary review)"
 72999-D01,district,"Mayagüez, Aguadilla & Arecibo",high,"West (Mayagüez, Aguadilla) and North (Arecibo) as locals and the Health Department divide them; Porta del Sol leaves out Arecibo and the mountains. Review"
 72999-D02,district,"Ponce, Guayama, Vieques & Culebra",high,"The south (Ponce, Guayama hub of the southeast) with Vieques and Culebra, named as the fixed local pair; the islands sit here because their neighbours Ceiba and Fajardo are in the San Juan metro (pinned to Patillas). Review"
+38060-D08,district,"Central, South & West Phoenix",high,follows its piece (release 1.4)
+38060-S04,subregion,Central Phoenix & Far West Valley,medium,"release 1.4 regrouping: Far West Valley with Central, South & West Phoenix"
