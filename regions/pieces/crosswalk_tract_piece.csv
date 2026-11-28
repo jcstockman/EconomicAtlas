@@ -1,1013 +1,1013 @@
 tract_geoid,county_fips,piece_id,piece_name,method,source_id,assign,pop2020_share
-04013010102,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013010103,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013010104,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013030401,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013030402,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013040502,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040506,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040507,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040512,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040513,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040514,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040515,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040516,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040522,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040523,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040524,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040525,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040526,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040527,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040528,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040529,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040530,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040531,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040532,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040533,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040534,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040535,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040536,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040537,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040538,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040539,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040540,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013040541,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050603,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050604,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050609,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050611,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050612,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050613,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050614,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050615,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050616,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050617,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050618,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050619,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050620,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050621,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050701,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013050702,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060801,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060802,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060901,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060902,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060903,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013060904,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061010,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061011,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061013,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061014,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061015,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061017,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061018,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061020,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061021,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061024,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061026,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061027,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061028,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061029,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061031,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061032,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061033,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061034,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061035,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061036,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061037,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061038,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061039,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061040,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061041,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061042,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061043,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061044,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061045,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061046,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061047,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061048,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061049,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061050,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061051,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061052,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061053,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061054,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061055,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061056,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061057,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061058,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061059,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061060,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061061,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061062,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061063,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061064,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061100,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061200,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061300,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013061401,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013061402,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013071503,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071504,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071505,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071506,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071509,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071510,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071511,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071512,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071513,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071514,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071515,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071516,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071517,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071600,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071701,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071702,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071801,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071802,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071903,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071906,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071909,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071910,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071911,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071912,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071913,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071914,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013071915,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013082002,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082007,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082008,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082009,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082010,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082012,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082016,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082017,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082018,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082019,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082020,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082021,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082022,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082023,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082024,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082025,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082026,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082027,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082028,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082204,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082205,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082206,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082207,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082208,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082209,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082210,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082211,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082212,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013082213,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013083000,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013092305,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092306,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092307,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092308,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092309,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092311,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092312,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092401,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092402,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092500,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092600,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092705,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092708,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092709,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092710,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092711,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092712,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092713,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092715,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092716,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092717,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092718,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092719,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013092720,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092721,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092723,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092724,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092801,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092802,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013092900,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093001,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093002,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093101,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093104,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093105,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093106,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013093200,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013103205,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103206,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103207,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103208,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103209,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103210,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103211,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103212,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103214,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103215,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103216,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103217,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103219,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103220,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103302,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103303,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103304,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103305,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103306,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103501,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103502,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103604,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103605,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103606,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103607,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103608,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103609,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103611,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103612,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103614,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103615,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103701,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103702,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013103900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104000,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104100,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104202,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104203,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104204,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104205,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104206,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104207,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104212,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104214,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104215,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104216,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104217,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104218,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104219,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104221,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104222,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104223,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104224,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104225,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104226,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104227,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013104301,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104302,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104401,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104402,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104501,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104502,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104600,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104701,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104702,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104801,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104802,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013104900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105002,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013105003,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013105004,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013105101,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105102,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105103,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013105200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013105400,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105501,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105502,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105503,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105601,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105701,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105702,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105800,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013105900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106001,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106002,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106003,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106200,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013106300,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106501,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013106502,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013106600,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106701,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106702,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106703,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106801,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106802,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013106900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107001,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107002,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107101,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107102,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107201,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107202,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107300,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107401,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107402,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107403,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107404,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107500,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107601,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013107700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013107800,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013107900,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108000,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108200,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108301,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108302,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108400,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108501,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108502,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013108601,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013108602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013108802,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013108901,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013108902,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109001,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109002,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109003,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109101,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109102,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109200,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109300,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109401,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109402,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109500,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109601,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109603,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109604,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109702,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109703,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109704,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109705,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109706,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109707,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109801,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109802,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013109900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110001,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110002,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110400,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110501,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110502,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110600,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013110701,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013110702,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013110801,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013110802,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013110901,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013110902,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111000,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111201,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111202,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013111203,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013111204,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013111300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111401,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111402,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111501,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111502,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111601,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013111602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013111700,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013111800,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013111900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112201,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112202,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112301,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112302,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112401,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112402,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112502,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112504,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112507,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112508,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112510,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112512,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112514,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112515,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112516,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112517,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112518,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112519,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112520,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112521,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112522,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112523,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112524,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112601,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112602,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112700,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013112900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113000,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113201,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113202,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113204,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013113301,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113502,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113503,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113601,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113602,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113701,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113702,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113800,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013113900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013114000,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114200,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114301,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114302,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114401,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114402,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114500,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114600,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114704,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114705,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114800,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013114900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013115200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115500,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013115600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115801,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115802,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013115900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116202,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116203,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116204,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116205,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116605,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116606,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116607,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116610,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116611,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116612,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116614,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116615,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116616,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116617,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116618,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116619,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116620,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116621,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116703,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116707,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116708,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116709,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116710,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116711,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116712,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116713,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116714,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116715,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116717,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116718,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116719,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116720,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116721,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116725,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116727,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116728,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116729,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116730,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116731,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116732,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116733,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116734,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116735,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116736,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116737,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116738,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013116800,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013116900,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013117000,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013117100,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013117200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013117300,04013,04013-01,Central & West Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013216806,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216807,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216809,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216810,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216813,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216816,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216819,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216820,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216821,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216822,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216826,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216829,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216830,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216831,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216832,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216833,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216834,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216835,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216836,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216837,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216838,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216839,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216840,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216841,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216842,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216843,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216844,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216845,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216849,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216850,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216851,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216852,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216853,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216854,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216855,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216856,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216857,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216858,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216859,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216860,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216861,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216901,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013216902,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217001,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217002,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217101,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217102,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217201,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217203,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217204,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217400,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217501,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217502,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217600,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217800,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013217900,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013218000,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013218100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013218200,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013218300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013318400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013318501,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013318700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013318800,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013318900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319001,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319002,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319101,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319103,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319104,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319201,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319202,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319401,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319402,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319403,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319404,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319705,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319706,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319707,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319708,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319709,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319710,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319801,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319802,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319902,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319903,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319904,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319905,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319906,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319907,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319908,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319909,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013319910,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013320001,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013320002,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013320007,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013320100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013420104,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420105,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420107,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420108,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420109,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420110,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420111,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420112,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420113,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420114,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420115,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420116,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420202,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420206,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420207,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420208,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420209,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420210,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420211,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420212,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420213,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420214,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420215,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420216,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420301,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420302,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420303,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420304,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420401,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420402,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420503,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420504,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420505,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420506,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420602,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420603,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420604,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420704,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420705,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420706,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420707,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420708,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420709,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420710,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420800,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420901,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013420902,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421001,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421002,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421101,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421102,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421201,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421202,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421302,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421303,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421304,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421400,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421501,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421502,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421601,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421602,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421701,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421702,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421801,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421802,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421901,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013421902,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422001,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422002,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422102,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422103,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422104,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422105,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422106,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422107,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422203,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422209,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422210,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422211,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422212,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422213,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422215,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422216,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422217,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422218,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422219,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422220,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422221,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422222,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422223,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422224,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422225,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422226,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422227,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422301,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422302,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422304,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013422305,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422307,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422308,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422309,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422401,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422402,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422403,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422404,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422501,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422502,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422503,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422504,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422506,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422507,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422508,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422509,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422510,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422511,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422512,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422513,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422514,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422607,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422609,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422610,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422615,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422617,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422618,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422620,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422621,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422622,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422623,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422624,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422625,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422626,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422627,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422628,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422629,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422630,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422632,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422633,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422634,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422636,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422637,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422638,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422639,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422640,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422642,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422643,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422647,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422648,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422649,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422650,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422651,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422652,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422653,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422654,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422655,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422656,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422657,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422658,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422659,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013422660,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013522801,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013522802,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013522901,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013522903,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013522904,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523002,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523005,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523006,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523007,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523008,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523102,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523103,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013523104,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013610001,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610002,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610201,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610202,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610301,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610302,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610400,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610500,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610600,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013610800,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013610901,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013610902,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013610903,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013611000,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013611100,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013611200,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013611300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611400,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611500,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611600,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611800,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013611900,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612000,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013612301,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013612302,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013612401,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612402,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612500,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612600,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612800,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013612900,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013613000,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013613100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013613200,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013613300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013613400,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613500,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613601,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613602,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613700,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613800,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013613900,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013614000,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013614100,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013614200,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013614300,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013614400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614500,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614601,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614602,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614700,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614800,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013614900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013615001,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013615002,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013615100,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013615201,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013615202,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013615300,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615400,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615500,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615600,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615700,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615800,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013615900,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013616000,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013616100,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616300,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616500,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616600,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616700,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616800,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013616900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617001,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617002,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617100,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617300,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013617400,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013617500,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013617600,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013617700,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013617800,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013617900,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013618000,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013618100,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618300,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618500,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618600,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618700,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618800,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013618900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619000,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619100,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619200,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619300,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619400,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619500,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619601,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619602,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619700,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619800,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013619900,04013,04013-04,North Phoenix,inferred,lodes_2024_louvain,nested,1.0
-04013723304,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723305,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723306,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723307,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723309,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723310,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013723311,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013810000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810800,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013810900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811800,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013811900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812801,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812802,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013812900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813200,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813600,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813700,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813800,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013813900,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013814000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013814100,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013814200,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814300,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814400,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814500,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814600,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814700,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814801,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814802,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013814900,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815000,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815100,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815201,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815202,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815203,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815300,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815401,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815402,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815501,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815502,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815601,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815602,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815700,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815800,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815901,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013815902,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816001,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816002,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816003,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816004,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816005,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816100,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816200,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816301,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816302,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816401,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816402,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816501,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816502,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816600,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816700,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816800,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816901,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816902,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816903,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013816904,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817000,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817101,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817102,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817103,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817200,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013817300,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013817400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013817500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013817600,04013,04013-05,Mesa & Gilbert,inferred,lodes_2024_louvain,nested,1.0
-04013940700,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013941000,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013941100,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013941200,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013941300,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013980100,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013980400,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013980500,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
-04013980700,04013,04013-06,"Scottsdale, Paradise Valley & Camelback East",inferred,lodes_2024_louvain,nested,1.0
-04013980900,04013,04013-03,West Valley,inferred,lodes_2024_louvain,nested,1.0
-04013981000,04013,04013-02,"Tempe, Chandler & South Mountain",inferred,lodes_2024_louvain,nested,1.0
+04013010102,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013010103,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013010104,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013030401,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013030402,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013040502,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040506,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040507,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040512,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040513,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040514,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040515,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040516,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040522,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040523,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040524,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040525,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040526,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040527,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040528,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040529,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040530,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040531,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040532,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013040533,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013040534,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013040535,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040536,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013040537,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013040538,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040539,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040540,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013040541,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050603,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050604,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050609,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050611,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050612,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050613,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050614,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050615,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050616,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050617,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050618,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050619,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050620,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050621,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050701,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013050702,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060801,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060802,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060901,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060902,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060903,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013060904,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061010,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061011,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061013,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061014,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061015,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061017,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061018,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061020,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061021,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061024,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061026,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061027,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061028,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061029,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061031,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061032,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061033,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061034,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061035,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061036,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061037,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061038,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061039,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061040,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061041,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061042,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061043,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061044,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061045,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061046,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061047,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061048,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061049,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061050,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061051,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061052,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061053,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061054,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061055,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061056,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061057,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061058,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061059,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061060,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061061,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061062,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061063,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061064,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013061200,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061300,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061401,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013061402,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071503,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071504,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071505,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071506,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071509,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071510,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071511,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071512,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071513,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071514,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071515,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071516,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071517,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071600,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071701,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071702,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071801,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071802,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013071903,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071906,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071909,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071910,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071911,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071912,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071913,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071914,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013071915,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013082002,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082007,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082008,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082009,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082010,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082012,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082016,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082017,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082018,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082019,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082020,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082021,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082022,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082023,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082024,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082025,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082026,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082027,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082028,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082204,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082205,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082206,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082207,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082208,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082209,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082210,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082211,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013082212,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013082213,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013083000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013092305,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092306,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092307,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092308,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092309,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092311,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092312,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092401,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092402,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092705,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092708,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092709,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092710,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092711,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092712,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092713,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092715,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092716,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092717,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092718,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092719,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013092720,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092721,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092723,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092724,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092801,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092802,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013092900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093001,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093002,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093101,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093104,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093105,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093106,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013093200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103205,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103206,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103207,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103208,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103209,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103210,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103211,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103212,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103214,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103215,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103216,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103217,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103219,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103220,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103302,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103303,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103304,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103305,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103306,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103501,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103502,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103604,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103605,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103606,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103607,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103608,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103609,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103611,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103612,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103614,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103615,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013103701,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103702,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013103900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104202,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104203,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104204,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104205,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104206,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104207,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104212,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104214,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104215,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104216,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104217,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104218,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104219,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104221,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104222,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104223,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104224,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104225,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104226,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104227,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104301,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104302,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104401,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104402,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104501,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104502,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013104701,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013104702,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013104801,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013104802,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013104900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105002,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105003,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105004,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105101,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105102,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105103,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013105501,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105502,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105503,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105601,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105602,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105701,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105702,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013105900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013106001,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013106002,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013106003,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013106100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106501,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106502,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106600,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106701,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013106702,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013106703,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013106801,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013106802,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013106900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107001,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107002,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107101,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107102,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107201,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107202,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107300,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107401,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107402,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107403,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107404,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013107500,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013107601,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013107602,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013107700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013107800,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013107900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108000,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108301,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108302,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108501,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108502,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108601,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108602,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108802,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013108901,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013108902,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109001,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109002,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109003,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109101,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109102,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109200,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109300,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109401,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109402,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109500,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109601,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109602,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109603,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109604,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109702,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109703,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109704,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109705,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109706,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109707,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109801,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109802,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013109900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110001,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110002,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110400,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110501,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110502,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013110600,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110701,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110702,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110801,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110802,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110901,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013110902,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111000,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111201,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111202,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111203,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111204,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111401,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111402,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111501,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111502,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111601,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013111602,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013111700,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013111800,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013111900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112201,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112202,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112301,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112302,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112401,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112402,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112502,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112504,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112507,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112508,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112510,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112512,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112514,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112515,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112516,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112517,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112518,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112519,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112520,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112521,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112522,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112523,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112524,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112601,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112602,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112700,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013112900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113201,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113202,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113204,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113301,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113502,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113503,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113601,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113602,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113701,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013113702,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013113800,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013113900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114200,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114301,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114302,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114401,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114402,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114500,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114600,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114704,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114705,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114800,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013114900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115200,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115300,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115400,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115500,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115600,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115700,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115801,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115802,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013115900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116202,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116203,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116204,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116205,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116300,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116400,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116500,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116605,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116606,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116607,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116610,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116611,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116612,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116614,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116615,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116616,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116617,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116618,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116619,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116620,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116621,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116703,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116707,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116708,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116709,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116710,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116711,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116712,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116713,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116714,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116715,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116717,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116718,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116719,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116720,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116721,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116725,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116727,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116728,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116729,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013116730,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116731,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116732,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116733,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116734,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116735,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116736,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116737,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116738,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116800,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013116900,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013117000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013117100,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013117200,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013117300,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
+04013216806,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216807,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216809,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216810,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216813,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216816,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216819,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216820,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216821,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216822,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216826,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216829,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216830,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216831,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216832,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216833,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216834,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216835,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216836,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216837,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216838,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216839,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216840,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216841,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216842,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216843,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216844,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216845,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216849,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216850,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216851,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216852,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216853,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216854,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216855,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216856,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216857,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216858,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216859,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216860,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216861,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216901,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013216902,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217001,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217002,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217101,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217102,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217201,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217203,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217204,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217501,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217502,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217600,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217800,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013217900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013218000,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013218100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013218200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013218300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013318400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013318501,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013318700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013318800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013318900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319001,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319002,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319101,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319103,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319104,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319201,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319202,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319401,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319402,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319403,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319404,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319705,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319706,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319707,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319708,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319709,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319710,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319801,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319802,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319902,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319903,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319904,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319905,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319906,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319907,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319908,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319909,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013319910,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013320001,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013320002,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013320007,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013320100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013420104,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420105,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420107,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420108,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420109,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420110,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420111,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420112,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420113,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420114,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420115,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420116,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420202,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420206,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420207,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420208,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420209,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420210,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420211,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420212,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420213,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420214,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420215,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420216,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420301,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420302,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420303,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420304,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420401,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420402,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420503,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420504,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420505,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420506,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420602,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420603,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420604,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420704,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420705,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420706,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420707,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420708,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420709,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420710,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420800,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420901,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013420902,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421001,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421002,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421101,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421102,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421201,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421202,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421302,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421303,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421304,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421400,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421501,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421502,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421601,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421602,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421701,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421702,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421801,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421802,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421901,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013421902,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422001,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422002,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422102,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422103,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422104,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422105,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422106,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422107,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422203,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422209,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422210,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422211,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422212,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422213,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422215,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422216,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422217,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422218,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422219,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422220,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422221,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422222,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422223,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422224,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422225,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422226,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422227,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422301,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422302,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422304,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422305,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422307,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422308,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422309,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422401,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422402,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422403,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422404,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422501,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422502,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422503,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422504,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422506,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422507,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422508,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422509,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422510,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422511,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422512,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422513,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422514,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422607,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422609,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422610,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422615,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422617,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422618,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422620,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422621,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422622,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422623,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422624,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422625,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422626,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422627,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422628,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422629,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422630,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422632,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422633,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422634,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422636,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422637,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422638,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422639,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422640,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422642,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422643,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422647,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422648,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422649,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422650,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422651,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422652,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422653,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422654,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422655,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422656,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422657,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422658,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013422659,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013422660,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013522801,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013522802,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013522901,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013522903,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013522904,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523002,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523005,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523006,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523007,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523008,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523102,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523103,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013523104,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013610001,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610002,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610201,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610202,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610301,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610302,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013610800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610901,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610902,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013610903,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611300,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013611900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013612000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013612200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013612301,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013612302,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013612401,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612402,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612500,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612600,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612800,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013612900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013613000,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013613100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013613200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013613300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013613400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613601,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613602,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013613900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614300,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614601,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614602,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013614900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615001,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013615002,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013615100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013615201,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013615202,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013615300,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615400,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013615500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013615900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616300,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013616700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013616800,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013616900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617001,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617002,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013617400,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013617500,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013617600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013617700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013617800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013617900,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618000,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618100,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618200,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618300,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618400,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618500,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618600,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618700,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618800,04013,04013-03,"Northwest Phoenix, Glendale & Peoria",inferred,lodes_2024_louvain,nested,1.0
+04013618900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619000,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619100,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619400,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619500,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619601,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619602,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619800,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013619900,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013723304,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723305,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723306,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723307,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723309,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723310,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013723311,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013810000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013810900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013811900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812801,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812802,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013812900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013813900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814801,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814802,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013814900,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815201,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815202,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815203,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815401,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815402,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815501,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815502,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815601,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815602,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815901,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013815902,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816001,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816002,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816003,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816004,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816005,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816100,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816301,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816302,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816401,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816402,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816501,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816502,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816600,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816700,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816800,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816901,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816902,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816903,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013816904,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817000,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817101,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817102,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817103,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817200,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817300,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013817600,04013,04013-05,Mesa,inferred,lodes_2024_louvain,nested,1.0
+04013940700,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013941000,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013941100,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013941200,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013941300,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013980100,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013980400,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013980500,04013,04013-02,"Tempe, Chandler & Gilbert",inferred,lodes_2024_louvain,nested,1.0
+04013980700,04013,04013-04,Scottsdale & Northeast Phoenix,inferred,lodes_2024_louvain,nested,1.0
+04013980900,04013,04013-01,Far West Valley: Surprise & Goodyear,inferred,lodes_2024_louvain,nested,1.0
+04013981000,04013,04013-07,"Central, South & West Phoenix",inferred,lodes_2024_louvain,nested,1.0
 04019000100,04019,04019-01,Pima County,whole,whole_county,nested,1.0
 04019000200,04019,04019-01,Pima County,whole,whole_county,nested,1.0
 04019000300,04019,04019-01,Pima County,whole,whole_county,nested,1.0
