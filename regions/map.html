@@ -119,6 +119,14 @@ tfoot td { font-weight: 600; border-bottom: 0; }
 .rankbar { position: relative; display: inline-block; width: 64px; height: 8px; border-radius: 4px; background: var(--rule); vertical-align: middle; margin-right: 6px; }
 .rankbar b { position: absolute; top: -2px; width: 4px; height: 12px; border-radius: 2px; background: var(--accent); transform: translateX(-2px); }
 .rank { font-family: var(--f-data); font-size: 0.8rem; color: var(--ink-2); }
+.piece.us { stroke-width: 0.3; }
+.piece.us.on { stroke: var(--hover); stroke-width: 1.6; }
+.st-line { fill: none; pointer-events: none; stroke: var(--surface); stroke-width: 1.2; stroke-linejoin: round; }
+.inset-l { font: 600 10px var(--f-body); fill: var(--ink-3); }
+.legend .sw { display: inline-block; width: 16px; height: 10px; border-radius: 2px; vertical-align: middle; }
+.legend .sw + .sw { margin-left: -8px; }
+.linkbtn { font: 500 0.82rem var(--f-body); color: var(--accent); background: none; border: 1px solid var(--rule); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
 footer { font-size: 0.8rem; color: var(--ink-3); max-width: 90ch; display: grid; gap: 6px; }
 footer p { margin: 0; }
 @media (prefers-reduced-motion: no-preference) { .piece { transition: fill 200ms ease; } }
@@ -130,6 +138,7 @@ footer p { margin: 0; }
     <div class="seg views" role="group" aria-label="View" id="views">
       <button type="button" data-v="m" aria-pressed="true">Metro areas</button>
       <button type="button" data-v="c" aria-pressed="false">County pieces</button>
+      <button type="button" data-v="u" aria-pressed="false">United States</button>
     </div>
     <p class="lede" id="lede"></p>
   </header>
@@ -179,6 +188,7 @@ footer p { margin: 0; }
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>
 <script>
 (() => {
   const css = () => getComputedStyle(document.documentElement);
@@ -188,6 +198,7 @@ footer p { margin: 0; }
   const SHADES = {
     c: [["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["jobs_lodes", "Jobs"], ["ind", "Indicator"]],
     m: [["group", "Subregion"], ["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["ind", "Indicator"]],
+    u: [["ind", "Indicator"]],
   };
   // ---------- atlas indicators (atlas/indicators.json: catalogue in theme order, values per level and area) ----------
   let IND = null;
@@ -205,7 +216,7 @@ footer p { margin: 0; }
   const catOf = iid => IND.catalogue[IDX.get(iid)];
   const indVal = (level, id, iid) => { const r = IND && IND.levels[level][id]; return r ? r[IDX.get(iid)] : null; };
   // peers: the areas an area is ranked among (pieces among the 157 pieces, not among every county unit)
-  const PEERS = { districts: "districts", subregions: "subregions", metros: "metro areas", counties: "split counties", pieces: "county pieces" };
+  const PEERS = { units: "atlas units", districts: "districts", subregions: "subregions", metros: "metro areas", counties: "split counties", pieces: "county pieces" };
   const peerIds = g => g === "pieces" ? Object.keys(IND.levels.units).filter(k => k.includes("-")) : Object.keys(IND.levels[g]);
   function rankOf(g, iid, v) {
     if (v == null) return null;
@@ -249,8 +260,9 @@ footer p { margin: 0; }
   const $ = id => document.getElementById(id);
   const els = { sel: d3.select("#place"), map: d3.select("#map"), rows: d3.select("#rows"), foot: d3.select("#foot"), head: d3.select("#head"),
     meta: d3.select("#meta"), legend: d3.select("#legend"), tip: $("tip") };
-  const state = { view: "m", shade: { c: "work_inside", m: "group" }, lines: { c: false, m: false }, current: { c: null, m: null },
-    ind: { c: "median_hh_income", m: "median_hh_income" }, sel: { c: null, m: null } };
+  const state = { view: "m", shade: { c: "work_inside", m: "group", u: "ind" }, lines: { c: false, m: false, u: true }, current: { c: null, m: null, u: "US" },
+    ind: { c: "median_hh_income", m: "median_hh_income", u: "median_hh_income" }, sel: { c: null, m: null, u: null } };
+  const us = { topo: null, feats: [], byId: new Map(), states: [], loading: null };
   const byCounty = new Map(), subByCounty = new Map();
   const metro = { cbsa: new Map(), subs: new Map(), units: new Map(), order: [] };
   let countyOrder = [], shown = null;
@@ -292,14 +304,16 @@ footer p { margin: 0; }
   // ---------- controls ----------
   function setPressed(sel, attr, val) { d3.selectAll(sel + " button").attr("aria-pressed", function () { return String(this.dataset[attr] === val); }); }
   function controls() {
-    const v = state.view, isM = v === "m";
+    const v = state.view, isM = v === "m", isU = v === "u";
     setPressed("#views", "v", v);
-    $("lede").textContent = isM
+    $("lede").textContent = isU
+      ? "All 3,315 atlas units: the 3,158 whole counties and county-equivalents (Puerto Rico's municipios included) and the 157 pieces of the largest counties. Shade the country by any indicator, pick a state to zoom in, and click a unit for its profile."
+      : isM
       ? "The 57 metro areas (CBSAs) of 1.0M+ residents, and the rest of Puerto Rico, split into districts of 0.35–1.5M and, in the 26 of 2.5M+, subregions of 0.6–3.5M. Every district is a union of atlas units (county pieces and whole counties), so all atlas figures add up to it. Pick a metro area to see how it divides."
       : "The 64 US counties with 0.92M+ residents, split into pieces of about 0.8M residents (0.45–1.1M) built from 2020 census tracts. Pick a county to see its pieces, their size and how much of their commuting stays inside.";
-    $("place-label").textContent = isM ? "Metro area" : "County";
-    $("sub-label").textContent = isM ? "County and piece lines" : "Subareas";
-    $("foot-m").hidden = !isM; $("foot-c").hidden = isM;
+    $("place-label").textContent = isU ? "State" : isM ? "Metro area" : "County";
+    $("sub-label").textContent = isU ? "State lines" : isM ? "County and piece lines" : "Subareas";
+    $("foot-m").hidden = !isM; $("foot-c").hidden = v !== "c";
     $("ind-field").hidden = !IND;
     if (IND) {
       const isel = d3.select("#ind");
@@ -315,7 +329,7 @@ footer p { margin: 0; }
       .attr("aria-pressed", d => String(d[0] === state.shade[v])).on("click", (ev, d) => { state.shade[v] = d[0]; controls(); redraw(); });
     sh.text(d => d[0] === "group" && isM && state.current.m && !metro.cbsa.get(state.current.m).big ? "District" : d[1]);
     setPressed("#subtoggle", "s", state.lines[v] ? "on" : "off");
-    const order = isM ? metro.order : countyOrder;
+    const order = isU ? us.states : isM ? metro.order : countyOrder;
     els.sel.selectAll("option").data(order, d => d.id).join("option").attr("value", d => d.id).text(d => d.label);
     if (state.current[v]) els.sel.property("value", state.current[v]);
   }
@@ -325,18 +339,20 @@ footer p { margin: 0; }
   function setView(v, id) {
     state.view = v; if (id) state.current[v] = id;
     if (!state.current[v]) state.current[v] = (v === "m" ? metro.order : countyOrder)[0]?.id || null;
-    controls(); redraw();
+    controls();
+    if (v === "u" && !us.topo) loadUS(); else redraw();
   }
   function redraw() {
     const id = state.current[state.view]; if (!id) return;
     try { history.replaceState(null, "", "#" + state.view + id); } catch (e) {}
+    if (state.view === "u") { if (us.topo && IND) drawUS(id); return; }
     state.view === "m" ? drawMetro(id) : drawCounty(id);
   }
-  function frame(feats) {
+  function frame(feats, fitObj) {
     els.map.selectAll("g").remove(); els.map.selectAll("defs").remove();
     els.map.append("defs").append("clipPath").attr("id", "frame").append("rect").attr("width", W).attr("height", H);
     els.tip.hidden = true;
-    const fitTo = mainland(feats);
+    const fitTo = fitObj ? { collection: fitObj, dropped: false } : mainland(feats);
     const proj = d3.geoMercator().fitExtent([[8, 8], [W - 8, H - 8]], fitTo.collection);
     const root = els.map.append("g").attr("clip-path", "url(#frame)");
     const geo = root.append("g"), labels = root.append("g");
@@ -554,14 +570,129 @@ footer p { margin: 0; }
     return `<p class="subtip"><b>${q.name}</b><br>Subarea ${q.subarea_id} · ${fmt(q.pop2020)} residents (2020) · ${q.kind === "puma" ? "exact PUMA " + q.puma_geoid : "part of PUMA " + q.puma_geoid}</p>`;
   }
 
+  // ---------- United States view ----------
+  // Every atlas unit (atlas/us_units.topojson). Colours are sevenths of all 3,315 units, so every state view matches the US.
+  const STATE_NAMES = { AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado", CT: "Connecticut",
+    DE: "Delaware", DC: "District of Columbia", FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana",
+    IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan",
+    MN: "Minnesota", MS: "Mississippi", MO: "Missouri", MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire",
+    NJ: "New Jersey", NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio", OK: "Oklahoma",
+    OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota", TN: "Tennessee", TX: "Texas",
+    UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming", PR: "Puerto Rico" };
+  function loadUS() {
+    if (us.loading) return;
+    els.rows.html(`<tr><td colspan="4" class="status">Loading the US units…</td></tr>`);
+    us.loading = get("atlas/us_units.topojson").then(t => {
+      us.topo = t;
+      us.feats = topojson.feature(t, t.objects.units).features;
+      us.feats.forEach(f => rewind(f.geometry));
+      us.byId = new Map(us.feats.map(f => [f.properties.id, f]));
+      us.borders = topojson.mesh(t, t.objects.units, (a, b) => a !== b && a.properties.state !== b.properties.state);
+      const n = d3.rollup(us.feats, v => v.length, f => f.properties.state);
+      us.states = [{ id: "US", label: `All of the US · ${fmt(us.feats.length)} units` }].concat([...n.keys()]
+        .sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b])).map(k => ({ id: k, label: `${STATE_NAMES[k]} · ${n.get(k)} unit${n.get(k) > 1 ? "s" : ""}` })));
+      if (state.view === "u") { controls(); redraw(); }
+    }).catch(err => els.rows.html(`<tr><td colspan="4" class="status">Could not load the US units (${err.message}).</td></tr>`));
+  }
+  const unitTitle = p => p.piece ? p.name : `${p.name}, ${STATE_NAMES[p.state]}`;
+  function drawUS(st) {
+    const iid = state.ind.u, c = catOf(iid), all = us.feats;
+    const feats = st === "US" ? all : all.filter(f => f.properties.state === st);
+    if (!feats.length) return;
+    const val = f => indVal("units", f.properties.id, iid);
+    const allVals = all.map(val).filter(v => v != null);
+    const ip = seq(), cols = d3.range(7).map(i => ip(0.1 + 0.9 * i / 6));
+    const q = d3.scaleQuantile().domain(allVals).range(cols);
+    const fill = f => { const v = val(f); return v == null ? tok("--empty") : q(v); };
+
+    // projections: Albers USA (Alaska and Hawaii inset) plus a Puerto Rico inset; a single state gets its own fit
+    let path, bpath;
+    const fc = fs => ({ type: "FeatureCollection", features: fs });
+    if (st === "US") {
+      const main = feats.filter(f => f.properties.state !== "PR"), pr = feats.filter(f => f.properties.state === "PR");
+      const pa = d3.geoAlbersUsa().fitExtent([[8, 8], [W - 8, H - 64]], fc(main));
+      const pp = d3.geoMercator().fitExtent([[W - 128, H - 60], [W - 14, H - 12]], fc(pr));
+      const gA = d3.geoPath(pa), gP = d3.geoPath(pp);
+      path = f => f.properties.state === "PR" ? gP(f) : gA(f); bpath = gA;
+    } else {
+      const proj = st === "AK" ? d3.geoConicEqualArea().rotate([154, 0]).center([0, 62]).parallels([55, 65]) : d3.geoMercator();
+      proj.fitExtent([[8, 8], [W - 8, H - 8]], fc(feats));
+      path = bpath = d3.geoPath(proj);
+    }
+    if (!state.sel.u || (st !== "US" && state.sel.u.level === "units" && us.byId.get(state.sel.u.id)?.properties.state !== st))
+      state.sel.u = { level: "us", id: "US" };
+    const pick = id => { state.sel.u = { level: "units", id }; renderProfile(); };
+
+    els.meta.html("");
+    els.meta.append("span").html(`<b>${st === "US" ? "United States" : STATE_NAMES[st]}</b>`);
+    els.meta.append("span").text(`${fmt(feats.length)} atlas units (${feats.filter(f => f.properties.piece).length} county pieces)`);
+    const nNull = feats.filter(f => val(f) == null).length;
+    if (nNull) els.meta.append("span").text(`${nNull} without a value for this indicator`);
+
+    const fr = frame(feats, feats[0].geometry), root = fr.root;
+    root.append("g").selectAll("path").data(feats).join("path").attr("class", "piece us").attr("d", path).attr("fill", fill)
+      .on("pointerenter pointermove", (ev, f) => { hover(f.properties.id, "id"); place(ev, usTip(f, c)); })
+      .on("pointerleave", () => { hover(null); els.tip.hidden = true; })
+      .on("click", (ev, f) => pick(f.properties.id));
+    if (state.lines.u) root.append("path").attr("class", "st-line").attr("d", bpath(us.borders));
+    if (st === "US") root.append("text").attr("class", "inset-l").attr("x", W - 128).attr("y", H - 64).text("Puerto Rico");
+
+    els.legend.html("");
+    els.legend.append("span").text(c.label);
+    const th = [d3.min(allVals), ...q.quantiles(), d3.max(allVals)];
+    cols.forEach((col, i) => els.legend.append("span").attr("class", "sw").style("background", col)
+      .attr("title", `${fmtInd(c, th[i])} to ${fmtInd(c, th[i + 1])}`));
+    els.legend.append("span").attr("class", "v").text(`${fmtInd(c, th[0])} to ${fmtInd(c, th[7])}`);
+    els.legend.append("span").html(`<span class="sw" style="background:var(--empty)"></span> no value`);
+    $("note").textContent = "Colours: seven classes holding equal numbers of the 3,315 atlas units, the same in every state view; hover a swatch for its range. Alaska and Hawaii are inset, Puerto Rico at bottom right. Shapes are simplified for this view. Scroll, pinch or use + and − to zoom; drag to pan.";
+
+    // table: highest and lowest units in view (all of them for a small state)
+    const ranked = feats.map(f => ({ f, v: val(f) })).filter(d => d.v != null).sort((a, b) => b.v - a.v);
+    const groups = ranked.length <= 20 ? [["All units, highest first", ranked]] : [["Highest", ranked.slice(0, 10)], ["Lowest", ranked.slice(-10)]];
+    els.head.html(`<tr><th>#</th><th>Atlas unit</th><th>${c.label.length > 24 ? c.label.slice(0, 22) + "…" : c.label}</th><th>US rank</th></tr>`);
+    const rows = [];
+    for (const [label, ds] of groups) {
+      rows.push({ kind: "sr", label });
+      ds.forEach(d => rows.push({ kind: "u", d, i: ranked.indexOf(d) + 1 }));
+    }
+    els.rows.selectAll("tr").remove();
+    els.rows.selectAll("tr").data(rows).join("tr").attr("class", r => r.kind === "sr" ? "sr" : "").attr("data-id", r => r.d ? r.d.f.properties.id : null)
+      .on("pointerenter", (ev, r) => r.d && hover(r.d.f.properties.id, "id")).on("pointerleave", () => hover(null))
+      .on("click", (ev, r) => r.d && pick(r.d.f.properties.id))
+      .html(r => {
+        if (r.kind === "sr") return `<td></td><td>${r.label}</td><td></td><td></td>`;
+        const p = r.d.f.properties, rk = rankOf("units", iid, r.d.v);
+        return `<td>${fmt(r.i)}</td><td>${unitTitle(p)}<span class="id">${p.id}${p.piece ? " · county piece" : ""}</span></td>
+          <td>${fmtInd(c, r.d.v)}</td><td>${ord(rk.r)} of ${fmt(rk.n)}</td>`;
+      });
+    els.foot.html(st === "US" ? `<tr><td></td><td>United States</td><td>${fmtInd(c, IND.us[IDX.get(iid)])}</td><td></td></tr>` : "");
+    d3.select("#mixkey").html(`# counts within ${st === "US" ? "the US" : STATE_NAMES[st]}; US rank is among all ${fmt(allVals.length)} atlas units with a value, highest first. Click a row or a unit for its profile.`);
+    renderProfile();
+  }
+  function usTip(f, c) {
+    const p = f.properties, v = indVal("units", p.id, c.id), rk = rankOf("units", c.id, v), m = p.cbsa && metro.cbsa.get(p.cbsa);
+    return `<h3>${unitTitle(p)}</h3><p class="comp">${p.id}${p.piece ? " · county piece" : ""}${m ? " · " + shortTitle(m.title) : ""}</p><dl>
+      <dt>${c.label}</dt><dd>${fmtInd(c, v)}</dd>${rk ? `<dt>US rank</dt><dd>${ord(rk.r)} of ${fmt(rk.n)}</dd>` : ""}
+      <dt>Residents 2025</dt><dd>${fmtInd(catOf("pop2025"), indVal("units", p.id, "pop2025"))}</dd></dl>`;
+  }
+
   // ---------- area profile ----------
   // The selected area's 46 indicators by theme, against its metro (or county) and the US, ranked among its peers.
   function renderProfile() {
     if (!IND) return;
     const v = state.view, sel = state.sel[v]; if (!sel) return;
-    const lvl = sel.level === "pieces" ? "units" : sel.level, row = IND.levels[lvl][sel.id];
-    let title, sub, comp = null;
-    if (v === "m") {
+    const lvl = sel.level === "pieces" ? "units" : sel.level, row = sel.level === "us" ? IND.us : IND.levels[lvl][sel.id];
+    let title, sub, comp = null, links = [];
+    if (v === "u") {
+      if (sel.level === "us") { title = "United States"; sub = "The 50 states, DC and Puerto Rico (BEA figures without Puerto Rico; QCEW from BLS's national total)"; }
+      else {
+        const p = us.byId.get(sel.id).properties, m = p.cbsa && metro.cbsa.get(p.cbsa);
+        title = unitTitle(p);
+        sub = `${p.piece ? `County piece ${p.id} of ${STATE_NAMES[p.state]}'s county ${p.county}` : `County ${p.id}`} · ${m ? (p.cbsa === "72999" ? "in " : "in metro area ") + m.title : "outside the 58 metro areas"}`;
+        if (m) { comp = [p.cbsa === "72999" ? "Region" : "Metro", "metros", p.cbsa]; links.push(["m", p.cbsa, `Open ${shortTitle(m.title)} in the metro view`]); }
+        if (byCounty.has(p.county)) links.push(["c", p.county, "Open its county in the pieces view"]);
+      }
+    } else if (v === "m") {
       const m = metro.cbsa.get(sel.cbsa), rest = sel.cbsa === "72999", within = [rest ? "Region" : "Metro", "metros", sel.cbsa];
       if (sel.level === "districts") {
         const d = m.districts.find(x => x.properties.district_id === sel.id).properties, s = d.subregion_id && metro.subs.get(d.subregion_id);
@@ -584,23 +715,26 @@ footer p { margin: 0; }
     for (const [theme, cs] of d3.groups(IND.catalogue.map((c, i) => ({ c, i })), x => x.c.theme)) {
       rows.push(`<tr class="theme"><td colspan="${comp ? 5 : 4}">${theme}</td></tr>`);
       for (const { c, i } of cs) {
-        const x = row ? row[i] : null, rk = rankOf(sel.level, c.id, x);
+        const x = row ? row[i] : null, rk = sel.level === "us" ? null : rankOf(sel.level, c.id, x);
         const bar = rk ? `<span class="rankbar" aria-hidden="true"><b style="left:${rk.n > 1 ? 100 * (rk.n - rk.r) / (rk.n - 1) : 50}%"></b></span>` : "";
         rows.push(`<tr data-ind="${c.id}" class="${c.id === cur ? "cur" : ""}" title="${c.source}, ${c.year}">
           <td>${c.label}</td><td>${fmtInd(c, x)}</td>${comp ? `<td>${fmtInd(c, indVal(comp[1], comp[2], c.id))}</td>` : ""}
-          <td>${fmtInd(c, IND.us[i])}</td><td>${rk ? `${bar}<span class="rank">${ord(rk.r)} of ${rk.n}</span>` : "—"}</td></tr>`);
+          <td>${fmtInd(c, IND.us[i])}</td><td>${rk ? `${bar}<span class="rank">${ord(rk.r)} of ${fmt(rk.n)}</span>` : "—"}</td></tr>`);
       }
     }
     const box = d3.select("#profile");
+    const how = v === "u" ? "Click a unit on the map or in the table" : v === "m" ? "Click a district on the map, a subregion or district row, or the total row" : "Click a piece on the map or in the table, or the county total row";
     box.html(`<h2>${title}</h2><p class="sub2">${sub}</p>
-      <p class="hint">${v === "m" ? "Click a district on the map, a subregion or district row, or the total row" : "Click a piece on the map or in the table, or the county total row"} to see its profile. Click an indicator to shade the map by it. Rank: highest value first, among all ${PEERS[sel.level]} in the atlas.</p>
+      ${links.length ? `<div class="links">${links.map(l => `<button type="button" class="linkbtn" data-v="${l[0]}" data-id="${l[1]}">${l[2]}</button>`).join("")}</div>` : ""}
+      <p class="hint">${how} to see its profile. Click an indicator to shade the map by it.${sel.level === "us" ? "" : ` Rank: highest value first, among all ${PEERS[sel.level]} in the atlas.`}</p>
       <div class="tablebox"><table><thead><tr><th>Indicator</th><th>This area</th>${comp ? `<th>${comp[0]}</th>` : ""}<th>US</th><th>Rank</th></tr></thead>
       <tbody>${rows.join("")}</tbody></table></div>`);
     box.selectAll("tbody tr[data-ind]").on("click", function () { state.ind[v] = this.dataset.ind; state.shade[v] = "ind"; controls(); redraw(); });
+    box.selectAll(".linkbtn").on("click", function () { setView(this.dataset.v, this.dataset.id); window.scrollTo({ top: 0, behavior: "smooth" }); });
   }
 
   // ---------- loading ----------
-  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (/^[mc]\d+$/.test(h)) setView(h[0], h.slice(1)); });
+  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (/^([mc]\d+|u[A-Z]{2})$/.test(h)) setView(h[0], h.slice(1)); });
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => setTimeout(redraw, 0));
   new MutationObserver(() => redraw()).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
@@ -624,7 +758,8 @@ footer p { margin: 0; }
     countyOrder = [...byCounty.entries()].sort((a, b) => d3.sum(b[1], d => d.properties.pop2025) - d3.sum(a[1], d => d.properties.pop2025))
       .map(([id, ps]) => ({ id, label: `${ps[0].properties.county} · ${(d3.sum(ps, x => x.properties.pop2025) / 1e6).toFixed(2)}M · ${ps.length} piece${ps.length > 1 ? "s" : ""}` }));
     const h = location.hash.slice(1);
-    if (/^[mc]\d+$/.test(h) && (h[0] === "m" ? metro.cbsa.has(h.slice(1)) : byCounty.has(h.slice(1)))) setView(h[0], h.slice(1));
+    if (/^u[A-Z]{2}$/.test(h)) setView("u", h.slice(1));
+    else if (/^[mc]\d+$/.test(h) && (h[0] === "m" ? metro.cbsa.has(h.slice(1)) : byCounty.has(h.slice(1)))) setView(h[0], h.slice(1));
     else setView("m");
     get("metros/metro_units.geojson").then(uj => {
       for (const f of uj.features) { rewind(f.geometry); const m = metro.cbsa.get(f.properties.cbsa); if (m) m.units.push(f); }
