@@ -115,9 +115,9 @@ A second review (2026-11-27) of the 50 medium- and low-confidence names renamed 
 **Puerto Rico and San Juan (2026-11-27).** San Juan-Bayamón-Caguas (2.02M) is the 57th CBSA covered.
 - **Commuting:** LODES does not cover Puerto Rico, so its commuting comes from the ACS 2016–2020 county-to-county flows (table 1, workers 16+; 670,799 workers between its 40 municipios). These are enough because every Puerto Rico unit is a whole municipio.
 - **Districts:** the rules are unchanged, and no municipio reaches 0.35M, so all are joined by commuting into three districts, shown in the district view:
-  - **D01** "San Juan, Carolina & the Northeast" (939k, 89% work inside)
+  - **D01** "San Juan, Carolina & the Northeast" (917k, 90% work inside)
   - **D02** "Bayamón, North Coast & Central Mountains" (620k, 61%)
-  - **D03** "Caguas, Cayey & Humacao" (464k, 72%)
+  - **D03** "Caguas, Cayey & Humacao" (487k, 72%)
 - **No subregions:** the metro is under 2.5M.
 - **Names:** a local review kept all three, now high confidence. "The Northeast" follows the National Weather Service's Northeast zone and the Corredor Ecológico del Noreste; "North Coast" and "Central Mountains" are the tourism regions' English names; "Valle del Turabo" would cover only part of D03.
 - **Other metros:** unchanged. All checks pass (57 CBSAs, 253 districts, 196 in the view, 81 subregions). Work-inside shares for San Juan use the ACS flows (2016–2020), not LODES 2024.
@@ -130,3 +130,14 @@ A second review (2026-11-27) of the 50 medium- and low-confidence names renamed 
 - **Adjacency fix:** an island is now linked to the nearest unit already connected to the largest part. Before, the two islands, being nearer each other than the mainland, were linked only to each other. This changed nothing elsewhere.
 - **Names:** a local review kept D01, because locals and the Health Department divide the area around Mayagüez, Aguadilla and Arecibo, and "Porta del Sol" would leave out a third of it. It renamed D02 from "Ponce, Guayama & the Island Municipalities": "Vieques & Culebra" is the fixed local pair, while "island municipalities" is an official description readers would not recognise. Both are now high confidence.
 - **Totals:** all checks pass. 58 areas (57 CBSAs and this region), 255 districts (198 in the view), 81 subregions. With San Juan, every Puerto Rico municipio is in a district.
+
+**Puerto Rico boundary review (2026-11-28).** A review of all 78 municipios checked where each one's out-commuters work (ACS 2016–2020 flows, also recomputed without San Juan city, which draws workers from the whole island) and local ties. The boundaries hold, with one move:
+- **Naguabo** (23k) is pinned to Humacao's district (D03). Its out-commuters split evenly: 2,327 to D01 and 2,308 to D03. Without San Juan city, D03 leads 53% to 46%. Humacao is its largest destination and its hospital town, and they share a senate district.
+- **Effect:** the move raises work-inside in both districts. D01 is now 917k and D03 487k.
+- **Close calls left as they are:**
+  - Aguas Buenas: as many workers to San Juan as to Caguas.
+  - Toa Baja and Cataño: 66% and 79% to D01.
+  - The mountain towns Comerío, Barranquitas and Orocovis: moving any of them to D03 lowers work-inside.
+  - Gurabo: D03 leads once San Juan city is left out.
+  - Nothing in the rest-of-island region is close.
+- **Anchors:** Bayamón and Caguas send most of their out-commuters to San Juan, but they anchor their own districts and stay.
