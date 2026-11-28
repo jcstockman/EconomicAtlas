@@ -60,6 +60,22 @@ The full list is in `indicator_catalogue.csv`, with each indicator's numerator, 
 
 Rounding: dollars and density to whole numbers, minutes to one decimal, percentages and ratios to two decimals.
 
+Also written:
+- `indicators_counties.csv`: the 64 counties split into pieces, each the sum of its pieces, for comparison.
+- `indicators_us.csv`: the 50 states, DC and Puerto Rico.
+  - BEA figures leave out Puerto Rico, which BEA does not cover.
+  - QCEW figures are BLS's national total, which also counts the US Virgin Islands (about 0.03% of jobs), because withheld county cells cannot be added up.
+  - An ACS gap in a tiny unit (Kalawao County, 82 residents) is skipped.
+- `indicators.json`: every level, the national row and the catalogue in theme order, in one compact file (1.0 MB) for the map.
+
+## The atlas map
+
+`regions/map.html` (published as "Economic Atlas Map") reads `atlas/indicators.json`:
+- **Shading:** in the metro and county-pieces views, any indicator can shade the map, comparing the metro's districts or the county's pieces. The table then shows that indicator in place of its units or population-mix column.
+- **Profiles:** clicking a district, a subregion row, the metro total, a piece or the county total opens a profile of all 46 indicators by theme. Each value is shown next to the metro or county (where there is one) and the US, with the area's rank among all its peers in the atlas: 255 districts, 81 subregions, 58 metro areas, 157 county pieces or 64 split counties.
+- **Shading from a profile:** clicking an indicator in a profile shades the map by it.
+- **Not on the map:** whole counties outside the 58 metro areas are in the tables but not on the map.
+
 ## Checks
 
 `check_indicators.py --cache DIR` (writes `check_indicators.csv`) tests three things. All pass on the 2026-11-28 build:
