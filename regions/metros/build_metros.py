@@ -1,4 +1,4 @@
-"""Subregions and districts for the 57 CBSAs of 1.0M+ (docs/specs/subregions-districts.md).
+"""Subregions and districts for the 57 CBSAs of 1.0M+, and the rest of Puerto Rico as one region (docs/specs/subregions-districts.md).
 
 Districts (0.35-1.5M): every atlas unit of 0.35M+ (a county piece, or a county) is a district; counties under 0.35M
 join, by LODES commuting (their residents' jobs), an adjacent district or small-county group in the same region, until
@@ -36,7 +36,9 @@ import build_groups as bg  # noqa: E402
 
 DELIN = "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx"
 ACS_FLOWS = "https://www2.census.gov/programs-surveys/demo/tables/metro-micro/2020/commuting-flows-2020/table1.xlsx"
-ACS_FLOW_STATES = {"72"}  # states whose commuting comes from the ACS flows instead of LODES
+ACS_FLOW_STATES = {"72"}
+PR_SAN_JUAN = "41980"
+PR_REST = ("72999", "Puerto Rico outside San Juan-Bayamón-Caguas")  # not an OMB area: the rest of the island as one region  # states whose commuting comes from the ACS flows instead of LODES
 OD = "https://lehd.ces.census.gov/data/lodes/LODES8/{st}/od/{st}_od_{part}_JT00_{yr}.csv.gz"
 ABBR = {"01": "al", "04": "az", "05": "ar", "06": "ca", "08": "co", "09": "ct", "10": "de", "11": "dc", "12": "fl", "13": "ga",
         "17": "il", "18": "in", "19": "ia", "20": "ks", "21": "ky", "24": "md", "25": "ma", "26": "mi", "27": "mn", "28": "ms",
@@ -68,7 +70,17 @@ def delineation():
     rows = list(openpyxl.load_workbook(bx.fetch(DELIN), read_only=True).active.iter_rows(values_only=True))
     hi = [i for i, r in enumerate(rows) if r and r[0] == "CBSA Code"][0]; h = rows[hi]
     out = [dict(zip(h, r)) for r in rows[hi + 1:] if r and r[0] and str(r[0]).isdigit()]
-    return [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area"]
+    out = [d for d in out if d["Metropolitan/Micropolitan Statistical Area"] == "Metropolitan Statistical Area"]
+    # Puerto Rico outside San Juan: its other metros (Ponce 0.26M and smaller) are far below COVER, so the rest of the
+    # island is one region of its own (PR_REST, about 1.16M), districted like a mid-size CBSA
+    keep = [d for d in out if d["FIPS State Code"] != "72" or d["CBSA Code"] == PR_SAN_JUAN]
+    in_sj = {d["FIPS State Code"] + d["FIPS County Code"] for d in keep if d["FIPS State Code"] == "72"}
+    rest = sorted(r["county_fips"] for r in csv.DictReader(open(os.path.join(HERE, "..", "units", "atlas_units.csv")))
+                  if r["state_fips"] == "72" and r["county_fips"] not in in_sj)
+    for f in rest:
+        keep.append({"CBSA Code": PR_REST[0], "CBSA Title": PR_REST[1], "Metropolitan Division Code": None, "Metropolitan Division Title": None,
+                     "CSA Code": None, "FIPS State Code": "72", "FIPS County Code": f[2:], "Metropolitan/Micropolitan Statistical Area": "Metropolitan Statistical Area"})
+    return keep
 
 
 def acs_flows(units_in):
@@ -131,7 +143,8 @@ def group(nodes, pop, adj, flows, blen, k, lo, hi, apart=(), mu=None):
 
 def adjacency(geo, cunits, upop, cbsas):
     """Adjacent units within each CBSA (shapes buffered by ADJ_BUF) with their shared boundary length; a part of a
-    CBSA cut off from the rest (an island) is linked to its nearest unit."""
+    CBSA cut off from the rest (an island) is linked to its nearest unit in the part already connected to the largest
+    (so two islands nearer each other than the mainland, Vieques and Culebra, are not left linked only to each other)."""
     adj = collections.defaultdict(set); blen = collections.defaultdict(dict)
     for c in cbsas:
         ids = sorted(cunits[c]); buf = [geo[k].buffer(ADJ_BUF) for k in ids]; tree = STRtree(buf)
@@ -141,10 +154,11 @@ def adjacency(geo, cunits, upop, cbsas):
                     adj[k].add(ids[j]); blen[k][ids[j]] = buf[i].intersection(buf[j]).area / (2 * ADJ_BUF)
         G0 = nx.Graph(); G0.add_nodes_from(ids); G0.add_edges_from((k, m) for k in ids for m in adj[k])
         comps = sorted(nx.connected_components(G0), key=lambda x: -sum(upop[k] for k in x))
+        done = set(comps[0])
         for comp in comps[1:]:
-            rest = [k for k in ids if k not in comp]
-            k, m = min(((k, m) for k in comp for m in rest), key=lambda km: geo[km[0]].distance(geo[km[1]]))
+            k, m = min(((k, m) for k in comp for m in sorted(done)), key=lambda km: geo[km[0]].distance(geo[km[1]]))
             adj[k].add(m); adj[m].add(k); blen[k][m] = blen[m][k] = 0.0
+            done |= comp
     return adj, blen
 
 

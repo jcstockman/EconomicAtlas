@@ -336,3 +336,5 @@ id,level,cbsa,anchor_unit,status,since_version
 47900-S01,subregion,47900,51059-01,active,1.0
 47900-S02,subregion,47900,24033-01,active,1.0
 47900-S03,subregion,47900,24031-01,active,1.0
+72999-D01,district,72999,72013,active,1.0
+72999-D02,district,72999,72113,active,1.0

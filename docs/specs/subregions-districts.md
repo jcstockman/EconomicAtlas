@@ -121,3 +121,12 @@ A second review (2026-11-27) of the 50 medium- and low-confidence names renamed 
 - **No subregions:** the metro is under 2.5M.
 - **Names:** a local review kept all three, now high confidence. "The Northeast" follows the National Weather Service's Northeast zone and the Corredor Ecológico del Noreste; "North Coast" and "Central Mountains" are the tourism regions' English names; "Valle del Turabo" would cover only part of D03.
 - **Other metros:** unchanged. All checks pass (57 CBSAs, 253 districts, 196 in the view, 81 subregions). Work-inside shares for San Juan use the ACS flows (2016–2020), not LODES 2024.
+
+**The rest of Puerto Rico (2026-11-27).** Puerto Rico's other metros are all far below the 1.0M cover (Ponce 0.26M, Aguadilla 0.25M, Mayagüez 0.21M, Arecibo 0.18M, Guayama 0.06M), so the rest of the island, the 38 municipios outside San Juan-Bayamón-Caguas (1.16M), is one region of its own. It has the code `72999`, which is not an OMB area, and is districted like a mid-size CBSA, by ACS 2016–2020 commuting.
+- **Districts:**
+  - **D01** "Mayagüez, Aguadilla & Arecibo" (718k, 22 municipios, 90% work inside): the west, the north around Arecibo, and the inland towns.
+  - **D02** "Ponce, Guayama, Vieques & Culebra" (443k, 16, 90%): the south coast from Guánica to Arroyo, with Vieques and Culebra.
+- **Islands:** Vieques and Culebra are pinned to Patillas, the nearest unit of the region; their own neighbours, Ceiba and Fajardo, are in the San Juan metro.
+- **Adjacency fix:** an island is now linked to the nearest unit already connected to the largest part. Before, the two islands, being nearer each other than the mainland, were linked only to each other. This changed nothing elsewhere.
+- **Names:** a local review kept D01, because locals and the Health Department divide the area around Mayagüez, Aguadilla and Arecibo, and "Porta del Sol" would leave out a third of it. It renamed D02 from "Ponce, Guayama & the Island Municipalities": "Vieques & Culebra" is the fixed local pair, while "island municipalities" is an official description readers would not recognise. Both are now high confidence.
+- **Totals:** all checks pass. 58 areas (57 CBSAs and this region), 255 districts (198 in the view), 81 subregions. With San Juan, every Puerto Rico municipio is in a district.

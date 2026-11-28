@@ -7,3 +7,5 @@ district,29510,29189-01,St. Louis city -> North & Central St. Louis County,"32% 
 district,17119,17163,Madison County IL -> St. Clair County IL,"Metro East forms its own district (0.55M with Monroe) rather than attaching county by county to the city"
 district,17133,17163,Monroe County IL -> St. Clair County IL,"34% of its workers go to the Metro East and city district, 23% to the Missouri side (jobs inside Monroe excluded)"
 subregion,29183,29189-02,St. Charles -> West & South St. Louis County subregion,"Keeps St. Charles with the Missouri suburbs (18% of its workers go to West & South County, which it borders at Chesterfield); by commuting alone the grouping would pair St. Charles with Metro East around the core (70% of commuting kept inside subregions against 63% here), the wrap-around this pin avoids"
+district,72147,72109,Vieques -> the south (Patillas),"Off the east coast, next to the San Juan metro's Ceiba and Fajardo, which are not in this region; Patillas is the nearest unit of the rest of Puerto Rico (most of Vieques's workers work on the island)"
+district,72049,72109,Culebra -> the south (Patillas),"With Vieques: the two islands go together"
