@@ -20,9 +20,13 @@ Writes next to this script:
   indicator_catalogue.csv           indicator_id, label, unit, kind, numerator, denominator, scale, source, year
   components_units.csv              unit_id and every component (for re-aggregating to any union of units)
   indicators_units.csv, indicators_districts.csv, indicators_subregions.csv, indicators_metros.csv
+  indicators_counties.csv           the 64 counties split into pieces (the sum of their pieces), for comparison
+  indicators_us.csv                 the 50 states, DC and Puerto Rico (BEA: without Puerto Rico, which it does not cover;
+                                    QCEW: BLS's national total, which also counts the US Virgin Islands, about 0.03% of jobs)
+  indicators.json                   all levels in one compact file for the atlas map (regions/map.html)
 usage: python3 build_indicators.py --cache DIR
 """
-import argparse, collections, csv, io, os, sys, zipfile
+import argparse, collections, csv, io, json, os, sys, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.join(HERE, "..")
@@ -30,6 +34,7 @@ sys.path[:0] = [os.path.join(R, "pieces"), os.path.join(R, "keys"), os.path.join
 import build_crosswalk as bx  # noqa: E402
 import build_keys as bk  # noqa: E402
 import apply_bea as ab  # noqa: E402
+import apply_qcew as aq  # noqa: E402
 
 GAZ = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_tracts_national.zip"
 INC_EDGES = [0, 10e3, 15e3, 20e3, 25e3, 30e3, 35e3, 40e3, 45e3, 50e3, 60e3, 75e3, 100e3, 125e3, 150e3, 200e3, None]  # B19001_002-017
@@ -105,6 +110,35 @@ CATALOGUE = [
     ("pc_personal_income", "Per capita personal income", "$", "ratio", "bea_personal_income", "bea_population", 1000, "BEA CAINC4 2024", "2024"),
     ("share_income_transfers", "Personal income from transfer receipts", "%", "rate", "bea_transfers", "bea_personal_income", 100, "BEA CAINC4 2024", "2024"),
 ]
+
+
+THEMES = [("Population", ["pop2020", "pop2025", "pop_change_2020_25", "density_2025", "share_under18", "share_65plus"]),
+          ("Origin", ["share_hispanic", "share_nh_white", "share_nh_black", "share_nh_asian", "share_foreign_born"]),
+          ("Income and poverty", ["households", "median_hh_income", "poverty_rate", "pc_personal_income", "share_income_transfers"]),
+          ("Education and work", ["share_bachelors", "lf_participation", "unemployment_rate", "share_uninsured"]),
+          ("Housing and commuting", ["share_owner_occupied", "median_home_value", "share_rent_burdened", "share_no_vehicle",
+                                     "share_work_home", "mean_commute_min"]),
+          ("Jobs and wages", ["qcew_estabs", "qcew_jobs", "qcew_avg_weekly_wage", "jobs_per_employed_resident", "share_jobs_government"]
+           + [f"share_jobs_{c}" for c in SUPERSECTORS]),
+          ("Economy", ["gdp", "gdp_real", "gdp_per_job", "personal_income"])]
+
+
+def national_qcew():
+    """QCEW components from BLS's national rows (US000): county sums cannot give them, because of withheld cells."""
+    z = zipfile.ZipFile(bx.fetch(aq.SINGLEFILE)); c = {}
+    with z.open(z.namelist()[0]) as fh:
+        for r in csv.DictReader(io.TextIOWrapper(fh)):
+            if r["area_fips"] != "US000":
+                continue
+            a, o, i, e = r["agglvl_code"], r["own_code"], r["industry_code"], float(r["annual_avg_emplvl"])
+            if a == "10":
+                c.update(qcew_estabs=float(r["annual_avg_estabs"]), qcew_jobs=e, qcew_wages=float(r["total_annual_wages"]), qcew_job_weeks=e * 52)
+            elif a == "11" and o == "5":
+                c["_private"] = e
+            elif a == "13" and o == "5" and i in SUPERSECTORS:
+                c[f"qcew_jobs_{i}"] = e
+    c["qcew_jobs_gov"] = c["qcew_jobs"] - c.pop("_private")
+    return c
 
 
 def median_from(counts, edges):
@@ -219,13 +253,15 @@ def main():
         for k in sorted(units):
             w.writerow([k] + ["" if comp[k][n] is None else round(comp[k][n], 3) for n in names])
 
-    def summed(members):
+    def summed(members, bea_skip=(), lenient=False):
         out = {}
         ms = set(members)
         for n in names:
             if n in BEA_COMP:
                 vs, used = [], set()
                 for m in members:
+                    if m[:2] in bea_skip:
+                        continue
                     cb = combo_of.get(m)
                     if cb is None:
                         vs.append(comp[m][n])
@@ -233,6 +269,8 @@ def main():
                         used.add(cb); vs.append(combo_val[cb].get(n) if combos[cb] <= ms else None)
             else:
                 vs = [comp[m][n] for m in members]
+                if lenient:  # national row: an ACS gap in a tiny unit (Kalawao) should not blank the US
+                    vs = [v for v in vs if v is not None] or [None]
             out[n] = None if any(v is None for v in vs) else sum(vs)
         return out
 
@@ -277,6 +315,12 @@ def main():
                          "work_inside": s["work_inside"]}, smem[k]) for k, s in sorted(S.items())],
         "metros": [({"cbsa": c, "name": ctitle[c], "units": len(ms)}, ms) for c, ms in sorted(cmem.items())],
     }
+    ctys = collections.defaultdict(list)
+    for k, u in units.items():
+        if u["unit_type"] == "piece":
+            ctys[u["county_fips"]].append(k)
+    levels["counties"] = [({"county_fips": c, "name": f"{units[ms[0]]['county']}, {units[ms[0]]['state']}", "units": len(ms)}, sorted(ms))
+                          for c, ms in sorted(ctys.items())]
     blanks = {}
     for lvl, rows in levels.items():
         out = []
@@ -286,6 +330,28 @@ def main():
             w = csv.DictWriter(fh, list(out[0])); w.writeheader(); w.writerows(out)
         blanks[lvl] = {i: sum(r[i] == "" for r in out) for i in iids}
         print(f"{lvl}: {len(out):,} rows", flush=True)
+    # national row: every unit (BEA without Puerto Rico, which it does not cover)
+    us = {"area": "United States (50 states, DC and Puerto Rico; BEA figures without Puerto Rico)", "units": len(units),
+          **indicators({**summed(sorted(units), bea_skip=("72",), lenient=True), **national_qcew()})}
+    with open(os.path.join(HERE, "indicators_us.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, list(us)); w.writeheader(); w.writerow(us)
+    # one compact file for the map: catalogue with themes, then values in catalogue order per area and level
+    theme_of = {i: t for t, ids in THEMES for i in ids}
+    assert set(theme_of) == set(iids), set(iids) ^ set(theme_of)
+    order = [i for _, ids in THEMES for i in ids]
+    cat = {c[0]: c for c in CATALOGUE}
+    vals = lambda r: [None if r[i] == "" else r[i] for i in order]
+    js = {"catalogue": [{"id": i, "label": cat[i][1], "unit": cat[i][2], "kind": cat[i][3], "source": cat[i][7], "year": cat[i][8],
+                         "theme": theme_of[i]} for i in order], "us": vals(us), "levels": {}}
+    keycol = {"units": "unit_id", "districts": "district_id", "subregions": "subregion_id", "metros": "cbsa", "counties": "county_fips"}
+    for lvl, kc in keycol.items():
+        js["levels"][lvl] = {r[kc]: vals(r) for r in csv.DictReader(open(os.path.join(HERE, f"indicators_{lvl}.csv")))}
+        for r in js["levels"][lvl].values():
+            for j, v in enumerate(r):
+                if v is not None:
+                    r[j] = float(v) if "." in v else int(v)
+    json.dump(js, open(os.path.join(HERE, "indicators.json"), "w"), separators=(",", ":"))
+    print(f"indicators.json {os.path.getsize(os.path.join(HERE, 'indicators.json')) / 1e6:.1f} MB", flush=True)
     with open(os.path.join(HERE, "indicator_catalogue.csv"), "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["indicator_id", "label", "unit", "kind", "numerator", "denominator", "scale", "source", "year"])
         w.writerows(CATALOGUE)

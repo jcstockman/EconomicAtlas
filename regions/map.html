@@ -1,4 +1,5 @@
-<title>Atlas Geography Map</title>
+<meta charset="utf-8">
+<title>Economic Atlas Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -103,6 +104,21 @@ tfoot td { font-weight: 600; border-bottom: 0; }
 .mixkey { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 10px; font-size: 0.78rem; color: var(--ink-2); }
 .mixkey i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
 .status { padding: 40px 12px; text-align: center; color: var(--ink-2); }
+.profile { padding: 16px; display: grid; gap: 12px; }
+.profile h2 { margin: 0; font-size: 1.15rem; line-height: 1.25; }
+.profile .sub2 { margin: -6px 0 0; font-size: 0.85rem; color: var(--ink-2); }
+.profile .hint { margin: 0; font-size: 0.8rem; color: var(--ink-3); }
+.profile table { font-size: 0.86rem; }
+.profile td:nth-child(1), .profile th:nth-child(1) { text-align: left; white-space: normal; font-family: var(--f-body); }
+.profile td:nth-child(2) { font-family: var(--f-data); font-weight: 600; text-align: right; }
+.profile tr.theme td { font: 600 0.72rem var(--f-body); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3);
+  padding-top: 14px; border-bottom: 1px solid var(--ink-3); }
+.profile tbody tr { cursor: pointer; }
+.profile tbody tr.theme { cursor: default; }
+.profile tr.cur td { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.rankbar { position: relative; display: inline-block; width: 64px; height: 8px; border-radius: 4px; background: var(--rule); vertical-align: middle; margin-right: 6px; }
+.rankbar b { position: absolute; top: -2px; width: 4px; height: 12px; border-radius: 2px; background: var(--accent); transform: translateX(-2px); }
+.rank { font-family: var(--f-data); font-size: 0.8rem; color: var(--ink-2); }
 footer { font-size: 0.8rem; color: var(--ink-3); max-width: 90ch; display: grid; gap: 6px; }
 footer p { margin: 0; }
 @media (prefers-reduced-motion: no-preference) { .piece { transition: fill 200ms ease; } }
@@ -110,7 +126,7 @@ footer p { margin: 0; }
 
 <div class="wrap">
   <header>
-    <h1>Atlas geography</h1>
+    <h1>Economic atlas</h1>
     <div class="seg views" role="group" aria-label="View" id="views">
       <button type="button" data-v="m" aria-pressed="true">Metro areas</button>
       <button type="button" data-v="c" aria-pressed="false">County pieces</button>
@@ -123,6 +139,7 @@ footer p { margin: 0; }
     <div class="field"><label id="shade-label">Shade by</label>
       <div class="seg" role="group" aria-labelledby="shade-label" id="shade"></div>
     </div>
+    <div class="field" id="ind-field"><label for="ind">Indicator</label><select id="ind"></select></div>
     <div class="field"><label id="sub-label">Subareas</label>
       <div class="seg" role="group" aria-labelledby="sub-label" id="subtoggle">
         <button type="button" data-s="off" aria-pressed="true">Hide</button>
@@ -150,7 +167,12 @@ footer p { margin: 0; }
     </section>
   </div>
 
+  <section class="panel profile" id="profile" aria-label="Area profile" aria-live="polite">
+    <p class="hint">Loading the atlas indicators…</p>
+  </section>
+
   <footer>
+    <p>Indicators: 46 per area from additive atlas-unit counts (rates are summed numerators over summed denominators; medians are estimated from summed brackets). Sources: Census 2020 and Vintage 2025; ACS 2020–2024 five-year, summed from tracts; BLS QCEW 2024; BEA 2024 (no Puerto Rico). Blank: withheld at the county by BLS or BEA, or not covered. US: the 50 states, DC and Puerto Rico (BEA without Puerto Rico; QCEW from BLS's national total). Spec: docs/specs/atlas-indicators.md.</p>
     <p id="foot-m">Metro areas: the 57 CBSAs of 1.0M+ residents (OMB July 2023 delineation, Vintage 2025 estimates), and the rest of Puerto Rico as one region (its other metros are all under 0.3M). Districts (0.35–1.5M) are atlas units, that is county pieces and counties, of 0.35M+, with smaller counties joined by where their residents work. Subregions (0.6–3.5M, aiming at 1–2.5M) exist only in the 26 CBSAs of 2.5M+: OMB metropolitan divisions, with larger divisions and undivided CBSAs split by commuting. The district view is shown in subregions over 1.5M and in mid-size CBSAs with two or more districts; elsewhere it falls through to the subregion or CBSA. Work inside: employed residents whose job is in the same area (LEHD LODES 2024, Michigan 2021, cross-state commuting included; Puerto Rico, which LODES does not cover: ACS 2016–2020 county-to-county flows). Spec: docs/specs/subregions-districts.md.</p>
     <p id="foot-c">County pieces: Census 2020 tracts (cartographic boundaries) and Vintage 2025 county estimates; 2020 redistricting data (PL 94-171) for the population mix; LEHD LODES 2024 workplace and origin–destination files (Michigan 2021; in-state jobs only, so "work inside" excludes cross-state commuting). Official pieces follow each county's planning or statistical division; inferred pieces come from Louvain on commuting. Spec: docs/specs/county-pieces.md.</p>
   </footer>
@@ -164,9 +186,36 @@ footer p { margin: 0; }
   const fmt = d3.format(","), fmtM = v => (v / 1e6).toFixed(2) + "M", pct = d3.format(".1%");
   const wi = v => v == null ? "—" : pct(v);
   const SHADES = {
-    c: [["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["jobs_lodes", "Jobs"]],
-    m: [["group", "Subregion"], ["work_inside", "Work inside"], ["pop2025", "Residents 2025"]],
+    c: [["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["jobs_lodes", "Jobs"], ["ind", "Indicator"]],
+    m: [["group", "Subregion"], ["work_inside", "Work inside"], ["pop2025", "Residents 2025"], ["ind", "Indicator"]],
   };
+  // ---------- atlas indicators (atlas/indicators.json: catalogue in theme order, values per level and area) ----------
+  let IND = null;
+  const IDX = new Map(), RANKS = new Map();
+  const fmtInd = (c, v) => {
+    if (v == null) return "—";
+    const u = c.unit;
+    if (u === "%") return (c.kind === "change" && v > 0 ? "+" : "") + v.toFixed(1) + "%";
+    if (u === "$ thousands") { const d = v * 1000; return d >= 1e12 ? "$" + (d / 1e12).toFixed(2) + "T" : d >= 1e9 ? "$" + (d / 1e9).toFixed(1) + "B" : "$" + (d / 1e6).toFixed(0) + "M"; }
+    if (u.startsWith("$")) return "$" + fmt(Math.round(v));
+    if (u === "ratio") return v.toFixed(2);
+    if (u === "minutes") return v.toFixed(1) + " min";
+    return fmt(Math.round(v));
+  };
+  const catOf = iid => IND.catalogue[IDX.get(iid)];
+  const indVal = (level, id, iid) => { const r = IND && IND.levels[level][id]; return r ? r[IDX.get(iid)] : null; };
+  // peers: the areas an area is ranked among (pieces among the 157 pieces, not among every county unit)
+  const PEERS = { districts: "districts", subregions: "subregions", metros: "metro areas", counties: "split counties", pieces: "county pieces" };
+  const peerIds = g => g === "pieces" ? Object.keys(IND.levels.units).filter(k => k.includes("-")) : Object.keys(IND.levels[g]);
+  function rankOf(g, iid, v) {
+    if (v == null) return null;
+    const key = g + "|" + iid;
+    if (!RANKS.has(key)) { const lvl = g === "pieces" ? "units" : g;
+      RANKS.set(key, peerIds(g).map(k => indVal(lvl, k, iid)).filter(x => x != null).map(x => -x).sort((a, b) => a - b)); }
+    const vs = RANKS.get(key);  // negated, ascending: rank 1 = highest value
+    return { r: 1 + d3.bisectLeft(vs, -v), n: vs.length };
+  }
+  const ord = n => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
   const METRIC = {
     work_inside: { label: "Work inside", f: wi },
     pop2025: { label: "Residents, 2025 est.", f: v => fmtM(v) },
@@ -200,7 +249,8 @@ footer p { margin: 0; }
   const $ = id => document.getElementById(id);
   const els = { sel: d3.select("#place"), map: d3.select("#map"), rows: d3.select("#rows"), foot: d3.select("#foot"), head: d3.select("#head"),
     meta: d3.select("#meta"), legend: d3.select("#legend"), tip: $("tip") };
-  const state = { view: "m", shade: { c: "work_inside", m: "group" }, lines: { c: false, m: false }, current: { c: null, m: null } };
+  const state = { view: "m", shade: { c: "work_inside", m: "group" }, lines: { c: false, m: false }, current: { c: null, m: null },
+    ind: { c: "median_hh_income", m: "median_hh_income" }, sel: { c: null, m: null } };
   const byCounty = new Map(), subByCounty = new Map();
   const metro = { cbsa: new Map(), subs: new Map(), units: new Map(), order: [] };
   let countyOrder = [], shown = null;
@@ -250,7 +300,18 @@ footer p { margin: 0; }
     $("place-label").textContent = isM ? "Metro area" : "County";
     $("sub-label").textContent = isM ? "County and piece lines" : "Subareas";
     $("foot-m").hidden = !isM; $("foot-c").hidden = isM;
-    const sh = d3.select("#shade").selectAll("button").data(SHADES[v], d => d[0]).join("button").attr("type", "button")
+    $("ind-field").hidden = !IND;
+    if (IND) {
+      const isel = d3.select("#ind");
+      if (isel.selectAll("optgroup").empty()) {
+        const themes = d3.groups(IND.catalogue, c => c.theme);
+        isel.selectAll("optgroup").data(themes).join("optgroup").attr("label", d => d[0])
+          .selectAll("option").data(d => d[1]).join("option").attr("value", c => c.id).text(c => c.label);
+        isel.on("change", function () { state.ind[state.view] = this.value; state.shade[state.view] = "ind"; controls(); redraw(); });
+      }
+      isel.property("value", state.ind[v]);
+    }
+    const sh = d3.select("#shade").selectAll("button").data(SHADES[v].filter(d => d[0] !== "ind" || IND), d => d[0]).join("button").attr("type", "button")
       .attr("aria-pressed", d => String(d[0] === state.shade[v])).on("click", (ev, d) => { state.shade[v] = d[0]; controls(); redraw(); });
     sh.text(d => d[0] === "group" && isM && state.current.m && !metro.cbsa.get(state.current.m).big ? "District" : d[1]);
     setPressed("#subtoggle", "s", state.lines[v] ? "on" : "off");
@@ -335,8 +396,12 @@ footer p { margin: 0; }
                        : ds.map(d => ({ id: d.properties.district_id, p: d.properties, feats: [d] }));
     const gc = groupColors(groups);
     const gkey = big ? "subregion_id" : "district_id";
-    const sc = shade === "group" ? null : scaleFor(ds.map(d => d.properties[shade]));
-    const fill = d => sc ? sc.c(d.properties[shade]) : gc.get(d.properties[gkey]);
+    const isInd = shade === "ind" && IND, ic = isInd ? catOf(state.ind.m) : null;
+    const val = d => isInd ? indVal("districts", d.properties.district_id, state.ind.m) : d.properties[shade];
+    const sc = shade === "group" ? null : scaleFor(ds.map(val));
+    const fill = d => sc ? sc.c(val(d)) : gc.get(d.properties[gkey]);
+    if (!state.sel.m || state.sel.m.cbsa !== cbsa) state.sel.m = { level: "metros", id: cbsa, cbsa };
+    const pick = (level, id) => { state.sel.m = { level, id, cbsa }; renderProfile(); };
 
     els.meta.html("");
     els.meta.append("span").html(`<b>${m.title}</b>`);
@@ -350,7 +415,8 @@ footer p { margin: 0; }
     const g = root.append("g"), gu = root.append("g"), ge = root.append("g"), gl = fr.labels;
     g.selectAll("path").data(ds).join("path").attr("class", "piece").attr("d", path).attr("fill", fill)
       .on("pointerenter pointermove", (ev, d) => { hover(d.properties.district_id, "district_id"); place(ev, metroTip(d, m)); })
-      .on("pointerleave", () => { hover(null); els.tip.hidden = true; });
+      .on("pointerleave", () => { hover(null); els.tip.hidden = true; })
+      .on("click", (ev, d) => pick("districts", d.properties.district_id));
     if (state.lines.m) {
       const us = m.units.filter(u => true);
       gu.selectAll("path.sub-halo").data(us).join("path").attr("class", "sub-halo").attr("d", path);
@@ -363,7 +429,8 @@ footer p { margin: 0; }
     fr.place(gl.selectAll("text").data(ds).join("text").attr("class", "num")
       .attr("fill", d => ink(fill(d))).text(d => num(d.properties.district_id)));
 
-    if (sc) ramp(ds.map(d => d.properties[shade]), sc.ip, METRIC[shade].f, METRIC[shade].label + (shade === "work_inside" ? " district" : ""), dropped);
+    if (sc && isInd) ramp(ds.map(val).filter(v => v != null), sc.ip, v => fmtInd(ic, v), ic.label, dropped);
+    else if (sc) ramp(ds.map(d => d.properties[shade]), sc.ip, METRIC[shade].f, METRIC[shade].label + (shade === "work_inside" ? " district" : ""), dropped);
     else {
       els.legend.html("");
       if (dropped) els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)").text("Inhabited offshore islands lie outside this frame; their figures are included in the table.");
@@ -376,7 +443,8 @@ footer p { margin: 0; }
     if (state.lines.m) els.legend.append("span").html(`<i style="border-top:1.5px dashed var(--ink)"></i>Counties and county pieces`);
     $("note").textContent = "Numbers are district numbers (the last two digits of the district ID) and match the table. Shading compares this metro area's districts only. Shapes are dissolved atlas units; no basemap. Scroll, pinch or use + and − to zoom; drag to pan.";
 
-    els.head.html(`<tr><th>#</th><th>${big ? "Subregion / district" : "District"}</th><th>2025 est.</th><th>Work inside</th><th>Units</th></tr>`);
+    const icol = (level, id) => isInd ? `<td>${fmtInd(ic, indVal(level, id, state.ind.m))}</td>` : "";
+    els.head.html(`<tr><th>#</th><th>${big ? "Subregion / district" : "District"}</th><th>2025 est.</th><th>Work inside</th>${isInd ? `<th title="${ic.label}">${ic.label.length > 22 ? ic.label.slice(0, 20) + "…" : ic.label}</th>` : "<th>Units</th>"}</tr>`);
     const rows = [];
     if (big) for (const gr of groups) {
       rows.push({ kind: "sr", p: gr.p, color: gc.get(gr.id), id: gr.id });
@@ -386,26 +454,30 @@ footer p { margin: 0; }
     els.rows.selectAll("tr").data(rows).join("tr").attr("class", r => r.kind + (r.muted ? " muted" : "")).attr("data-id", r => r.id)
       .on("pointerenter", (ev, r) => r.kind === "sr" ? hover(r.id, "subregion_id") : hover(r.id, "district_id"))
       .on("pointerleave", () => hover(null))
+      .on("click", (ev, r) => pick(r.kind === "sr" ? "subregions" : "districts", r.id))
       .html(r => {
         const p = r.p;
         if (r.kind === "sr") {
           const view = p.district_view ? `${p.districts} districts, shown in the district view` : `${p.districts} district${p.districts > 1 ? "s" : ""}; district view falls through to the subregion (under 1.5M)`;
           return `<td><span class="badge" style="background:${r.color};color:${ink(r.color)}">S${num(p.subregion_id)}</span></td>
-            <td>${p.name}<span class="id">${p.subregion_id} · ${view}</span></td><td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td><td>${p.units}</td>`;
+            <td>${p.name}<span class="id">${p.subregion_id} · ${view}</span></td><td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td>${isInd ? icol("subregions", r.id) : `<td>${p.units}</td>`}`;
         }
         return `<td><span class="badge" style="background:${r.color};color:${ink(r.color)}">${num(p.district_id)}</span></td>
           <td>${p.name}<span class="id">${p.district_id}${p.units > 1 ? " · " + p.members.split("; ").join(", ") : ""}</span></td>
-          <td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td><td>${p.units}</td>`;
+          <td>${fmtM(p.pop2025)}</td><td>${wi(p.work_inside)}</td>${isInd ? icol("districts", r.id) : `<td>${p.units}</td>`}`;
       });
     d3.select("#mixkey").html(big ? "Greyed districts are not shown in the district view: their subregion is under 1.5M, so the atlas reports the subregion instead." :
       ds.length > 1 ? "Mid-size metro area (1.0–2.5M): no subregions; the district view shows these districts." :
       "Mid-size metro area that yields a single district: both levels fall through to the CBSA.");
-    els.foot.html(`<tr><td></td><td>CBSA total</td><td>${fmtM(m.pop)}</td><td></td><td>${d3.sum(ds, d => d.properties.units)}</td></tr>`);
+    els.foot.html(`<tr style="cursor:pointer"><td></td><td>${cbsa === "72999" ? "Region" : "CBSA"} total</td><td>${fmtM(m.pop)}</td><td></td>${isInd ? icol("metros", cbsa) : `<td>${d3.sum(ds, d => d.properties.units)}</td>`}</tr>`);
+    els.foot.select("tr").on("click", () => pick("metros", cbsa));
+    renderProfile();
   }
   function metroTip(d, m) {
     const p = d.properties, s = p.subregion_id && metro.subs.get(p.subregion_id);
     return `<h3>${num(p.district_id)}. ${p.name}</h3><p class="comp">${p.district_id}${s ? ` · in subregion S${num(s.subregion_id)}, ${s.name}` : ""}</p><dl>
-      <dt>Residents 2025</dt><dd>${fmtM(p.pop2025)}</dd><dt>Work inside</dt><dd>${wi(p.work_inside)}</dd><dt>Atlas units</dt><dd>${p.units}</dd></dl>
+      <dt>Residents 2025</dt><dd>${fmtM(p.pop2025)}</dd><dt>Work inside</dt><dd>${wi(p.work_inside)}</dd><dt>Atlas units</dt><dd>${p.units}</dd>
+      ${state.shade.m === "ind" && IND ? `<dt>${catOf(state.ind.m).label}</dt><dd>${fmtInd(catOf(state.ind.m), indVal("districts", p.district_id, state.ind.m))}</dd>` : ""}</dl>
       ${p.units > 1 ? `<p class="subtip">${p.members.split("; ").join(", ")}</p>` : ""}
       <p class="subtip">${p.district_view ? "Shown in the district view." : s ? "Not in the district view: subregion under 1.5M." : "Single district: falls through to the CBSA."}</p>`;
   }
@@ -425,13 +497,18 @@ footer p { margin: 0; }
     if (sc0) els.meta.append("span").text(`${sc0.length} subareas, ${sc0.filter(d => d.properties.kind === "puma").length} exact PUMAs`);
 
     const fr = frame(ps), { path, root, dropped } = fr;
-    const sc = scaleFor(ps.map(p => p.properties[metric]).filter(v => v != null));
-    const fill = p => sc.c(p.properties[metric]);
+    const isInd = metric === "ind" && IND, ic = isInd ? catOf(state.ind.c) : null;
+    const val = p => isInd ? indVal("units", p.properties.piece_id, state.ind.c) : p.properties[metric];
+    const sc = scaleFor(ps.map(val).filter(v => v != null));
+    const fill = p => sc.c(val(p));
+    if (!state.sel.c || state.sel.c.fips !== fips) state.sel.c = { level: ps.length > 1 ? "counties" : "pieces", id: ps.length > 1 ? fips : ps[0].properties.piece_id, fips };
+    const pick = (level, id) => { state.sel.c = { level, id, fips }; renderProfile(); };
     const g = root.append("g"), gs = root.append("g"), gl = fr.labels;
     g.selectAll("path").data(ps, d => d.properties.piece_id).join("path")
       .attr("class", "piece").attr("d", path).attr("fill", fill)
       .on("pointerenter pointermove", (ev, d) => { hover(d.properties.piece_id, "piece_id"); place(ev, pieceTip(ev, d)); })
-      .on("pointerleave", () => { hover(null); els.tip.hidden = true; });
+      .on("pointerleave", () => { hover(null); els.tip.hidden = true; })
+      .on("click", (ev, d) => pick("pieces", d.properties.piece_id));
     const subs = subByCounty.get(fips) || [];
     shown = { path, geo: root, subs: showSub ? subs : [] };
     if (showSub) {
@@ -440,26 +517,32 @@ footer p { margin: 0; }
     }
     fr.place(gl.selectAll("text").data(ps).join("text").attr("class", "num")
       .attr("fill", d => ink(fill(d))).text(d => num(d.properties.piece_id)));
-    ramp(ps.map(p => p.properties[metric]).filter(v => v != null), sc.ip, METRIC[metric].f, metric === "work_inside" ? "Work inside piece" : METRIC[metric].label, dropped);
+    if (isInd) ramp(ps.map(val).filter(v => v != null), sc.ip, v => fmtInd(ic, v), ic.label, dropped);
+    else ramp(ps.map(p => p.properties[metric]).filter(v => v != null), sc.ip, METRIC[metric].f, metric === "work_inside" ? "Work inside piece" : METRIC[metric].label, dropped);
     $("note").textContent = "Numbers match the table. Dashed lines (Show subareas) are the subareas nested in each piece, cut along 2020 PUMA lines. Shading compares this county's pieces only. No basemap: boundaries are dissolved 2020 tracts, clipped to the shoreline; uninhabited islands are left off.";
 
-    els.head.html(`<tr><th>#</th><th>Piece</th><th>2025 est.</th><th>Jobs</th><th>Work inside</th><th>Population mix</th></tr>`);
+    const icol = (level, id) => isInd ? `<td>${fmtInd(ic, indVal(level, id, state.ind.c))}</td>` : "";
+    els.head.html(`<tr><th>#</th><th>Piece</th><th>2025 est.</th><th>Jobs</th><th>Work inside</th>${isInd ? `<th title="${ic.label}">${ic.label.length > 22 ? ic.label.slice(0, 20) + "…" : ic.label}</th>` : "<th>Population mix</th>"}</tr>`);
     els.rows.selectAll("tr").remove();
     els.rows.selectAll("tr").data(ps).join("tr").attr("data-id", d => d.properties.piece_id)
       .on("pointerenter", (ev, d) => hover(d.properties.piece_id, "piece_id")).on("pointerleave", () => hover(null))
+      .on("click", (ev, d) => pick("pieces", d.properties.piece_id))
       .html(d => { const p = d.properties, f = fill(d);
         return `<td><span class="badge" style="background:${f};color:${ink(f)}">${num(p.piece_id)}</span></td>
           <td>${p.name}<span class="id">${p.piece_id}${p.components ? " · " + p.components : ""}</span></td><td>${fmtM(p.pop2025)}</td>
-          <td>${fmt(p.jobs_lodes)}</td><td>${wi(p.work_inside)}</td><td>${mixBar(p)}</td>`; });
-    d3.select("#mixkey").html("Population mix, 2020 census (non-Hispanic groups by race): " + GROUPS.map(g => `<span><i style="background:var(${g[2]})"></i>${g[1]}</span>`).join(""));
+          <td>${fmt(p.jobs_lodes)}</td><td>${wi(p.work_inside)}</td>${isInd ? icol("units", p.piece_id) : `<td>${mixBar(p)}</td>`}`; });
+    d3.select("#mixkey").html(isInd ? "" : "Population mix, 2020 census (non-Hispanic groups by race): " + GROUPS.map(g => `<span><i style="background:var(${g[2]})"></i>${g[1]}</span>`).join(""));
     const sum = k => d3.sum(ps, d => d.properties[k]);
-    els.foot.html(`<tr><td></td><td>County total</td><td>${fmtM(sum("pop2025"))}</td><td>${fmt(sum("jobs_lodes"))}</td><td></td><td></td></tr>`);
+    els.foot.html(`<tr style="cursor:pointer"><td></td><td>County total</td><td>${fmtM(sum("pop2025"))}</td><td>${fmt(sum("jobs_lodes"))}</td><td></td>${isInd && ps.length > 1 ? icol("counties", fips) : "<td></td>"}</tr>`);
+    if (ps.length > 1) els.foot.select("tr").on("click", () => pick("counties", fips));
+    renderProfile();
   }
   function pieceTip(ev, d) {
     const p = d.properties;
     return `<h3>${num(p.piece_id)}. ${p.name}</h3>${p.components ? `<p class="comp">${p.components}</p>` : ""}<dl>
       <dt>Residents 2025</dt><dd>${fmtM(p.pop2025)}</dd><dt>Residents 2020</dt><dd>${fmt(p.pop2020)}</dd>
       <dt>Jobs</dt><dd>${fmt(p.jobs_lodes)}</dd><dt>Work inside</dt><dd>${wi(p.work_inside)}</dd>
+      ${state.shade.c === "ind" && IND ? `<dt>${catOf(state.ind.c).label}</dt><dd>${fmtInd(catOf(state.ind.c), indVal("units", p.piece_id, state.ind.c))}</dd>` : ""}
       ${GROUPS.map(g => `<dt>${g[1]}</dt><dd>${pct(p[g[0]] || 0)}</dd>`).join("")}</dl>${subTip(ev)}`;
   }
   function subTip(ev) {  // the subarea under the pointer, when subareas are shown
@@ -469,6 +552,51 @@ footer p { margin: 0; }
     if (!s) return "";
     const q = s.properties;
     return `<p class="subtip"><b>${q.name}</b><br>Subarea ${q.subarea_id} · ${fmt(q.pop2020)} residents (2020) · ${q.kind === "puma" ? "exact PUMA " + q.puma_geoid : "part of PUMA " + q.puma_geoid}</p>`;
+  }
+
+  // ---------- area profile ----------
+  // The selected area's 46 indicators by theme, against its metro (or county) and the US, ranked among its peers.
+  function renderProfile() {
+    if (!IND) return;
+    const v = state.view, sel = state.sel[v]; if (!sel) return;
+    const lvl = sel.level === "pieces" ? "units" : sel.level, row = IND.levels[lvl][sel.id];
+    let title, sub, comp = null;
+    if (v === "m") {
+      const m = metro.cbsa.get(sel.cbsa), rest = sel.cbsa === "72999", within = [rest ? "Region" : "Metro", "metros", sel.cbsa];
+      if (sel.level === "districts") {
+        const d = m.districts.find(x => x.properties.district_id === sel.id).properties, s = d.subregion_id && metro.subs.get(d.subregion_id);
+        title = d.name; sub = `District ${d.district_id}${s ? ` · subregion S${num(s.subregion_id)}, ${s.name}` : ""} · ${m.title}`; comp = within;
+      } else if (sel.level === "subregions") {
+        title = metro.subs.get(sel.id).name; sub = `Subregion ${sel.id} · ${m.title}`; comp = within;
+      } else {
+        title = m.title; sub = rest ? "Region, not an OMB metro area: Puerto Rico's municipios outside San Juan-Bayamón-Caguas" : `Metro area, CBSA ${sel.cbsa}`;
+      }
+    } else {
+      const ps = byCounty.get(sel.fips), first = ps[0].properties;
+      if (sel.level === "pieces") {
+        const p = ps.find(x => x.properties.piece_id === sel.id).properties;
+        title = p.name; sub = `County piece ${p.piece_id} · ${first.county}${ps.length === 1 ? " (kept whole)" : ""}`;
+        if (ps.length > 1) comp = ["County", "counties", sel.fips];
+      } else { title = first.county; sub = `County of ${ps.length} pieces (their sum)`; }
+    }
+    const cur = state.shade[v] === "ind" ? state.ind[v] : null;
+    const rows = [];
+    for (const [theme, cs] of d3.groups(IND.catalogue.map((c, i) => ({ c, i })), x => x.c.theme)) {
+      rows.push(`<tr class="theme"><td colspan="${comp ? 5 : 4}">${theme}</td></tr>`);
+      for (const { c, i } of cs) {
+        const x = row ? row[i] : null, rk = rankOf(sel.level, c.id, x);
+        const bar = rk ? `<span class="rankbar" aria-hidden="true"><b style="left:${rk.n > 1 ? 100 * (rk.n - rk.r) / (rk.n - 1) : 50}%"></b></span>` : "";
+        rows.push(`<tr data-ind="${c.id}" class="${c.id === cur ? "cur" : ""}" title="${c.source}, ${c.year}">
+          <td>${c.label}</td><td>${fmtInd(c, x)}</td>${comp ? `<td>${fmtInd(c, indVal(comp[1], comp[2], c.id))}</td>` : ""}
+          <td>${fmtInd(c, IND.us[i])}</td><td>${rk ? `${bar}<span class="rank">${ord(rk.r)} of ${rk.n}</span>` : "—"}</td></tr>`);
+      }
+    }
+    const box = d3.select("#profile");
+    box.html(`<h2>${title}</h2><p class="sub2">${sub}</p>
+      <p class="hint">${v === "m" ? "Click a district on the map, a subregion or district row, or the total row" : "Click a piece on the map or in the table, or the county total row"} to see its profile. Click an indicator to shade the map by it. Rank: highest value first, among all ${PEERS[sel.level]} in the atlas.</p>
+      <div class="tablebox"><table><thead><tr><th>Indicator</th><th>This area</th>${comp ? `<th>${comp[0]}</th>` : ""}<th>US</th><th>Rank</th></tr></thead>
+      <tbody>${rows.join("")}</tbody></table></div>`);
+    box.selectAll("tbody tr[data-ind]").on("click", function () { state.ind[v] = this.dataset.ind; state.shade[v] = "ind"; controls(); redraw(); });
   }
 
   // ---------- loading ----------
@@ -502,6 +630,10 @@ footer p { margin: 0; }
       for (const f of uj.features) { rewind(f.geometry); const m = metro.cbsa.get(f.properties.cbsa); if (m) m.units.push(f); }
       if (state.view === "m") redraw();
     }).catch(() => {});
+    get("atlas/indicators.json").then(j => {
+      IND = j; j.catalogue.forEach((c, i) => IDX.set(c.id, i));
+      controls(); redraw();
+    }).catch(err => { d3.select("#profile").html(`<p class="hint">Could not load the atlas indicators (${err.message}).</p>`); });
     get("pieces/subareas.geojson").then(sj2 => {
       for (const f of sj2.features) { rewind(f.geometry); const c = f.properties.county_fips; if (!subByCounty.has(c)) subByCounty.set(c, []); subByCounty.get(c).push(f); }
       if (state.view === "c") redraw();
