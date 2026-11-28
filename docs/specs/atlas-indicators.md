@@ -74,7 +74,12 @@ Also written:
 - **Shading:** in the metro and county-pieces views, any indicator can shade the map, comparing the metro's districts or the county's pieces. The table then shows that indicator in place of its units or population-mix column.
 - **Profiles:** clicking a district, a subregion row, the metro total, a piece or the county total opens a profile of all 46 indicators by theme. Each value is shown next to the metro or county (where there is one) and the US, with the area's rank among all its peers in the atlas: 255 districts, 81 subregions, 58 metro areas, 157 county pieces or 64 split counties.
 - **Shading from a profile:** clicking an indicator in a profile shades the map by it.
-- **Not on the map:** whole counties outside the 58 metro areas are in the tables but not on the map.
+- **United States view:** all 3,315 atlas units (`atlas/us_units.topojson`, 1.8 MB, built by `build_us_shapes.py`).
+  - **Shapes:** the 8.6 MB unit shapes, simplified topology-aware with mapshaper (keep 8%, quantized to 1e5, so neighbours share borders). Alaska and Hawaii are inset by Albers USA, and Puerto Rico in its own inset. A single state gets its own fit (Alaska a conic projection).
+  - **Colours:** seven classes holding equal numbers of all 3,315 units, so every state view uses the national scale.
+  - **Table:** the ten highest and ten lowest units in view (every unit for a state of 20 or fewer), with the US rank.
+  - **Profiles:** a unit's profile compares it with its metro area (if any) and the US, ranks it among all 3,315 units, and links to the unit's metro and county views. With nothing selected, the profile shows the US.
+  - **Links:** `#uUS` or `#u<state code>` open the view.
 
 ## Checks
 
