@@ -1,7 +1,7 @@
 indicator_id,label,unit,kind,numerator,denominator,scale,source,year
 pop2020,"Population, 2020 census",persons,count,pop2020,,1,"Census 2020 (PL 94-171, tracts)",2020
-pop2025,"Population, 2025 estimate",persons,count,pop2025,,1,Census Vintage 2025 estimates,2025
-pop_change_2020_25,"Population change, 2020 to 2025",%,change,pop2025,pop2020,100,"Census 2020, Vintage 2025",2020-2025
+pop2025,"Population, 2025 estimate",persons,count,pop2025,,1,Census Vintage 2025 estimates (pieces: sub-county method),2025
+pop_change_2020_25,"Population change, April 2020 to July 2025",%,change,pop2025,pop_base2020,100,Census Vintage 2025 (estimates base and 2025); pieces: sub-county estimates,2020-2025
 density_2025,"Residents per square mile of land, 2025",per sq mi,ratio,pop2025,land_sqmi,1,Vintage 2025; 2020 Gazetteer,2025
 share_under18,Residents under 18,%,rate,acs_under18,acs_pop,100,ACS 2020-2024 B01001,2020-2024
 share_65plus,Residents 65 and over,%,rate,acs_65plus,acs_pop,100,ACS 2020-2024 B01001,2020-2024

@@ -188,7 +188,6 @@ footer p { margin: 0; }
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>
 <script>
 (() => {
   const css = () => getComputedStyle(document.documentElement);
@@ -367,18 +366,32 @@ footer p { margin: 0; }
     els.map.call(zoom.transform, t0);
     return { path: d3.geoPath(proj), root: geo, labels, dropped: fitTo.dropped, place: sel => { sel.each(function (d) { this._c = d3.geoPath(proj).centroid(d); }); apply(zoomT && zoomT.key === key ? zoomT.t : t0); } };
   }
-  function ramp(vals, ip, f, label, dropped) {
+  // National colour classes: seven classes holding equal numbers of a national reference set, so one value gets one colour
+  // in every view and area. Reference: all 3,315 atlas units for rates, ratios, medians and changes; for size-dependent
+  // counts (and the geography measures), every area of the kind drawn (all districts, or all atlas units / pieces).
+  const CLASSES = 7;
+  function classScale(refVals) {
+    const ip = seq(), cols = d3.range(CLASSES).map(i => ip(0.1 + 0.9 * i / (CLASSES - 1)));
+    const q = d3.scaleQuantile().domain(refVals).range(cols);
+    return { q, refVals, c: v => v == null ? tok("--empty") : q(v) };
+  }
+  const REF_TEXT = { units: "all 3,315 atlas units", districts: "all 255 districts", pieces: "all 157 county pieces" };
+  function indScale(iid, level) {  // level drawn: "districts" or "units"
+    const ref = catOf(iid).kind === "count" ? level : "units";
+    return { ...classScale(Object.values(IND.levels[ref]).map(r => r[IDX.get(iid)]).filter(v => v != null)), ref };
+  }
+  function classLegend(label, sc, f, ref, dropped) {
     els.legend.html("");
     if (dropped) els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)")
       .text("Inhabited offshore islands lie outside this frame; their figures are included in the table.");
     els.legend.append("span").text(label);
-    els.legend.append("span").attr("class", "v").text(f(d3.min(vals)));
-    els.legend.append("span").attr("class", "ramp").style("background", `linear-gradient(90deg, ${d3.range(0.08, 1.001, 0.092).map(ip).join(",")})`);
-    els.legend.append("span").attr("class", "v").text(f(d3.max(vals)));
-  }
-  function scaleFor(vals) {
-    const lo = d3.min(vals), hi = d3.max(vals), ip = seq();
-    return { ip, c: v => v == null ? tok("--empty") : ip(hi > lo ? 0.08 + 0.92 * (v - lo) / (hi - lo) : 0.6) };
+    const v = sc.refVals, th = [d3.min(v), ...sc.q.quantiles(), d3.max(v)];
+    sc.q.range().forEach((col, i) => els.legend.append("span").attr("class", "sw").style("background", col)
+      .attr("title", `${f(th[i])} to ${f(th[i + 1])}`));
+    els.legend.append("span").attr("class", "v").text(`${f(th[0])} to ${f(th[CLASSES])}`);
+    els.legend.append("span").html(`<span class="sw" style="background:var(--empty)"></span> no value`);
+    els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)")
+      .text(`National colours: seven classes, each holding a seventh of ${REF_TEXT[ref]}; hover a swatch for its range.`);
   }
   function place(ev, html) {
     const box = els.map.node().parentNode.getBoundingClientRect();
@@ -414,7 +427,8 @@ footer p { margin: 0; }
     const gkey = big ? "subregion_id" : "district_id";
     const isInd = shade === "ind" && IND, ic = isInd ? catOf(state.ind.m) : null;
     const val = d => isInd ? indVal("districts", d.properties.district_id, state.ind.m) : d.properties[shade];
-    const sc = shade === "group" ? null : scaleFor(ds.map(val));
+    const sc = shade === "group" ? null : isInd ? indScale(state.ind.m, "districts")
+      : { ...classScale([...metro.cbsa.values()].flatMap(x => x.districts.map(d => d.properties[shade])).filter(v => v != null)), ref: "districts" };
     const fill = d => sc ? sc.c(val(d)) : gc.get(d.properties[gkey]);
     if (!state.sel.m || state.sel.m.cbsa !== cbsa) state.sel.m = { level: "metros", id: cbsa, cbsa };
     const pick = (level, id) => { state.sel.m = { level, id, cbsa }; renderProfile(); };
@@ -445,8 +459,8 @@ footer p { margin: 0; }
     fr.place(gl.selectAll("text").data(ds).join("text").attr("class", "num")
       .attr("fill", d => ink(fill(d))).text(d => num(d.properties.district_id)));
 
-    if (sc && isInd) ramp(ds.map(val).filter(v => v != null), sc.ip, v => fmtInd(ic, v), ic.label, dropped);
-    else if (sc) ramp(ds.map(d => d.properties[shade]), sc.ip, METRIC[shade].f, METRIC[shade].label + (shade === "work_inside" ? " district" : ""), dropped);
+    if (sc && isInd) classLegend(ic.label, sc, v => fmtInd(ic, v), sc.ref, dropped);
+    else if (sc) classLegend(METRIC[shade].label + (shade === "work_inside" ? " district" : ""), sc, METRIC[shade].f, sc.ref, dropped);
     else {
       els.legend.html("");
       if (dropped) els.legend.append("span").style("width", "100%").style("color", "var(--ink-3)").text("Inhabited offshore islands lie outside this frame; their figures are included in the table.");
@@ -457,7 +471,7 @@ footer p { margin: 0; }
       } else els.legend.append("span").text("Colour: district, matching the table");
     }
     if (state.lines.m) els.legend.append("span").html(`<i style="border-top:1.5px dashed var(--ink)"></i>Counties and county pieces`);
-    $("note").textContent = "Numbers are district numbers (the last two digits of the district ID) and match the table. Shading compares this metro area's districts only. Shapes are dissolved atlas units; no basemap. Scroll, pinch or use + and − to zoom; drag to pan.";
+    $("note").textContent = "Numbers are district numbers (the last two digits of the district ID) and match the table. Colours are national classes, the same in every metro area. Shapes are dissolved atlas units; no basemap. Scroll, pinch or use + and − to zoom; drag to pan.";
 
     const icol = (level, id) => isInd ? `<td>${fmtInd(ic, indVal(level, id, state.ind.m))}</td>` : "";
     els.head.html(`<tr><th>#</th><th>${big ? "Subregion / district" : "District"}</th><th>2025 est.</th><th>Work inside</th>${isInd ? `<th title="${ic.label}">${ic.label.length > 22 ? ic.label.slice(0, 20) + "…" : ic.label}</th>` : "<th>Units</th>"}</tr>`);
@@ -515,7 +529,8 @@ footer p { margin: 0; }
     const fr = frame(ps), { path, root, dropped } = fr;
     const isInd = metric === "ind" && IND, ic = isInd ? catOf(state.ind.c) : null;
     const val = p => isInd ? indVal("units", p.properties.piece_id, state.ind.c) : p.properties[metric];
-    const sc = scaleFor(ps.map(val).filter(v => v != null));
+    const sc = isInd ? indScale(state.ind.c, "units")
+      : { ...classScale([...byCounty.values()].flat().map(p => p.properties[metric]).filter(v => v != null)), ref: "pieces" };
     const fill = p => sc.c(val(p));
     if (!state.sel.c || state.sel.c.fips !== fips) state.sel.c = { level: ps.length > 1 ? "counties" : "pieces", id: ps.length > 1 ? fips : ps[0].properties.piece_id, fips };
     const pick = (level, id) => { state.sel.c = { level, id, fips }; renderProfile(); };
@@ -533,9 +548,9 @@ footer p { margin: 0; }
     }
     fr.place(gl.selectAll("text").data(ps).join("text").attr("class", "num")
       .attr("fill", d => ink(fill(d))).text(d => num(d.properties.piece_id)));
-    if (isInd) ramp(ps.map(val).filter(v => v != null), sc.ip, v => fmtInd(ic, v), ic.label, dropped);
-    else ramp(ps.map(p => p.properties[metric]).filter(v => v != null), sc.ip, METRIC[metric].f, metric === "work_inside" ? "Work inside piece" : METRIC[metric].label, dropped);
-    $("note").textContent = "Numbers match the table. Dashed lines (Show subareas) are the subareas nested in each piece, cut along 2020 PUMA lines. Shading compares this county's pieces only. No basemap: boundaries are dissolved 2020 tracts, clipped to the shoreline; uninhabited islands are left off.";
+    if (isInd) classLegend(ic.label, sc, v => fmtInd(ic, v), sc.ref, dropped);
+    else classLegend(metric === "work_inside" ? "Work inside piece" : METRIC[metric].label, sc, METRIC[metric].f, sc.ref, dropped);
+    $("note").textContent = "Numbers match the table. Dashed lines (Show subareas) are the subareas nested in each piece, cut along 2020 PUMA lines. Colours are national classes, the same in every county and in the United States view. No basemap: boundaries are dissolved 2020 tracts, clipped to the shoreline; uninhabited islands are left off.";
 
     const icol = (level, id) => isInd ? `<td>${fmtInd(ic, indVal(level, id, state.ind.c))}</td>` : "";
     els.head.html(`<tr><th>#</th><th>Piece</th><th>2025 est.</th><th>Jobs</th><th>Work inside</th>${isInd ? `<th title="${ic.label}">${ic.label.length > 22 ? ic.label.slice(0, 20) + "…" : ic.label}</th>` : "<th>Population mix</th>"}</tr>`);
@@ -571,7 +586,7 @@ footer p { margin: 0; }
   }
 
   // ---------- United States view ----------
-  // Every atlas unit (atlas/us_units.topojson). Colours are sevenths of all 3,315 units, so every state view matches the US.
+  // Every atlas unit (atlas/us_units.geojson; state borders atlas/us_states.geojson). Colours are sevenths of all 3,315 units, so every state view matches the US.
   const STATE_NAMES = { AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado", CT: "Connecticut",
     DE: "Delaware", DC: "District of Columbia", FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana",
     IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan",
@@ -582,12 +597,12 @@ footer p { margin: 0; }
   function loadUS() {
     if (us.loading) return;
     els.rows.html(`<tr><td colspan="4" class="status">Loading the US units…</td></tr>`);
-    us.loading = get("atlas/us_units.topojson").then(t => {
-      us.topo = t;
-      us.feats = topojson.feature(t, t.objects.units).features;
+    us.loading = Promise.all([get("atlas/us_units.geojson"), get("atlas/us_states.geojson")]).then(([uj, sj]) => {
+      us.topo = uj;
+      us.feats = uj.features;
       us.feats.forEach(f => rewind(f.geometry));
       us.byId = new Map(us.feats.map(f => [f.properties.id, f]));
-      us.borders = topojson.mesh(t, t.objects.units, (a, b) => a !== b && a.properties.state !== b.properties.state);
+      us.borders = sj.type === "FeatureCollection" ? { type: "GeometryCollection", geometries: sj.features.map(f => f.geometry) } : sj;
       const n = d3.rollup(us.feats, v => v.length, f => f.properties.state);
       us.states = [{ id: "US", label: `All of the US · ${fmt(us.feats.length)} units` }].concat([...n.keys()]
         .sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b])).map(k => ({ id: k, label: `${STATE_NAMES[k]} · ${n.get(k)} unit${n.get(k) > 1 ? "s" : ""}` })));
@@ -601,9 +616,8 @@ footer p { margin: 0; }
     if (!feats.length) return;
     const val = f => indVal("units", f.properties.id, iid);
     const allVals = all.map(val).filter(v => v != null);
-    const ip = seq(), cols = d3.range(7).map(i => ip(0.1 + 0.9 * i / 6));
-    const q = d3.scaleQuantile().domain(allVals).range(cols);
-    const fill = f => { const v = val(f); return v == null ? tok("--empty") : q(v); };
+    const sc = indScale(iid, "units");
+    const fill = f => sc.c(val(f));
 
     // projections: Albers USA (Alaska and Hawaii inset) plus a Puerto Rico inset; a single state gets its own fit
     let path, bpath;
@@ -637,14 +651,8 @@ footer p { margin: 0; }
     if (state.lines.u) root.append("path").attr("class", "st-line").attr("d", bpath(us.borders));
     if (st === "US") root.append("text").attr("class", "inset-l").attr("x", W - 128).attr("y", H - 64).text("Puerto Rico");
 
-    els.legend.html("");
-    els.legend.append("span").text(c.label);
-    const th = [d3.min(allVals), ...q.quantiles(), d3.max(allVals)];
-    cols.forEach((col, i) => els.legend.append("span").attr("class", "sw").style("background", col)
-      .attr("title", `${fmtInd(c, th[i])} to ${fmtInd(c, th[i + 1])}`));
-    els.legend.append("span").attr("class", "v").text(`${fmtInd(c, th[0])} to ${fmtInd(c, th[7])}`);
-    els.legend.append("span").html(`<span class="sw" style="background:var(--empty)"></span> no value`);
-    $("note").textContent = "Colours: seven classes holding equal numbers of the 3,315 atlas units, the same in every state view; hover a swatch for its range. Alaska and Hawaii are inset, Puerto Rico at bottom right. Shapes are simplified for this view. Scroll, pinch or use + and − to zoom; drag to pan.";
+    classLegend(c.label, sc, v => fmtInd(c, v), sc.ref, false);
+    $("note").textContent = "Colours are national classes, the same in every state and in the metro and county views. Alaska and Hawaii are inset, Puerto Rico at bottom right. Shapes are simplified for this view. Scroll, pinch or use + and − to zoom; drag to pan.";
 
     // table: highest and lowest units in view (all of them for a small state)
     const ranked = feats.map(f => ({ f, v: val(f) })).filter(d => d.v != null).sort((a, b) => b.v - a.v);

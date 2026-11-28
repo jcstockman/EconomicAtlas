@@ -2,12 +2,20 @@
 metro areas), built from additive components so that every level is computed the same way.
 
 Components, per atlas unit:
-  population   2020 census and Vintage 2025 estimate (regions/units), land area (2020 Gazetteer, tracts)
+  population   2020 census count; Vintage 2025 estimate and its April 2020 estimates base (counties: Census Bureau;
+               county pieces: the county's figures shared by the sub-county method below); land area (2020 Gazetteer)
   ACS          2020-2024 five-year estimates summed from 2020 tracts (every unit is a set of whole tracts); income and
                home-value brackets for estimated medians
   QCEW 2024    establishments, employment, wages: total, government (federal + state + local), private, and the 11
                private supersectors (regions/data/qcew_2024_units.csv)
   BEA 2024     GDP (current, real), personal income and transfers, earnings by place of work (regions/data/bea_units.csv)
+Sub-county population (pieces): each 2020 block (PL 94-171) is grown by its area's 2020-2025 growth in the Census
+Bureau's city and town estimates (sub-est2025: the place-within-county-subdivision part where county subdivisions are
+estimated, else the incorporated place within the county, else the balance of the county), and the county's 2025
+estimate is shared among its pieces by these grown weights (largest remainder, so pieces add up exactly). A piece's 2020
+base is the county's estimates base times the piece's share of the 2020 count. Pieces' BEA population (for per capita
+income) is the county's BEA population shared the same way as the 2025 estimate. Population change is 2025 over the
+estimates base, as the Census Bureau computes it (the census count differs from the base by 0.5%+ in 49 counties).
 Indicators (indicator_catalogue.csv) are components or ratios of two summed components; medians are estimated from the
 summed brackets by linear interpolation within the median's bracket (the Census Bureau's method for derived medians).
 A level's value is missing when any member's component is missing (a QCEW or BEA cell withheld at the county, ACS
@@ -73,8 +81,8 @@ BEA_COMP = {"bea_gdp": ("CAGDP2", "1"), "bea_gdp_real": ("CAGDP9", "1"), "bea_pe
 # indicators: id, label, unit, kind, numerator, denominator, scale, source, year
 CATALOGUE = [
     ("pop2020", "Population, 2020 census", "persons", "count", "pop2020", "", 1, "Census 2020 (PL 94-171, tracts)", "2020"),
-    ("pop2025", "Population, 2025 estimate", "persons", "count", "pop2025", "", 1, "Census Vintage 2025 estimates", "2025"),
-    ("pop_change_2020_25", "Population change, 2020 to 2025", "%", "change", "pop2025", "pop2020", 100, "Census 2020, Vintage 2025", "2020-2025"),
+    ("pop2025", "Population, 2025 estimate", "persons", "count", "pop2025", "", 1, "Census Vintage 2025 estimates (pieces: sub-county method)", "2025"),
+    ("pop_change_2020_25", "Population change, April 2020 to July 2025", "%", "change", "pop2025", "pop_base2020", 100, "Census Vintage 2025 (estimates base and 2025); pieces: sub-county estimates", "2020-2025"),
     ("density_2025", "Residents per square mile of land, 2025", "per sq mi", "ratio", "pop2025", "land_sqmi", 1, "Vintage 2025; 2020 Gazetteer", "2025"),
     ("share_under18", "Residents under 18", "%", "rate", "acs_under18", "acs_pop", 100, "ACS 2020-2024 B01001", "2020-2024"),
     ("share_65plus", "Residents 65 and over", "%", "rate", "acs_65plus", "acs_pop", 100, "ACS 2020-2024 B01001", "2020-2024"),
@@ -123,6 +131,69 @@ THEMES = [("Population", ["pop2020", "pop2025", "pop_change_2020_25", "density_2
           ("Economy", ["gdp", "gdp_real", "gdp_per_job", "personal_income"])]
 
 
+SUBEST = "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/cities/totals/sub-est2025_{s}.csv"
+
+
+def county_estimates():
+    """{county: (April 2020 estimates base, July 2025 estimate)}, Vintage 2025, Puerto Rico included."""
+    sys.path.insert(0, os.path.join(R, "units"))
+    import build_units as bu
+    out = {}
+    for r in csv.DictReader(open(bx.fetch(bu.EST), encoding="latin-1")):
+        if r["SUMLEV"] == "050":
+            out[r["STATE"] + r["COUNTY"]] = (int(r["ESTIMATESBASE2020"]), int(r["POPESTIMATE2025"]))
+    pr = collections.defaultdict(dict)
+    for r in csv.DictReader(open(bx.fetch(bu.PR_EST), encoding="latin-1")):
+        if r["SUMLEV"] == "050":
+            pr["72" + r["MUNICIPIO"]][r["YEAR"]] = int(r["POPESTIMATE"])
+    for f, y in pr.items():
+        out[f] = (y["1"], y[bu.PR_YEAR])
+    return out
+
+
+def piece_weights(pieces, unit_of):
+    """Sub-county method: {piece: (2020 count, 2020 count grown to 2025 by its blocks' areas)}, and diagnostics."""
+    import build_demographics as bd
+    est = county_estimates()
+    w, p20 = collections.Counter(), collections.Counter()
+    matched = collections.Counter()
+    for s2 in sorted({p[:2] for p in pieces}):
+        name, st = bd.STATES[s2]
+        g071, g157 = {}, {}
+        for r in csv.DictReader(open(bx.fetch(SUBEST.format(s=int(s2))), encoding="latin-1")):
+            b, e = int(r["ESTIMATESBASE2020"]), int(r["POPESTIMATE2025"])
+            if b <= 0:
+                continue
+            if r["SUMLEV"] == "071":  # place part within a county subdivision (cousub codes are unique in a state)
+                g071[(r["COUSUB"], r["PLACE"])] = e / b
+            elif r["SUMLEV"] == "157":  # incorporated place part within a county, or the balance of the county (99990)
+                g157[(r["STATE"] + r["COUNTY"], r["PLACE"])] = e / b
+        z = zipfile.ZipFile(bx.fetch(bd.PL.format(name=name, st=st)))
+        geo = {}
+        with z.open(f"{st}geo2020.pl") as fh:
+            for line in io.TextIOWrapper(fh, encoding="latin-1"):
+                f = line.split("|")
+                if f[2] == "750":
+                    u = unit_of.get(f[9][:11])
+                    if u in pieces:
+                        geo[f[7]] = (u, f[17], f[29])
+        with z.open(f"{st}000012020.pl") as fh:
+            for line in io.TextIOWrapper(fh, encoding="latin-1"):
+                f = line.split("|"); g = geo.get(f[4])
+                if not g or f[5] == "0":
+                    continue
+                u, cs, pl = g; n = int(f[5]); c = u[:5]
+                gr = g071.get((cs, pl)) or g071.get((cs, "99990"))
+                how = "cousub"
+                if gr is None:
+                    gr = g157.get((c, pl)) or g157.get((c, "99990")); how = "place"
+                if gr is None:
+                    b, e = est[c]; gr = e / b; how = "county"
+                w[u] += n * gr; p20[u] += n; matched[how] += n
+        print(f"  sub-county {st}: {len(geo):,} blocks", flush=True)
+    return {u: (p20[u], w[u]) for u in pieces}, matched, est
+
+
 def national_qcew():
     """QCEW components from BLS's national rows (US000): county sums cannot give them, because of withheld cells."""
     z = zipfile.ZipFile(bx.fetch(aq.SINGLEFILE)); c = {}
@@ -169,6 +240,35 @@ def main():
     comp = {k: collections.defaultdict(lambda: None) for k in units}
     for k, u in units.items():
         comp[k]["pop2020"] = float(u["pop2020"]); comp[k]["pop2025"] = float(u["pop2025_est"])
+    # 2025 and estimates base: counties from the Census Bureau; pieces by the sub-county method
+    pcs = collections.defaultdict(list)
+    for k, u in units.items():
+        if u["unit_type"] == "piece":
+            pcs[u["county_fips"]].append(k)
+    split_pieces = {p for c, ps in pcs.items() if len(ps) > 1 for p in ps}
+    pw, matched, est = piece_weights(split_pieces, unit_of)
+    cnt20 = collections.Counter()
+    for k, u in units.items():
+        cnt20[u["county_fips"]] += int(u["pop2020"])
+    moved = []
+    for k, u in units.items():
+        b, e = est[u["county_fips"]]
+        comp[k]["pop_base2020"] = b * int(u["pop2020"]) / cnt20[u["county_fips"]]
+    for c, ps in pcs.items():
+        if len(ps) < 2:
+            continue
+        b, e = est[c]; tw = sum(pw[p][1] for p in ps)
+        raw = {p: e * pw[p][1] / tw for p in ps}
+        alloc = {p: int(v) for p, v in raw.items()}
+        for p in sorted(ps, key=lambda p: -(raw[p] - alloc[p]))[:e - sum(alloc.values())]:
+            alloc[p] += 1  # largest remainder: pieces add up to the county estimate
+        for p in ps:
+            moved.append((p, alloc[p] - comp[p]["pop2025"], comp[p]["pop2025"]))
+            comp[p]["pop2025"] = float(alloc[p])
+    tot = sum(matched.values())
+    print("sub-county growth source (share of 2020 residents in split counties):", {k: round(v / tot, 3) for k, v in matched.items()})
+    big = sorted(moved, key=lambda x: -abs(x[1]) / x[2])[:5]
+    print("largest piece changes vs. the county-share method:", [(p, int(d), f"{100 * d / o:+.1f}%") for p, d, o in big])
 
     # land area: 2020 Gazetteer tracts (square miles)
     z = zipfile.ZipFile(bx.fetch(GAZ))
@@ -245,8 +345,16 @@ def main():
                 for cb in combos:
                     combo_val[cb][name] = data.get(cb, {}).get(l)
     combo_of = {m: cb for cb, ms in combos.items() for m in ms}
+    # BEA population of pieces: the county's BEA population shared like the 2025 estimate (sub-county method), not by
+    # 2020 counts, so per capita income uses the same population as the rest of the atlas
+    for c, ps in pcs.items():
+        bp = [comp[p]["bea_population"] for p in ps]
+        if len(ps) > 1 and None not in bp:
+            tot_b, tot_e = sum(bp), sum(comp[p]["pop2025"] for p in ps)
+            for p in ps:
+                comp[p]["bea_population"] = tot_b * comp[p]["pop2025"] / tot_e
 
-    names = ["pop2020", "pop2025", "land_sqmi"] + list(ACS_COMP) + ["acs_commuters", "qcew_estabs", "qcew_jobs", "qcew_wages",
+    names = ["pop2020", "pop2025", "pop_base2020", "land_sqmi"] + list(ACS_COMP) + ["acs_commuters", "qcew_estabs", "qcew_jobs", "qcew_wages",
              "qcew_job_weeks", "qcew_jobs_gov"] + [f"qcew_jobs_{s}" for s in SUPERSECTORS] + list(BEA_COMP)
     with open(os.path.join(HERE, "components_units.csv"), "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["unit_id"] + names)

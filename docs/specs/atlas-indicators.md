@@ -29,7 +29,16 @@ Every level is computed in the same way from additive components per unit. As a 
    - **Government jobs** are QCEW total minus private jobs, both of which BLS always publishes, so a withheld federal, state or local cell does not blank them.
    - **Supersector shares** are blank wherever a member county has that supersector withheld.
 4. **BEA combined areas.** BEA reports Virginia's independent cities together with a neighbouring county, and Maui with Kalawao. These units have no BEA values of their own. A district or metro that holds every member of a combined area takes the combined area's figure.
-5. **Mean commute time** counts commuters (workers not working from home) only in tracts that have an aggregate travel time (B08013), to match its numerator. 1,016 tracts have no travel time; nearly all are empty or tiny.
+5. **Population, 2025 and change.**
+   - **Counties:** the 2025 figure is the Census Bureau's Vintage 2025 estimate. Change is measured from the April 2020 estimates base, as the Census Bureau does. The census count differs from that base by 0.5%+ in 49 counties; in Luce County, Michigan, using the count gave +18.7% instead of −1.2%.
+   - **County pieces (the sub-county method):** before this, a piece got its county's estimate shared by 2020 counts, so every piece showed its county's growth rate.
+     1. Each 2020 block (PL 94-171) is grown by its area's 2020–2025 growth in the Census Bureau's city and town estimates (`sub-est2025`): the part of a place within a county subdivision where those are estimated (18.5% of residents in split counties), otherwise the incorporated place or the balance of the county (81.5%).
+     2. The county's 2025 estimate is shared among its pieces by the grown weights (largest remainder, so pieces add up exactly).
+     3. A piece's 2020 base is the county's estimates base times the piece's share of the 2020 count.
+     4. A piece's BEA population, the denominator of per capita income, is shared like its 2025 estimate.
+   - **Example:** North Collin (McKinney & Frisco) grew 42.6% against 5.2% for South Collin (Plano & Allen), where both showed the county's 21.7% before.
+   - **Geography files:** the atlas units and districts files still carry the county-share 2025 population for pieces, so their figures differ from these tables in 118 districts (−13.6% to +17.2%).
+6. **Mean commute time** counts commuters (workers not working from home) only in tracts that have an aggregate travel time (B08013), to match its numerator. 1,016 tracts have no travel time; nearly all are empty or tiny.
 
 ## Indicators
 
@@ -71,12 +80,14 @@ Also written:
 ## The atlas map
 
 `regions/map.html` (published as "Economic Atlas Map") reads `atlas/indicators.json`:
-- **Shading:** in the metro and county-pieces views, any indicator can shade the map, comparing the metro's districts or the county's pieces. The table then shows that indicator in place of its units or population-mix column.
+- **Shading:** in every view, any indicator can shade the map. Colours are national classes: seven classes, each holding a seventh of a national reference set, so one value gets one colour in every view and area.
+  - Rates, ratios, medians and changes use all 3,315 atlas units.
+  - Size-dependent counts use every area of the kind drawn: all 255 districts, or all 3,315 units.
+  - The geography measures (work inside, residents, jobs in the metro and county views) use all districts or all 157 pieces. The table then shows that indicator in place of its units or population-mix column.
 - **Profiles:** clicking a district, a subregion row, the metro total, a piece or the county total opens a profile of all 46 indicators by theme. Each value is shown next to the metro or county (where there is one) and the US, with the area's rank among all its peers in the atlas: 255 districts, 81 subregions, 58 metro areas, 157 county pieces or 64 split counties.
 - **Shading from a profile:** clicking an indicator in a profile shades the map by it.
-- **United States view:** all 3,315 atlas units (`atlas/us_units.topojson`, 1.8 MB, built by `build_us_shapes.py`).
-  - **Shapes:** the 8.6 MB unit shapes, simplified topology-aware with mapshaper (keep 8%, quantized to 1e5, so neighbours share borders). Alaska and Hawaii are inset by Albers USA, and Puerto Rico in its own inset. A single state gets its own fit (Alaska a conic projection).
-  - **Colours:** seven classes holding equal numbers of all 3,315 units, so every state view uses the national scale.
+- **United States view:** all 3,315 atlas units, from two files built by `build_us_shapes.py`: `atlas/us_units.geojson` (1.9 MB) and `atlas/us_states.geojson` (state borders). They are plain GeoJSON, so the page needs no library beyond d3.
+  - **Shapes:** the 8.6 MB unit shapes, simplified topology-aware with mapshaper (keep 8%, coordinates to 0.001°, so neighbours share borders). Alaska and Hawaii are inset by Albers USA, and Puerto Rico in its own inset. A single state gets its own fit (Alaska a conic projection).
   - **Table:** the ten highest and ten lowest units in view (every unit for a state of 20 or fewer), with the US rank.
   - **Profiles:** a unit's profile compares it with its metro area (if any) and the US, ranks it among all 3,315 units, and links to the unit's metro and county views. With nothing selected, the profile shows the US.
   - **Links:** `#uUS` or `#u<state code>` open the view.
